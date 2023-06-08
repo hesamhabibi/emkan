@@ -1,0 +1,22 @@
+@import "../../../../../../styles/variables";
+
+.card {
+
+  >.header {
+    margin-bottom: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      i {
+        margin-left: 0.7rem;
+      }
+    }
+  }
+
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+  border-radius: 10px;
+  background: white;
+}
+

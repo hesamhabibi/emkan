@@ -1,0 +1,14 @@
+{% layout "components/layout/layout", title:"page_404_not_found_title", hideFooter:true%}
+
+{%block stylesheets%}
+{%endblock%}
+
+{%block main%}
+<div class="text-center font-shabnam-normal-digit" style="margin-top: 5rem;">
+    <div style="font-size: 5rem;" >404</div>
+    <div>{%trans 'page_404_not_found'%}</div>
+    <a class="text-blue-c100" href="{%route 'home'%}">
+        بازگشت به خانه
+    </a>
+</div>
+{%endblock%}

@@ -1,0 +1,16 @@
+{%getSettingByKeys header_settings={fields:["value"],keys:[
+"web_logo_image",
+]}%}
+{%getCategories headerCategories={
+    fields:{data:["id","title_web",{seo:"url"},{media:["alt","url"]},
+        {"children": ["id","title_web",{seo:"url"},{media:["alt","url"]},
+            {"children": ["id","title_web",{seo:"url"},{media:["alt","url"]}]}
+        ]}
+    ]},
+    filter:{type:CategoryTypes.product,parent_id: null},
+    limit:30,
+}%}
+{%global header_settings=header_settings%}
+{%global headerCategories=headerCategories.data%}
+
+{%render '/components/commons/header/_header'%}

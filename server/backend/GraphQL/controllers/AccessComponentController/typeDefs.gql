@@ -1,0 +1,80 @@
+module.exports = `
+
+    type Query {
+        getAccessComponent(id:ID!): AccessComponent
+        getAccessComponents(page:Int,limit:Int,filter:AccessComponentFilter,sort:[Sort]): AccessComponentPaginate
+        getAllAccessComponents(filter:AccessComponentFilter,sort:[Sort]): [AccessComponent]
+        getAllAccessComponentsChildren(parent_id:ID!, access_id:ID, filter:AccessComponentFilter,sort:[Sort]): [AccessComponent]
+    }
+
+    type Mutation {
+        createAccessComponent(input:AccessComponentInput): AccessComponent
+        updateAccessComponent(id:ID!,input:AccessComponentInput): AccessComponent
+        deleteAccessComponent(id:ID!): Response
+        sortAccessComponents(input:[sortAccessComponentInput]): Response
+    }
+
+    type AccessComponent {
+        id: ID
+        name: String
+        type: Int
+        key: String
+        action_type: Int
+        action: String
+        field: String
+        description: String
+        sort: Int
+        parent_id: ID
+        kind_status: Int
+        createdAt: String
+        updatedAt: String
+
+        is_internal: Boolean
+        has_access: Boolean
+        is_completed: Boolean
+
+        children: [AccessComponent]
+        parent: AccessComponent
+        accessControlLists: [AccessControlList]
+    }
+
+    type AccessComponentPaginate {
+        paginate: Paginate
+        data: [AccessComponent]
+    }
+
+    input AccessComponentInput {
+        name: String
+        type: Int
+        key: String
+        action_type: Int
+        action: String
+        field: String
+        description: String
+        sort: Int
+        parent_id: ID
+        kind_status: Int
+    }
+
+    input sortAccessComponentInput {
+        id: ID!
+        sort: Int
+        parent_id: ID
+    }
+
+    input AccessComponentFilter {
+        name: [filterString]
+        type: [filterInt]
+        key: [filterString]
+        action_type: [filterInt]
+        action: [filterString]
+        field: [filterString]
+        description: [filterString]
+        sort: [filterInt]
+        parent_id: [filterID]
+        kind_status: [filterInt]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`

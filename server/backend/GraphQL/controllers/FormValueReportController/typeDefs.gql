@@ -1,0 +1,31 @@
+module.exports = `
+    type Query {
+        getFormValueReport(collections: FormValueReportCollectionInput, sort_fields:[FormValueReportSortInput], fields:[String], filter:JSON): JSON
+        getFormValueReportFields(collections: FormValueReportCollectionInput): [JSON]
+    }
+
+    enum FormValueReportTypeEnum {
+        OR
+        AND
+    }
+    
+    enum FormValueReportCollectionEnum {
+        form
+        category
+        tag
+        tag_group
+    }
+
+    input FormValueReportSortInput {
+        field: String
+        desc: Boolean
+    }
+
+    input FormValueReportCollectionInput {
+        form_ids: [ID]
+        category_ids: [ID]
+        tag_ids: [ID]
+        tag_group_ids: [ID]
+    }
+
+`;

@@ -1,0 +1,68 @@
+@import 'styles/variables';
+@import 'styles/components/mixin/mixin';
+
+.imagePreview {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.31);
+
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > span {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 20px;
+    cursor: pointer;
+    background: #efefef;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+  }
+
+
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.2s ease;
+
+  > img {
+    border-radius: 5px;
+    max-width: 90%;
+    margin: auto;
+    max-height: 90%;
+  }
+
+  &.show {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#adminLayout {
+  > main {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 1rem;
+    margin-right: 290px;
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    overflow-y: overlay;
+    @include transition(0.3s ease-in-out);
+
+    &.hidden {
+      margin-right: 0
+    }
+  }
+}

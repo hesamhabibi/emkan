@@ -1,0 +1,23 @@
+module.exports = `
+
+    type Price {
+        id: ID
+        price: Int
+        offer_price: Int
+        main_price: Int
+        offer_startAt: String
+        offer_expireAt: String
+        discount_percent: Float
+        createdAt: String
+        updatedAt: String
+    }
+
+    input PriceInput {
+        price: Int
+        offer_price: Int
+        offer_startAt: String
+        offer_expireAt: String
+        discount_percent: Float
+    }
+
+`

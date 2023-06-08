@@ -1,0 +1,1325 @@
+[
+    {
+        "code": "aa",
+        "name": "Afar",
+        "name_auto": "Afar",
+        "name_fa": "دور",
+        "direction": "ltr"
+    },
+    {
+        "code": "ab",
+        "name": "Abkhazian",
+        "name_auto": "Abkhazian",
+        "name_fa": "آبخازی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ae",
+        "name": "Avestan",
+        "name_auto": "Avestan",
+        "name_fa": "اوستایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "af",
+        "name": "Afrikaans",
+        "name_auto": "Afrikaans",
+        "name_fa": "آفریقایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ak",
+        "name": "Akan",
+        "name_auto": "Akan",
+        "name_fa": "اراده",
+        "direction": "ltr"
+    },
+    {
+        "code": "am",
+        "name": "Amharic",
+        "name_auto": "Amharic",
+        "name_fa": "امهری",
+        "direction": "ltr"
+    },
+    {
+        "code": "an",
+        "name": "Aragonese",
+        "name_auto": "Aragonese",
+        "name_fa": "آراگونی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ar",
+        "name": "Arabic",
+        "name_auto": "العربية",
+        "name_fa": "عربی",
+        "direction": "rtl"
+    },
+    {
+        "code": "as",
+        "name": "Assamese",
+        "name_auto": "Assamese",
+        "name_fa": "آسامی",
+        "direction": "ltr"
+    },
+    {
+        "code": "av",
+        "name": "Avaric",
+        "name_auto": "Avaric",
+        "name_fa": "آواریک",
+        "direction": "ltr"
+    },
+    {
+        "code": "ay",
+        "name": "Aymara",
+        "name_auto": "Aymara",
+        "name_fa": "آیمارا",
+        "direction": "ltr"
+    },
+    {
+        "code": "az",
+        "name": "Azerbaijani",
+        "name_auto": "Azerbaijani",
+        "name_fa": "آذربایجانی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ba",
+        "name": "Bashkir",
+        "name_auto": "Bashkir",
+        "name_fa": "باشکیری",
+        "direction": "ltr"
+    },
+    {
+        "code": "be",
+        "name": "Belarusian",
+        "name_auto": "Belarusian",
+        "name_fa": "بلاروسی",
+        "direction": "ltr"
+    },
+    {
+        "code": "bg",
+        "name": "Bulgarian",
+        "name_auto": "Bulgarian",
+        "name_fa": "بلغاری",
+        "direction": "ltr"
+    },
+    {
+        "code": "bh",
+        "name": "Bihari languages",
+        "name_auto": "Bihari languages",
+        "name_fa": "زبانهای بیهاری",
+        "direction": "ltr"
+    },
+    {
+        "code": "bi",
+        "name": "Bislama",
+        "name_auto": "Bislama",
+        "name_fa": "بیسلاما",
+        "direction": "ltr"
+    },
+    {
+        "code": "bm",
+        "name": "Bambara",
+        "name_auto": "Bambara",
+        "name_fa": "بامبارا",
+        "direction": "ltr"
+    },
+    {
+        "code": "bn",
+        "name": "Bengali",
+        "name_auto": "Bengali",
+        "name_fa": "بنگالی",
+        "direction": "ltr"
+    },
+    {
+        "code": "bo",
+        "name": "Tibetan",
+        "name_auto": "Tibetan",
+        "name_fa": "تبتی",
+        "direction": "ltr"
+    },
+    {
+        "code": "br",
+        "name": "Breton",
+        "name_auto": "Breton",
+        "name_fa": "برتون",
+        "direction": "ltr"
+    },
+    {
+        "code": "bs",
+        "name": "Bosnian",
+        "name_auto": "Bosnian",
+        "name_fa": "بوسنیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ca",
+        "name": "Catalan; Valencian",
+        "name_auto": "Catalan; Valencian",
+        "name_fa": "کاتالان والنسیا",
+        "direction": "ltr"
+    },
+    {
+        "code": "ce",
+        "name": "Chechen",
+        "name_auto": "Chechen",
+        "name_fa": "چچنی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ch",
+        "name": "Chamorro",
+        "name_auto": "Chamorro",
+        "name_fa": "چامورو",
+        "direction": "ltr"
+    },
+    {
+        "code": "co",
+        "name": "Corsican",
+        "name_auto": "Corsican",
+        "name_fa": "کورسیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "cr",
+        "name": "Cree",
+        "name_auto": "Cree",
+        "name_fa": "کری",
+        "direction": "ltr"
+    },
+    {
+        "code": "cs",
+        "name": "Czech",
+        "name_auto": "Czech",
+        "name_fa": "کشور چک",
+        "direction": "ltr"
+    },
+    {
+        "code": "cu",
+        "name": "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic",
+        "name_auto": "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic",
+        "name_fa": "اسلاوی کلیسا اسلاوی قدیمی اسلاوی کلیسا؛ بلغاری قدیمی اسلاوی کلیسای قدیمی",
+        "direction": "ltr"
+    },
+    {
+        "code": "cv",
+        "name": "Chuvash",
+        "name_auto": "Chuvash",
+        "name_fa": "چوواش",
+        "direction": "ltr"
+    },
+    {
+        "code": "cy",
+        "name": "Welsh",
+        "name_auto": "Welsh",
+        "name_fa": "ولزی",
+        "direction": "ltr"
+    },
+    {
+        "code": "da",
+        "name": "Danish",
+        "name_auto": "Danish",
+        "name_fa": "دانمارکی",
+        "direction": "ltr"
+    },
+    {
+        "code": "de",
+        "name": "German",
+        "name_auto": "Deutsche",
+        "name_fa": "آلمانی",
+        "direction": "ltr"
+    },
+    {
+        "code": "dv",
+        "name": "Divehi; Dhivehi; Maldivian",
+        "name_auto": "Divehi; Dhivehi; Maldivian",
+        "name_fa": "دیوهی ذیوهی ؛ مالدیو",
+        "direction": "rtl"
+    },
+    {
+        "code": "dz",
+        "name": "Dzongkha",
+        "name_auto": "Dzongkha",
+        "name_fa": "دزونگا",
+        "direction": "ltr"
+    },
+    {
+        "code": "ee",
+        "name": "Ewe",
+        "name_auto": "Ewe",
+        "name_fa": "میش",
+        "direction": "ltr"
+    },
+    {
+        "code": "el",
+        "name": "Greek, Modern (1453-)",
+        "name_auto": "Greek, Modern (1453-)",
+        "name_fa": "یونانی ، مدرن (1453-)",
+        "direction": "ltr"
+    },
+    {
+        "code": "en",
+        "name": "English",
+        "name_auto": "English",
+        "name_fa": "انگلیسی",
+        "direction": "ltr"
+    },
+    {
+        "code": "eo",
+        "name": "Esperanto",
+        "name_auto": "Esperanto",
+        "name_fa": "اسپرانتو",
+        "direction": "ltr"
+    },
+    {
+        "code": "es",
+        "name": "Spanish; Castilian",
+        "name_auto": "Spanish; Castilian",
+        "name_fa": "اسپانیایی کاستیلین",
+        "direction": "ltr"
+    },
+    {
+        "code": "et",
+        "name": "Estonian",
+        "name_auto": "Estonian",
+        "name_fa": "استونیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "eu",
+        "name": "Basque",
+        "name_auto": "Basque",
+        "name_fa": "باسکایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "fa",
+        "name": "Persian",
+        "name_auto": "فارسی",
+        "name_fa": "فارسی",
+        "direction": "rtl"
+    },
+    {
+        "code": "ff",
+        "name": "Fulah",
+        "name_auto": "Fulah",
+        "name_fa": "فولاه",
+        "direction": "rtl"
+    },
+    {
+        "code": "fi",
+        "name": "Finnish",
+        "name_auto": "Finnish",
+        "name_fa": "فنلاندی",
+        "direction": "ltr"
+    },
+    {
+        "code": "fj",
+        "name": "Fijian",
+        "name_auto": "Fijian",
+        "name_fa": "فیجیان",
+        "direction": "ltr"
+    },
+    {
+        "code": "fo",
+        "name": "Faroese",
+        "name_auto": "Faroese",
+        "name_fa": "فاروئی",
+        "direction": "ltr"
+    },
+    {
+        "code": "fr",
+        "name": "French",
+        "name_auto": "français",
+        "name_fa": "فرانسوی",
+        "direction": "ltr"
+    },
+    {
+        "code": "fy",
+        "name": "Western Frisian",
+        "name_auto": "Western Frisian",
+        "name_fa": "فریزی غربی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ga",
+        "name": "Irish",
+        "name_auto": "Irish",
+        "name_fa": "ایرلندی",
+        "direction": "ltr"
+    },
+    {
+        "code": "gd",
+        "name": "Gaelic; Scomttish Gaelic",
+        "name_auto": "Gaelic; Scomttish Gaelic",
+        "name_fa": "گالیایی گالیسی اسکاتلندی",
+        "direction": "ltr"
+    },
+    {
+        "code": "gl",
+        "name": "Galician",
+        "name_auto": "Galician",
+        "name_fa": "گالیسیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "gn",
+        "name": "Guarani",
+        "name_auto": "Guarani",
+        "name_fa": "گوارانی",
+        "direction": "ltr"
+    },
+    {
+        "code": "gu",
+        "name": "Gujarati",
+        "name_auto": "Gujarati",
+        "name_fa": "گجراتی",
+        "direction": "ltr"
+    },
+    {
+        "code": "gv",
+        "name": "Manx",
+        "name_auto": "Manx",
+        "name_fa": "مانکسی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ha",
+        "name": "Hausa",
+        "name_auto": "Hausa",
+        "name_fa": "هاوسا",
+        "direction": "ltr"
+    },
+    {
+        "code": "he",
+        "name": "Hebrew",
+        "name_auto": "Hebrew",
+        "name_fa": "عبری",
+        "direction": "rtl"
+    },
+    {
+        "code": "hi",
+        "name": "Hindi",
+        "name_auto": "Hindi",
+        "name_fa": "هندی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ho",
+        "name": "Hiri Motu",
+        "name_auto": "Hiri Motu",
+        "name_fa": "هیری موتو",
+        "direction": "ltr"
+    },
+    {
+        "code": "hr",
+        "name": "Croatian",
+        "name_auto": "Croatian",
+        "name_fa": "کرواتی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ht",
+        "name": "Haitian; Haitian Creole",
+        "name_auto": "Haitian; Haitian Creole",
+        "name_fa": "هائیتی ؛ کریول هائیتی",
+        "direction": "ltr"
+    },
+    {
+        "code": "hu",
+        "name": "Hungarian",
+        "name_auto": "Hungarian",
+        "name_fa": "مجارستانی",
+        "direction": "ltr"
+    },
+    {
+        "code": "hy",
+        "name": "Armenian",
+        "name_auto": "Armenian",
+        "name_fa": "ارمنی",
+        "direction": "ltr"
+    },
+    {
+        "code": "hz",
+        "name": "Herero",
+        "name_auto": "Herero",
+        "name_fa": "هیررو",
+        "direction": "ltr"
+    },
+    {
+        "code": "ia",
+        "name": "Interlingua (International Auxiliary Language Association)",
+        "name_auto": "Interlingua (International Auxiliary Language Association)",
+        "name_fa": "سرخپوشان (انجمن بین المللی زبان کمکی)",
+        "direction": "ltr"
+    },
+    {
+        "code": "id",
+        "name": "Indonesian",
+        "name_auto": "Indonesian",
+        "name_fa": "اندونزیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ie",
+        "name": "Interlingue; Occidental",
+        "name_auto": "Interlingue; Occidental",
+        "name_fa": "فاصله غربی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ig",
+        "name": "Igbo",
+        "name_auto": "Igbo",
+        "name_fa": "ایبو",
+        "direction": "ltr"
+    },
+    {
+        "code": "ii",
+        "name": "Sichuan Yi; Nuosu",
+        "name_auto": "Sichuan Yi; Nuosu",
+        "name_fa": "سیچوان یی ؛ نووسو",
+        "direction": "ltr"
+    },
+    {
+        "code": "ik",
+        "name": "Inupiaq",
+        "name_auto": "Inupiaq",
+        "name_fa": "اینوپیاک",
+        "direction": "ltr"
+    },
+    {
+        "code": "io",
+        "name": "Ido",
+        "name_auto": "Ido",
+        "name_fa": "آیدو",
+        "direction": "ltr"
+    },
+    {
+        "code": "is",
+        "name": "Icelandic",
+        "name_auto": "Icelandic",
+        "name_fa": "ایسلندی",
+        "direction": "ltr"
+    },
+    {
+        "code": "it",
+        "name": "Italian",
+        "name_auto": "Italian",
+        "name_fa": "ایتالیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "iu",
+        "name": "Inuktitut",
+        "name_auto": "Inuktitut",
+        "name_fa": "اینوکتیتوت",
+        "direction": "ltr"
+    },
+    {
+        "code": "ja",
+        "name": "Japanese",
+        "name_auto": "Japanese",
+        "name_fa": "ژاپنی",
+        "direction": "ltr"
+    },
+    {
+        "code": "jv",
+        "name": "Javanese",
+        "name_auto": "Javanese",
+        "name_fa": "جاوه ای",
+        "direction": "ltr"
+    },
+    {
+        "code": "ka",
+        "name": "Georgian",
+        "name_auto": "Georgian",
+        "name_fa": "گرجی",
+        "direction": "ltr"
+    },
+    {
+        "code": "kg",
+        "name": "Kongo",
+        "name_auto": "Kongo",
+        "name_fa": "کنگو",
+        "direction": "ltr"
+    },
+    {
+        "code": "ki",
+        "name": "Kikuyu; Gikuyu",
+        "name_auto": "Kikuyu; Gikuyu",
+        "name_fa": "کیکویو گیکویو",
+        "direction": "ltr"
+    },
+    {
+        "code": "kj",
+        "name": "Kuanyama; Kwanyama",
+        "name_auto": "Kuanyama; Kwanyama",
+        "name_fa": "کوانیاما کوانیاما",
+        "direction": "ltr"
+    },
+    {
+        "code": "kk",
+        "name": "Kazakh",
+        "name_auto": "Kazakh",
+        "name_fa": "قزاقی",
+        "direction": "ltr"
+    },
+    {
+        "code": "kl",
+        "name": "Kalaallisut; Greenlandic",
+        "name_auto": "Kalaallisut; Greenlandic",
+        "name_fa": "کالالیسوت گرینلندی",
+        "direction": "ltr"
+    },
+    {
+        "code": "km",
+        "name": "Central Khmer",
+        "name_auto": "Central Khmer",
+        "name_fa": "خمر مرکزی",
+        "direction": "ltr"
+    },
+    {
+        "code": "kn",
+        "name": "Kannada",
+        "name_auto": "Kannada",
+        "name_fa": "کانادا",
+        "direction": "ltr"
+    },
+    {
+        "code": "ko",
+        "name": "Korean",
+        "name_auto": "Korean",
+        "name_fa": "کره ای",
+        "direction": "ltr"
+    },
+    {
+        "code": "kr",
+        "name": "Kanuri",
+        "name_auto": "Kanuri",
+        "name_fa": "کانوری",
+        "direction": "ltr"
+    },
+    {
+        "code": "ks",
+        "name": "Kashmiri",
+        "name_auto": "Kashmiri",
+        "name_fa": "کشمیری",
+        "direction": "ltr"
+    },
+    {
+        "code": "ku",
+        "name": "Kurdish",
+        "name_auto": "Kurdish",
+        "name_fa": "کردی",
+        "direction": "rtl"
+    },
+    {
+        "code": "kv",
+        "name": "Komi",
+        "name_auto": "Komi",
+        "name_fa": "کومی",
+        "direction": "ltr"
+    },
+    {
+        "code": "kw",
+        "name": "Cornish",
+        "name_auto": "Cornish",
+        "name_fa": "کورنیش",
+        "direction": "ltr"
+    },
+    {
+        "code": "ky",
+        "name": "Kirghiz; Kyrgyz",
+        "name_auto": "Kirghiz; Kyrgyz",
+        "name_fa": "قرقیزستان قرقیزستان",
+        "direction": "ltr"
+    },
+    {
+        "code": "la",
+        "name": "Latin",
+        "name_auto": "Latin",
+        "name_fa": "لاتین",
+        "direction": "ltr"
+    },
+    {
+        "code": "lb",
+        "name": "Luxembourgish; Letzeburgesch",
+        "name_auto": "Luxembourgish; Letzeburgesch",
+        "name_fa": "لوکزامبورگ؛ لتزبورگ",
+        "direction": "ltr"
+    },
+    {
+        "code": "lg",
+        "name": "Ganda",
+        "name_auto": "Ganda",
+        "name_fa": "گاندا",
+        "direction": "ltr"
+    },
+    {
+        "code": "li",
+        "name": "Limburgan; Limburger; Limburgish",
+        "name_auto": "Limburgan; Limburger; Limburgish",
+        "name_fa": "لیمبورکی؛ لیمبرگر لیمبورکی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ln",
+        "name": "Lingala",
+        "name_auto": "Lingala",
+        "name_fa": "لینگالا",
+        "direction": "ltr"
+    },
+    {
+        "code": "lo",
+        "name": "Lao",
+        "name_auto": "Lao",
+        "name_fa": "لائو",
+        "direction": "ltr"
+    },
+    {
+        "code": "lt",
+        "name": "Lithuanian",
+        "name_auto": "Lithuanian",
+        "name_fa": "لیتوانیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "lu",
+        "name": "Luba-Katanga",
+        "name_auto": "Luba-Katanga",
+        "name_fa": "لوبا-کاتانگا",
+        "direction": "ltr"
+    },
+    {
+        "code": "lv",
+        "name": "Latvian",
+        "name_auto": "Latvian",
+        "name_fa": "لتونیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "mg",
+        "name": "Malagasy",
+        "name_auto": "Malagasy",
+        "name_fa": "مالاگازی",
+        "direction": "ltr"
+    },
+    {
+        "code": "mh",
+        "name": "Marshallese",
+        "name_auto": "Marshallese",
+        "name_fa": "مارشالی",
+        "direction": "ltr"
+    },
+    {
+        "code": "mi",
+        "name": "Maori",
+        "name_auto": "Maori",
+        "name_fa": "مائوری",
+        "direction": "ltr"
+    },
+    {
+        "code": "mk",
+        "name": "Macedonian",
+        "name_auto": "Macedonian",
+        "name_fa": "مقدونی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ml",
+        "name": "Malayalam",
+        "name_auto": "Malayalam",
+        "name_fa": "مالایایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "mn",
+        "name": "Mongolian",
+        "name_auto": "Mongolian",
+        "name_fa": "مغولی",
+        "direction": "ltr"
+    },
+    {
+        "code": "mr",
+        "name": "Marathi",
+        "name_auto": "Marathi",
+        "name_fa": "مراتی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ms",
+        "name": "Malay",
+        "name_auto": "Malay",
+        "name_fa": "مالاییایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "mt",
+        "name": "Maltese",
+        "name_auto": "Maltese",
+        "name_fa": "مالتیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "my",
+        "name": "Burmese",
+        "name_auto": "Burmese",
+        "name_fa": "برمه ای",
+        "direction": "ltr"
+    },
+    {
+        "code": "na",
+        "name": "Nauru",
+        "name_auto": "Nauru",
+        "name_fa": "نائورو",
+        "direction": "ltr"
+    },
+    {
+        "code": "nb",
+        "name": "Bokmål, Norwegian; Norwegian Bokmål",
+        "name_auto": "Bokmål, Norwegian; Norwegian Bokmål",
+        "name_fa": "بوکمل ، نروژی؛ نروژی",
+        "direction": "ltr"
+    },
+    {
+        "code": "nd",
+        "name": "Ndebele, North; North Ndebele",
+        "name_auto": "Ndebele, North; North Ndebele",
+        "name_fa": "ندبله ، شمال ندبله شمالی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ne",
+        "name": "Nepali",
+        "name_auto": "Nepali",
+        "name_fa": "نپالی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ng",
+        "name": "Ndonga",
+        "name_auto": "Ndonga",
+        "name_fa": "ندونگا",
+        "direction": "ltr"
+    },
+    {
+        "code": "nl",
+        "name": "Dutch; Flemish",
+        "name_auto": "Dutch; Flemish",
+        "name_fa": "هلندی فلاندی",
+        "direction": "ltr"
+    },
+    {
+        "code": "nn",
+        "name": "Norwegian Nynorsk; Nynorsk, Norwegian",
+        "name_auto": "Norwegian Nynorsk; Nynorsk, Norwegian",
+        "name_fa": "نینورویسی نروژی؛ نینورسی ، نروژی",
+        "direction": "ltr"
+    },
+    {
+        "code": "no",
+        "name": "Norwegian",
+        "name_auto": "Norwegian",
+        "name_fa": "نروژی",
+        "direction": "ltr"
+    },
+    {
+        "code": "nr",
+        "name": "Ndebele, South; South Ndebele",
+        "name_auto": "Ndebele, South; South Ndebele",
+        "name_fa": "ندبله ، جنوب ؛ ندبله جنوبی",
+        "direction": "ltr"
+    },
+    {
+        "code": "nv",
+        "name": "Navajo; Navaho",
+        "name_auto": "Navajo; Navaho",
+        "name_fa": "ناواهو ؛ ناوهو",
+        "direction": "ltr"
+    },
+    {
+        "code": "ny",
+        "name": "Chichewa; Chewa; Nyanja",
+        "name_auto": "Chichewa; Chewa; Nyanja",
+        "name_fa": "چیچوا چوا دریا",
+        "direction": "ltr"
+    },
+    {
+        "code": "oc",
+        "name": "Occitan (post 1500)",
+        "name_auto": "Occitan (post 1500)",
+        "name_fa": "اکسیتانی (پست 1500)",
+        "direction": "ltr"
+    },
+    {
+        "code": "oj",
+        "name": "Ojibwa",
+        "name_auto": "Ojibwa",
+        "name_fa": "اوجیبوا",
+        "direction": "ltr"
+    },
+    {
+        "code": "om",
+        "name": "Oromo",
+        "name_auto": "Oromo",
+        "name_fa": "اورومو",
+        "direction": "ltr"
+    },
+    {
+        "code": "or",
+        "name": "Oriya",
+        "name_auto": "Oriya",
+        "name_fa": "اوریا",
+        "direction": "ltr"
+    },
+    {
+        "code": "os",
+        "name": "Ossetian; Ossetic",
+        "name_auto": "Ossetian; Ossetic",
+        "name_fa": "اوستیایی اوسی",
+        "direction": "ltr"
+    },
+    {
+        "code": "pa",
+        "name": "Panjabi; Punjabi",
+        "name_auto": "Panjabi; Punjabi",
+        "name_fa": "پنجابی؛ پنجابی",
+        "direction": "ltr"
+    },
+    {
+        "code": "pi",
+        "name": "Pali",
+        "name_auto": "Pali",
+        "name_fa": "پالی",
+        "direction": "ltr"
+    },
+    {
+        "code": "pl",
+        "name": "Polish",
+        "name_auto": "Polish",
+        "name_fa": "لهستانی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ps",
+        "name": "Pushto; Pashto",
+        "name_auto": "Pushto; Pashto",
+        "name_fa": "پشتو پشتو",
+        "direction": "ltr"
+    },
+    {
+        "code": "pt",
+        "name": "Portuguese",
+        "name_auto": "Portuguese",
+        "name_fa": "پرتغالی",
+        "direction": "ltr"
+    },
+    {
+        "code": "qu",
+        "name": "Quechua",
+        "name_auto": "Quechua",
+        "name_fa": "کوچو",
+        "direction": "ltr"
+    },
+    {
+        "code": "rm",
+        "name": "Romansh",
+        "name_auto": "Romansh",
+        "name_fa": "رومانشی",
+        "direction": "ltr"
+    },
+    {
+        "code": "rn",
+        "name": "Rundi",
+        "name_auto": "Rundi",
+        "name_fa": "رندی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ro",
+        "name": "Romanian; Moldavian; Moldovan",
+        "name_auto": "Romanian; Moldavian; Moldovan",
+        "name_fa": "رومانیایی؛ مولداوی مولداوی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ru",
+        "name": "Russian",
+        "name_auto": "Russian",
+        "name_fa": "روسی",
+        "direction": "ltr"
+    },
+    {
+        "code": "rw",
+        "name": "Kinyarwanda",
+        "name_auto": "Kinyarwanda",
+        "name_fa": "کینارواندا",
+        "direction": "ltr"
+    },
+    {
+        "code": "sa",
+        "name": "Sanskrit",
+        "name_auto": "Sanskrit",
+        "name_fa": "سانسکریت",
+        "direction": "ltr"
+    },
+    {
+        "code": "sc",
+        "name": "Sardinian",
+        "name_auto": "Sardinian",
+        "name_fa": "ساردینی",
+        "direction": "ltr"
+    },
+    {
+        "code": "sd",
+        "name": "Sindhi",
+        "name_auto": "Sindhi",
+        "name_fa": "سندی",
+        "direction": "ltr"
+    },
+    {
+        "code": "se",
+        "name": "Northern Sami",
+        "name_auto": "Northern Sami",
+        "name_fa": "سامی شمالی",
+        "direction": "ltr"
+    },
+    {
+        "code": "sg",
+        "name": "Sango",
+        "name_auto": "Sango",
+        "name_fa": "سانگو",
+        "direction": "ltr"
+    },
+    {
+        "code": "si",
+        "name": "Sinhala; Sinhalese",
+        "name_auto": "Sinhala; Sinhalese",
+        "name_fa": "سینهالی؛ سینهالی",
+        "direction": "ltr"
+    },
+    {
+        "code": "sk",
+        "name": "Slovak",
+        "name_auto": "Slovak",
+        "name_fa": "اسلواکیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "sl",
+        "name": "Slovenian",
+        "name_auto": "Slovenian",
+        "name_fa": "اسلوونیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "sm",
+        "name": "Samoan",
+        "name_auto": "Samoan",
+        "name_fa": "ساموایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "sn",
+        "name": "Shona",
+        "name_auto": "Shona",
+        "name_fa": "شونا",
+        "direction": "ltr"
+    },
+    {
+        "code": "so",
+        "name": "Somali",
+        "name_auto": "Somali",
+        "name_fa": "سومالیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "sq",
+        "name": "Albanian",
+        "name_auto": "Albanian",
+        "name_fa": "آلبانیایی",
+        "direction": "ltr"
+    },
+    {
+        "code": "sr",
+        "name": "Serbian",
+        "name_auto": "Serbian",
+        "name_fa": "صربی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ss",
+        "name": "Swati",
+        "name_auto": "Swati",
+        "name_fa": "سواتی",
+        "direction": "ltr"
+    },
+    {
+        "code": "st",
+        "name": "Sotho, Southern",
+        "name_auto": "Sotho, Southern",
+        "name_fa": "سوتو ، جنوبی",
+        "direction": "ltr"
+    },
+    {
+        "code": "su",
+        "name": "Sundanese",
+        "name_auto": "Sundanese",
+        "name_fa": "سوندانی",
+        "direction": "ltr"
+    },
+    {
+        "code": "sv",
+        "name": "Swedish",
+        "name_auto": "Swedish",
+        "name_fa": "سوئدی",
+        "direction": "ltr"
+    },
+    {
+        "code": "sw",
+        "name": "Swahili",
+        "name_auto": "Swahili",
+        "name_fa": "سواحیلی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ta",
+        "name": "Tamil",
+        "name_auto": "Tamil",
+        "name_fa": "تامیل",
+        "direction": "ltr"
+    },
+    {
+        "code": "te",
+        "name": "Telugu",
+        "name_auto": "Telugu",
+        "name_fa": "تلوگو",
+        "direction": "ltr"
+    },
+    {
+        "code": "tg",
+        "name": "Tajik",
+        "name_auto": "Tajik",
+        "name_fa": "تاجیکی",
+        "direction": "ltr"
+    },
+    {
+        "code": "th",
+        "name": "Thai",
+        "name_auto": "Thai",
+        "name_fa": "تایلندی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ti",
+        "name": "Tigrinya",
+        "name_auto": "Tigrinya",
+        "name_fa": "تیگرینیا",
+        "direction": "ltr"
+    },
+    {
+        "code": "tk",
+        "name": "Turkmen",
+        "name_auto": "Turkmen",
+        "name_fa": "ترکمن",
+        "direction": "ltr"
+    },
+    {
+        "code": "tl",
+        "name": "Tagalog",
+        "name_auto": "Tagalog",
+        "name_fa": "تاگالوگ",
+        "direction": "ltr"
+    },
+    {
+        "code": "tn",
+        "name": "Tswana",
+        "name_auto": "Tswana",
+        "name_fa": "تسوانا",
+        "direction": "ltr"
+    },
+    {
+        "code": "to",
+        "name": "Tonga (Tonga Islands)",
+        "name_auto": "Tonga (Tonga Islands)",
+        "name_fa": "تونگا (جزایر تونگا)",
+        "direction": "ltr"
+    },
+    {
+        "code": "tr",
+        "name": "Turkish",
+        "name_auto": "Türk",
+        "name_fa": "ترکی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ts",
+        "name": "Tsonga",
+        "name_auto": "Tsonga",
+        "name_fa": "تسونگا",
+        "direction": "ltr"
+    },
+    {
+        "code": "tt",
+        "name": "Tatar",
+        "name_auto": "Tatar",
+        "name_fa": "تاتار",
+        "direction": "ltr"
+    },
+    {
+        "code": "tw",
+        "name": "Twi",
+        "name_auto": "Twi",
+        "name_fa": "توئی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ty",
+        "name": "Tahitian",
+        "name_auto": "Tahitian",
+        "name_fa": "تاهیتی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ug",
+        "name": "Uighur; Uyghur",
+        "name_auto": "Uighur; Uyghur",
+        "name_fa": "اویغور اویغور",
+        "direction": "ltr"
+    },
+    {
+        "code": "uk",
+        "name": "Ukrainian",
+        "name_auto": "Ukrainian",
+        "name_fa": "اوکراینی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ur",
+        "name": "Urdu",
+        "name_auto": "Urdu",
+        "name_fa": "اردو",
+        "direction": "rtl"
+    },
+    {
+        "code": "uz",
+        "name": "Uzbek",
+        "name_auto": "Uzbek",
+        "name_fa": "ازبکی",
+        "direction": "ltr"
+    },
+    {
+        "code": "ve",
+        "name": "Venda",
+        "name_auto": "Venda",
+        "name_fa": "وندا",
+        "direction": "ltr"
+    },
+    {
+        "code": "vi",
+        "name": "Vietnamese",
+        "name_auto": "Vietnamese",
+        "name_fa": "ویتنامی",
+        "direction": "ltr"
+    },
+    {
+        "code": "vo",
+        "name": "Volapük",
+        "name_auto": "Volapük",
+        "name_fa": "ولاکی",
+        "direction": "ltr"
+    },
+    {
+        "code": "wa",
+        "name": "Walloon",
+        "name_auto": "Walloon",
+        "name_fa": "والونی",
+        "direction": "ltr"
+    },
+    {
+        "code": "wo",
+        "name": "Wolof",
+        "name_auto": "Wolof",
+        "name_fa": "ولوف",
+        "direction": "ltr"
+    },
+    {
+        "code": "xh",
+        "name": "Xhosa",
+        "name_auto": "Xhosa",
+        "name_fa": "خوسا",
+        "direction": "ltr"
+    },
+    {
+        "code": "yi",
+        "name": "Yiddish",
+        "name_auto": "Yiddish",
+        "name_fa": "ییدیش",
+        "direction": "ltr"
+    },
+    {
+        "code": "yo",
+        "name": "Yoruba",
+        "name_auto": "Yoruba",
+        "name_fa": "یوروبا",
+        "direction": "ltr"
+    },
+    {
+        "code": "za",
+        "name": "Zhuang; Chuang",
+        "name_auto": "Zhuang; Chuang",
+        "name_fa": "ژوانگ چوانگ",
+        "direction": "ltr"
+    },
+    {
+        "code": "zh",
+        "name": "Chinese",
+        "name_auto": "Chinese",
+        "name_fa": "چینی",
+        "direction": "ltr"
+    },
+    {
+        "code": "zu",
+        "name": "Zulu",
+        "name_auto": "Zulu",
+        "name_fa": "زولو",
+        "direction": "ltr"
+    },
+    {
+        "code": "arc",
+        "name": "Aramaic",
+        "name_auto": "Aramaic",
+        "name_fa": "آرامی",
+        "direction": "rtl"
+    },
+    {
+        "code": "aze",
+        "name": "Azeri",
+        "name_auto": "Azeri",
+        "name_fa": "آذری",
+        "direction": "rtl"
+    },
+    {
+        "code": "nqo",
+        "name": "N'ko",
+        "name_auto": "N'ko",
+        "name_fa": "نکو",
+        "direction": "rtl"
+    },
+    {
+        "code": "roh",
+        "name": "Rohingya",
+        "name_auto": "Rohingya",
+        "name_fa": "روهینگیا",
+        "direction": "rtl"
+    },
+    {
+        "code": "syc",
+        "name": "Syriac",
+        "name_auto": "Syriac",
+        "name_fa": "سریانی",
+        "direction": "rtl"
+    }
+]

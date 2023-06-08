@@ -1,0 +1,63 @@
+module.exports = `
+
+    type Query {
+        getReminder(id:ID!): Reminder
+        getReminders(page:Int, limit:Int, filter:ReminderFilter,sort:[Sort]): ReminderPaginate
+        getAllReminders(filter:ReminderFilter,sort:[Sort]): [Reminder]
+        getAllSelfReminders(filter:ReminderFilter,sort:[Sort]): [Reminder]
+        getRangeSelfReminders(date_start:String, date_end:String,type:Int): [Reminder]
+    }
+
+    type Mutation {
+        createReminder(input:ReminderInput): Reminder
+        updateReminder(id:ID!, input:ReminderInput): Reminder
+        deleteReminder(id:ID!): Response
+    }
+
+    type Reminder {
+        id: ID
+        title: String
+        description: String
+        start_date: String
+        end_date: String
+        user_id: ID
+        access_user_ids: [ID]
+        type: Int
+        can_edit: Boolean
+        is_owner: Boolean
+        editable: Boolean
+        createdAt: String
+        updatedAt: String
+
+        user: User
+    }
+
+    type ReminderPaginate {
+        paginate: Paginate
+        data: [Reminder]
+    }
+
+    input ReminderInput {
+        title: String
+        description: String
+        start_date: String
+        end_date: String
+        access_user_ids: [ID]
+        type: Int
+        can_edit: Boolean
+    }
+
+
+    input ReminderFilter {
+        title: [filterString]
+        description: [filterString]
+        start_date: [filterDate]
+        end_date: [filterDate]
+        access_user_ids: [filterArray]
+        type: [filterInt]
+        user_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

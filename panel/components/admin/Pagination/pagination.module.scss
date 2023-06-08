@@ -1,0 +1,32 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.paginate {
+  align-items: center;
+}
+
+.pagination {
+  outline: 0;
+  border: 0;
+  width: 6rem;
+  margin: 10px;
+  height: 3rem;
+  text-align: center;
+  @include rounded(0.5rem);
+  @include box-shadow(-4px 9px 25px -6px rgb(0 0 0 / 10%))
+}
+
+.paginationMobile {
+  outline: 0;
+  border: 0;
+  width: 70%;
+  margin: 10px;
+  height: 3rem;
+  text-align: center;
+  @include rounded(0.5rem);
+  @include box-shadow(-4px 9px 25px -6px rgb(0 0 0 / 10%))
+}
+
+.previous_btn {
+  margin-top: 1rem;
+}

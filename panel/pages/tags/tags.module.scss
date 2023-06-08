@@ -1,0 +1,157 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.tag {
+  padding: 0.5rem 1rem;
+  margin: 0.4rem;
+  //width: 8rem;
+  height: auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  @include generate-color(background, $white);
+  @include rounded(2rem);
+  @include box-shadow($box-shadow-2);
+
+  .actions {
+    padding-right: 1rem;
+
+    button {
+      margin: 0;
+      position: relative;
+      top: 0;
+      cursor: pointer;
+      //padding: 0.5rem;
+      //font-size: 1.2rem;
+      @include transition(0.2s);
+      @include hover {
+        @include generate-color(color, $blue)
+      }
+    }
+  }
+}
+
+.main {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+
+.group {
+  border-top: 1px solid lightgray;
+  background-color: $white;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+
+  .mute {
+    color: gray;
+  }
+}
+
+.btnCollapse {
+  padding: 1rem;
+  width: 100%;
+  justify-content: space-between;
+
+
+  button {
+    margin: 0;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+
+    @include generate-color(color, $black);
+    @include transition(0.2s);
+    @include hover {
+      @include generate-color(color, $blue)
+    }
+  }
+
+  @include box-shadow($box-shadow-1);
+}
+
+
+.rows {
+  text-align: right;
+  //transition: all 0.15s ease-out;
+  overflow: hidden;
+
+  width: 100%;
+
+  margin: 1rem 0;
+
+  @include rounded(0.4rem);
+  @include box-shadow($box-shadow-1);
+
+  .button {
+    background: lighten(lightgray, 15);
+    cursor: pointer;
+    box-shadow: none;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    margin: auto;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    transition: 0.2s ease;
+
+    @include hover {
+      background: $white;
+
+    }
+
+    i {
+      @include transition(0.2s);
+
+    }
+
+    button {
+      margin: 0;
+      position: relative;
+      top: 0;
+      cursor: pointer;
+
+      @include transition(0.2s);
+      //@include hover {
+      //  @include generate-color(color, $blue)
+      //}
+    }
+  }
+
+  p {
+    display: inline;
+    padding: 10px;
+  }
+
+  hr {
+    color: #f0f2fe !important;
+    border-color: #f0f2fe;
+  }
+}
+
+.justifyEnd {
+  justify-items: end;
+  position: relative;
+  text-align: left;
+
+  button {
+    //position: absolute;
+    width: auto;
+    padding: .3rem .6rem;
+    display: inline;
+    height: auto;
+  }
+}
+
+.textBlack {
+  color: #34345f
+}

@@ -1,0 +1,28 @@
+{%comment%}
+    inputs:
+        blogs: Array of blogs
+        title
+        link
+        limit
+{%endcomment%}
+<!-- start aticles section -->
+<div class="mt-[35px] mx-[15px]">
+    <div class="lg:mx-[15px]">
+        <div class="flex justify-between mb-[20px]">
+            <span class="text-[16px]">{{title}}</span>
+            <a href="{{link}}" class="text-[14px]">مشاهده همه</a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {%if limit%}
+                {%for blog in blogs%}
+                    {%render '/components/commons/blogs/sliderItem', blog=blog%}
+                {%endfor%}
+            {%else%}
+                {%for blog in blogs limit:limit%}
+                    {%render '/components/commons/blogs/sliderItem', blog=blog%}
+                {%endfor%}
+            {%endif%}
+        </div>
+    </div>
+</div>
+<!-- end articles section -->

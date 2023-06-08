@@ -1,0 +1,369 @@
+module.exports = `
+
+    type Query {
+        getProduct(id:ID!): Product
+        getProducts(page:Int, limit:Int, filter:ProductFilter,sort:[Sort]): ProductPaginate
+        getAllProducts(filter:ProductFilter,sort:[Sort]): [Product]
+        getAllRelatedProductBySelection(filter:ProductFilter,sort:[Sort],selection:RelatedProductSelectionInput): [Product]
+        getAllColorLabels: [VariantLabel]
+    }
+
+    type Mutation {
+        createProduct(input:ProductInput): Product
+        updateProduct(id:ID!, input:ProductInput): Product
+        deleteProduct(id:ID!): Response
+        updateMixVariant(input:[ProductUpdateMixVariantInput]): Response
+        updateMixVariantByCode(input:[ProductUpdateMixVariantBySlugInput]): Response
+    }
+
+    type Product {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        summary: JSON # multi language
+        summary_panel: String @multilang(field:"summary",type:"panel")
+        summary_web: String @multilang(field:"summary")
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+        strengths: [JSON] # multi language
+        strengths_panel: [String] @multilang(field:"strengths",type:"panel")
+        strengths_web: [String] @multilang(field:"strengths")
+        weaknesses: [JSON] # multi language
+        weaknesses_panel: [String] @multilang(field:"weaknesses",type:"panel")
+        weaknesses_web: [String] @multilang(field:"weaknesses")
+        main_features: [JSON] # multi language
+        main_features_panel: [String] @multilang(field:"main_features",type:"panel")
+        main_features_web: [String] @multilang(field:"main_features")
+        status: Int
+        publishAt: String
+        has_rating: Boolean
+        has_comment: Boolean
+        is_special:Boolean
+        only_description:Boolean
+        show_price:Boolean
+        type: Int
+        category_id: ID
+        brand_id: ID
+        seo_id: ID
+        tag_ids: [ID]
+        tag_group_id: ID
+        user_id: ID
+        visit_count: Int
+        rate_average: Float
+        user_rate: Float
+        createdAt: String
+        updatedAt: String
+
+        attribute_variant_id: ID
+        attribute_groups: [ProductAttributeGroup]
+        has_variant: Boolean
+        variant: [VariantValue]
+        mix_variant: [MixVariantValue]
+        order_mix_variant: [MixVariantValue]
+
+        details: ProductDetails
+        price: Price
+        price_history: [Price]
+        category: Category
+        brand: Brand
+        media: MediaStructure
+        media_gallery: [MediaGalleryStructure]
+        video: MediaStructure
+        files: [MediaGalleryStructure]
+        seo: SEO
+        tags: [Tag]
+        tag_group: Tag
+        collections: ProductCollection
+        services: ProductServices
+        tutorials: [Tutorial]
+        user: User
+        comments: [Comment]
+    }
+
+    type ProductDetails {
+        product_code: String
+        warehouse: String
+        use_count: Boolean
+        count: Int
+        count_status: Int
+        count_unit: Int
+        limit_min: Int
+        limit_max: Int
+        length: Int
+        width: Int
+        height: Int
+        weight: Int
+    }
+
+    type ProductAttribute {
+        attribute_id: ID
+        attribute_value_id: ID
+
+        attribute: Attribute
+        attribute_value: AttributeValue
+        value: JSON # multi language , for easy access
+        value_panel: String @multilang(field:"value",type:"panel")
+        value_web: String @multilang(field:"value")
+    }
+
+    type ProductAttributeGroup {
+        attribute_group_id: ID
+        attributes: [ProductAttribute]
+        
+        attribute_group: Attribute
+    }
+
+    type VariantValue {
+        name: JSON # multi language
+        name_panel: String @multilang(field:"name",type:"panel")
+        name_web: String @multilang(field:"name")
+        type: Int
+        labels: [VariantLabel]
+    }
+
+    type VariantLabel {
+        key: String
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        values: JSON
+    }
+
+    type MixVariantValue {
+        keys: [String]
+        is_main_price: Boolean
+        is_active: Boolean
+        sort: Int
+        details: ProductDetails
+        price_id: ID
+        has_media_gallery: Boolean
+        media: MediaStructure
+        media_gallery: [MediaGalleryStructure]
+
+        price: Price
+        price_history: [Price]
+    }
+
+    type ProductCollection {
+        related_products: RelatedProductCollection
+    }
+
+    type RelatedProductCollection {
+        collection_type: Int
+        collection_id: ID
+
+        collection: Collection
+        collection_title: JSON # multi language
+        collection_title_panel: String @multilang(field:"collection_title",type:"panel")
+        collection_title_web: String @multilang(field:"collection_title")
+        collection_list: [CollectionList]
+    }
+
+
+    type ProductServices {
+        api_config: ProductServicesApiConfig
+    }
+
+    type ProductServicesApiConfig {
+        type: Int
+        app_key: String
+        url: String
+        mutation: String
+    }
+
+    type Tutorial {
+        file_key: String
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        user_access_ids: [ID]
+        
+        product: Product
+
+        user_accesses: [User]
+    }
+
+    type ProductPaginate {
+        paginate: Paginate
+        data: [Product]
+    }
+
+    input RelatedProductSelectionInput {
+        category_ids: [ID]
+        brand_ids: [ID]
+        product_code: String
+        title: String
+    }
+
+    input ProductInput {
+        title: JSON # multi language
+        summary: JSON # multi language
+        description: JSON # multi language
+        strengths: [JSON] # multi language
+        weaknesses: [JSON] # multi language
+        main_features: [JSON] # multi language
+        status: Int
+        publishAt: String
+        has_rating: Boolean
+        has_comment: Boolean
+        is_special: Boolean
+        only_description: Boolean
+        show_price: Boolean
+        type: Int
+        use_count_limit: Boolean
+        contact_for_price: Boolean
+        category_id: ID
+        brand_id: ID
+        media_gallery: [MediaGalleryStructureInput]
+        video: MediaStructureInput
+        files: [MediaGalleryStructureInput]
+        tag_ids: [ID]
+        tag_group_id: ID
+        
+        seo: SEOInput
+        attribute_variant_id: ID
+        attribute_groups: [ProductAttributeGroupInput]
+        details: ProductDetailsInput
+        price: PriceInput
+        has_variant: Boolean
+        variant: [VariantInput]
+        mix_variant: [MixVariantInput]
+        collections: ProductCollectionInput
+        services: ProductServicesInput
+        tutorials: [TutorialInput]
+    }
+
+    input ProductDetailsInput {
+        product_code: String
+        warehouse: String
+        use_count: Boolean
+        count: Int
+        count_status: Int
+        count_unit: Int
+        limit_min: Int
+        limit_max: Int
+        length: Int
+        width: Int
+        height: Int
+        weight: Int
+    }
+
+    input ProductAttributeInput {
+        attribute_id: ID,
+        value: JSON,
+    }
+
+    input ProductAttributeGroupInput {
+        attribute_group_id: ID,
+        attributes: [ProductAttributeInput],
+    }
+
+    input VariantInput {
+        name: JSON # multi language
+        type: Int
+        labels: [VariantLabelInput]
+    }
+
+    input VariantLabelInput {
+        key: String
+        title: JSON # multi language
+        values: JSON
+    }
+
+    input MixVariantInput {
+        keys: [String]
+        is_main_price: Boolean
+        is_active: Boolean
+        sort: Int
+        details: ProductDetailsInput
+        price: PriceInput
+        has_media_gallery: Boolean
+        media_gallery: [MediaGalleryStructureInput]
+    }
+
+    input ProductCollectionInput {
+        related_products: [RelatedProductCollectionInput]
+    }
+
+    input RelatedProductCollectionInput {
+        collection_title: JSON # multi language
+        collection_type: Int
+        collection_id: ID
+        collection_list: [RelatedProductCollectionListInput]
+    }
+
+    input RelatedProductCollectionListInput {
+        product_id: ID
+        has_variant_key: Boolean
+        mix_variant_keys: [String]
+        sort: Int
+    }
+
+    input ProductServicesInput {
+        api_config: ProductServicesApiConfigInput
+    }
+
+    input ProductServicesApiConfigInput {
+        type: Int
+        app_key: String
+        url: String
+        mutation: String
+    }
+
+    input TutorialInput {
+        file_key: String
+        title: JSON # multi language
+        user_access_ids: [ID]
+    }
+
+    input ProductUpdateMixVariantInput {
+        product_id: ID
+        keys: [String]
+        is_active: Boolean
+        details: ProductDetailsInput
+        price: PriceInput
+    }
+    
+    input ProductUpdateMixVariantBySlugInput {
+        product_code: String
+        is_active: Boolean
+        details: ProductDetailsInput
+        price: PriceInput
+    }
+
+    input ProductFilter {
+        title: [filterMultiLang]
+        summary: [filterMultiLang]
+        description: [filterMultiLang]
+        strengths: [filterArray]
+        weaknesses: [filterArray]
+        main_features: [filterArray]
+        status: [filterInt]
+        publishAt: [filterDate]
+        has_rating: [filterBoolean]
+        is_special: [filterBoolean]
+        only_description: [filterBoolean]
+        show_price: [filterBoolean]
+        type: [filterInt]
+        # details: [filterJSON]
+        category_id: [filterID]
+        brand_id: [filterID]
+        # media: [filterJSON]
+        # media_gallery: [filterArray]
+        seo_id: [filterID]
+        tag_ids: [filterArray]
+        tag_group_id: [filterID]
+        attribute_variant_id: [filterID]
+        # attribute_groups: [filterArray]
+        # variant: [filterArray]
+        # mix_variant: [filterArray]
+        # related_products: [filterArray]
+        # tutorials: [filterJSON]
+        user_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

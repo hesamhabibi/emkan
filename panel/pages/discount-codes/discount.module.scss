@@ -1,0 +1,34 @@
+@import "styles/variables";
+
+.card {
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid darken($gray-light, 70);
+  padding: 10px 10px;
+  margin: 10px;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $white;
+  transition: 0.2s ease;
+
+  &:hover {
+    background: $gray-light;
+  }
+}
+
+
+.container {
+  text-align: right;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 10px;
+  border: 1px solid darken($gray-light, 70);
+
+}
+
+.button {
+  border-radius: 30px;
+  height: 30px;
+}

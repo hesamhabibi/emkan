@@ -1,0 +1,50 @@
+<!-- start main content -->
+<div class="dir-right text-center flex justify-center items-center h-screen md:bg-gray-c100">
+    <div class="mx-[65px] md:mx-[40px] md:border md:border-gray-c300 rounded-[30px] md:p-[30px] bg-white md:pb-[80px]">
+
+        <img style="width: 300px; margin: auto;margin-bottom: 15px;" src="{{loginSettings.web_logo_image.value.url | abs_url}}" alt="{{loginSettings.web_logo_image.value.alt}}">
+        <!-- <p class="text-blue-c200 font-black font-poppinsBold text-3xl mb-[15px]"></p> -->
+
+        <div class="font-shabnam-bold-digit text-[14px] mb-[50px]">
+            <a class="border-l-2 border-black pl-[10px] ">ورود</a>
+            <a href="{%route 'register'%}" class=" pr-[10px]">ثبت نام</a>
+        </div>
+
+        <div class="mb-[35px] lg:mt-0 text-right">
+            <div id="">
+                <label for="username" class="pt-[10px] font-shabnam-normal-digit text-[12px] mr-[10px] block">لطفا شماره موبایل یا ایمیل خود را وارد کنید</label>
+                <input class="lg:w-[340px] font-shabnam-normal-digit py-[12px] px-[15px] mt-[10px] rounded-[10px] border border-gray-c300 w-full focus:outline-none focus:ring-0 focus:border-blue-c100 hover:border-blue-c100 transition-all"
+                       type="text" id="username" onkeyup="this.value = digit_to_en(this.value)">
+                <!-- input when error -->
+                <!-- <input class="hidden lg:w-[340px] font-shabnam-normal py-[12px] px-[15px] mt-[10px] rounded-[10px] border border-red-c100 w-full focus:outline-none focus:ring-0 focus:border-red-c100 transition-all" type="text" id="username"> -->
+            </div>
+
+            <div id="UserKey" class="d-none">
+                <label for="code" class="pt-[10px] font-shabnam-normal-digit text-[12px] mr-[10px] block">کد ارسال شده را وارد کنید</label>
+                <input class="lg:w-[340px] font-shabnam-normal-digit py-[12px] px-[15px] mt-[10px] rounded-[10px] border border-gray-c300 w-full focus:outline-none focus:ring-0 focus:border-blue-c100 hover:border-blue-c100 transition-all" type="text" id="code">
+                <p class="hidden font-shabnam-normal-digit text-[12px] text-red-c100 mr-[10px]"> شماره موبایل یا ایمیل نادرست است.</p>
+            </div>
+
+            <div id="UserPassword">
+                <label for="password" class="pt-[10px] font-shabnam-normal-digit text-[12px] mr-[10px] block">رمز عبور را وارد کنید</label>
+                <input class="lg:w-[340px] font-shabnam-normal-digit py-[12px] px-[15px] mt-[10px] rounded-[10px] border border-gray-c300 w-full focus:outline-none focus:ring-0 focus:border-blue-c100 hover:border-blue-c100 transition-all" type="text" id="password">
+                <p class="hidden font-shabnam-normal-digit text-[12px] text-red-c100 mr-[10px]"> شماره موبایل یا ایمیل نادرست است.</p>
+            </div>
+
+            <div id="UserError" class="d-none">
+                <p class="font-shabnam-normal-digit text-[12px] text-red-c100 mr-[10px]"> شماره موبایل یا ایمیل نادرست است.</p>
+            </div>
+
+        </div>
+
+        <!-- <button id="NextBtn" onclick="loginNext();" class="lg:w-[340px] rounded-[10px] py-[12px] w-full bg-gradient-to-r from-blue-c100 to-blue-c200 hover:shadow-[0_0px_8px_1px_rgba(0,0,0,0.3)] transition-all duration-300 text-white font-shabnam-normal text-[17px] md:text-[14px]">ادامه</button> -->
+        <button id="LoginBtn" onclick="login();" class="lg:w-[340px] rounded-[10px] py-[12px] w-full bg-gradient-to-r from-blue-c100 to-blue-c200 hover:shadow-[0_0px_8px_1px_rgba(0,0,0,0.3)] transition-all duration-300 text-white font-shabnam-normal-digit text-[17px] md:text-[14px]">ورود</button>
+
+        <p class="font-shabnam-normal-digit text-[12px] mt-[15px]">
+            {{loginSettings.web_loginPage_rules_text.value_web}}
+        </p>
+
+    </div>
+</div>
+
+<!-- end main content -->

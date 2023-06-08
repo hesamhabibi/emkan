@@ -1,0 +1,48 @@
+module.exports = `
+
+    type Query {
+        getTag(id:ID!): Tag
+        getTags(page:Int, limit:Int, filter:TagFilter,sort:[Sort]): TagPaginate
+        getAllTags(filter:TagFilter,sort:[Sort]): [Tag]
+    }
+
+    type Mutation {
+        createTag(input:TagInput): Tag
+        updateTag(id:ID!, input:TagInput): Tag
+        deleteTag(id:ID!): Response
+    }
+
+    type Tag {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        deep: Int
+        tag_group_ids: [ID]
+        tag_ids: [ID]
+
+        tag_groups: [Tag] # for deep tag_group
+        tags: [Tag] # for deep tag
+        blogs: [Blog]
+        products: [Product]
+    }
+
+    type TagPaginate {
+        paginate: Paginate
+        data: [Tag]
+    }
+
+    input TagInput {
+        title: JSON # multi language
+        deep: Int
+        tag_group_ids: [ID]
+        tag_ids: [ID]
+    }
+
+    input TagFilter {
+        title: [filterMultiLang]
+        deep: [filterInt]
+        tag_group_ids: [filterArray]
+    }
+
+`;

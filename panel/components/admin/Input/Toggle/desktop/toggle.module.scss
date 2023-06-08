@@ -1,0 +1,55 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.formGroup {
+  position: relative;
+
+  .invalid {
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("/images/error.png");
+    background-repeat: no-repeat;
+    background-position: left calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+    border-color: $danger;
+    @include box-shadow-important($input-shadow-error);
+  }
+
+  .formControl {
+    width: 100%;
+    border: 1px solid darken($gray-light, 70);
+    padding: 0.4rem 0.6rem;
+    outline: none;
+    @include rounded(0.25rem);
+    @include transition(0.2s);
+    @include focus {
+      border-color: lighten($pink, 30%);
+      @include box-shadow($input-shadow-1);
+    }
+
+    &.formControlSm {
+      height: 28px;
+      padding: 0.2rem 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    &.formControlLg {
+      height: 48px;
+      padding: 0.7rem 1rem;
+    }
+  }
+
+  .formToggle {
+    padding: 0.2rem !important;
+    @include generate-color(background, $white);
+    @include flex-position(y, center);
+    height: 38.8px;
+
+    > button {
+      flex: 1 1;
+      height: 100%;
+      white-space: nowrap;
+      @include rounded(0.25rem);
+      @include transition(0.2s);
+    }
+  }
+}

@@ -1,0 +1,59 @@
+$light-theme: true;
+$white: #ffffff;
+$black: #000000;
+$purple: #7209B7;
+$pink: #F72585;
+$green: #00ff00;
+$green-light: #3ECF8E;
+$blue: #4361EE;
+$blue-dark: #32325D;
+$gray-light: #d1d6d92e;
+$warning: #ffc107;
+$warning-light: lighten($warning, 40%);
+$danger: #EC6060;
+$danger-light: lighten(#EC6060,25%);
+$success: $green-light;
+$success-light: lighten($success, 35%);
+$neutral: $blue;
+$primary: #5f6cec;
+$info: #6b7b93;
+$orange: #EC9860;
+$orange-light: lighten($orange, 20%);
+
+
+// ----------------------------------------------------
+// Template Colors
+$main-bg: lighten($blue, 37%);
+
+// ----------------------------------------------------
+
+
+//vazir font
+$main-FD-font: 'vazir';
+$font-direction: '../public/fonts';
+
+// FontAweSome
+$font-awesome-brands: 'Font Awesome 6 Brands';
+$font-awesome-light: 'Font Awesome 6 Light';
+$font-awesome-duotone: 'Font Awesome 6 Duotone';
+$font-awesome-regular: 'Font Awesome 6 Regular';
+$font-awesome-solid: 'Font Awesome 6 Solid';
+
+//box-shadow
+$box-shadow-1: 0 2px 12px -10px $blue-dark;
+$box-shadow-2: 0 5px 6px -5px $blue-dark;
+$box-shadow-4: 0px -1px 4px -1px $blue-dark inset;
+$box-shadow-5: 0px 1px 4px -1px $blue-dark inset;
+$box-shadow-success: 0 0 5px 0 $success;
+$box-shadow-neutral: 0 0 5px 0 $neutral;
+$box-shadow-warning: 0 0 5px 0 $warning;
+$box-shadow-danger: 0 0 5px 0 $danger;
+$box-shadow-primary: 0 0 5px 0 $primary;
+$box-shadow-info: 0 0 5px 0 $info;
+$box-shadow-orange: 0 0 5px 0 $orange;
+
+
+$input-shadow-1: 0 0 0 0.2rem lighten($blue, 25%);
+$input-shadow-2: 0 0 0 0.2rem lighten($pink, 30%);
+
+$input-shadow-error: 0 0 0 0.1rem lighten($danger, 10%);

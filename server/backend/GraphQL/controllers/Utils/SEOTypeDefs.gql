@@ -1,0 +1,35 @@
+module.exports = `
+
+    type SEO {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+        keywords: JSON # multi language
+        keywords_panel: String @multilang(field:"keyword",type:"panel")
+        keywords_web: String @multilang(field:"keyword")
+        url: String
+        url_status: Int
+        canonical_url: String
+        redirect_url_301: String
+        redirect_url_404: String
+        robots_status: Int
+        createdAt: String
+        updatedAt: String
+    }
+
+    input SEOInput {
+        title: JSON # multi language
+        description: JSON # multi language
+        keywords: JSON # multi language
+        url: String
+        canonical_url: String
+        redirect_url_301: String
+        redirect_url_404: String
+        robots_status: Int
+    }
+
+`

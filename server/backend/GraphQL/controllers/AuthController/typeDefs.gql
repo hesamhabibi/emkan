@@ -1,0 +1,55 @@
+module.exports = `
+
+    type Query {
+        getSelf: User
+    }
+
+    type Mutation {
+        panelLogin(username:String, password:String,recaptcha_v3_token: String): TokenResponse
+        panelLogout: Response
+        panelRegister(input: UserPanelRegisterInput!): TokenResponse
+        
+        resetPasswordEmail(email:String!,recaptcha_v3_token: String): Response
+        resetPassword(input: UserResetPasswordInput): Response
+
+        SMSLoginSendToken (mobile:String!,recaptcha_v3_token: String): Response
+        SMSLoginVerifyToken (mobile:String!, token:String!,recaptcha_v3_token: String): TokenResponse
+        SMSRegisterSendToken (input: UserWebRegisterInput!): Response
+    }
+
+    input UserPanelRegisterInput {
+        recaptcha_v3_token: String
+        name: String
+        username: String
+        last_name: String
+        email: String
+        mobile: String
+        password: String
+        password_confirmation: String
+    }
+
+    input UserWebRegisterInput {
+        recaptcha_v3_token: String
+        name: String
+        username: String
+        last_name: String
+        email: String
+        mobile: String
+    }
+
+    input UserResetPasswordInput {
+        recaptcha_v3_token: String
+        email: String
+        token: String
+        password: String
+        password_confirmation: String
+    }
+
+    type TokenResponse {
+        token: String
+        user: User
+        menu_items: [AccessMenuItem]
+        settings: JSON
+    }
+
+`;

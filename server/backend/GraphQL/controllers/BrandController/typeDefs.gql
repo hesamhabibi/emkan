@@ -1,0 +1,61 @@
+module.exports = `
+
+    type Query {
+        getBrand(id:ID!): Brand
+        getBrands(page:Int, limit:Int, filter:BrandFilter,sort:[Sort]): BrandPaginate
+        getAllBrands(filter:BrandFilter,sort:[Sort]): [Brand]
+    }
+
+    type Mutation {
+        createBrand(input:BrandInput): Brand
+        updateBrand(id:ID!, input:BrandInput): Brand
+        deleteBrand(id:ID!): Response
+    }
+
+    type Brand {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        active: Boolean
+        show_in_menu: Boolean
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+        media: MediaStructure
+        seo_id: ID
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        products: [Product]
+        seo: SEO
+        user: User
+    }
+
+    type BrandPaginate {
+        paginate: Paginate
+        data: [Brand]
+    }
+
+    input BrandInput {
+        title: JSON # multi language
+        active: Boolean
+        show_in_menu: Boolean
+        description: JSON # multi language
+        media: MediaStructureInput
+        seo: SEOInput
+    }
+
+    input BrandFilter {
+        title: [filterMultiLang]
+        active: [filterBoolean]
+        show_in_menu: [filterBoolean]
+        description: [filterMultiLang]
+        # media: [filterID]
+        seo_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

@@ -1,0 +1,8 @@
+@import "styles/variables";
+
+.progress {
+  transition: width 1s ease;
+  height: 1.5px;
+  background-color: $primary;
+  box-shadow: $box-shadow-1;
+}

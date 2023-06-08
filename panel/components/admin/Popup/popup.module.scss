@@ -1,0 +1,117 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.popup {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @include generate-color(background, #f0f1f280);
+
+  .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 20rem;
+    max-width: 100%;
+    border: 0;
+
+    @include box-shadow(rgba(17, 12, 46, 0.15) 0 48px 100px 0);
+    @include generate-color(background, $white);
+    @include rounded(0.5rem);
+
+    .title-danger, .title-error {
+      text-align: right;
+      font-weight: bold;
+      padding: 1rem;
+
+
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+
+      @include generate-color(background, #FDDFE6FF);
+      @include generate-color(color, #DF0044FF);
+    }
+
+    .title-primary {
+      text-align: right;
+      font-weight: bold;
+      padding: 1rem;
+
+
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+
+      @include generate-color(background, $primary);
+      @include generate-color(color, $white);
+    }
+
+    .title-success {
+      text-align: right;
+      font-weight: bold;
+      padding: 1rem;
+
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+
+      @include generate-color(background, $success-light);
+      @include generate-color(color, $black);
+    }
+
+    .title-warning {
+      text-align: right;
+      font-weight: bold;
+      padding: 1rem;
+
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+
+      @include generate-color(background, $warning-light);
+      @include generate-color(color, $black);
+    }
+
+    .title-info {
+      text-align: right;
+      font-weight: bold;
+      padding: 1rem;
+
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+
+      @include generate-color(background, $info);
+      @include generate-color(color, $white);
+    }
+
+    .body {
+      padding: 1rem;
+    }
+    .footer {
+      text-align: left;
+      padding: .3rem;
+      button {
+        transition: all .3s;
+
+        @include rounded(.3rem);
+        padding: .3rem 1rem;
+        margin: 0.3rem;
+        font-weight: bold;
+
+        @include hover {
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px !important;
+        }
+      }
+    }
+  }
+}

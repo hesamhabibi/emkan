@@ -1,0 +1,80 @@
+{%let sort={field:'createdAt',operator:'desc'}-%}
+{%if query.sort == 'newest'%}{%let sort={field:'createdAt',operator:'desc'}%}{%endif-%}
+{%if query.sort == 'oldest'%}{%let sort={field:'createdAt',operator:'asc'}%}{%endif-%}
+{%if query.sort == 'cheapest'%}{%let sort={field:'price',operator:'asc'}%}{%endif-%}
+{%if query.sort == 'expensive'%}{%let sort={field:'price',operator:'desc'}%}{%endif-%}
+
+{%if query.category%}
+{%getCategoryBySlug singleCategory = {
+slug: query.category,
+fields: ['id','title_web','title','description_web',{seo:SingleSEOFields}],
+}%}
+{%global singleCategory=singleCategory%}
+{%endif%}
+{%if query.brand%}
+{%getBrandBySlug singleBrand = {
+slug: query.brand,
+fields: ['id','title_web','title','description_web',{seo:SingleSEOFields}],
+}%}
+{%global singleBrand=singleBrand%}
+{%endif%}
+
+{%let filter = {
+type: ProductTypes.product,
+is_main: true,
+search_text: query.search | or: null,
+category_ids: [singleCategory.id|or:null],
+brand_ids: [singleBrand.id|or:null],
+tag_ids: [query.tag|or:null],
+}-%}
+
+{%getProducts products={
+fields:{data:["title_web","is_special","average_rate",{seo:"url"},{media:["alt","url"]},{mix_variant:["keys",{price:["has_offer","discount_percent","price","main_price"]}]}],paginate:["pages","total"]},
+filter:filter,
+sort:sort,
+limit:16,
+page:query.page | int |or:1
+}-%}
+{%global paginate_pages=products.paginate.pages%}
+{%global paginate_total=products.paginate.total%}
+{%global products=products.data%}
+
+{%getCategories productCategories={
+fields:{data:["id","title_web",{seo:'url'}]},
+filter:{type:CategoryTypes.product,show_in_menu:true},
+limit:12
+}-%}
+{%global productCategories=productCategories.data%}
+
+{%getBrands productBrands={
+fields:{data:["id","title_web",{seo:'url'}]},
+filter:{},
+limit:12
+}-%}
+{%global productBrands=productBrands.data%}
+
+{%let pageSeo = singleCategory.seo%}
+{%if pageSeo | not%}
+    {%let pageSeo = singleBrand.seo%}
+{%endif%}
+{%if pageSeo | not%}
+    {%getBlogBySlug ProductsPage={slug:"#ProductsPage",type:BlogTypes.page,fields:{seo:SingleSEOFields}}%}
+    {%let pageSeo=ProductsPage.seo%}
+{%endif%}
+
+{% layout "/components/layout/layout",
+title: 'products',
+seo: pageSeo,
+%}
+
+{%block stylesheets%}
+{%endblock%}
+
+{%block main%}
+
+    {%render '/components/main/products', products=products.data%}
+
+{%endblock%}
+
+{%block scripts%}
+{%endblock%}

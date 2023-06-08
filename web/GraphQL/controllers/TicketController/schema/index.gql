@@ -1,0 +1,72 @@
+module.exports = `
+
+    type Query {
+        getUserTicket(id:ID): Ticket
+        getUserTickets(page:Int, limit:Int, filter:TicketFilter, sort: TicketSort): TicketData
+        getAllUserTickets(filter:TicketFilter, sort: TicketSort): [Ticket]
+        getTicketDepartments: [TicketDepartment]
+    }
+
+    # type Mutation {
+    #     createTicket(input:TicketInput): Ticket
+    # }
+
+    type TicketData {
+        data: [Ticket]
+        paginate: Paginate
+    }
+
+    type Ticket {
+        id: ID
+        title: String
+        text: String
+        status: Int
+        department: Int
+        number: String
+        name: String
+        last_name: String
+        email: String
+        mobile: String
+        media: MediaStructure
+        reply_to_id: ID
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        user: Author
+        reply_to: Ticket
+        replies: [Ticket]
+    }
+
+    type TicketDepartment {
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        number: Int
+
+        tickets: [Ticket]
+    }
+
+    # input TicketInput {
+    #     title: String
+    #     text: String
+    #     media: MediaStructureInput
+    # }
+
+    input TicketFilter {
+        search_text: String
+        department: Int
+        reply_to_id: ID
+    }
+
+    enum TicketSortFields {
+        createdAt
+        updatedAt
+    }
+
+    input TicketSort {
+        field: TicketSortFields
+        operator: sortEnum
+    }
+
+`;

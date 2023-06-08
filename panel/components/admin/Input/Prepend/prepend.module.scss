@@ -1,0 +1,64 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+
+.container {
+  border: 1px solid darken($gray-light, 70);
+
+  @include generate-color(background, $white);
+  @include transition(0.2s);
+  @include rounded(0.25rem);
+
+  &.active {
+    border-color: lighten($blue, 30%);
+    @include box-shadow($input-shadow-1);
+  }
+
+
+  .text {
+    height: 100%;
+    >div {
+      height: 100%;
+    }
+    input {
+      height: 100%;
+      border: none !important;
+      outline: none;
+
+      @include rounded(0);
+      @include focus {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  .select {
+    @include generate-color(color, $white);
+    margin-left: 0.5rem;
+
+    > i {
+      left: 1rem !important;
+    }
+
+    > input {
+      border: none !important;
+      outline: none !important;
+      padding: 5px 15px !important;
+      margin: 5px 0;
+
+      @include generate-color(background, $primary);
+      @include roundedI(20rem);
+
+      @include hover {
+        @include generate-color(background, lighten($primary, 10));
+      }
+
+      @include focus {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+    }
+
+  }
+}

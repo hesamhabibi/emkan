@@ -1,0 +1,1504 @@
+<!-- start main content -->
+<div class="font-shabnam-bold bg-gray-c100 overflow-x-hidden">
+    <div class="container mx-auto mb-[40px]">
+        {% if singleCategory %}
+            {% letRoute relatedProductsRoute = {routeName: 'products', category = singleCategory.seo.url} %}
+            {% render '/components/commons/breadCrumb', links=[{title: 'همه محصولات', url: 'products' | route}, {title: singleCategory.title_web | or: 'محصولات مرتبط', url: relatedProductsRoute }] %}
+        {% else %}
+            {% render '/components/commons/breadCrumb', links=[{title: 'همه محصولات', url: 'products' | route}] %}
+        {% endif %}
+
+        <!-- start sort section -->
+        <div class="md:flex dir-right gap-4 sm:block ">
+            <div class="md:w-[35%] lg:w-[30%] hidden md:block text-[14px]">
+
+                <div x-data="{ open: {% if query.search %} true {% else %} false {% endif %} }" class="flex mb-[10px]">
+                    <div :class="{ 'flex': open, 'hidden': !open }"
+                         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                        <div @click.away="open = false" class="relative w-full">
+                            <button @click="open = !open"
+                                    class="flex items-center justify-between w-full bg-white px-4 py-2 pr-8 rounded-[10px] focus:outline-none hover:shadow-[0_4px_3px_-2px_rgba(0,0,0,0.3)] transition-shadow duration-300">
+                                <span>جستوجو</span>
+                                <svg fill="currentColor" viewBox="0 0 20 20"
+                                     :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                     class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                    <path fill-rule="evenodd"
+                                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                          clip-rule="evenodd">
+                                    </path>
+                                </svg>
+                            </button>
+                            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                 x-transition:enter-start="transform opacity-0 scale-95"
+                                 x-transition:enter-end="transform opacity-100 scale-100"
+                                 x-transition:leave="transition ease-in duration-75"
+                                 x-transition:leave-start="transform opacity-100 scale-100"
+                                 x-transition:leave-end="transform opacity-0 scale-95" class="mt-[-10px]">
+                                <div class="pl-4 pr-8 pt-[25px] pb-4 bg-white rounded-b-[10px]">
+                                    <div class="block">
+                                        <!-- srart search input -->
+                                        <div class="border-gray-border">
+                                            <form>
+                                                <div class="relative">
+                                                    <button class="flex absolute inset-y-0 right-4 items-center">
+                                                        <svg class="inline" width="22" height="22"
+                                                             viewBox="0 0 22 22" fill="none" --}}
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M15.7825 15.7827L20.9999 21.0001" stroke="#636363"
+                                                                  stroke-width="1.5" stroke-linecap="round"
+                                                                  stroke-linejoin="round"/>
+                                                            <path
+                                                                    d="M9.26087 17.5217C13.8232 17.5217 17.5217 13.8232 17.5217 9.26087C17.5217 4.69852 13.8232 1 9.26087 1C4.69852 1 1 4.69852 1 9.26087C1 13.8232 4.69852 17.5217 9.26087 17.5217Z"
+                                                                    stroke="#636363" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="search" id="search" name="search"
+                                                           value="{{ query.search }}"
+                                                           class="block py-[15px] pl-[8px] pr-[46px] md:pr-[44px] w-full text-gray-c400 rounded-xl border border-gray-border text-xs focus:outline-0 placeholder:text-size-11px placeholder:text-gray-c500 placeholder:font-shabnam-normal placeholder:font-normal"
+                                                           placeholder="جستوجو...">
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                        <!-- end search input -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div x-data="{ open: {% if query.category %} true {% else %} false {% endif %} }"
+                     class="flex mb-[10px]">
+                    <div :class="{ 'flex': open, 'hidden': !open }"
+                         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                        <div @click.away="open = false" class="relative w-full">
+                            <button @click="open = !open"
+                                    class="flex items-center justify-between w-full bg-white px-4 py-2 pr-8 rounded-[10px] focus:outline-none hover:shadow-[0_4px_3px_-2px_rgba(0,0,0,0.3)] transition-shadow duration-300">
+                                <span>
+                                    دسته بندی ها
+                                </span>
+                                <svg fill="currentColor" viewBox="0 0 20 20"
+                                     :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                     class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                    <path fill-rule="evenodd"
+                                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                 x-transition:enter-start="transform opacity-0 scale-95"
+                                 x-transition:enter-end="transform opacity-100 scale-100"
+                                 x-transition:leave="transition ease-in duration-75"
+                                 x-transition:leave-start="transform opacity-100 scale-100"
+                                 x-transition:leave-end="transform opacity-0 scale-95" class="mt-[-10px]">
+                                <div class="pl-4 pr-8 pt-[25px] pb-4 bg-white rounded-b-[10px]">
+                                    <div class="block">
+                                        <!-- srart search input -->
+                                        <!-- <div class="border-gray-border">
+                                            <form>
+                                                <div class="relative">
+                                                    <div
+                                                        class="flex absolute inset-y-0 right-4 items-center pointer-events-none">
+                                                        <svg class="inline" width="22" height="22"
+                                                            viewBox="0 0 22 22" fill="none" --}}
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M15.7825 15.7827L20.9999 21.0001" stroke="#636363"
+                                                                stroke-width="1.5" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path
+                                                                d="M9.26087 17.5217C13.8232 17.5217 17.5217 13.8232 17.5217 9.26087C17.5217 4.69852 13.8232 1 9.26087 1C4.69852 1 1 4.69852 1 9.26087C1 13.8232 4.69852 17.5217 9.26087 17.5217Z"
+                                                                stroke="#636363" stroke-width="1.5"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </div>
+                                                    <input type="search" id="search"
+                                                        class="block py-[15px] pl-[8px] pr-[46px] md:pr-[44px] w-full text-gray-c400 rounded-xl border border-gray-border text-xs focus:outline-0 placeholder:text-size-11px placeholder:text-gray-c500 placeholder:font-shabnam-normal placeholder:font-normal"
+                                                        placeholder="جست و جوی برند..." required="">
+                                                </div>
+                                            </form>
+
+                                        </div> -->
+                                        <!-- end search input -->
+                                        {% if singleCategory %}
+                                            <div>
+                                                <p class="font-shabnam-bold text-[10px] text-gray-c500 mt-[15px]">
+                                                    دسته بندی انتخاب شده
+                                                </p>
+
+                                                <div class="border-b border-gray-c200 py-[13px]"
+                                                     onclick="addToQuery('category',null,true)">
+                                                    <label for="choosenCategory1"
+                                                           class="cursor-pointer inline mr-[8px] font-shabnam-bold inline-flex justify-between lg:w-[88%] w-[85%]">
+                                                        <span class=" text-[14px]">{{ singleCategory.title_web }}</span>
+                                                        <!-- <span class="float-left  text-[12px] text-gray-c500">{{ singleCategory.title.en | or: singleCategory.title_web }}</span> -->
+                                                    </label>
+                                                    <input name="1{{ 'now' | date: '%H%M%S' }}" id="choosenCategory1"
+                                                           checked onclick="addToQuery('category',null,true)"
+                                                           class="float-right relative mt-[2px] form-check-input h-[18px] w-[18px] border border-gray-300 rounded-[3px] bg-white
+                                                        appearance-none checked:bg-red-c100 peer-checked:bg-bule-c100 checked:border-red-c100 checked:before:absolute checked:before:content-['x']
+                                                checked:before:text-white checked:before:left-[4px] checked:before:top-[-2px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                           type="checkbox" value="">
+                                                </div>
+
+                                            </div>
+                                        {% endif %}
+                                        <div>
+                                            <p class="font-shabnam-bold text-gray-c500 text-[10px] mt-[15px]">
+                                                دسته بندی ها
+                                            </p>
+
+                                            {% for category in productCategories %}
+                                                {% unless category.id == singleCategory.id %}
+                                                    <div class="{% if forloop.last | not %} border-b border-gray-c200 {% endif %} py-[13px]"
+                                                         onclick="addToQuery('category','{{ category.seo.url }}',true)">
+                                                        <label for="Categories_{{ category.id }}"
+                                                               class="cursor-pointer inline mr-[8px] font-shabnam-bold inline-flex justify-between  lg:w-[88%] w-[85%]">
+                                                            <span class=" text-[14px]">{{ category.title_web }}</span>
+                                                            <!-- <span class="float-left  text-[12px] text-gray-c500">{{ category.title.en | or: category.title_web }}</span> -->
+                                                        </label>
+                                                        <input name="{{ category.id }}{{ 'now' | date: '%H%M%S' }}"
+                                                               id="Categories_{{ category.id }}"
+                                                               onclick="addToQuery('category','{{ category.seo.url }}',true)"
+                                                               class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white
+                                                            checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                    checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                               type="checkbox" value="">
+                                                    </div>
+                                                {% endunless %}
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div x-data="{ open: {% if query.brand %} true {% else %} false {% endif %} }" class="flex mb-[10px]">
+                    <div :class="{ 'flex': open, 'hidden': !open }"
+                         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                        <div @click.away="open = false" class="relative w-full">
+                            <button @click="open = !open"
+                                    class="flex items-center justify-between w-full bg-white px-4 py-2 pr-8 rounded-[10px] focus:outline-none hover:shadow-[0_4px_3px_-2px_rgba(0,0,0,0.3)] transition-shadow duration-300">
+                                <span>
+                                    برند ها
+                                </span>
+                                <svg fill="currentColor" viewBox="0 0 20 20"
+                                     :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                     class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                    <path fill-rule="evenodd"
+                                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                 x-transition:enter-start="transform opacity-0 scale-95"
+                                 x-transition:enter-end="transform opacity-100 scale-100"
+                                 x-transition:leave="transition ease-in duration-75"
+                                 x-transition:leave-start="transform opacity-100 scale-100"
+                                 x-transition:leave-end="transform opacity-0 scale-95" class="mt-[-10px]">
+                                <div class="pl-4 pr-8 pt-[25px] pb-4 bg-white rounded-b-[10px]">
+                                    <div class="block">
+                                        <!-- srart search input -->
+                                        <!-- <div class="border-gray-border">
+                                            <form>
+                                                <div class="relative">
+                                                    <div
+                                                        class="flex absolute inset-y-0 right-4 items-center pointer-events-none">
+                                                        <svg class="inline" width="22" height="22"
+                                                            viewBox="0 0 22 22" fill="none" --}}
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M15.7825 15.7827L20.9999 21.0001" stroke="#636363"
+                                                                stroke-width="1.5" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path
+                                                                d="M9.26087 17.5217C13.8232 17.5217 17.5217 13.8232 17.5217 9.26087C17.5217 4.69852 13.8232 1 9.26087 1C4.69852 1 1 4.69852 1 9.26087C1 13.8232 4.69852 17.5217 9.26087 17.5217Z"
+                                                                stroke="#636363" stroke-width="1.5"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </div>
+                                                    <input type="search" id="search"
+                                                        class="block py-[15px] pl-[8px] pr-[46px] md:pr-[44px] w-full text-gray-c400 rounded-xl border border-gray-border text-xs focus:outline-0 placeholder:text-size-11px placeholder:text-gray-c500 placeholder:font-shabnam-normal placeholder:font-normal"
+                                                        placeholder="جست و جوی برند..." required="">
+                                                </div>
+                                            </form>
+
+                                        </div> -->
+                                        <!-- end search input -->
+                                        {% if singleBrand %}
+                                            <div>
+                                                <p class="font-shabnam-bold text-[10px] text-gray-c500 mt-[15px]">
+                                                    برند انتخاب شده
+                                                </p>
+
+                                                <div class="border-b border-gray-c200 py-[13px]"
+                                                     onclick="addToQuery('brand',null,true)">
+                                                    <label for="choosenBrand1"
+                                                           class="cursor-pointer inline mr-[8px] font-shabnam-bold inline-flex justify-between lg:w-[88%] w-[85%]">
+                                                        <span class=" text-[14px]">{{ singleBrand.title_web }}</span>
+                                                        <!-- <span class="float-left  text-[12px] text-gray-c500">{{ singleBrand.title.en | or: singleBrand.title_web }}</span> -->
+                                                    </label>
+                                                    <input name="1{{ 'now' | date: '%H%M%S' }}" id="choosenBrand1"
+                                                           checked onclick="addToQuery('brand',null,true)"
+                                                           class="float-right relative mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-gray-300 rounded-[3px] bg-white checked:bg-red-c100 peer-checked:bg-bule-c100 checked:border-red-c100 checked:before:absolute checked:before:content-['x']
+                                                checked:before:text-white checked:before:left-[4px] checked:before:top-[-2px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                           type="checkbox" value="">
+                                                </div>
+
+                                            </div>
+                                        {% endif %}
+                                        <div>
+                                            <p class="font-shabnam-bold text-gray-c500 text-[10px] mt-[15px]">
+                                                برند ها
+                                            </p>
+
+                                            {% for brand in productBrands %}
+                                                {% unless brand.id == singleBrand.id %}
+                                                    <div class="{% if forloop.last | not %} border-b border-gray-c200 {% endif %} py-[13px]"
+                                                         onclick="addToQuery('brand','{{ brand.seo.url }}',true)">
+                                                        <label for="Brands_{{ brand.id }}"
+                                                               class="cursor-pointer inline mr-[8px] font-shabnam-bold inline-flex justify-between  lg:w-[88%] w-[85%]">
+                                                            <span class=" text-[14px]">{{ brand.title_web }}</span>
+                                                            <!-- <span class="float-left  text-[12px] text-gray-c500">{{ brand.title.en | or: brand.title_web }}</span> -->
+                                                        </label>
+                                                        <input name="{{ brand.id }}{{ 'now' | date: '%H%M%S' }}"
+                                                               id="Brands_{{ brand.id }}"
+                                                               onclick="addToQuery('brand','{{ brand.seo.url }}',true)"
+                                                               class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                    checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                               type="checkbox" value="">
+                                                    </div>
+                                                {% endunless %}
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {%comment%}
+                    <div x-data="{ open: true }" class="flex mb-[10px]">
+                        <div :class="{ 'flex': open, 'hidden': !open }"
+                            class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                            <div @click.away="open = false" class="relative w-full" x-data="{ open: false }">
+                                <button @click="open = !open"
+                                    class="flex items-center justify-between w-full bg-white px-4 py-2 pr-8 rounded-[10px] focus:outline-none hover:shadow-[0_4px_3px_-2px_rgba(0,0,0,0.3)] transition-shadow duration-300">
+                                    <span>رنگ</span>
+                                    <svg fill="currentColor" viewBox="0 0 20 20"
+                                        :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                    x-transition:leave-end="transform opacity-0 scale-95" class="mt-[-10px]">
+                                    <div class="pl-4 pr-8 pt-[25px] pb-4 bg-white rounded-b-[10px]">
+                                        <div class="block">
+                                            <!-- srart search input -->
+                                            <div class="border-gray-border">
+                                                <form>
+                                                    <div class="relative">
+                                                        <div
+                                                            class="flex absolute inset-y-0 right-4 items-center pointer-events-none">
+                                                            <svg class="inline" width="22" height="22"
+                                                                viewBox="0 0 22 22" fill="none" --}}
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M15.7825 15.7827L20.9999 21.0001"
+                                                                    stroke="#636363" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M9.26087 17.5217C13.8232 17.5217 17.5217 13.8232 17.5217 9.26087C17.5217 4.69852 13.8232 1 9.26087 1C4.69852 1 1 4.69852 1 9.26087C1 13.8232 4.69852 17.5217 9.26087 17.5217Z"
+                                                                    stroke="#636363" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input type="search" id="search"
+                                                            class="block py-[15px] pl-[8px] pr-[46px] md:pr-[44px] w-full text-gray-c400 rounded-xl border border-gray-border text-xs focus:outline-0 placeholder:text-size-11px placeholder:text-gray-c500 placeholder:font-shabnam-normal placeholder:font-normal"
+                                                            placeholder="جست و جوی رنگ..." required="">
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                            <!-- end search input -->
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="productColor1"
+                                                    class="inline mr-[8px] font-shabnam-bold inline-flex justify-between  lg:w-[90%] w-[85%]">
+                                                    <span class=" text-[14px]">آبی</span>
+                                                    <span
+                                                        class="float-left bg-blue-c100 w-[18px] h-[18px] rounded-full"></span>
+                                                </label>
+                                                <input id="productColor1"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="productColor2"
+                                                    class="inline mr-[8px] font-shabnam-bold inline-flex justify-between lg:w-[90%] w-[85%]">
+                                                    <span class=" text-[14px]">نقره ای</span>
+                                                    <span
+                                                        class="float-left bg-gray-c200 w-[18px] h-[18px] rounded-full"></span>
+                                                </label>
+                                                <input id="productColor2"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="productColor3"
+                                                    class="inline mr-[8px] font-shabnam-bold inline-flex justify-between  lg:w-[90%] w-[85%]">
+                                                    <span class=" text-[14px]">طلایی</span>
+                                                    <span
+                                                        class="float-left bg-yellow-400 w-[18px] h-[18px] rounded-full"></span>
+                                                </label>
+                                                <input id="productColor3"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="productColor4"
+                                                    class="inline mr-[8px] font-shabnam-bold inline-flex justify-between  lg:w-[90%] w-[85%]">
+                                                    <span class=" text-[14px]">سبز تیره</span>
+                                                    <span
+                                                        class="float-left bg-green-c200 w-[18px] h-[18px] rounded-full"></span>
+                                                </label>
+                                                <input id="productColor4"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class=" py-[13px]">
+                                                <label for="productColor5"
+                                                    class="inline mr-[8px] font-shabnam-bold inline-flex justify-between lg:w-[90%] w-[85%]">
+                                                    <span class=" text-[14px]">مشکی</span>
+                                                    <span
+                                                        class="float-left bg-black w-[18px] h-[18px] rounded-full"></span>
+                                                </label>
+                                                <input id="productColor5"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-data="{ open: true }" class="flex mb-[10px]">
+                        <div :class="{ 'flex': open, 'hidden': !open }"
+                            class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                            <div @click.away="open = false" class="relative w-full" x-data="{ open: false }">
+                                <button @click="open = !open"
+                                    class="flex items-center justify-between w-full bg-white px-4 py-2 pr-8 rounded-[10px] focus:outline-none hover:shadow-[0_4px_3px_-2px_rgba(0,0,0,0.3)] transition-shadow duration-300">
+                                    <span>نوع</span>
+                                    <svg fill="currentColor" viewBox="0 0 20 20"
+                                        :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                    x-transition:leave-end="transform opacity-0 scale-95" class="mt-[-10px]">
+                                    <div class="pl-4 pr-8 pt-[25px] pb-4 bg-white rounded-b-[10px]">
+                                        <div class="block">
+                                            <!-- srart search input -->
+                                            <div class="border-gray-border">
+                                                <form>
+                                                    <div class="relative">
+                                                        <div
+                                                            class="flex absolute inset-y-0 right-4 items-center pointer-events-none">
+                                                            <svg class="inline" width="22" height="22"
+                                                                viewBox="0 0 22 22" fill="none" --}}
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M15.7825 15.7827L20.9999 21.0001"
+                                                                    stroke="#636363" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M9.26087 17.5217C13.8232 17.5217 17.5217 13.8232 17.5217 9.26087C17.5217 4.69852 13.8232 1 9.26087 1C4.69852 1 1 4.69852 1 9.26087C1 13.8232 4.69852 17.5217 9.26087 17.5217Z"
+                                                                    stroke="#636363" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input type="search" id="search"
+                                                            class="block py-[15px] pl-[8px] pr-[46px] md:pr-[44px] w-full text-gray-c400 rounded-xl border border-gray-border text-xs focus:outline-0 placeholder:text-size-11px placeholder:text-gray-c500 placeholder:font-shabnam-normal placeholder:font-normal"
+                                                            placeholder="جست و جوی نوع..." required="">
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                            <!-- end search input -->
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="productُType1" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">حمام</span>
+                                                </label>
+                                                <input id="productُType1"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="productُType2" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">آشپزخانه</span>
+                                                </label>
+                                                <input id="productُType2"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="productُType3" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">سرویس بهداشتی</span>
+                                                </label>
+                                                <input id="productُType3"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="productُType4" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">روشویی</span>
+                                                </label>
+                                                <input id="productُType4"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class=" py-[13px]">
+                                                <label for="productُType5" class="inline mr-[8px] font-shabnam-bold ">
+                                                    <span class=" text-[14px]">شلنگ توالت</span>
+                                                </label>
+                                                <input id="productُType5"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-data="{ open: true }" class="flex mb-[10px]">
+                        <div :class="{ 'flex': open, 'hidden': !open }"
+                            class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                            <div @click.away="open = false" class="relative w-full" x-data="{ open: false }">
+                                <button @click="open = !open"
+                                    class="flex items-center justify-between w-full bg-white px-4 py-2 pr-8 rounded-[10px] focus:outline-none hover:shadow-[0_4px_3px_-2px_rgba(0,0,0,0.3)] transition-shadow duration-300">
+                                    <span>نوع دسته</span>
+                                    <svg fill="currentColor" viewBox="0 0 20 20"
+                                        :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                    x-transition:leave-end="transform opacity-0 scale-95" class="mt-[-10px]">
+                                    <div class="pl-4 pr-8 pt-[25px] pb-4 bg-white rounded-b-[10px]">
+                                        <div class="block">
+                                            <!-- srart search input -->
+                                            <div class="border-gray-border">
+                                                <form>
+                                                    <div class="relative">
+                                                        <div
+                                                            class="flex absolute inset-y-0 right-4 items-center pointer-events-none">
+                                                            <svg class="inline" width="22" height="22"
+                                                                viewBox="0 0 22 22" fill="none" --}}
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M15.7825 15.7827L20.9999 21.0001"
+                                                                    stroke="#636363" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M9.26087 17.5217C13.8232 17.5217 17.5217 13.8232 17.5217 9.26087C17.5217 4.69852 13.8232 1 9.26087 1C4.69852 1 1 4.69852 1 9.26087C1 13.8232 4.69852 17.5217 9.26087 17.5217Z"
+                                                                    stroke="#636363" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input type="search" id="search"
+                                                            class="block py-[15px] pl-[8px] pr-[46px] md:pr-[44px] w-full text-gray-c400 rounded-xl border border-gray-border text-xs focus:outline-0 placeholder:text-size-11px placeholder:text-gray-c500 placeholder:font-shabnam-normal placeholder:font-normal"
+                                                            placeholder="جست و جوی نوع دسته..." required="">
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                            <!-- end search input -->
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="handlerُType1" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">زاماک</span>
+                                                </label>
+                                                <input id="handlerُType1"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="handlerُType2" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">آلیاژ برنج</span>
+                                                </label>
+                                                <input id="handlerُType2"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="handlerُType3" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">پلاستیک</span>
+                                                </label>
+                                                <input id="handlerُType3"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="handlerُType4" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">فلز</span>
+                                                </label>
+                                                <input id="handlerُType4"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class=" py-[13px]">
+                                                <label for="handlerُType5" class="inline mr-[8px] font-shabnam-bold ">
+                                                    <span class=" text-[14px]">ای بی اس</span>
+                                                </label>
+                                                <input id="handlerُType5"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-data="{ open: true }" class="flex mb-[10px]">
+                        <div :class="{ 'flex': open, 'hidden': !open }"
+                            class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                            <div @click.away="open = false" class="relative w-full" x-data="{ open: false }">
+                                <button @click="open = !open"
+                                    class="flex items-center justify-between w-full bg-white px-4 py-2 pr-8 rounded-[10px] focus:outline-none hover:shadow-[0_4px_3px_-2px_rgba(0,0,0,0.3)] transition-shadow duration-300">
+                                    <span>ویژگی شیرآلات</span>
+                                    <svg fill="currentColor" viewBox="0 0 20 20"
+                                        :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                    x-transition:leave-end="transform opacity-0 scale-95" class="mt-[-10px]">
+                                    <div class="pl-4 pr-8 pt-[25px] pb-4 bg-white rounded-b-[10px]">
+                                        <div class="block">
+                                            <!-- srart search input -->
+                                            <div class="border-gray-border">
+                                                <form>
+                                                    <div class="relative">
+                                                        <div
+                                                            class="flex absolute inset-y-0 right-4 items-center pointer-events-none">
+                                                            <svg class="inline" width="22" height="22"
+                                                                viewBox="0 0 22 22" fill="none" --}}
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M15.7825 15.7827L20.9999 21.0001"
+                                                                    stroke="#636363" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M9.26087 17.5217C13.8232 17.5217 17.5217 13.8232 17.5217 9.26087C17.5217 4.69852 13.8232 1 9.26087 1C4.69852 1 1 4.69852 1 9.26087C1 13.8232 4.69852 17.5217 9.26087 17.5217Z"
+                                                                    stroke="#636363" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input type="search" id="search"
+                                                            class="block py-[15px] pl-[8px] pr-[46px] md:pr-[44px] w-full text-gray-c400 rounded-xl border border-gray-border text-xs focus:outline-0 placeholder:text-size-11px placeholder:text-gray-c500 placeholder:font-shabnam-normal placeholder:font-normal"
+                                                            placeholder="جست و جوی ویژگی ها..." required="">
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                            <!-- end search input -->
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="features1" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">رنگ براق</span>
+                                                </label>
+                                                <input id="features1"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="feature2" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">دارای شلنگ</span>
+                                                </label>
+                                                <input id="features2"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="features3" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">دارای آبفشان</span>
+                                                </label>
+                                                <input id="features3"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="features4" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">دارای یک دسته</span>
+                                                </label>
+                                                <input id="features4"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class=" py-[13px]">
+                                                <label for="features5" class="inline mr-[8px] font-shabnam-bold ">
+                                                    <span class=" text-[14px]">علمک چرخان ۳۶۰ درجه</span>
+                                                </label>
+                                                <input id="features5"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-data="{ open: true }" class="flex mb-[10px]">
+                        <div :class="{ 'flex': open, 'hidden': !open }"
+                            class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                            <div @click.away="open = false" class="relative w-full" x-data="{ open: false }">
+                                <button @click="open = !open"
+                                    class="flex items-center justify-between w-full bg-white px-4 py-2 pr-8 rounded-[10px] focus:outline-none hover:shadow-[0_4px_3px_-2px_rgba(0,0,0,0.3)] transition-shadow duration-300">
+                                    <span>تعداد خروجی آب</span>
+                                    <svg fill="currentColor" viewBox="0 0 20 20"
+                                        :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                    x-transition:leave-end="transform opacity-0 scale-95" class="mt-[-10px]">
+                                    <div class="pl-4 pr-8 pt-[25px] pb-4 bg-white rounded-b-[10px]">
+                                        <div class="block">
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="outletCount1" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">۱</span>
+                                                </label>
+                                                <input id="outletCount1"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="outletCount2" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">۲</span>
+                                                </label>
+                                                <input id="outletCount2"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class=" py-[13px]">
+                                                <label for="outletCount3" class="inline mr-[8px] font-shabnam-bold ">
+                                                    <span class=" text-[14px]">۳</span>
+                                                </label>
+                                                <input id="outletCount3"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-data="{ open: true }" class="flex mb-[10px]">
+                        <div :class="{ 'flex': open, 'hidden': !open }"
+                            class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                            <div @click.away="open = false" class="relative w-full" x-data="{ open: false }">
+                                <button @click="open = !open"
+                                    class="flex items-center justify-between w-full bg-white px-4 py-2 pr-8 rounded-[10px] focus:outline-none hover:shadow-[0_4px_3px_-2px_rgba(0,0,0,0.3)] transition-shadow duration-300">
+                                    <span>نوع پوشش</span>
+                                    <svg fill="currentColor" viewBox="0 0 20 20"
+                                        :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                    x-transition:leave-end="transform opacity-0 scale-95" class="mt-[-10px]">
+                                    <div class="pl-4 pr-8 pt-[25px] pb-4 bg-white rounded-b-[10px]">
+                                        <div class="block">
+                                            <!-- srart search input -->
+                                            <div class="border-gray-border">
+                                                <form>
+                                                    <div class="relative">
+                                                        <div
+                                                            class="flex absolute inset-y-0 right-4 items-center pointer-events-none">
+                                                            <svg class="inline" width="22" height="22"
+                                                                viewBox="0 0 22 22" fill="none" --}}
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M15.7825 15.7827L20.9999 21.0001"
+                                                                    stroke="#636363" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path
+                                                                    d="M9.26087 17.5217C13.8232 17.5217 17.5217 13.8232 17.5217 9.26087C17.5217 4.69852 13.8232 1 9.26087 1C4.69852 1 1 4.69852 1 9.26087C1 13.8232 4.69852 17.5217 9.26087 17.5217Z"
+                                                                    stroke="#636363" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                        <input type="search" id="search"
+                                                            class="block py-[15px] pl-[8px] pr-[46px] md:pr-[44px] w-full text-gray-c400 rounded-xl border border-gray-border text-xs focus:outline-0 placeholder:text-size-11px placeholder:text-gray-c500 placeholder:font-shabnam-normal placeholder:font-normal"
+                                                            placeholder="جست و جوی پوشش ها..." required="">
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                            <!-- end search input -->
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="coverType1" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">نیکل-کروم</span>
+                                                </label>
+                                                <input id="coverType1"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="border-b border-gray-c200 py-[13px]">
+                                                <label for="coverType2" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">رنگ پودری الکترواستاتیک</span>
+                                                </label>
+                                                <input id="coverType2"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                            <div class="py-[13px]">
+                                                <label for="coverType3" class="inline mr-[8px] font-shabnam-bold">
+                                                    <span class=" text-[14px]">PVD تیتانیوم</span>
+                                                </label>
+                                                <input id="coverType3"
+                                                    class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                    type="checkbox" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {%endcomment%}
+
+                <!-- <label for="default-toggle"
+                    class="inline-flex justify-between relative items-center cursor-pointer dir-left w-full bg-white  hover:shadow-[0_4px_3px_-2px_rgba(0,0,0,0.3)] transition-shadow duration-300 px-4 py-2 pr-8 rounded-[10px]">
+                    <input type="checkbox" value="" id="default-toggle" class="sr-only peer">
+                    <div
+                        class="w-[2rem] h-3 bg-gray-c300 peer-focus:outline-none rounded-full peer-checked:after:translate-x-full peer-checked:after:bg-blue-c100 after:content-[''] after:absolute after:top-[8px] after:left-[11px] after:bg-gray-c500 after:border-gray-300  after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-c300">
+                    </div>
+                    <span class="ml-3 text-sm font-medium text-gray-900">فقط کالاهای موجود</span>
+                </label> -->
+
+            </div>
+            <div class="md:w-[65%] lg:w-[70%] sm:w-full mb-[30px]">
+                <!-- start fillter titles -->
+                <div class="rounded-[10px] bg-white p-[15px] lg:mb-[12px] mb-0 font-shabnam-bold font-shabnam-bold-digit flex justify-between items-center ">
+                    <!-- فیلتر محصولات -->
+                    <div x-data="{ modelOpen: false }" class="md:hidden">
+                        <button @click="modelOpen =!modelOpen"
+                                class="text-[12px] transition-all duration-500 hover:scale-110" type="button">
+                            <svg class="!inline" width="22" height="19" viewBox="0 0 22 19" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M20.9052 9.61906H17.1909M6.04808 0.952393C6.37645 0.952393 6.69136 1.08283 6.92355 1.31502C7.15574 1.54721 7.28618 1.86212 7.28618 2.19049V4.66668C7.28618 4.99504 7.15574 5.30996 6.92355 5.54214C6.69136 5.77433 6.37645 5.90477 6.04808 5.90477C5.71972 5.90477 5.40481 5.77433 5.17262 5.54214C4.94043 5.30996 4.80999 4.99504 4.80999 4.66668V2.19049C4.80999 1.86212 4.94043 1.54721 5.17262 1.31502C5.40481 1.08283 5.71972 0.952393 6.04808 0.952393V0.952393ZM20.9052 3.42858H7.28618H20.9052ZM4.80999 3.42858H1.0957H4.80999ZM6.04808 13.3333C6.37645 13.3333 6.69136 13.4638 6.92355 13.696C7.15574 13.9282 7.28618 14.2431 7.28618 14.5714V17.0476C7.28618 17.376 7.15574 17.6909 6.92355 17.9231C6.69136 18.1553 6.37645 18.2857 6.04808 18.2857C5.71972 18.2857 5.40481 18.1553 5.17262 17.9231C4.94043 17.6909 4.80999 17.376 4.80999 17.0476V14.5714C4.80999 14.2431 4.94043 13.9282 5.17262 13.696C5.40481 13.4638 5.71972 13.3333 6.04808 13.3333ZM20.9052 15.8095H7.28618H20.9052ZM4.80999 15.8095H1.0957H4.80999ZM15.9528 7.14287C16.2812 7.14287 16.5961 7.27331 16.8283 7.5055C17.0605 7.73769 17.1909 8.0526 17.1909 8.38096V10.8572C17.1909 11.1855 17.0605 11.5004 16.8283 11.7326C16.5961 11.9648 16.2812 12.0953 15.9528 12.0953C15.6245 12.0953 15.3096 11.9648 15.0774 11.7326C14.8452 11.5004 14.7148 11.1855 14.7148 10.8572V8.38096C14.7148 8.0526 14.8452 7.73769 15.0774 7.5055C15.3096 7.27331 15.6245 7.14287 15.9528 7.14287V7.14287ZM14.7148 9.61906H1.0957H14.7148Z"
+                                        stroke="#636363" stroke-width="1.3" stroke-linecap="round"
+                                        stroke-linejoin="round"/>
+                            </svg>
+                            فیلتر محصولات
+                        </button>
+                        <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto"
+                             aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                            <div class="flex items-center justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+                                <div x-cloak @click="modelOpen = false" x-show="modelOpen"
+                                     x-transition:enter="transition ease-out duration-300 transform"
+                                     x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                                     x-transition:leave="transition ease-in duration-200 transform"
+                                     x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                                     class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40"
+                                     aria-hidden="true"></div>
+                                <div x-cloak x-show="modelOpen"
+                                     x-transition:enter="transition ease-out duration-300 transform"
+                                     x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                     x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                                     x-transition:leave="transition ease-in duration-200 transform"
+                                     x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                                     x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                     class="inline-block w-full max-w-xl p-[15px] my-[30px] overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl">
+                                    <div>
+                                        <div class="flex justify-between items-center">
+                                            <p class="inline">فیلتر محصولات</p>
+                                            <button @click="modelOpen = false"
+                                                    class=" mb-[20px] text-gray-600 focus:outline-none hover:text-gray-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="!inline w-6 h-6"
+                                                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                          stroke-width="2"
+                                                          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <div class=" text-[14px]">
+                                                <div x-data="{ open: true }" class="flex">
+                                                    <div :class="{ 'flex': open, 'hidden': !open }"
+                                                         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                                                        <div @click.away="open = false"
+                                                             class="relative w-full rounded-[10px] border border-gray-c200"
+                                                             x-data="{ open: {% if query.search %} true {% else %} false {% endif %} }">
+                                                            <button @click="open = !open"
+                                                                    class="flex items-center justify-between w-full bg-white py-[15px] px-[10px] rounded-[10px] focus:outline-none">
+                                                                <span>جستوجو</span>
+                                                                <svg fill="currentColor" viewBox="0 0 20 20"
+                                                                     :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                                                     class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                                                    <path fill-rule="evenodd"
+                                                                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                                          clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </button>
+                                                            <div x-show="open"
+                                                                 x-transition:enter="transition ease-out duration-100"
+                                                                 x-transition:enter-start="transform opacity-0 scale-95"
+                                                                 x-transition:enter-end="transform opacity-100 scale-100"
+                                                                 x-transition:leave="transition ease-in duration-75"
+                                                                 x-transition:leave-start="transform opacity-100 scale-100"
+                                                                 x-transition:leave-end="transform opacity-0 scale-95"
+                                                                 class="mt-[-10px]">
+                                                                <div class="pl-[15px] pr-[15px] pt-[15px] pb-4 bg-white rounded-b-[10px]">
+                                                                    <div class="block">
+                                                                        <!-- srart search input -->
+                                                                        <div class="border-gray-border">
+                                                                            <form>
+                                                                                <div class="relative">
+                                                                                    <button class="flex absolute inset-y-0 right-4 items-center">
+                                                                                        <svg class="inline"
+                                                                                             width="22"
+                                                                                             height="22"
+                                                                                             viewBox="0 0 22 22"
+                                                                                             fill="none"
+                                                                                             xmlns="http://www.w3.org/2000/svg">
+                                                                                            <path
+                                                                                                    d="M15.7825 15.7827L20.9999 21.0001"
+                                                                                                    stroke="#636363"
+                                                                                                    stroke-width="1.5"
+                                                                                                    stroke-linecap="round"
+                                                                                                    stroke-linejoin="round"/>
+                                                                                            <path
+                                                                                                    d="M9.26087 17.5217C13.8232 17.5217 17.5217 13.8232 17.5217 9.26087C17.5217 4.69852 13.8232 1 9.26087 1C4.69852 1 1 4.69852 1 9.26087C1 13.8232 4.69852 17.5217 9.26087 17.5217Z"
+                                                                                                    stroke="#636363"
+                                                                                                    stroke-width="1.5"
+                                                                                                    stroke-linecap="round"
+                                                                                                    stroke-linejoin="round"/>
+                                                                                        </svg>
+                                                                                    </button>
+                                                                                    <input type="search"
+                                                                                           id="search"
+                                                                                           name="search"
+                                                                                           value="{{ query.search }}"
+                                                                                           class="block py-[15px] pl-[8px] pr-[46px] md:pr-[44px] w-full text-gray-c400 rounded-xl border border-gray-border text-xs focus:outline-0 placeholder:text-size-11px placeholder:text-gray-c500 placeholder:font-shabnam-normal placeholder:font-normal"
+                                                                                           placeholder="جستوجو...">
+                                                                                </div>
+                                                                            </form>
+
+                                                                        </div>
+                                                                        <!-- end search input -->
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div x-data="{ open: true }" class="flex">
+                                                    <div :class="{ 'flex': open, 'hidden': !open }"
+                                                         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                                                        <div @click.away="open = false"
+                                                             class="relative w-full rounded-[10px] border border-gray-c200"
+                                                             x-data="{ open: {% if query.category %} true {% else %} false {% endif %} }">
+                                                            <button @click="open = !open"
+                                                                    class="flex items-center justify-between w-full bg-white py-[15px] px-[10px] rounded-[10px] focus:outline-none">
+                                                                <span>دسته بندی ها</span>
+                                                                <svg fill="currentColor" viewBox="0 0 20 20"
+                                                                     :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                                                     class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                                                    <path fill-rule="evenodd"
+                                                                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                                          clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </button>
+                                                            <div x-show="open"
+                                                                 x-transition:enter="transition ease-out duration-100"
+                                                                 x-transition:enter-start="transform opacity-0 scale-95"
+                                                                 x-transition:enter-end="transform opacity-100 scale-100"
+                                                                 x-transition:leave="transition ease-in duration-75"
+                                                                 x-transition:leave-start="transform opacity-100 scale-100"
+                                                                 x-transition:leave-end="transform opacity-0 scale-95"
+                                                                 class="mt-[-10px]">
+                                                                <div class="px-[10px] pt-[15px] pb-[15px] bg-white rounded-b-[10px]">
+                                                                    <div class="block">
+                                                                        <!-- srart search input -->
+                                                                        <!-- <div class="border-gray-border">
+                                                                            <form>
+                                                                                <div class="relative">
+                                                                                    <div
+                                                                                        class="flex absolute inset-y-0 right-4 items-center pointer-events-none">
+                                                                                        <svg class="inline"
+                                                                                            width="22"
+                                                                                            height="22"
+                                                                                            viewBox="0 0 22 22"
+                                                                                            fill="none"
+                                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                                            <path
+                                                                                                d="M15.7825 15.7827L20.9999 21.0001"
+                                                                                                stroke="#636363"
+                                                                                                stroke-width="1.5"
+                                                                                                stroke-linecap="round"
+                                                                                                stroke-linejoin="round" />
+                                                                                            <path
+                                                                                                d="M9.26087 17.5217C13.8232 17.5217 17.5217 13.8232 17.5217 9.26087C17.5217 4.69852 13.8232 1 9.26087 1C4.69852 1 1 4.69852 1 9.26087C1 13.8232 4.69852 17.5217 9.26087 17.5217Z"
+                                                                                                stroke="#636363"
+                                                                                                stroke-width="1.5"
+                                                                                                stroke-linecap="round"
+                                                                                                stroke-linejoin="round" />
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    <input type="search"
+                                                                                        id="search"
+                                                                                        name="search"
+                                                                                        value="{{ query.search }}"
+                                                                                        class="block py-[15px] pl-[8px] pr-[46px] md:pr-[44px] w-full text-gray-c400 rounded-xl border border-gray-border text-xs focus:outline-0 placeholder:text-size-11px placeholder:text-gray-c500 placeholder:font-shabnam-normal placeholder:font-normal"
+                                                                                        placeholder="جستوجو..."
+                                                                                        required="">
+                                                                                </div>
+                                                                            </form>
+
+                                                                        </div> -->
+                                                                        <!-- end search input -->
+                                                                        {% if singleCategory %}
+                                                                            <div>
+                                                                                <p class="font-shabnam-bold-digit text-[10px] text-gray-c500 text-right">
+                                                                                    دسته بندی انتخاب شده
+                                                                                </p>
+
+                                                                                <div class="border-b border-gray-c200 py-[13px]"
+                                                                                     onclick="addToQuery('category',null,true)">
+                                                                                    <label for="choosenCategory1"
+                                                                                           class="inline mr-[8px] font-shabnam-bold inline-flex justify-between lg:w-[90%] w-[85%]">
+                                                                                        <span class="text-right text-[14px]">{{ singleCategory.title_web }}</span>
+                                                                                        <span class="float-left text-right text-[12px] text-gray-c500">{{ singleCategory.title.en | or: singleCategory.title_web }}</span>
+                                                                                    </label>
+                                                                                    {% comment %}<input id="choosenCategory1" checked{% endcomment %}
+                                                                                    {% comment %}disabled{% endcomment %}
+                                                                                    {% comment %}class="float-right mt-[2px] form-check-input h-[18px] w-[18px] border border-gray-300 rounded-[3px] bg-white{% endcomment %}
+                                                                                    {% comment %}focus:outline-none transition duration-200 bg-no-repeat bg-center bg-contain cursor-pointer{% endcomment %}
+                                                                                    {% comment %}appearance-none checked:bg-red-c100 peer-checked:bg-blue-c100 checked:border-red-c100{% endcomment %}
+                                                                                    {% comment %}checked:before:absolute checked:before:content-['x'] checked:before:text-white checked:before:left-[4px] checked:before:top-[-2px] "{% endcomment %}
+                                                                                    {% comment %}type="checkbox" value="">{% endcomment %}
+                                                                                    <input name="1{{ 'now' | date: '%H%M%S' }}"
+                                                                                           id="choosenCategory1"
+                                                                                           checked
+                                                                                           onclick="addToQuery('category',null,true)"
+                                                                                           class="float-right relative mt-[2px] form-check-input h-[18px] w-[18px] border border-gray-300 rounded-[3px] bg-white
+                                                                                        appearance-none checked:bg-red-c100 peer-checked:bg-bule-c100 checked:border-red-c100 checked:before:absolute checked:before:content-['x']
+                                                                                        checked:before:text-white checked:before:left-[4px] checked:before:top-[-2px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                                                           type="checkbox" value="">
+                                                                                </div>
+
+                                                                            </div>
+                                                                        {% endif %}
+                                                                        <div>
+                                                                            <p class="font-shabnam-bold text-gray-c500 text-[10px] mt-[15px] text-right">
+                                                                                دسته بندی ها
+                                                                            </p>
+
+                                                                            {% for category in productCategories %}
+                                                                                {% unless category.id == singleCategory.id %}
+                                                                                    <div class="{% if forloop.last | not %} border-b border-gray-c200 {% endif %} py-[13px]"
+                                                                                         onclick="addToQuery('category','{{ category.seo.url }}',true)">
+                                                                                        <label for="Categories_{{ category.id }}"
+                                                                                               class="inline mr-[8px] font-shabnam-bold-digit inline-flex justify-between lg:w-[90%] w-[85%]">
+                                                                                            <span class=" text-[14px] text-right">{{ category.title_web }}</span>
+                                                                                            <span class="float-left text-right text-[12px] text-gray-c500">{{ category.title.en | or: category.title_web }}</span>
+                                                                                        </label>
+                                                                                        {% comment %}<input id="Categories_{{ category.id }}"{% endcomment %}
+                                                                                        {% comment %}disabled{% endcomment %}
+                                                                                        {% comment %}class="float-right mt-[2px] form-check-input h-[18px] w-[18px] border border-black rounded-[3px] bg-white{% endcomment %}
+                                                                                        {% comment %}focus:outline-none transition relative duration-200  bg-no-repeat bg-center bg-contain cursor-pointer{% endcomment %}
+                                                                                        {% comment %}appearance-none checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100{% endcomment %}
+                                                                                        {% comment %}checked:before:absolute checked:before:content-['\2713'] checked:before:text-white checked:before:pr-[3px] "{% endcomment %}
+                                                                                        {% comment %}type="checkbox" value="">{% endcomment %}
+                                                                                        <input name="{{ category.id }}{{ 'now' | date: '%H%M%S' }}"
+                                                                                               id="Categories_{{ category.id }}"
+                                                                                               onclick="addToQuery('category','{{ category.seo.url }}',true)"
+                                                                                               class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white
+                                                                                               checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                                                               checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                                                               type="checkbox" value="">
+                                                                                    </div>
+                                                                                {% endunless %}
+                                                                            {% endfor %}
+
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div x-data="{ open: true }" class="flex">
+                                                    <div :class="{ 'flex': open, 'hidden': !open }"
+                                                         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                                                        <div @click.away="open = false"
+                                                             class="relative w-full rounded-[10px] border border-gray-c200"
+                                                             x-data="{ open: {% if query.brand %} true {% else %} false {% endif %} }">
+                                                            <button @click="open = !open"
+                                                                    class="flex items-center justify-between w-full bg-white py-[15px] px-[10px] rounded-[10px] focus:outline-none">
+                                                                <span class="text-right">برند ها</span>
+                                                                <svg fill="currentColor" viewBox="0 0 20 20"
+                                                                     :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                                                                     class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                                                    <path fill-rule="evenodd"
+                                                                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                                          clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </button>
+                                                            <div x-show="open"
+                                                                 x-transition:enter="transition ease-out duration-100"
+                                                                 x-transition:enter-start="transform opacity-0 scale-95"
+                                                                 x-transition:enter-end="transform opacity-100 scale-100"
+                                                                 x-transition:leave="transition ease-in duration-75"
+                                                                 x-transition:leave-start="transform opacity-100 scale-100"
+                                                                 x-transition:leave-end="transform opacity-0 scale-95"
+                                                                 class="mt-[-10px]">
+                                                                <div class="px-[10px] pt-[15px] pb-[15px] bg-white rounded-b-[10px]">
+                                                                    <div class="block">
+                                                                        <!-- srart search input -->
+                                                                        <!-- <div class="border-gray-border">
+                                                                            <form>
+                                                                                <div class="relative">
+                                                                                    <div
+                                                                                        class="flex absolute inset-y-0 right-4 items-center pointer-events-none">
+                                                                                        <svg class="inline"
+                                                                                            width="22"
+                                                                                            height="22"
+                                                                                            viewBox="0 0 22 22"
+                                                                                            fill="none"
+                                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                                            <path
+                                                                                                d="M15.7825 15.7827L20.9999 21.0001"
+                                                                                                stroke="#636363"
+                                                                                                stroke-width="1.5"
+                                                                                                stroke-linecap="round"
+                                                                                                stroke-linejoin="round" />
+                                                                                            <path
+                                                                                                d="M9.26087 17.5217C13.8232 17.5217 17.5217 13.8232 17.5217 9.26087C17.5217 4.69852 13.8232 1 9.26087 1C4.69852 1 1 4.69852 1 9.26087C1 13.8232 4.69852 17.5217 9.26087 17.5217Z"
+                                                                                                stroke="#636363"
+                                                                                                stroke-width="1.5"
+                                                                                                stroke-linecap="round"
+                                                                                                stroke-linejoin="round" />
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    <input type="search"
+                                                                                        id="search"
+                                                                                        name="search"
+                                                                                        value="{{ query.search }}"
+                                                                                        class="block py-[15px] pl-[8px] pr-[46px] md:pr-[44px] w-full text-gray-c400 rounded-xl border border-gray-border text-xs focus:outline-0 placeholder:text-size-11px placeholder:text-gray-c500 placeholder:font-shabnam-normal placeholder:font-normal"
+                                                                                        placeholder="جستوجو..."
+                                                                                        required="">
+                                                                                </div>
+                                                                            </form>
+
+                                                                        </div> -->
+                                                                        <!-- end search input -->
+                                                                        {% if singleBrand %}
+                                                                            <div>
+                                                                                <p class="font-shabnam-bold-digit text-[10px] text-gray-c500 text-right">
+                                                                                    برند انتخاب شده
+                                                                                </p>
+
+                                                                                <div class="border-b border-gray-c200 py-[13px]"
+                                                                                     onclick="addToQuery('brand',null,true)">
+                                                                                    <label for="choosenBrand1"
+                                                                                           class="inline mr-[8px] font-shabnam-bold inline-flex justify-between lg:w-[90%] w-[85%]">
+                                                                                        <span class="text-right text-[14px]">{{ singleBrand.title_web }}</span>
+                                                                                        <span class="float-left text-right text-[12px] text-gray-c500">{{ singleBrand.title.en | or: singleBrand.title_web }}</span>
+                                                                                    </label>
+                                                                                    <input name="1{{ 'now' | date: '%H%M%S' }}"
+                                                                                           id="choosenBrand1"
+                                                                                           checked
+                                                                                           onclick="addToQuery('brand',null,true)"
+                                                                                           class="float-right relative mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-gray-300 rounded-[3px] bg-white
+                                                                                           checked:bg-red-c100 peer-checked:bg-bule-c100 checked:border-red-c100 checked:before:absolute checked:before:content-['x']
+                                                                                            checked:before:text-white checked:before:left-[4px] checked:before:top-[-2px] focus:outline-none transition duration-200
+                                                                                            bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                                                           type="checkbox" value="">
+                                                                                </div>
+
+                                                                            </div>
+                                                                        {% endif %}
+                                                                        <div>
+                                                                            <p class="font-shabnam-bold-digit text-gray-c500 text-[10px] text-right mt-[15px]">
+                                                                                برند ها
+                                                                            </p>
+
+                                                                            {% for brand in productBrands %}
+                                                                                {% unless brand.id == singleBrand.id %}
+                                                                                    <div class="{% if forloop.last | not %} border-b border-gray-c200 {% endif %} py-[13px]"
+                                                                                         onclick="addToQuery('brand','{{ brand.seo.url }}',true)">
+                                                                                        <label for="Brands_{{ brand.id }}"
+                                                                                               class="inline mr-[8px] font-shabnam-bold inline-flex justify-between  lg:w-[90%] w-[85%]">
+                                                                                            <span class="text-right text-[14px]">{{ brand.title_web }}</span>
+                                                                                            <span class="float-left text-right text-[12px] text-gray-c500">{{ brand.title.en | or: brand.title_web }}</span>
+                                                                                        </label>
+                                                                                        <input name="{{ brand.id }}{{ 'now' | date: '%H%M%S' }}"
+                                                                                               id="Brands_{{ brand.id }}"
+                                                                                               onclick="addToQuery('brand','{{ brand.seo.url }}',true)"
+                                                                                               class="float-right mt-[2px] form-check-input appearance-none h-[18px] w-[18px] border border-black rounded-[3px] bg-white
+                                                                                               checked:bg-blue-c100 peer-checked:bg-blue-c100 checked:border-blue-c100 checked:before:absolute checked:before:content-['\2713']
+                                                                                                checked:before:text-white checked:before:pr-[3px] focus:outline-none transition duration-200  bg-no-repeat bg-center bg-contain cursor-pointer"
+                                                                                               type="checkbox" value="">
+                                                                                    </div>
+                                                                                {% endunless %}
+                                                                            {% endfor %}
+
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- فیلتر محصولات -->
+
+                    <span class="float-left text-[12px] dir-right font-shabnam-bold-digit">{{ paginate_total }} کالا</span>
+
+                    <!-- مرتب سازی -->
+                    <div x-data="{ modelOpen: false }" class="lg:hidden">
+                        <button @click="modelOpen =!modelOpen"
+                                class="text-[12px] inline transition-all duration-500 hover:scale-110"
+                                type="button">
+                            <svg class="!inline" width="26" height="26" viewBox="0 0 26 26"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M14.625 17.875L15.7739 16.7261L18.6875 19.6398V3.25H20.3125V19.6398L23.2261 16.7261L24.375 17.875L19.5 22.75L14.625 17.875ZM1.625 14.625H13V16.25H1.625V14.625ZM4.875 9.75H13V11.375H4.875V9.75ZM8.125 4.875H13V6.5H8.125V4.875Z"
+                                        fill="#636363"/>
+                            </svg>
+                            مرتب سازی
+                        </button>
+                        <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto"
+                             aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                            <div class="flex items-center justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+                                <div x-cloak @click="modelOpen = false" x-show="modelOpen"
+                                     x-transition:enter="transition ease-out duration-300 transform"
+                                     x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                                     x-transition:leave="transition ease-in duration-200 transform"
+                                     x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                                     class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40"
+                                     aria-hidden="true"></div>
+                                <div x-cloak x-show="modelOpen"
+                                     x-transition:enter="transition ease-out duration-300 transform"
+                                     x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                     x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                                     x-transition:leave="transition ease-in duration-200 transform"
+                                     x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                                     x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                     class="inline-block w-full max-w-xl p-[15px] my-[30px] overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl">
+                                    <div>
+                                        <div class="flex justify-between items-center">
+                                            <p class="inline">مرتب سازی</p>
+                                        <button @click="modelOpen = false"
+                                                class=" mb-[20px] text-gray-600 focus:outline-none hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="!inline w-6 h-6"
+                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      stroke-width="2"
+                                                      d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                        </button>
+                                        </div>
+                                        <div>
+                                            <ul class="dir-right text-right text-gray-c500 text-[12px]">
+                                                <li class="hover:text-blue-c100 active:text-blue-c100 py-[5px] px-[10px] my-[5px] {% if query.sort == 'newest' %}active_sort_design{% endif %} {% unless query.sort %}active_sort_design{% endunless %}">
+                                                    <a href="javascript:addToQuery('sort','newest',true)">
+                                                        جدید ترین
+                                                    </a>
+                                                </li>
+                                                <li class="hover:text-blue-c100 active:text-blue-c100 py-[5px] px-[10px] my-[5px] {% if query.sort == 'oldest' %}active_sort_design{% endif %}">
+                                                    <a href="javascript:addToQuery('sort','oldest',true)">
+                                                        قدیمی ترین
+                                                    </a>
+                                                </li>
+                                                <li class="hover:text-blue-c100 active:text-blue-c100 py-[5px] px-[10px] my-[5px] {% if query.sort == 'expensive' %}active_sort_design{% endif %}">
+                                                    <a href="javascript:addToQuery('sort','expensive',true)">
+                                                        گران ترین
+                                                    </a>
+                                                </li>
+                                                <li class="hover:text-blue-c100 active:text-blue-c100 py-[5px] px-[10px] my-[5px] {% if query.sort == 'cheapest' %}active_sort_design{% endif %}">
+                                                    <a href="javascript:addToQuery('sort','cheapest',true)">
+                                                        ارزان ترین
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="hidden lg:inline  text-[12px]">
+                        <svg class="!inline" width="36" height="26" viewBox="0 0 36 26" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_442_11367)">
+                                <path
+                                        d="M21.3068 9.3889H6.69324C6.50938 9.3889 6.33305 9.31281 6.20305 9.17737C6.07304 9.04193 6 8.85823 6 8.66668C6 8.47514 6.07304 8.29144 6.20305 8.15599C6.33305 8.02055 6.50938 7.94446 6.69324 7.94446H21.3068C21.4906 7.94446 21.6669 8.02055 21.797 8.15599C21.927 8.29144 22 8.47514 22 8.66668C22 8.85823 21.927 9.04193 21.797 9.17737C21.6669 9.31281 21.4906 9.3889 21.3068 9.3889Z"
+                                        fill="black"/>
+                                <path
+                                        d="M16.2998 13.7223H6.70019C6.51449 13.7223 6.33639 13.6462 6.20508 13.5107C6.07377 13.3753 6 13.1916 6 13.0001C6 12.8085 6.07377 12.6248 6.20508 12.4894C6.33639 12.3539 6.51449 12.2778 6.70019 12.2778H16.2998C16.4855 12.2778 16.6636 12.3539 16.7949 12.4894C16.9262 12.6248 17 12.8085 17 13.0001C17 13.1916 16.9262 13.3753 16.7949 13.5107C16.6636 13.6462 16.4855 13.7223 16.2998 13.7223Z"
+                                        fill="black"/>
+                                <path
+                                        d="M11.2754 18.0555H6.72464C6.53245 18.0555 6.34814 17.9794 6.21224 17.844C6.07635 17.7086 6 17.5249 6 17.3333C6 17.1418 6.07635 16.9581 6.21224 16.8226C6.34814 16.6872 6.53245 16.6111 6.72464 16.6111H11.2754C11.4675 16.6111 11.6519 16.6872 11.7878 16.8226C11.9237 16.9581 12 17.1418 12 17.3333C12 17.5249 11.9237 17.7086 11.7878 17.844C11.6519 17.9794 11.4675 18.0555 11.2754 18.0555Z"
+                                        fill="black"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_442_11367">
+                                    <rect width="36" height="26" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        مرتب سازی
+                        <ul class="hidden lg:inline-flex gap-6 text-gray-c500 mr-[15px] text-[12px]">
+
+                            <li class="hover:text-blue-c100 active:text-blue-c100 inline {% if query.sort == 'newest' %}active_sort_design{% endif %} {% unless query.sort %}active_sort_design{% endunless %}">
+                                <a href="javascript:addToQuery('sort','newest',true)">
+                                    جدید ترین
+                                </a>
+                            </li>
+                            <li class="hover:text-blue-c100 active:text-blue-c100 inline {% if query.sort == 'oldest' %}active_sort_design{% endif %}">
+                                <a href="javascript:addToQuery('sort','oldest',true)">
+                                    قدیمی ترین
+                                </a>
+                            </li>
+                            <li class="hover:text-blue-c100 active:text-blue-c100 inline {% if query.sort == 'expensive' %}active_sort_design{% endif %}">
+                                <a href="javascript:addToQuery('sort','expensive',true)">
+                                    گران ترین
+                                </a>
+                            </li>
+                            <li class="hover:text-blue-c100 active:text-blue-c100 inline {% if query.sort == 'cheapest' %}active_sort_design{% endif %}">
+                                <a href="javascript:addToQuery('sort','cheapest',true)">
+                                    ارزان ترین
+                                </a>
+                            </li>
+
+                        </ul>
+                    </button>
+                    <!-- مرتب سازی -->
+                </div>
+                <!-- end fillter titles -->
+
+                <!-- start filltered product section -->
+                <div class="rounded-t-[10px] py-[10px] bg-transparent lg:bg-white grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 md:gap-2 lg:gap-0 lg:px-[15px] px-0">
+
+                    {% for product in products %}
+                        <div class=" sm:border border-gray-c100  mt-[5px] mb-[15px] lg:my-0 sm:hover:bg-[rgba(99 99 99, )] transition-all duration-300">
+
+                            <a href="{% route 'product', slug = product.seo.url, variants = product.mix_variant[0].keys %}"
+                               class="bg-white text-center sm:flex block md:d-inherit justify-center items-center rounded-[20px] sm:mx-[20px] md:mx-0 mx-0  px-[15px] sm:px-0 hover:shadow-[0_0px_8px_1px_rgba(0,0,0,0.3)] sm:hover:shadow-[0_0px_0px_0px_rgba(0,0,0,0.3)] transition-all duration-300">
+                                <div class="sm:py-[10px] py-0 text-right sm:block flex items-center gap-1 sm:h-auto  transform translate sm:hover:translate-y-[-0.75rem] sm:[&>*:nth-child(1)]:hover:scale-105 duration-500 ease-in-out">
+                                    <div class="relative w-[35%] sm:w-full transition-all duration-500">
+
+                                        {% if product.is_special %}
+                                            <span class="text-left absolute right-[-10px] top-[-10px] lg:top-[-8px] lg:right-[4px]">
+                                                <svg class="!inline" width="25" height="25" viewBox="0 0 35 35"
+                                                     fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                          d="M9.47404 3.42824C10.857 3.31782 12.17 2.77385 13.2258 1.87379C14.4183 0.858112 15.9336 0.300293 17.5 0.300293C19.0664 0.300293 20.5817 0.858112 21.7742 1.87379C22.83 2.77385 24.1429 3.31782 25.5259 3.42824C27.0878 3.55306 28.5541 4.23011 29.662 5.33801C30.7699 6.44591 31.4469 7.91221 31.5717 9.47404C31.6814 10.8565 32.2253 12.1701 33.1262 13.2258C34.1419 14.4183 34.6997 15.9336 34.6997 17.5C34.6997 19.0664 34.1419 20.5817 33.1262 21.7742C32.2261 22.83 31.6822 24.1429 31.5717 25.5259C31.4469 27.0878 30.7699 28.5541 29.662 29.662C28.5541 30.7699 27.0878 31.4469 25.5259 31.5717C24.1429 31.6822 22.83 32.2261 21.7742 33.1262C20.5817 34.1419 19.0664 34.6997 17.5 34.6997C15.9336 34.6997 14.4183 34.1419 13.2258 33.1262C12.17 32.2261 10.857 31.6822 9.47404 31.5717C7.91221 31.4469 6.44591 30.7699 5.33801 29.662C4.23011 28.5541 3.55306 27.0878 3.42824 25.5259C3.31782 24.1429 2.77385 22.83 1.87379 21.7742C0.858112 20.5817 0.300293 19.0664 0.300293 17.5C0.300293 15.9336 0.858112 14.4183 1.87379 13.2258C2.77385 12.17 3.31782 10.857 3.42824 9.47404C3.55306 7.91221 4.23011 6.44591 5.33801 5.33801C6.44591 4.23011 7.91221 3.55306 9.47404 3.42824ZM25.47 14.72C25.8617 14.3145 26.0784 13.7715 26.0735 13.2077C26.0686 12.644 25.8425 12.1048 25.4439 11.7061C25.0452 11.3075 24.506 11.0814 23.9423 11.0765C23.3785 11.0716 22.8354 11.2883 22.4299 11.6799L15.35 18.7599L12.57 15.9799C12.1645 15.5883 11.6215 15.3716 11.0577 15.3765C10.494 15.3814 9.95476 15.6075 9.55613 16.0061C9.15751 16.4048 8.93139 16.944 8.92649 17.5077C8.92159 18.0715 9.1383 18.6145 9.52994 19.02L13.8299 23.32C14.2331 23.7231 14.7799 23.9495 15.35 23.9495C15.9201 23.9495 16.4669 23.7231 16.87 23.32L25.47 14.72Z"
+                                                          fill="#0078C8"/>
+                                                </svg>
+                                            </span>
+                                        {% endif %}
+
+                                        <img class="mx-auto w-[235px] md:w-[225px] lg:w-[200px]"
+                                             src="{{ product.media.url | or: default_card_image_url | abs_url }}"
+                                             alt="{{ product.media.alt }}">
+                                    </div>
+
+                                    <div class="w-[65%] bg-gray-c100 py-[15px] px-[15px] md:px-[10px] md:pt-[15px] md:mx-[10px] md:pb-[15px] md:w-inherit 992: min-h-[118px] flex flex-col justify-between lg:rounded-t-0 rounded-[20px] sm:w-full my-[10px]">
+
+                                        <p class="mb-0 text-[14px] font-shabnam-bold sm:text-center text-right">
+                                            {{ product.title_web }}
+                                        </p>
+
+                                        {%if show_prices%}
+                                            {% if product.mix_variant[0].price.has_offer %}
+                                                <div class="flex justify-between mb-[10px] sm:mb-0">
+                                                    <button>
+                                                        <span class="px-[9px] bg-blue-c100 text-white rounded-[5px] text-[16px] font-shabnam-normal-digit">
+                                                            %{{ product.mix_variant[0].price.discount_percent }}
+                                                        </span>
+                                                    </button>
+                                                    <span class="text-gray-c400 font-shabnam-normal-digit text-[16px] line-through">{{ product.mix_variant[0].price.price }}</span>
+                                                </div>
+                                            {% endif %}
+                                        {%endif%}
+
+                                        <div class="flex justify-between items-center">
+                                            <div class="rounded-[5px] text-left text-[13px]">
+                                                <span class="pl-[4px] font-shabnam-normal-digit">
+                                                    {{ product.average_rate }}
+                                                </span>
+                                                <svg class="!inline" width="18" height="18" viewBox="0 0 18 18"
+                                                     fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                            d="M16.9999 8.39013C17.1858 8.2517 17.3236 8.05857 17.3941 7.83784C17.4647 7.61711 17.4643 7.37983 17.3932 7.15929C17.3221 6.93875 17.1837 6.74599 16.9975 6.60806C16.8113 6.47012 16.5866 6.39392 16.3549 6.39013L11.8549 6.22013C11.8328 6.21861 11.8116 6.21071 11.7938 6.19741C11.7761 6.1841 11.7626 6.16595 11.7549 6.14513L10.1999 1.94513C10.1218 1.73145 9.97989 1.54694 9.79342 1.41658C9.60696 1.28622 9.38494 1.21631 9.15742 1.21631C8.92991 1.21631 8.70788 1.28622 8.52142 1.41658C8.33495 1.54694 8.19305 1.73145 8.11492 1.94513L6.56492 6.16013C6.55726 6.18095 6.54374 6.1991 6.526 6.21241C6.50826 6.22571 6.48705 6.23361 6.46492 6.23513L1.96492 6.40513C1.73322 6.40892 1.50852 6.48512 1.32232 6.62306C1.13611 6.76099 0.99775 6.95375 0.926625 7.17429C0.8555 7.39483 0.855181 7.63211 0.925713 7.85284C0.996244 8.07357 1.13409 8.2667 1.31992 8.40513L4.84992 11.1801C4.86759 11.194 4.88079 11.2128 4.8879 11.2341C4.89501 11.2555 4.89571 11.2784 4.88992 11.3001L3.67492 15.6051C3.61196 15.8244 3.61806 16.0577 3.69239 16.2733C3.76672 16.4889 3.90567 16.6764 4.09034 16.8103C4.27502 16.9441 4.49644 17.0179 4.7245 17.0214C4.95255 17.025 5.17617 16.9582 5.36492 16.8301L9.09492 14.3301C9.11329 14.3174 9.13509 14.3107 9.15742 14.3107C9.17975 14.3107 9.20155 14.3174 9.21992 14.3301L12.9499 16.8301C13.1361 16.9626 13.3589 17.0337 13.5874 17.0337C13.8159 17.0337 14.0387 16.9626 14.2249 16.8301C14.4096 16.6975 14.5487 16.511 14.623 16.2961C14.6974 16.0812 14.7033 15.8485 14.6399 15.6301L13.4149 11.3101C13.4084 11.2884 13.4088 11.2653 13.4159 11.2438C13.4231 11.2223 13.4367 11.2036 13.4549 11.1901L16.9999 8.39013Z"
+                                                            fill="#FFCF24"/>
+                                                </svg>
+                                            </div>
+
+                                            {%if show_prices%}
+                                                <span class="text-[19px] text-blue-c100 font-shabnam-bold-digit">
+                                                    {{ product.mix_variant[0].price.main_price }}
+                                                    <span class="font-shabnam-normal text-[16px]">تومان</span>
+                                                </span>
+                                            {%endif%}
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    {% endfor %}
+
+                </div>
+                <!-- end filltered product section -->
+                {% if pages > 1 %}
+                    <!-- start articles pagination -->
+                    <div class=" text-center lg:bg-white bg-transparent w-full pb-[25px] rounded-b-[10px] font-shabnam-bold">
+                        <hr class="bg-gray-c200 mx-[15px] mb-[25px]">
+                        {% render '/components/commons/paginate', page=query.page | or: 1, pages: paginate_pages %}
+                    </div>
+                    <!-- end articles pagination -->
+                {% endif %}
+
+            </div>
+        </div>
+        <!-- end sort section -->
+
+        {% if singleCategory.description_web or singleBrand.description_web %}
+            <!-- start description section -->
+            <div class=" bg-white rounded-[10px]">
+                <div id="category_description" class="category_texteditor pt-[40px] pb-[20px] pr-[40px] pl-[15px]">
+                    {% if singleCategory.description_web %}
+                        {{ singleCategory.description_web }}
+                    {% else %}
+                        {{ singleBrand.description_web }}
+                    {% endif %}
+                </div>
+
+                <script>
+                    function toggle_category_description() {
+                        var elem = document.getElementById('category_description')
+                        if (elem.classList.contains('d-none')) {
+                            elem.classList.remove('d-none');
+                            document.getElementById('toggle_category_desription_text').innerText = 'مشاهده کمتر';
+                        } else {
+                            elem.classList.add('d-none')
+                            document.getElementById('toggle_category_desription_text').innerText = 'مشاهده توضیحات';
+                        }
+                    }
+                </script>
+
+                <div class="text-center text-[14px] font-shabnam-light bg-gradient-to-t from-white to-transparent">
+                    <button class="my-[25px]" onclick="toggle_category_description()">
+                        <svg class="mx-auto" width="14" height="11" viewBox="0 0 14 11" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M13.834 5.79148C13.8866 5.8376 13.9283 5.89274 13.9568 5.95365C13.9853 6.01456 14 6.08 14 6.14611C14 6.21222 13.9853 6.27766 13.9568 6.33857C13.9283 6.39948 13.8866 6.45462 13.834 6.50074C13.7264 6.59529 13.5821 6.6482 13.4318 6.6482C13.2815 6.6482 13.1372 6.59529 13.0295 6.50074L7.0012 1.19981L0.971651 6.50074C0.917483 6.54845 0.853424 6.58608 0.783131 6.61147C0.712838 6.63686 0.637688 6.64951 0.561973 6.6487C0.486259 6.64789 0.411461 6.63364 0.341855 6.60676C0.272247 6.57988 0.209194 6.54089 0.156293 6.49203C0.105864 6.44549 0.0661063 6.39044 0.0392938 6.33002C0.0124822 6.26961 -0.00085783 6.20502 3.86238e-05 6.13995C0.000935078 6.07488 0.0160499 6.01061 0.0445171 5.95082C0.0729852 5.89102 0.114247 5.83688 0.165942 5.79148L6.58025 0.154417C6.69288 0.0554103 6.84393 0 7.0012 0C7.15847 0 7.30952 0.0554103 7.42215 0.154417L13.834 5.79148ZM13.834 10.1427C13.8866 10.1889 13.9283 10.244 13.9568 10.3049C13.9853 10.3658 14 10.4313 14 10.4974C14 10.5635 13.9853 10.6289 13.9568 10.6898C13.9283 10.7507 13.8866 10.8059 13.834 10.852C13.7264 10.9466 13.5821 10.9995 13.4318 10.9995C13.2815 10.9995 13.1372 10.9466 13.0295 10.852L7.0012 5.55107L0.971651 10.852C0.917483 10.8997 0.853424 10.9373 0.783131 10.9627C0.712838 10.9881 0.637688 11.0008 0.561973 11C0.486259 10.9992 0.411461 10.9849 0.341855 10.958C0.272247 10.9311 0.209194 10.8922 0.156293 10.8433C0.105864 10.7968 0.0661063 10.7417 0.0392938 10.6813C0.0124822 10.6209 -0.00085783 10.5563 3.86238e-05 10.4912C0.000935078 10.4261 0.0160499 10.3619 0.0445171 10.3021C0.0729852 10.2423 0.114247 10.1881 0.165942 10.1427L6.58025 4.50568C6.69288 4.40667 6.84393 4.35126 7.0012 4.35126C7.15847 4.35126 7.30952 4.40667 7.42215 4.50568L13.834 10.1427Z"
+                                    fill="#636363"/>
+                        </svg>
+                        <span id="toggle_category_desription_text">
+                            مشاهده کمتر
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!-- end description section -->
+        {% endif %}
+
+    </div>
+
+</div>
+<!-- end home main content -->

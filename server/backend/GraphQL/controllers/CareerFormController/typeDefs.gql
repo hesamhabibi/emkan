@@ -1,0 +1,50 @@
+module.exports = `
+
+    type Query {
+        getCareerForms(page:Int, limit:Int, filter:CareerFormFilter): CareerFormPaginate
+        # getAllCareerForms(filter:CareerFormFilter): [CareerForm]
+    }
+
+    type CareerForm {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        user_name: String
+        user_last_name: String
+        user_email: String
+        user_mobile: String
+        fields: [CareerFormField]
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        user: User
+    }
+
+    type CareerFormField {
+        name: String
+        title: String
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        type: Int
+        size: Int
+        value: JSON
+    }
+
+    type CareerFormPaginate {
+        paginate: Paginate
+        data: [CareerForm]
+    }
+
+    input CareerFormFilter {
+        title: [filterMultiLang]
+        user_name: [filterString]
+        user_last_name: [filterString]
+        user_email: [filterString]
+        user_mobile: [filterString]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

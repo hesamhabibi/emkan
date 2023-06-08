@@ -1,0 +1,66 @@
+module.exports = `
+
+    type Query {
+        getComment(id:ID!): Comment
+        getComments(page:Int, limit:Int, filter:CommentFilter,sort:[Sort]): CommentPaginate
+        getAllComments(filter:CommentFilter,sort:[Sort]): [Comment]
+    }
+
+    type Mutation {
+        createComment(input:CreateCommentInput): Comment
+        updateComment(id:ID!, input:CommentInput): Comment
+        deleteComment(id:ID!): Response
+        replyComment(reply_to_id:ID!, input:CommentInput): Comment
+        setConfirmComment (id:ID!,confirmed:Boolean): Comment
+    }
+
+    type Comment {
+        id: ID
+        title: String
+        text: String
+        confirmed: Boolean
+        reply_to_id: ID
+        user_id: ID
+        model_name: String
+        model_type: Int
+        model_id: String
+        createdAt: String
+        updatedAt: String
+
+        reply_to: Comment
+        replies: [Comment]
+        user: User
+    }
+
+    type CommentPaginate {
+        paginate: Paginate
+        data: [Comment]
+    }
+
+    input CreateCommentInput {
+        title: String
+        text: String
+        reply_to_id:ID
+        model_type: Int
+        model_id: ID
+    }
+
+    input CommentInput {
+        title: String
+        text: String
+    }
+
+    input CommentFilter {
+        title: [filterString]
+        text: [filterString]
+        confirmed: [filterBoolean]
+        reply_to_id: [filterID]
+        user_id: [filterID]
+        model_name: [filterString]
+        model_type: [filterInt]
+        model_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

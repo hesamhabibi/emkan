@@ -1,0 +1,53 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.container {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  @include transition(0.4s ease-out);
+
+  &.opened {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  > .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 5;
+    width: 300px;
+
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+
+    > .header {
+      padding: 0.4rem 0.6rem;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      cursor: move;
+      i {
+        cursor: pointer;
+        &.move {
+          cursor: move;
+        }
+      }
+
+      @include generate-color(background, $gray-light);
+      @include generate-color(color, gray);
+      @include flex-position(x, space-between);
+    }
+
+    .content {
+      padding: 10px;
+    }
+
+    @include rounded(5px);
+    @include generate-color(background, $white);
+  }
+}

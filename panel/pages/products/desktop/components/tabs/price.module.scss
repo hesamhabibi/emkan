@@ -1,0 +1,42 @@
+
+.info {
+  margin-top: -15px;
+}
+
+.toggle {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.header {
+  padding: 10px 0;
+  border-radius: 10px;
+
+  > i {
+    cursor: help;
+  }
+}
+
+
+.buttonGroup {
+  height: 100%;
+  border-radius: 50px;
+  min-width: 70px;
+
+}
+
+.button {
+  width: 100%;
+  margin-top: 2.4rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  > i {
+    transition: 0.5s;
+  }
+}

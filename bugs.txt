@@ -1,0 +1,6 @@
+create product => message: "Cannot convert undefined or null to object"
+
+
+select collection, getCollectionProducts => message: "get_product_by_collection_id is not a function"
+
+

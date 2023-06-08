@@ -1,0 +1,39 @@
+module.exports = `
+
+    type Query {
+        getFieldValidation(id:ID!): FieldValidation
+        getFieldValidations(page:Int, limit:Int, filter:FieldValidationFilter,sort:[Sort]): FieldValidationPaginate
+        getAllFieldValidations(filter:FieldValidationFilter,sort:[Sort]): [FieldValidation]
+    }
+
+    type Mutation {
+        createFieldValidation(input:FieldValidationInput): FieldValidation
+        updateFieldValidation(id:ID!, input:FieldValidationInput): FieldValidation
+        deleteFieldValidation(id:ID!): Response
+    }
+
+    type FieldValidation {
+        id: ID
+        title: String
+        validation_rule: String
+        createdAt: String
+        updatedAt: String
+    }
+
+    type FieldValidationPaginate {
+        paginate: Paginate
+        data: [FieldValidation]
+    }
+
+    input FieldValidationInput {
+        title: String
+        validation_rule: String
+    }
+
+    input FieldValidationFilter {
+        title: [filterString]
+        validation_rule: [filterString]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+`;

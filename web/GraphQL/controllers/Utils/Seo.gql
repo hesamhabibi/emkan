@@ -1,0 +1,19 @@
+module.exports = `
+    type SEO {
+        id: ID
+        title: JSON # multi language
+        title_web: String @multilang(field:"title")
+        description: JSON # multi language
+        description_web: String @multilang(field:"description")
+        keywords: JSON # multi language
+        keywords_web: String @multilang(field:"keywords")
+        url: String
+        url_status: Int
+        canonical_url: String
+        redirect_url_301: String
+        redirect_url_404: String
+        robots_status: Int
+        createdAt: String
+        updatedAt: String
+    }
+`;

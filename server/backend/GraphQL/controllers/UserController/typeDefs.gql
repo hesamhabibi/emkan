@@ -1,0 +1,99 @@
+module.exports = `
+
+    type Query {
+        getUser(id:ID!): User
+        getUsers(page:Int, limit:Int, filter:UserFilter,sort:[Sort]): UserPaginate
+        getAllUsers(filter:UserFilter,sort:[Sort]): [User]
+    }
+
+    type Mutation {
+        createUser(input:UserInput): User
+        updateUser(id:ID!, input:UserInput): User
+        deleteUser(id:ID!): Response
+        updateUserInformation(id:ID!, input:UserInformationInput): User
+        changePasswordUser(id:ID!, input:changePasswordUserInput!): User
+    }
+
+    type User {
+        id: ID
+        name: String
+        last_name: String
+        full_name: String
+        username: String
+        email: String
+        mobile: String
+        # password: String
+        is_active: Boolean
+        access_id: ID
+        createdAt: String
+        updatedAt: String
+
+        user_information: UserInformation
+
+        access: Access
+        accessControlLists: [AccessControlList]
+        blogs: [Blog]
+        products: [Product]
+        brands: [Brand]
+        categories: [Category]
+        medias: [Media]
+
+        transactions: [Transaction]
+        complete_orders: [Order]
+        cart: Order
+        # tickets: [Ticket] # todo
+        tutorials: [Tutorial]
+    }
+
+    type UserInformation {
+        media: MediaStructure
+        address_ids: [ID]
+        phone: String
+        gender: Int
+
+        addresses: [Address]
+    }
+
+    type UserPaginate {
+        paginate: Paginate
+        data: [User]
+    }
+
+    input UserInput {
+        name: String
+        last_name: String
+        username: String
+        email: String
+        mobile: String
+        password: String
+        is_active: Boolean
+        access_id: ID
+
+        user_information: UserInformationInput
+    }
+
+    input UserInformationInput {
+        media: MediaStructureInput
+        address_ids: [ID]
+        phone: String
+        gender: Int
+    }
+
+    input changePasswordUserInput {
+        password: String
+        password_confirmation: String
+    }
+
+    input UserFilter {
+        name: [filterString]
+        last_name: [filterString]
+        username: [filterString]
+        email: [filterString]
+        mobile: [filterString]
+        is_active: [filterBoolean]
+        access_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

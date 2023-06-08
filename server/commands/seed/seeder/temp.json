@@ -1,0 +1,34 @@
+{
+    "columns": {
+        "/admin/mytest": [
+            {
+                "name": "نام",
+                "key": "name",
+                "action": "action"
+            }
+        ]
+    },
+    "actions": {
+        "/admin/mytest": [
+            {
+                "name": "اکشن ۱",
+                "key": "action_1",
+                "action": "action_action"
+            },
+            {
+                "name": "اکشن 2",
+                "key": "action_2",
+                "action": "action_action"
+            }
+        ]
+    },
+    "others": {
+        "/admin/mytest": [
+            {
+                "name": "دیگر ۱",
+                "key": "other 1",
+                "action": "other_action"
+            }
+        ]
+    }
+}

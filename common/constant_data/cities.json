@@ -1,0 +1,9991 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "fa": "اسکو",
+            "en": "Osko"
+        },
+        "slug": "اسکو",
+        "state_id": 1
+    },
+    {
+        "id": 2,
+        "name": {
+            "fa": "اهر",
+            "en": "Ahar"
+        },
+        "slug": "اهر",
+        "state_id": 1
+    },
+    {
+        "id": 3,
+        "name": {
+            "fa": "ایلخچی",
+            "en": "Elekhchi"
+        },
+        "slug": "ایلخچی",
+        "state_id": 1
+    },
+    {
+        "id": 4,
+        "name": {
+            "fa": "آبش احمد",
+            "en": "Absh Ahmad"
+        },
+        "slug": "آبش-احمد",
+        "state_id": 1
+    },
+    {
+        "id": 5,
+        "name": {
+            "fa": "آذرشهر",
+            "en": "Azar shahr"
+        },
+        "slug": "آذرشهر",
+        "state_id": 1
+    },
+    {
+        "id": 6,
+        "name": {
+            "fa": "آقکند",
+            "en": "Aghkand"
+        },
+        "slug": "آقکند",
+        "state_id": 1
+    },
+    {
+        "id": 7,
+        "name": {
+            "fa": "باسمنج",
+            "en": "Basmanj"
+        },
+        "slug": "باسمنج",
+        "state_id": 1
+    },
+    {
+        "id": 8,
+        "name": {
+            "fa": "بخشایش",
+            "en": "Bakhshayesh"
+        },
+        "slug": "بخشایش",
+        "state_id": 1
+    },
+    {
+        "id": 9,
+        "name": {
+            "fa": "بستان آباد",
+            "en": "Bastan Abad"
+        },
+        "slug": "بستان-آباد",
+        "state_id": 1
+    },
+    {
+        "id": 10,
+        "name": {
+            "fa": "بناب",
+            "en": "Bonab"
+        },
+        "slug": "بناب",
+        "state_id": 1
+    },
+    {
+        "id": 11,
+        "name": {
+            "fa": "بناب جدید",
+            "en": "Bonab Jadid"
+        },
+        "slug": "بناب-جدید",
+        "state_id": 1
+    },
+    {
+        "id": 12,
+        "name": {
+            "fa": "تبریز",
+            "en": "Tabriz"
+        },
+        "slug": "تبریز",
+        "state_id": 1
+    },
+    {
+        "id": 13,
+        "name": {
+            "fa": "ترک",
+            "en": "Tark"
+        },
+        "slug": "ترک",
+        "state_id": 1
+    },
+    {
+        "id": 14,
+        "name": {
+            "fa": "ترکمانچای",
+            "en": "Turkman Chay"
+        },
+        "slug": "ترکمانچای",
+        "state_id": 1
+    },
+    {
+        "id": 15,
+        "name": {
+            "fa": "تسوج",
+            "en": "Tasoj"
+        },
+        "slug": "تسوج",
+        "state_id": 1
+    },
+    {
+        "id": 16,
+        "name": {
+            "fa": "تیکمه داش",
+            "en": "Tekmeh Dash"
+        },
+        "slug": "تیکمه-داش",
+        "state_id": 1
+    },
+    {
+        "id": 17,
+        "name": {
+            "fa": "جلفا",
+            "en": "Jolfa"
+        },
+        "slug": "جلفا",
+        "state_id": 1
+    },
+    {
+        "id": 18,
+        "name": {
+            "fa": "خاروانا",
+            "en": "Kharvana"
+        },
+        "slug": "خاروانا",
+        "state_id": 1
+    },
+    {
+        "id": 19,
+        "name": {
+            "fa": "خامنه",
+            "en": "Khamaneh"
+        },
+        "slug": "خامنه",
+        "state_id": 1
+    },
+    {
+        "id": 20,
+        "name": {
+            "fa": "خراجو",
+            "en": "Kharajoo"
+        },
+        "slug": "خراجو",
+        "state_id": 1
+    },
+    {
+        "id": 21,
+        "name": {
+            "fa": "خسروشهر",
+            "en": "Khosrow Shahr"
+        },
+        "slug": "خسروشهر",
+        "state_id": 1
+    },
+    {
+        "id": 22,
+        "name": {
+            "fa": "خضرلو",
+            "en": "Khezerloo"
+        },
+        "slug": "خضرلو",
+        "state_id": 1
+    },
+    {
+        "id": 23,
+        "name": {
+            "fa": "خمارلو",
+            "en": "Khomarlu"
+        },
+        "slug": "خمارلو",
+        "state_id": 1
+    },
+    {
+        "id": 24,
+        "name": {
+            "fa": "خواجه",
+            "en": "Khajeh"
+        },
+        "slug": "خواجه",
+        "state_id": 1
+    },
+    {
+        "id": 25,
+        "name": {
+            "fa": "دوزدوزان",
+            "en": "Duzduzan"
+        },
+        "slug": "دوزدوزان",
+        "state_id": 1
+    },
+    {
+        "id": 26,
+        "name": {
+            "fa": "زرنق",
+            "en": "Zarnaq"
+        },
+        "slug": "زرنق",
+        "state_id": 1
+    },
+    {
+        "id": 27,
+        "name": {
+            "fa": "زنوز",
+            "en": "Zonouz"
+        },
+        "slug": "زنوز",
+        "state_id": 1
+    },
+    {
+        "id": 28,
+        "name": {
+            "fa": "سراب",
+            "en": "Sarab"
+        },
+        "slug": "سراب",
+        "state_id": 1
+    },
+    {
+        "id": 29,
+        "name": {
+            "fa": "سردرود",
+            "en": "Sardroud"
+        },
+        "slug": "سردرود",
+        "state_id": 1
+    },
+    {
+        "id": 30,
+        "name": {
+            "fa": "سهند",
+            "en": "Sahand"
+        },
+        "slug": "سهند",
+        "state_id": 1
+    },
+    {
+        "id": 31,
+        "name": {
+            "fa": "سیس",
+            "en": "Sis"
+        },
+        "slug": "سیس",
+        "state_id": 1
+    },
+    {
+        "id": 32,
+        "name": {
+            "fa": "سیه رود",
+            "en": "Siahrood"
+        },
+        "slug": "سیه-رود",
+        "state_id": 1
+    },
+    {
+        "id": 33,
+        "name": {
+            "fa": "شبستر",
+            "en": "Shabestar"
+        },
+        "slug": "شبستر",
+        "state_id": 1
+    },
+    {
+        "id": 34,
+        "name": {
+            "fa": "شربیان",
+            "en": "Sharabian"
+        },
+        "slug": "شربیان",
+        "state_id": 1
+    },
+    {
+        "id": 35,
+        "name": {
+            "fa": "شرفخانه",
+            "en": "Sharafkhaneh"
+        },
+        "slug": "شرفخانه",
+        "state_id": 1
+    },
+    {
+        "id": 36,
+        "name": {
+            "fa": "شندآباد",
+            "en": "Shendabad"
+        },
+        "slug": "شندآباد",
+        "state_id": 1
+    },
+    {
+        "id": 37,
+        "name": {
+            "fa": "صوفیان",
+            "en": "Soufian"
+        },
+        "slug": "صوفیان",
+        "state_id": 1
+    },
+    {
+        "id": 38,
+        "name": {
+            "fa": "عجب شیر",
+            "en": "Ajab Shir"
+        },
+        "slug": "عجب-شیر",
+        "state_id": 1
+    },
+    {
+        "id": 39,
+        "name": {
+            "fa": "قره آغاج",
+            "en": "Qareh Aghaj"
+        },
+        "slug": "قره-آغاج",
+        "state_id": 1
+    },
+    {
+        "id": 40,
+        "name": {
+            "fa": "کشکسرای",
+            "en": "Koshksaray"
+        },
+        "slug": "کشکسرای",
+        "state_id": 1
+    },
+    {
+        "id": 41,
+        "name": {
+            "fa": "کلوانق",
+            "en": "Kelvanaq"
+        },
+        "slug": "کلوانق",
+        "state_id": 1
+    },
+    {
+        "id": 42,
+        "name": {
+            "fa": "کلیبر",
+            "en": "Kaleybar"
+        },
+        "slug": "کلیبر",
+        "state_id": 1
+    },
+    {
+        "id": 43,
+        "name": {
+            "fa": "کوزه کنان",
+            "en": "Koozehkonan"
+        },
+        "slug": "کوزه-کنان",
+        "state_id": 1
+    },
+    {
+        "id": 44,
+        "name": {
+            "fa": "گوگان",
+            "en": "Gogan"
+        },
+        "slug": "گوگان",
+        "state_id": 1
+    },
+    {
+        "id": 45,
+        "name": {
+            "fa": "لیلان",
+            "en": "Leilan"
+        },
+        "slug": "لیلان",
+        "state_id": 1
+    },
+    {
+        "id": 46,
+        "name": {
+            "fa": "مراغه",
+            "en": "Maragheh"
+        },
+        "slug": "مراغه",
+        "state_id": 1
+    },
+    {
+        "id": 47,
+        "name": {
+            "fa": "مرند",
+            "en": "Marand"
+        },
+        "slug": "مرند",
+        "state_id": 1
+    },
+    {
+        "id": 48,
+        "name": {
+            "fa": "ملکان",
+            "en": "Malekan"
+        },
+        "slug": "ملکان",
+        "state_id": 1
+    },
+    {
+        "id": 49,
+        "name": {
+            "fa": "ملک کیان",
+            "en": "Malek-Kian"
+        },
+        "slug": "ملک-کیان",
+        "state_id": 1
+    },
+    {
+        "id": 50,
+        "name": {
+            "fa": "ممقان",
+            "en": "Mamaqan"
+        },
+        "slug": "ممقان",
+        "state_id": 1
+    },
+    {
+        "id": 51,
+        "name": {
+            "fa": "مهربان",
+            "en": "Mehraban"
+        },
+        "slug": "مهربان",
+        "state_id": 1
+    },
+    {
+        "id": 52,
+        "name": {
+            "fa": "میانه",
+            "en": "Miyaneh"
+        },
+        "slug": "میانه",
+        "state_id": 1
+    },
+    {
+        "id": 53,
+        "name": {
+            "fa": "نظرکهریزی",
+            "en": "Nazarkahrizi"
+        },
+        "slug": "نظرکهریزی",
+        "state_id": 1
+    },
+    {
+        "id": 54,
+        "name": {
+            "fa": "هادی شهر",
+            "en": "Hadishahr"
+        },
+        "slug": "هادی-شهر",
+        "state_id": 1
+    },
+    {
+        "id": 55,
+        "name": {
+            "fa": "هرگلان",
+            "en": "Hargalan"
+        },
+        "slug": "هرگلان",
+        "state_id": 1
+    },
+    {
+        "id": 56,
+        "name": {
+            "fa": "هریس",
+            "en": "Heris"
+        },
+        "slug": "هریس",
+        "state_id": 1
+    },
+    {
+        "id": 57,
+        "name": {
+            "fa": "هشترود",
+            "en": "Hashtrood"
+        },
+        "slug": "هشترود",
+        "state_id": 1
+    },
+    {
+        "id": 58,
+        "name": {
+            "fa": "هوراند",
+            "en": "Hurand"
+        },
+        "slug": "هوراند",
+        "state_id": 1
+    },
+    {
+        "id": 59,
+        "name": {
+            "fa": "وایقان",
+            "en": "Vaighan"
+        },
+        "slug": "وایقان",
+        "state_id": 1
+    },
+    {
+        "id": 60,
+        "name": {
+            "fa": "ورزقان",
+            "en": "Varzeqan"
+        },
+        "slug": "ورزقان",
+        "state_id": 1
+    },
+    {
+        "id": 61,
+        "name": {
+            "fa": "یامچی",
+            "en": "Yamchi"
+        },
+        "slug": "یامچی",
+        "state_id": 1
+    },
+    {
+        "id": 62,
+        "name": {
+            "fa": "ارومیه",
+            "en": "Urmia"
+        },
+        "slug": "ارومیه",
+        "state_id": 2
+    },
+    {
+        "id": 63,
+        "name": {
+            "fa": "اشنویه",
+            "en": "Oshnavieh"
+        },
+        "slug": "اشنویه",
+        "state_id": 2
+    },
+    {
+        "id": 64,
+        "name": {
+            "fa": "ایواوغلی",
+            "en": "Evogli"
+        },
+        "slug": "ایواوغلی",
+        "state_id": 2
+    },
+    {
+        "id": 65,
+        "name": {
+            "fa": "آواجیق",
+            "en": "Avajiq"
+        },
+        "slug": "آواجیق",
+        "state_id": 2
+    },
+    {
+        "id": 66,
+        "name": {
+            "fa": "باروق",
+            "en": "Baruq"
+        },
+        "slug": "باروق",
+        "state_id": 2
+    },
+    {
+        "id": 67,
+        "name": {
+            "fa": "بازرگان",
+            "en": "Bazargan"
+        },
+        "slug": "بازرگان",
+        "state_id": 2
+    },
+    {
+        "id": 68,
+        "name": {
+            "fa": "بوکان",
+            "en": "Bukan"
+        },
+        "slug": "بوکان",
+        "state_id": 2
+    },
+    {
+        "id": 69,
+        "name": {
+            "fa": "پلدشت",
+            "en": "Poldasht"
+        },
+        "slug": "پلدشت",
+        "state_id": 2
+    },
+    {
+        "id": 70,
+        "name": {
+            "fa": "پیرانشهر",
+            "en": "Piranshahr"
+        },
+        "slug": "پیرانشهر",
+        "state_id": 2
+    },
+    {
+        "id": 71,
+        "name": {
+            "fa": "تازه شهر",
+            "en": "Taze Shahr"
+        },
+        "slug": "تازه-شهر",
+        "state_id": 2
+    },
+    {
+        "id": 72,
+        "name": {
+            "fa": "تکاب",
+            "en": "Takab"
+        },
+        "slug": "تکاب",
+        "state_id": 2
+    },
+    {
+        "id": 73,
+        "name": {
+            "fa": "چهاربرج",
+            "en": "Charburj"
+        },
+        "slug": "چهاربرج",
+        "state_id": 2
+    },
+    {
+        "id": 74,
+        "name": {
+            "fa": "خوی",
+            "en": "Khoy"
+        },
+        "slug": "خوی",
+        "state_id": 2
+    },
+    {
+        "id": 75,
+        "name": {
+            "fa": "دیزج دیز",
+            "en": "Dizaj Diz"
+        },
+        "slug": "دیزج-دیز",
+        "state_id": 2
+    },
+    {
+        "id": 76,
+        "name": {
+            "fa": "ربط",
+            "en": "Rabat"
+        },
+        "slug": "ربط",
+        "state_id": 2
+    },
+    {
+        "id": 77,
+        "name": {
+            "fa": "سردشت",
+            "en": "Sardasht"
+        },
+        "slug": "آذربایجان-غربی-سردشت",
+        "state_id": 2
+    },
+    {
+        "id": 78,
+        "name": {
+            "fa": "سرو",
+            "en": "Sarv"
+        },
+        "slug": "سرو",
+        "state_id": 2
+    },
+    {
+        "id": 79,
+        "name": {
+            "fa": "سلماس",
+            "en": "Salmas"
+        },
+        "slug": "سلماس",
+        "state_id": 2
+    },
+    {
+        "id": 80,
+        "name": {
+            "fa": "سیلوانه",
+            "en": "Silvana"
+        },
+        "slug": "سیلوانه",
+        "state_id": 2
+    },
+    {
+        "id": 81,
+        "name": {
+            "fa": "سیمینه",
+            "en": "Simmineh"
+        },
+        "slug": "سیمینه",
+        "state_id": 2
+    },
+    {
+        "id": 82,
+        "name": {
+            "fa": "سیه چشمه",
+            "en": "Siah Cheshmeh"
+        },
+        "slug": "سیه-چشمه",
+        "state_id": 2
+    },
+    {
+        "id": 83,
+        "name": {
+            "fa": "شاهین دژ",
+            "en": "Shahin Dej"
+        },
+        "slug": "شاهین-دژ",
+        "state_id": 2
+    },
+    {
+        "id": 84,
+        "name": {
+            "fa": "شوط",
+            "en": "Showt"
+        },
+        "slug": "شوط",
+        "state_id": 2
+    },
+    {
+        "id": 85,
+        "name": {
+            "fa": "فیرورق",
+            "en": "Firuraq"
+        },
+        "slug": "فیرورق",
+        "state_id": 2
+    },
+    {
+        "id": 86,
+        "name": {
+            "fa": "قره ضیاءالدین",
+            "en": "Qarahziyaeddin"
+        },
+        "slug": "قره-ضیاءالدین",
+        "state_id": 2
+    },
+    {
+        "id": 87,
+        "name": {
+            "fa": "قطور",
+            "en": "Qotur"
+        },
+        "slug": "قطور",
+        "state_id": 2
+    },
+    {
+        "id": 88,
+        "name": {
+            "fa": "قوشچی",
+            "en": "Qushchi"
+        },
+        "slug": "قوشچی",
+        "state_id": 2
+    },
+    {
+        "id": 89,
+        "name": {
+            "fa": "کشاورز",
+            "en": "Keshavarz"
+        },
+        "slug": "کشاورز",
+        "state_id": 2
+    },
+    {
+        "id": 90,
+        "name": {
+            "fa": "گردکشانه",
+            "en": "Gerd Kashaneh"
+        },
+        "slug": "گردکشانه",
+        "state_id": 2
+    },
+    {
+        "id": 91,
+        "name": {
+            "fa": "ماکو",
+            "en": "Maku"
+        },
+        "slug": "ماکو",
+        "state_id": 2
+    },
+    {
+        "id": 92,
+        "name": {
+            "fa": "محمدیار",
+            "en": "Mohammadyar"
+        },
+        "slug": "محمدیار",
+        "state_id": 2
+    },
+    {
+        "id": 93,
+        "name": {
+            "fa": "محمودآباد",
+            "en": "Mahmudabad"
+        },
+        "slug": "آذربایجان-غربی-محمودآباد",
+        "state_id": 2
+    },
+    {
+        "id": 94,
+        "name": {
+            "fa": "مهاباد",
+            "en": "Mahabad"
+        },
+        "slug": "آذربایجان-غربی-مهاباد",
+        "state_id": 2
+    },
+    {
+        "id": 95,
+        "name": {
+            "fa": "میاندوآب",
+            "en": "Qoshachay"
+        },
+        "slug": "میاندوآب",
+        "state_id": 2
+    },
+    {
+        "id": 96,
+        "name": {
+            "fa": "میرآباد",
+            "en": "Mirabad"
+        },
+        "slug": "میرآباد",
+        "state_id": 2
+    },
+    {
+        "id": 97,
+        "name": {
+            "fa": "نالوس",
+            "en": "Nalous"
+        },
+        "slug": "نالوس",
+        "state_id": 2
+    },
+    {
+        "id": 98,
+        "name": {
+            "fa": "نقده",
+            "en": "Naqadeh"
+        },
+        "slug": "نقده",
+        "state_id": 2
+    },
+    {
+        "id": 99,
+        "name": {
+            "fa": "نوشین",
+            "en": "Nushin"
+        },
+        "slug": "نوشین",
+        "state_id": 2
+    },
+    {
+        "id": 100,
+        "name": {
+            "fa": "اردبیل",
+            "en": "Ardabil"
+        },
+        "slug": "شهر-اردبیل",
+        "state_id": 3
+    },
+    {
+        "id": 101,
+        "name": {
+            "fa": "اصلاندوز",
+            "en": "Aslan Duz"
+        },
+        "slug": "اصلاندوز",
+        "state_id": 3
+    },
+    {
+        "id": 102,
+        "name": {
+            "fa": "آبی بیگلو",
+            "en": "Abibeiglou"
+        },
+        "slug": "آبی-بیگلو",
+        "state_id": 3
+    },
+    {
+        "id": 103,
+        "name": {
+            "fa": "بیله سوار",
+            "en": "Bileh Savar"
+        },
+        "slug": "بیله-سوار",
+        "state_id": 3
+    },
+    {
+        "id": 104,
+        "name": {
+            "fa": "پارس آباد",
+            "en": "Parsabad"
+        },
+        "slug": "پارس-آباد",
+        "state_id": 3
+    },
+    {
+        "id": 105,
+        "name": {
+            "fa": "تازه کند",
+            "en": "Tazeh Kand"
+        },
+        "slug": "تازه-کند",
+        "state_id": 3
+    },
+    {
+        "id": 106,
+        "name": {
+            "fa": "تازه کندانگوت",
+            "en": "Tazakand"
+        },
+        "slug": "تازه-کندانگوت",
+        "state_id": 3
+    },
+    {
+        "id": 107,
+        "name": {
+            "fa": "جعفرآباد",
+            "en": "Jafarabad"
+        },
+        "slug": "جعفرآباد",
+        "state_id": 3
+    },
+    {
+        "id": 108,
+        "name": {
+            "fa": "خلخال",
+            "en": "Khalkhal"
+        },
+        "slug": "خلخال",
+        "state_id": 3
+    },
+    {
+        "id": 109,
+        "name": {
+            "fa": "رضی",
+            "en": "Razi"
+        },
+        "slug": "رضی",
+        "state_id": 3
+    },
+    {
+        "id": 110,
+        "name": {
+            "fa": "سرعین",
+            "en": "Sarein"
+        },
+        "slug": "سرعین",
+        "state_id": 3
+    },
+    {
+        "id": 111,
+        "name": {
+            "fa": "عنبران",
+            "en": "Anbaran"
+        },
+        "slug": "عنبران",
+        "state_id": 3
+    },
+    {
+        "id": 112,
+        "name": {
+            "fa": "فخرآباد",
+            "en": "Fakhr Abad"
+        },
+        "slug": "فخرآباد",
+        "state_id": 3
+    },
+    {
+        "id": 113,
+        "name": {
+            "fa": "کلور",
+            "en": "Kolor"
+        },
+        "slug": "کلور",
+        "state_id": 3
+    },
+    {
+        "id": 114,
+        "name": {
+            "fa": "کوراییم",
+            "en": "Kuraim"
+        },
+        "slug": "کوراییم",
+        "state_id": 3
+    },
+    {
+        "id": 115,
+        "name": {
+            "fa": "گرمی",
+            "en": "Germi"
+        },
+        "slug": "گرمی",
+        "state_id": 3
+    },
+    {
+        "id": 116,
+        "name": {
+            "fa": "گیوی",
+            "en": "Givi"
+        },
+        "slug": "گیوی",
+        "state_id": 3
+    },
+    {
+        "id": 117,
+        "name": {
+            "fa": "لاهرود",
+            "en": "Lahroud"
+        },
+        "slug": "لاهرود",
+        "state_id": 3
+    },
+    {
+        "id": 118,
+        "name": {
+            "fa": "مشگین شهر",
+            "en": "Meshgin Shahr"
+        },
+        "slug": "مشگین-شهر",
+        "state_id": 3
+    },
+    {
+        "id": 119,
+        "name": {
+            "fa": "نمین",
+            "en": "Namin"
+        },
+        "slug": "نمین",
+        "state_id": 3
+    },
+    {
+        "id": 120,
+        "name": {
+            "fa": "نیر",
+            "en": "Nir"
+        },
+        "slug": "اردبیل-نیر",
+        "state_id": 3
+    },
+    {
+        "id": 121,
+        "name": {
+            "fa": "هشتجین",
+            "en": "Hashjin"
+        },
+        "slug": "هشتجین",
+        "state_id": 3
+    },
+    {
+        "id": 122,
+        "name": {
+            "fa": "هیر",
+            "en": "Hir"
+        },
+        "slug": "هیر",
+        "state_id": 3
+    },
+    {
+        "id": 123,
+        "name": {
+            "fa": "ابریشم",
+            "en": "Abrisham"
+        },
+        "slug": "ابریشم",
+        "state_id": 4
+    },
+    {
+        "id": 124,
+        "name": {
+            "fa": "ابوزیدآباد",
+            "en": "Abouzeidabad"
+        },
+        "slug": "ابوزیدآباد",
+        "state_id": 4
+    },
+    {
+        "id": 125,
+        "name": {
+            "fa": "اردستان",
+            "en": "Ardestan"
+        },
+        "slug": "اردستان",
+        "state_id": 4
+    },
+    {
+        "id": 126,
+        "name": {
+            "fa": "اژیه",
+            "en": "Ezhieh"
+        },
+        "slug": "اژیه",
+        "state_id": 4
+    },
+    {
+        "id": 127,
+        "name": {
+            "fa": "اصفهان",
+            "en": "Isfahan"
+        },
+        "slug": "شهر-اصفهان",
+        "state_id": 4
+    },
+    {
+        "id": 128,
+        "name": {
+            "fa": "افوس",
+            "en": "Afus"
+        },
+        "slug": "افوس",
+        "state_id": 4
+    },
+    {
+        "id": 129,
+        "name": {
+            "fa": "انارک",
+            "en": "Anarak"
+        },
+        "slug": "انارک",
+        "state_id": 4
+    },
+    {
+        "id": 130,
+        "name": {
+            "fa": "ایمانشهر",
+            "en": "Imanshahr"
+        },
+        "slug": "ایمانشهر",
+        "state_id": 4
+    },
+    {
+        "id": 131,
+        "name": {
+            "fa": "آران وبیدگل",
+            "en": "Aran va Bidgol"
+        },
+        "slug": "آران-وبیدگل",
+        "state_id": 4
+    },
+    {
+        "id": 132,
+        "name": {
+            "fa": "بادرود",
+            "en": "Badroud"
+        },
+        "slug": "بادرود",
+        "state_id": 4
+    },
+    {
+        "id": 133,
+        "name": {
+            "fa": "باغ بهادران",
+            "en": "Baghbahadoran"
+        },
+        "slug": "باغ-بهادران",
+        "state_id": 4
+    },
+    {
+        "id": 134,
+        "name": {
+            "fa": "بافران",
+            "en": "Bafrān"
+        },
+        "slug": "بافران",
+        "state_id": 4
+    },
+    {
+        "id": 135,
+        "name": {
+            "fa": "برزک",
+            "en": "Barzok"
+        },
+        "slug": "برزک",
+        "state_id": 4
+    },
+    {
+        "id": 136,
+        "name": {
+            "fa": "برف انبار",
+            "en": "Barf Anbar"
+        },
+        "slug": "برف-انبار",
+        "state_id": 4
+    },
+    {
+        "id": 137,
+        "name": {
+            "fa": "بهاران شهر",
+            "en": "Baharan Shahr"
+        },
+        "slug": "بهاران-شهر",
+        "state_id": 4
+    },
+    {
+        "id": 138,
+        "name": {
+            "fa": "بهارستان",
+            "en": "Baharestan"
+        },
+        "slug": "بهارستان",
+        "state_id": 4
+    },
+    {
+        "id": 139,
+        "name": {
+            "fa": "بوئین و میاندشت",
+            "en": "Buin va Miandasht"
+        },
+        "slug": "بوئین-میاندشت",
+        "state_id": 4
+    },
+    {
+        "id": 140,
+        "name": {
+            "fa": "پیربکران",
+            "en": "Pir Bakran"
+        },
+        "slug": "پیربکران",
+        "state_id": 4
+    },
+    {
+        "id": 141,
+        "name": {
+            "fa": "تودشک",
+            "en": "Toodeshk"
+        },
+        "slug": "تودشک",
+        "state_id": 4
+    },
+    {
+        "id": 142,
+        "name": {
+            "fa": "تیران",
+            "en": "Tiran"
+        },
+        "slug": "تیران",
+        "state_id": 4
+    },
+    {
+        "id": 143,
+        "name": {
+            "fa": "جندق",
+            "en": "Jandaq"
+        },
+        "slug": "جندق",
+        "state_id": 4
+    },
+    {
+        "id": 144,
+        "name": {
+            "fa": "جوزدان",
+            "en": "Jowzdan"
+        },
+        "slug": "جوزدان",
+        "state_id": 4
+    },
+    {
+        "id": 145,
+        "name": {
+            "fa": "جوشقان و کامو",
+            "en": "Jowsheqan va Kamu"
+        },
+        "slug": "جوشقان-کامو",
+        "state_id": 4
+    },
+    {
+        "id": 146,
+        "name": {
+            "fa": "چادگان",
+            "en": "Chadegan"
+        },
+        "slug": "چادگان",
+        "state_id": 4
+    },
+    {
+        "id": 147,
+        "name": {
+            "fa": "چرمهین",
+            "en": "Chermahin"
+        },
+        "slug": "چرمهین",
+        "state_id": 4
+    },
+    {
+        "id": 148,
+        "name": {
+            "fa": "چمگردان",
+            "en": "Chamgordan"
+        },
+        "slug": "چمگردان",
+        "state_id": 4
+    },
+    {
+        "id": 149,
+        "name": {
+            "fa": "حبیب آباد",
+            "en": "Habib Abad"
+        },
+        "slug": "حبیب-آباد",
+        "state_id": 4
+    },
+    {
+        "id": 150,
+        "name": {
+            "fa": "حسن آباد",
+            "en": "Hasan Abad"
+        },
+        "slug": "اصفهان-حسن-آباد",
+        "state_id": 4
+    },
+    {
+        "id": 151,
+        "name": {
+            "fa": "حنا",
+            "en": "Hana"
+        },
+        "slug": "حنا",
+        "state_id": 4
+    },
+    {
+        "id": 152,
+        "name": {
+            "fa": "خالدآباد",
+            "en": "Khaled Abad"
+        },
+        "slug": "خالدآباد",
+        "state_id": 4
+    },
+    {
+        "id": 153,
+        "name": {
+            "fa": "خمینی شهر",
+            "en": "Khomeyni Shahr"
+        },
+        "slug": "خمینی-شهر",
+        "state_id": 4
+    },
+    {
+        "id": 154,
+        "name": {
+            "fa": "خوانسار",
+            "en": "Khansar"
+        },
+        "slug": "خوانسار",
+        "state_id": 4
+    },
+    {
+        "id": 155,
+        "name": {
+            "fa": "خور",
+            "en": "Khoor"
+        },
+        "slug": "اصفهان-خور",
+        "state_id": 4
+    },
+    {
+        "id": 157,
+        "name": {
+            "fa": "خورزوق",
+            "en": "Khorzugh"
+        },
+        "slug": "خورزوق",
+        "state_id": 4
+    },
+    {
+        "id": 158,
+        "name": {
+            "fa": "داران",
+            "en": "Daran"
+        },
+        "slug": "داران",
+        "state_id": 4
+    },
+    {
+        "id": 159,
+        "name": {
+            "fa": "دامنه",
+            "en": "Damaneh"
+        },
+        "slug": "دامنه",
+        "state_id": 4
+    },
+    {
+        "id": 160,
+        "name": {
+            "fa": "درچه",
+            "en": "Dorcheh"
+        },
+        "slug": "درچه",
+        "state_id": 4
+    },
+    {
+        "id": 161,
+        "name": {
+            "fa": "دستگرد",
+            "en": "Dastgerd"
+        },
+        "slug": "دستگرد",
+        "state_id": 4
+    },
+    {
+        "id": 162,
+        "name": {
+            "fa": "دهاقان",
+            "en": "Dehaghan"
+        },
+        "slug": "دهاقان",
+        "state_id": 4
+    },
+    {
+        "id": 163,
+        "name": {
+            "fa": "دهق",
+            "en": "Dehagh"
+        },
+        "slug": "دهق",
+        "state_id": 4
+    },
+    {
+        "id": 164,
+        "name": {
+            "fa": "دولت آباد",
+            "en": "Dolat Abad"
+        },
+        "slug": "اصفهان-دولت-آباد",
+        "state_id": 4
+    },
+    {
+        "id": 165,
+        "name": {
+            "fa": "دیزیچه",
+            "en": "Diziche"
+        },
+        "slug": "دیزیچه",
+        "state_id": 4
+    },
+    {
+        "id": 166,
+        "name": {
+            "fa": "رزوه",
+            "en": "Rezveh"
+        },
+        "slug": "رزوه",
+        "state_id": 4
+    },
+    {
+        "id": 167,
+        "name": {
+            "fa": "رضوانشهر",
+            "en": "Rezvanshahr"
+        },
+        "slug": "اصفهان-رضوانشهر",
+        "state_id": 4
+    },
+    {
+        "id": 168,
+        "name": {
+            "fa": "زاینده رود",
+            "en": "Zayandeh Rud"
+        },
+        "slug": "زاینده-رود",
+        "state_id": 4
+    },
+    {
+        "id": 169,
+        "name": {
+            "fa": "زرین شهر",
+            "en": "Zarin Shahr"
+        },
+        "slug": "زرین-شهر",
+        "state_id": 4
+    },
+    {
+        "id": 170,
+        "name": {
+            "fa": "زواره",
+            "en": "Zavareh"
+        },
+        "slug": "زواره",
+        "state_id": 4
+    },
+    {
+        "id": 171,
+        "name": {
+            "fa": "زیباشهر",
+            "en": "Zibashahr"
+        },
+        "slug": "زیباشهر",
+        "state_id": 4
+    },
+    {
+        "id": 172,
+        "name": {
+            "fa": "سده لنجان",
+            "en": "Sedeh Lenjan"
+        },
+        "slug": "سده-لنجان",
+        "state_id": 4
+    },
+    {
+        "id": 173,
+        "name": {
+            "fa": "سفیدشهر",
+            "en": "Sefid Shahr"
+        },
+        "slug": "سفیدشهر",
+        "state_id": 4
+    },
+    {
+        "id": 174,
+        "name": {
+            "fa": "سگزی",
+            "en": "Sejzi"
+        },
+        "slug": "سگزی",
+        "state_id": 4
+    },
+    {
+        "id": 175,
+        "name": {
+            "fa": "سمیرم",
+            "en": "Semirom"
+        },
+        "slug": "سمیرم",
+        "state_id": 4
+    },
+    {
+        "id": 176,
+        "name": {
+            "fa": "شاهین شهر",
+            "en": "Shahin Shahr"
+        },
+        "slug": "شاهین-شهر",
+        "state_id": 4
+    },
+    {
+        "id": 177,
+        "name": {
+            "fa": "شهرضا",
+            "en": "Shahreza"
+        },
+        "slug": "شهرضا",
+        "state_id": 4
+    },
+    {
+        "id": 178,
+        "name": {
+            "fa": "طالخونچه",
+            "en": "Talkhooncheh"
+        },
+        "slug": "طالخونچه",
+        "state_id": 4
+    },
+    {
+        "id": 179,
+        "name": {
+            "fa": "عسگران",
+            "en": "Askaran"
+        },
+        "slug": "عسگران",
+        "state_id": 4
+    },
+    {
+        "id": 180,
+        "name": {
+            "fa": "علویجه",
+            "en": "Alavijeh"
+        },
+        "slug": "علویجه",
+        "state_id": 4
+    },
+    {
+        "id": 181,
+        "name": {
+            "fa": "فرخی",
+            "en": "Farkhi"
+        },
+        "slug": "فرخی",
+        "state_id": 4
+    },
+    {
+        "id": 182,
+        "name": {
+            "fa": "فریدونشهر",
+            "en": "Fereydun Shahr"
+        },
+        "slug": "فریدونشهر",
+        "state_id": 4
+    },
+    {
+        "id": 183,
+        "name": {
+            "fa": "فلاورجان",
+            "en": "Falavarjan"
+        },
+        "slug": "فلاورجان",
+        "state_id": 4
+    },
+    {
+        "id": 184,
+        "name": {
+            "fa": "فولادشهر",
+            "en": "Folad Shahr"
+        },
+        "slug": "فولادشهر",
+        "state_id": 4
+    },
+    {
+        "id": 185,
+        "name": {
+            "fa": "قمصر",
+            "en": "Ghamsar"
+        },
+        "slug": "قمصر",
+        "state_id": 4
+    },
+    {
+        "id": 186,
+        "name": {
+            "fa": "قهجاورستان",
+            "en": "Qahjavarestan"
+        },
+        "slug": "قهجاورستان",
+        "state_id": 4
+    },
+    {
+        "id": 187,
+        "name": {
+            "fa": "قهدریجان",
+            "en": "Ghahderijan"
+        },
+        "slug": "قهدریجان",
+        "state_id": 4
+    },
+    {
+        "id": 188,
+        "name": {
+            "fa": "کاشان",
+            "en": "Kashan"
+        },
+        "slug": "کاشان",
+        "state_id": 4
+    },
+    {
+        "id": 189,
+        "name": {
+            "fa": "کرکوند",
+            "en": "Karkevand"
+        },
+        "slug": "کرکوند",
+        "state_id": 4
+    },
+    {
+        "id": 190,
+        "name": {
+            "fa": "کلیشاد و سودرجان",
+            "en": "Kelishad and Soderjaan"
+        },
+        "slug": "کلیشاد-سودرجان",
+        "state_id": 4
+    },
+    {
+        "id": 191,
+        "name": {
+            "fa": "کمشچه",
+            "en": "Komshecheh"
+        },
+        "slug": "کمشچه",
+        "state_id": 4
+    },
+    {
+        "id": 192,
+        "name": {
+            "fa": "کمه",
+            "en": "Komeh"
+        },
+        "slug": "کمه",
+        "state_id": 4
+    },
+    {
+        "id": 193,
+        "name": {
+            "fa": "کهریزسنگ",
+            "en": "Kahrizsang"
+        },
+        "slug": "کهریزسنگ",
+        "state_id": 4
+    },
+    {
+        "id": 194,
+        "name": {
+            "fa": "کوشک",
+            "en": "Kooshk"
+        },
+        "slug": "کوشک",
+        "state_id": 4
+    },
+    {
+        "id": 195,
+        "name": {
+            "fa": "کوهپایه",
+            "en": "Kuhpayeh"
+        },
+        "slug": "کوهپایه",
+        "state_id": 4
+    },
+    {
+        "id": 196,
+        "name": {
+            "fa": "گرگاب",
+            "en": "Gorgab"
+        },
+        "slug": "گرگاب",
+        "state_id": 4
+    },
+    {
+        "id": 197,
+        "name": {
+            "fa": "گزبرخوار",
+            "en": "Gaz"
+        },
+        "slug": "گزبرخوار",
+        "state_id": 4
+    },
+    {
+        "id": 198,
+        "name": {
+            "fa": "گلپایگان",
+            "en": "Golpayegan"
+        },
+        "slug": "گلپایگان",
+        "state_id": 4
+    },
+    {
+        "id": 199,
+        "name": {
+            "fa": "گلدشت",
+            "en": "Goldasht"
+        },
+        "slug": "گلدشت",
+        "state_id": 4
+    },
+    {
+        "id": 200,
+        "name": {
+            "fa": "گلشهر",
+            "en": "Golshahr"
+        },
+        "slug": "گلشهر",
+        "state_id": 4
+    },
+    {
+        "id": 201,
+        "name": {
+            "fa": "گوگد",
+            "en": "Googad"
+        },
+        "slug": "گوگد",
+        "state_id": 4
+    },
+    {
+        "id": 202,
+        "name": {
+            "fa": "لای بید",
+            "en": "Laybid"
+        },
+        "slug": "لای-بید",
+        "state_id": 4
+    },
+    {
+        "id": 203,
+        "name": {
+            "fa": "مبارکه",
+            "en": "Mobarakeh"
+        },
+        "slug": "مبارکه",
+        "state_id": 4
+    },
+    {
+        "id": 204,
+        "name": {
+            "fa": "مجلسی",
+            "en": "Majlesi"
+        },
+        "slug": "مجلسی",
+        "state_id": 4
+    },
+    {
+        "id": 205,
+        "name": {
+            "fa": "محمدآباد",
+            "en": "Mohammad Abad"
+        },
+        "slug": "اصفهان-محمدآباد",
+        "state_id": 4
+    },
+    {
+        "id": 206,
+        "name": {
+            "fa": "مشکات",
+            "en": "Mashkat"
+        },
+        "slug": "مشکات",
+        "state_id": 4
+    },
+    {
+        "id": 207,
+        "name": {
+            "fa": "منظریه",
+            "en": "Manzariyeh"
+        },
+        "slug": "منظریه",
+        "state_id": 4
+    },
+    {
+        "id": 208,
+        "name": {
+            "fa": "مهاباد",
+            "en": "Mahabad"
+        },
+        "slug": "اصفهان-مهاباد",
+        "state_id": 4
+    },
+    {
+        "id": 209,
+        "name": {
+            "fa": "میمه",
+            "en": "Meymeh"
+        },
+        "slug": "اصفهان-میمه",
+        "state_id": 4
+    },
+    {
+        "id": 210,
+        "name": {
+            "fa": "نائین",
+            "en": "Naein"
+        },
+        "slug": "نائین",
+        "state_id": 4
+    },
+    {
+        "id": 211,
+        "name": {
+            "fa": "نجف آباد",
+            "en": "Najafabad"
+        },
+        "slug": "نجف-آباد",
+        "state_id": 4
+    },
+    {
+        "id": 212,
+        "name": {
+            "fa": "نصرآباد",
+            "en": "Nasrabad"
+        },
+        "slug": "اصفهان-نصرآباد",
+        "state_id": 4
+    },
+    {
+        "id": 213,
+        "name": {
+            "fa": "نطنز",
+            "en": "Natanz"
+        },
+        "slug": "نطنز",
+        "state_id": 4
+    },
+    {
+        "id": 214,
+        "name": {
+            "fa": "نوش آباد",
+            "en": "Nushabad"
+        },
+        "slug": "نوش-آباد",
+        "state_id": 4
+    },
+    {
+        "id": 215,
+        "name": {
+            "fa": "نیاسر",
+            "en": "Niasar"
+        },
+        "slug": "نیاسر",
+        "state_id": 4
+    },
+    {
+        "id": 216,
+        "name": {
+            "fa": "نیک آباد",
+            "en": "Nik Abad"
+        },
+        "slug": "نیک-آباد",
+        "state_id": 4
+    },
+    {
+        "id": 217,
+        "name": {
+            "fa": "هرند",
+            "en": "Harand"
+        },
+        "slug": "هرند",
+        "state_id": 4
+    },
+    {
+        "id": 218,
+        "name": {
+            "fa": "ورزنه",
+            "en": "Varzaneh"
+        },
+        "slug": "ورزنه",
+        "state_id": 4
+    },
+    {
+        "id": 219,
+        "name": {
+            "fa": "ورنامخواست",
+            "en": "Varnamkhast"
+        },
+        "slug": "ورنامخواست",
+        "state_id": 4
+    },
+    {
+        "id": 220,
+        "name": {
+            "fa": "وزوان",
+            "en": "Vazvan"
+        },
+        "slug": "وزوان",
+        "state_id": 4
+    },
+    {
+        "id": 221,
+        "name": {
+            "fa": "ونک",
+            "en": "Vanak"
+        },
+        "slug": "ونک",
+        "state_id": 4
+    },
+    {
+        "id": 222,
+        "name": {
+            "fa": "اسارا",
+            "en": "Asara"
+        },
+        "slug": "اسارا",
+        "state_id": 5
+    },
+    {
+        "id": 223,
+        "name": {
+            "fa": "اشتهارد",
+            "en": "Eshtehard"
+        },
+        "slug": "اشتهارد",
+        "state_id": 5
+    },
+    {
+        "id": 224,
+        "name": {
+            "fa": "تنکمان",
+            "en": "Tankaman"
+        },
+        "slug": "تنکمان",
+        "state_id": 5
+    },
+    {
+        "id": 225,
+        "name": {
+            "fa": "چهارباغ",
+            "en": "Charbagh"
+        },
+        "slug": "چهارباغ",
+        "state_id": 5
+    },
+    {
+        "id": 226,
+        "name": {
+            "fa": "سیف آباد",
+            "en": "Seyfabad"
+        },
+        "slug": "سیف-آباد",
+        "state_id": 5
+    },
+    {
+        "id": 227,
+        "name": {
+            "fa": "شهر جدید هشتگرد",
+            "en": "Hashtgerd New Shahr"
+        },
+        "slug": "شهر-جدید-هشتگرد",
+        "state_id": 5
+    },
+    {
+        "id": 228,
+        "name": {
+            "fa": "طالقان",
+            "en": "Taleqan"
+        },
+        "slug": "طالقان",
+        "state_id": 5
+    },
+    {
+        "id": 229,
+        "name": {
+            "fa": "کرج",
+            "en": "Karaj"
+        },
+        "slug": "کرج",
+        "state_id": 5
+    },
+    {
+        "id": 230,
+        "name": {
+            "fa": "کمال شهر",
+            "en": "Kamal Shahr"
+        },
+        "slug": "کمال-شهر",
+        "state_id": 5
+    },
+    {
+        "id": 231,
+        "name": {
+            "fa": "کوهسار",
+            "en": "Koohsar"
+        },
+        "slug": "کوهسار",
+        "state_id": 5
+    },
+    {
+        "id": 232,
+        "name": {
+            "fa": "گرمدره",
+            "en": "Garmdareh"
+        },
+        "slug": "گرمدره",
+        "state_id": 5
+    },
+    {
+        "id": 233,
+        "name": {
+            "fa": "ماهدشت",
+            "en": "Mahdasht"
+        },
+        "slug": "ماهدشت",
+        "state_id": 5
+    },
+    {
+        "id": 234,
+        "name": {
+            "fa": "محمدشهر",
+            "en": "Mohammad Shahr"
+        },
+        "slug": "البرز-محمدشهر",
+        "state_id": 5
+    },
+    {
+        "id": 235,
+        "name": {
+            "fa": "مشکین دشت",
+            "en": "Meshkindasht"
+        },
+        "slug": "مشکین-دشت",
+        "state_id": 5
+    },
+    {
+        "id": 236,
+        "name": {
+            "fa": "نظرآباد",
+            "en": "Nazarabad"
+        },
+        "slug": "نظرآباد",
+        "state_id": 5
+    },
+    {
+        "id": 237,
+        "name": {
+            "fa": "هشتگرد",
+            "en": "Hashtgerd"
+        },
+        "slug": "هشتگرد",
+        "state_id": 5
+    },
+    {
+        "id": 1117,
+        "name": {
+            "fa": "فردیس",
+            "en": "Fardis"
+        },
+        "slug": "فردیس",
+        "state_id": 5
+    },
+    {
+        "id": 1118,
+        "name": {
+            "fa": "مارلیک",
+            "en": "Marlik"
+        },
+        "slug": "مارلیک",
+        "state_id": 5
+    },
+    {
+        "id": 238,
+        "name": {
+            "fa": "ارکواز",
+            "en": "Arkavaz"
+        },
+        "slug": "ارکواز",
+        "state_id": 6
+    },
+    {
+        "id": 239,
+        "name": {
+            "fa": "ایلام",
+            "en": "Ilam"
+        },
+        "slug": "شهر-ایلام",
+        "state_id": 6
+    },
+    {
+        "id": 240,
+        "name": {
+            "fa": "ایوان",
+            "en": "Eyvan"
+        },
+        "slug": "ایوان",
+        "state_id": 6
+    },
+    {
+        "id": 241,
+        "name": {
+            "fa": "آبدانان",
+            "en": "Abdanan"
+        },
+        "slug": "آبدانان",
+        "state_id": 6
+    },
+    {
+        "id": 242,
+        "name": {
+            "fa": "آسمان آباد",
+            "en": "Aseman Abad"
+        },
+        "slug": "آسمان-آباد",
+        "state_id": 6
+    },
+    {
+        "id": 243,
+        "name": {
+            "fa": "بدره",
+            "en": "Bedreh"
+        },
+        "slug": "بدره",
+        "state_id": 6
+    },
+    {
+        "id": 244,
+        "name": {
+            "fa": "پهله",
+            "en": "Pahleh"
+        },
+        "slug": "پهله",
+        "state_id": 6
+    },
+    {
+        "id": 245,
+        "name": {
+            "fa": "توحید",
+            "en": "Tawhid"
+        },
+        "slug": "توحید",
+        "state_id": 6
+    },
+    {
+        "id": 246,
+        "name": {
+            "fa": "چوار",
+            "en": "Chovar"
+        },
+        "slug": "چوار",
+        "state_id": 6
+    },
+    {
+        "id": 247,
+        "name": {
+            "fa": "دره شهر",
+            "en": "Darreh Shahr"
+        },
+        "slug": "دره-شهر",
+        "state_id": 6
+    },
+    {
+        "id": 248,
+        "name": {
+            "fa": "دلگشا",
+            "en": "Delgosha"
+        },
+        "slug": "دلگشا",
+        "state_id": 6
+    },
+    {
+        "id": 249,
+        "name": {
+            "fa": "دهلران",
+            "en": "Dehloran"
+        },
+        "slug": "دهلران",
+        "state_id": 6
+    },
+    {
+        "id": 250,
+        "name": {
+            "fa": "زرنه",
+            "en": "Zarneh"
+        },
+        "slug": "زرنه",
+        "state_id": 6
+    },
+    {
+        "id": 251,
+        "name": {
+            "fa": "سراب باغ",
+            "en": "Sarabbagh"
+        },
+        "slug": "سراب-باغ",
+        "state_id": 6
+    },
+    {
+        "id": 252,
+        "name": {
+            "fa": "سرابله",
+            "en": "Sarableh"
+        },
+        "slug": "سرابله",
+        "state_id": 6
+    },
+    {
+        "id": 253,
+        "name": {
+            "fa": "صالح آباد",
+            "en": "Saleh Abad"
+        },
+        "slug": "ایلام-صالح-آباد",
+        "state_id": 6
+    },
+    {
+        "id": 254,
+        "name": {
+            "fa": "لومار",
+            "en": "Loumar"
+        },
+        "slug": "لومار",
+        "state_id": 6
+    },
+    {
+        "id": 255,
+        "name": {
+            "fa": "مهران",
+            "en": "Mehran"
+        },
+        "slug": "مهران",
+        "state_id": 6
+    },
+    {
+        "id": 256,
+        "name": {
+            "fa": "مورموری",
+            "en": "Moormoori"
+        },
+        "slug": "مورموری",
+        "state_id": 6
+    },
+    {
+        "id": 257,
+        "name": {
+            "fa": "موسیان",
+            "en": "Moosyan"
+        },
+        "slug": "موسیان",
+        "state_id": 6
+    },
+    {
+        "id": 258,
+        "name": {
+            "fa": "میمه",
+            "en": "Meymeh"
+        },
+        "slug": "ایلام-میمه",
+        "state_id": 6
+    },
+    {
+        "id": 259,
+        "name": {
+            "fa": "امام حسن",
+            "en": "Emam Hasan"
+        },
+        "slug": "امام-حسن",
+        "state_id": 7
+    },
+    {
+        "id": 260,
+        "name": {
+            "fa": "انارستان",
+            "en": "Anarestan"
+        },
+        "slug": "انارستان",
+        "state_id": 7
+    },
+    {
+        "id": 261,
+        "name": {
+            "fa": "اهرم",
+            "en": "Ahram"
+        },
+        "slug": "اهرم",
+        "state_id": 7
+    },
+    {
+        "id": 262,
+        "name": {
+            "fa": "آب پخش",
+            "en": "Ab Pakhsh"
+        },
+        "slug": "آب-پخش",
+        "state_id": 7
+    },
+    {
+        "id": 263,
+        "name": {
+            "fa": "آبدان",
+            "en": "Abdan"
+        },
+        "slug": "آبدان",
+        "state_id": 7
+    },
+    {
+        "id": 264,
+        "name": {
+            "fa": "برازجان",
+            "en": "Borazjan"
+        },
+        "slug": "برازجان",
+        "state_id": 7
+    },
+    {
+        "id": 265,
+        "name": {
+            "fa": "بردخون",
+            "en": "Bord Khun"
+        },
+        "slug": "بردخون",
+        "state_id": 7
+    },
+    {
+        "id": 266,
+        "name": {
+            "fa": "بندردیر",
+            "en": "Bandar Dayyer"
+        },
+        "slug": "بندردیر",
+        "state_id": 7
+    },
+    {
+        "id": 267,
+        "name": {
+            "fa": "بندردیلم",
+            "en": "Bandar Deylam"
+        },
+        "slug": "بندردیلم",
+        "state_id": 7
+    },
+    {
+        "id": 268,
+        "name": {
+            "fa": "بندرریگ",
+            "en": "Bandar Rig"
+        },
+        "slug": "بندرریگ",
+        "state_id": 7
+    },
+    {
+        "id": 269,
+        "name": {
+            "fa": "بندرکنگان",
+            "en": "Bandar-e Kangan"
+        },
+        "slug": "بندرکنگان",
+        "state_id": 7
+    },
+    {
+        "id": 270,
+        "name": {
+            "fa": "بندرگناوه",
+            "en": "Bandar Ganaveh"
+        },
+        "slug": "بندرگناوه",
+        "state_id": 7
+    },
+    {
+        "id": 271,
+        "name": {
+            "fa": "بنک",
+            "en": "Banak"
+        },
+        "slug": "بنک",
+        "state_id": 7
+    },
+    {
+        "id": 272,
+        "name": {
+            "fa": "بوشهر",
+            "en": "Bushehr"
+        },
+        "slug": "شهر-بوشهر",
+        "state_id": 7
+    },
+    {
+        "id": 273,
+        "name": {
+            "fa": "تنگ ارم",
+            "en": "Tang Eram"
+        },
+        "slug": "تنگ-ارم",
+        "state_id": 7
+    },
+    {
+        "id": 274,
+        "name": {
+            "fa": "جم",
+            "en": "Jam"
+        },
+        "slug": "جم",
+        "state_id": 7
+    },
+    {
+        "id": 275,
+        "name": {
+            "fa": "چغادک",
+            "en": "Choghadak"
+        },
+        "slug": "چغادک",
+        "state_id": 7
+    },
+    {
+        "id": 276,
+        "name": {
+            "fa": "خارک",
+            "en": "Khark"
+        },
+        "slug": "خارک",
+        "state_id": 7
+    },
+    {
+        "id": 277,
+        "name": {
+            "fa": "خورموج",
+            "en": "Khormoj"
+        },
+        "slug": "خورموج",
+        "state_id": 7
+    },
+    {
+        "id": 278,
+        "name": {
+            "fa": "دالکی",
+            "en": "Dalaki"
+        },
+        "slug": "دالکی",
+        "state_id": 7
+    },
+    {
+        "id": 279,
+        "name": {
+            "fa": "دلوار",
+            "en": "Delvar"
+        },
+        "slug": "دلوار",
+        "state_id": 7
+    },
+    {
+        "id": 280,
+        "name": {
+            "fa": "ریز",
+            "en": "Riz"
+        },
+        "slug": "ریز",
+        "state_id": 7
+    },
+    {
+        "id": 281,
+        "name": {
+            "fa": "سعدآباد",
+            "en": "Sadabad"
+        },
+        "slug": "سعدآباد",
+        "state_id": 7
+    },
+    {
+        "id": 282,
+        "name": {
+            "fa": "سیراف",
+            "en": "Siraf"
+        },
+        "slug": "سیراف",
+        "state_id": 7
+    },
+    {
+        "id": 283,
+        "name": {
+            "fa": "شبانکاره",
+            "en": "Shabankareh"
+        },
+        "slug": "شبانکاره",
+        "state_id": 7
+    },
+    {
+        "id": 284,
+        "name": {
+            "fa": "شنبه",
+            "en": "Shanbeh"
+        },
+        "slug": "شنبه",
+        "state_id": 7
+    },
+    {
+        "id": 285,
+        "name": {
+            "fa": "عسلویه",
+            "en": "Asaluyeh"
+        },
+        "slug": "عسلویه",
+        "state_id": 7
+    },
+    {
+        "id": 286,
+        "name": {
+            "fa": "کاکی",
+            "en": "Kaki"
+        },
+        "slug": "کاکی",
+        "state_id": 7
+    },
+    {
+        "id": 287,
+        "name": {
+            "fa": "کلمه",
+            "en": "Kalameh"
+        },
+        "slug": "کلمه",
+        "state_id": 7
+    },
+    {
+        "id": 288,
+        "name": {
+            "fa": "نخل تقی",
+            "en": "Nakhl Taghi"
+        },
+        "slug": "نخل-تقی",
+        "state_id": 7
+    },
+    {
+        "id": 289,
+        "name": {
+            "fa": "وحدتیه",
+            "en": "Vahdatiyeh"
+        },
+        "slug": "وحدتیه",
+        "state_id": 7
+    },
+    {
+        "id": 290,
+        "name": {
+            "fa": "ارجمند",
+            "en": "Arjmand"
+        },
+        "slug": "ارجمند",
+        "state_id": 8
+    },
+    {
+        "id": 291,
+        "name": {
+            "fa": "اسلامشهر",
+            "en": "Eslamshahr"
+        },
+        "slug": "اسلامشهر",
+        "state_id": 8
+    },
+    {
+        "id": 292,
+        "name": {
+            "fa": "اندیشه",
+            "en": "Andisheh"
+        },
+        "slug": "اندیشه",
+        "state_id": 8
+    },
+    {
+        "id": 293,
+        "name": {
+            "fa": "آبسرد",
+            "en": "Absard"
+        },
+        "slug": "آبسرد",
+        "state_id": 8
+    },
+    {
+        "id": 294,
+        "name": {
+            "fa": "آبعلی",
+            "en": "Abali"
+        },
+        "slug": "آبعلی",
+        "state_id": 8
+    },
+    {
+        "id": 295,
+        "name": {
+            "fa": "باغستان",
+            "en": "Baghestan"
+        },
+        "slug": "باغستان",
+        "state_id": 8
+    },
+    {
+        "id": 296,
+        "name": {
+            "fa": "باقرشهر",
+            "en": "Baghershahr"
+        },
+        "slug": "باقرشهر",
+        "state_id": 8
+    },
+    {
+        "id": 297,
+        "name": {
+            "fa": "بومهن",
+            "en": "Bumehen"
+        },
+        "slug": "بومهن",
+        "state_id": 8
+    },
+    {
+        "id": 298,
+        "name": {
+            "fa": "پاکدشت",
+            "en": "Pakdasht"
+        },
+        "slug": "پاکدشت",
+        "state_id": 8
+    },
+    {
+        "id": 299,
+        "name": {
+            "fa": "پردیس",
+            "en": "Pardis"
+        },
+        "slug": "پردیس",
+        "state_id": 8
+    },
+    {
+        "id": 300,
+        "name": {
+            "fa": "پیشوا",
+            "en": "Pishva"
+        },
+        "slug": "پیشوا",
+        "state_id": 8
+    },
+    {
+        "id": 301,
+        "name": {
+            "fa": "تهران",
+            "en": "Tehran"
+        },
+        "slug": "شهر-تهران",
+        "state_id": 8
+    },
+    {
+        "id": 302,
+        "name": {
+            "fa": "جوادآباد",
+            "en": "Javadabad"
+        },
+        "slug": "جوادآباد",
+        "state_id": 8
+    },
+    {
+        "id": 303,
+        "name": {
+            "fa": "چهاردانگه",
+            "en": "Chahar Dangeh"
+        },
+        "slug": "چهاردانگه",
+        "state_id": 8
+    },
+    {
+        "id": 304,
+        "name": {
+            "fa": "حسن آباد",
+            "en": "Hasan Abad"
+        },
+        "slug": "تهران-حسن-آباد",
+        "state_id": 8
+    },
+    {
+        "id": 305,
+        "name": {
+            "fa": "دماوند",
+            "en": "Damavand"
+        },
+        "slug": "دماوند",
+        "state_id": 8
+    },
+    {
+        "id": 306,
+        "name": {
+            "fa": "دیزین",
+            "en": "Dizin"
+        },
+        "slug": "دیزین",
+        "state_id": 8
+    },
+    {
+        "id": 307,
+        "name": {
+            "fa": "ری",
+            "en": "Rey"
+        },
+        "slug": "ری",
+        "state_id": 8
+    },
+    {
+        "id": 308,
+        "name": {
+            "fa": "رباط کریم",
+            "en": "Robat Karim"
+        },
+        "slug": "رباط-کریم",
+        "state_id": 8
+    },
+    {
+        "id": 309,
+        "name": {
+            "fa": "رودهن",
+            "en": "Rudehen"
+        },
+        "slug": "رودهن",
+        "state_id": 8
+    },
+    {
+        "id": 310,
+        "name": {
+            "fa": "شاهدشهر",
+            "en": "Shahedshahr"
+        },
+        "slug": "شاهدشهر",
+        "state_id": 8
+    },
+    {
+        "id": 311,
+        "name": {
+            "fa": "شریف آباد",
+            "en": "Sharif Abad"
+        },
+        "slug": "شریف-آباد",
+        "state_id": 8
+    },
+    {
+        "id": 312,
+        "name": {
+            "fa": "شمشک",
+            "en": "Shemshak"
+        },
+        "slug": "شمشک",
+        "state_id": 8
+    },
+    {
+        "id": 313,
+        "name": {
+            "fa": "شهریار",
+            "en": "Shahriar"
+        },
+        "slug": "شهریار",
+        "state_id": 8
+    },
+    {
+        "id": 314,
+        "name": {
+            "fa": "صالح آباد",
+            "en": "Saleh Abad"
+        },
+        "slug": "تهران-صالح-آباد",
+        "state_id": 8
+    },
+    {
+        "id": 315,
+        "name": {
+            "fa": "صباشهر",
+            "en": "Saba Shahr"
+        },
+        "slug": "صباشهر",
+        "state_id": 8
+    },
+    {
+        "id": 316,
+        "name": {
+            "fa": "صفادشت",
+            "en": "Safadasht"
+        },
+        "slug": "صفادشت",
+        "state_id": 8
+    },
+    {
+        "id": 317,
+        "name": {
+            "fa": "فردوسیه",
+            "en": "Ferdosiye"
+        },
+        "slug": "فردوسیه",
+        "state_id": 8
+    },
+    {
+        "id": 318,
+        "name": {
+            "fa": "فشم",
+            "en": "Fasham"
+        },
+        "slug": "فشم",
+        "state_id": 8
+    },
+    {
+        "id": 319,
+        "name": {
+            "fa": "فیروزکوه",
+            "en": "Firuzkuh"
+        },
+        "slug": "فیروزکوه",
+        "state_id": 8
+    },
+    {
+        "id": 320,
+        "name": {
+            "fa": "قدس",
+            "en": "Quds"
+        },
+        "slug": "قدس",
+        "state_id": 8
+    },
+    {
+        "id": 321,
+        "name": {
+            "fa": "قرچک",
+            "en": "Qarchak"
+        },
+        "slug": "قرچک",
+        "state_id": 8
+    },
+    {
+        "id": 322,
+        "name": {
+            "fa": "کهریزک",
+            "en": "Kahrizak"
+        },
+        "slug": "کهریزک",
+        "state_id": 8
+    },
+    {
+        "id": 323,
+        "name": {
+            "fa": "کیلان",
+            "en": "Kilan"
+        },
+        "slug": "کیلان",
+        "state_id": 8
+    },
+    {
+        "id": 324,
+        "name": {
+            "fa": "گلستان",
+            "en": "Golestan"
+        },
+        "slug": "شهر-گلستان",
+        "state_id": 8
+    },
+    {
+        "id": 325,
+        "name": {
+            "fa": "لواسان",
+            "en": "Lavasan"
+        },
+        "slug": "لواسان",
+        "state_id": 8
+    },
+    {
+        "id": 326,
+        "name": {
+            "fa": "ملارد",
+            "en": "Malard"
+        },
+        "slug": "ملارد",
+        "state_id": 8
+    },
+    {
+        "id": 327,
+        "name": {
+            "fa": "میگون",
+            "en": "Meygon"
+        },
+        "slug": "میگون",
+        "state_id": 8
+    },
+    {
+        "id": 328,
+        "name": {
+            "fa": "نسیم شهر",
+            "en": "Nasim Shahr"
+        },
+        "slug": "نسیم-شهر",
+        "state_id": 8
+    },
+    {
+        "id": 329,
+        "name": {
+            "fa": "نصیرآباد",
+            "en": "Nasir Abad"
+        },
+        "slug": "نصیرآباد",
+        "state_id": 8
+    },
+    {
+        "id": 330,
+        "name": {
+            "fa": "وحیدیه",
+            "en": "Vahidiyeh"
+        },
+        "slug": "وحیدیه",
+        "state_id": 8
+    },
+    {
+        "id": 331,
+        "name": {
+            "fa": "ورامین",
+            "en": "Varamin"
+        },
+        "slug": "ورامین",
+        "state_id": 8
+    },
+    {
+        "id": 1116,
+        "name": {
+            "fa": "پرند",
+            "en": "Parand"
+        },
+        "slug": "پرند",
+        "state_id": 8
+    },
+    {
+        "id": 332,
+        "name": {
+            "fa": "اردل",
+            "en": "Ardal"
+        },
+        "slug": "اردل",
+        "state_id": 9
+    },
+    {
+        "id": 333,
+        "name": {
+            "fa": "آلونی",
+            "en": "Aluni"
+        },
+        "slug": "آلونی",
+        "state_id": 9
+    },
+    {
+        "id": 334,
+        "name": {
+            "fa": "باباحیدر",
+            "en": "Babaheydar"
+        },
+        "slug": "باباحیدر",
+        "state_id": 9
+    },
+    {
+        "id": 335,
+        "name": {
+            "fa": "بروجن",
+            "en": "Boroujen"
+        },
+        "slug": "بروجن",
+        "state_id": 9
+    },
+    {
+        "id": 336,
+        "name": {
+            "fa": "بلداجی",
+            "en": "Boldaji"
+        },
+        "slug": "بلداجی",
+        "state_id": 9
+    },
+    {
+        "id": 337,
+        "name": {
+            "fa": "بن",
+            "en": "Bonn"
+        },
+        "slug": "بن",
+        "state_id": 9
+    },
+    {
+        "id": 338,
+        "name": {
+            "fa": "جونقان",
+            "en": "Junqan"
+        },
+        "slug": "جونقان",
+        "state_id": 9
+    },
+    {
+        "id": 339,
+        "name": {
+            "fa": "چلگرد",
+            "en": "Chelgerd"
+        },
+        "slug": "چلگرد",
+        "state_id": 9
+    },
+    {
+        "id": 340,
+        "name": {
+            "fa": "سامان",
+            "en": "Saman"
+        },
+        "slug": "سامان",
+        "state_id": 9
+    },
+    {
+        "id": 341,
+        "name": {
+            "fa": "سفیددشت",
+            "en": "Sefiddasht"
+        },
+        "slug": "سفیددشت",
+        "state_id": 9
+    },
+    {
+        "id": 342,
+        "name": {
+            "fa": "سودجان",
+            "en": "Sudejan"
+        },
+        "slug": "سودجان",
+        "state_id": 9
+    },
+    {
+        "id": 343,
+        "name": {
+            "fa": "سورشجان",
+            "en": "Sureshjan"
+        },
+        "slug": "سورشجان",
+        "state_id": 9
+    },
+    {
+        "id": 344,
+        "name": {
+            "fa": "شلمزار",
+            "en": "Shalamzar"
+        },
+        "slug": "شلمزار",
+        "state_id": 9
+    },
+    {
+        "id": 345,
+        "name": {
+            "fa": "شهرکرد",
+            "en": "Shahrekord"
+        },
+        "slug": "شهرکرد",
+        "state_id": 9
+    },
+    {
+        "id": 346,
+        "name": {
+            "fa": "طاقانک",
+            "en": "Taqanak"
+        },
+        "slug": "طاقانک",
+        "state_id": 9
+    },
+    {
+        "id": 347,
+        "name": {
+            "fa": "فارسان",
+            "en": "Farsan"
+        },
+        "slug": "فارسان",
+        "state_id": 9
+    },
+    {
+        "id": 348,
+        "name": {
+            "fa": "فرادبنه",
+            "en": "Faradonbeh"
+        },
+        "slug": "فرادبنه",
+        "state_id": 9
+    },
+    {
+        "id": 349,
+        "name": {
+            "fa": "فرخ شهر",
+            "en": "Farrokhshahr"
+        },
+        "slug": "فرخ-شهر",
+        "state_id": 9
+    },
+    {
+        "id": 350,
+        "name": {
+            "fa": "کیان",
+            "en": "Kian"
+        },
+        "slug": "کیان",
+        "state_id": 9
+    },
+    {
+        "id": 351,
+        "name": {
+            "fa": "گندمان",
+            "en": "Gandoman"
+        },
+        "slug": "گندمان",
+        "state_id": 9
+    },
+    {
+        "id": 352,
+        "name": {
+            "fa": "گهرو",
+            "en": "Gahru"
+        },
+        "slug": "گهرو",
+        "state_id": 9
+    },
+    {
+        "id": 353,
+        "name": {
+            "fa": "لردگان",
+            "en": "Lordegan"
+        },
+        "slug": "لردگان",
+        "state_id": 9
+    },
+    {
+        "id": 354,
+        "name": {
+            "fa": "مال خلیفه",
+            "en": "Mal-e Khalifeh"
+        },
+        "slug": "مال-خلیفه",
+        "state_id": 9
+    },
+    {
+        "id": 355,
+        "name": {
+            "fa": "ناغان",
+            "en": "Naghan"
+        },
+        "slug": "ناغان",
+        "state_id": 9
+    },
+    {
+        "id": 356,
+        "name": {
+            "fa": "نافچ",
+            "en": "Nafch"
+        },
+        "slug": "نافچ",
+        "state_id": 9
+    },
+    {
+        "id": 357,
+        "name": {
+            "fa": "نقنه",
+            "en": "Naghneh"
+        },
+        "slug": "نقنه",
+        "state_id": 9
+    },
+    {
+        "id": 358,
+        "name": {
+            "fa": "هفشجان",
+            "en": "Hafshejan"
+        },
+        "slug": "هفشجان",
+        "state_id": 9
+    },
+    {
+        "id": 359,
+        "name": {
+            "fa": "ارسک",
+            "en": "Eresk"
+        },
+        "slug": "ارسک",
+        "state_id": 10
+    },
+    {
+        "id": 360,
+        "name": {
+            "fa": "اسدیه",
+            "en": "Asadieh"
+        },
+        "slug": "اسدیه",
+        "state_id": 10
+    },
+    {
+        "id": 361,
+        "name": {
+            "fa": "اسفدن",
+            "en": "Esfedan"
+        },
+        "slug": "اسفدن",
+        "state_id": 10
+    },
+    {
+        "id": 362,
+        "name": {
+            "fa": "اسلامیه",
+            "en": "Islamiyeh"
+        },
+        "slug": "اسلامیه",
+        "state_id": 10
+    },
+    {
+        "id": 363,
+        "name": {
+            "fa": "آرین شهر",
+            "en": "Arian Shahr"
+        },
+        "slug": "آرین-شهر",
+        "state_id": 10
+    },
+    {
+        "id": 364,
+        "name": {
+            "fa": "آیسک",
+            "en": "Ayask"
+        },
+        "slug": "آیسک",
+        "state_id": 10
+    },
+    {
+        "id": 365,
+        "name": {
+            "fa": "بشرویه",
+            "en": "Boshrouyeh"
+        },
+        "slug": "بشرویه",
+        "state_id": 10
+    },
+    {
+        "id": 366,
+        "name": {
+            "fa": "بیرجند",
+            "en": "Birjand"
+        },
+        "slug": "بیرجند",
+        "state_id": 10
+    },
+    {
+        "id": 367,
+        "name": {
+            "fa": "حاجی آباد",
+            "en": "Haji Abad"
+        },
+        "slug": "خراسان-جنوبی-حاجی-آباد",
+        "state_id": 10
+    },
+    {
+        "id": 368,
+        "name": {
+            "fa": "خضری دشت بیاض",
+            "en": "Khezri Dashtebayaz"
+        },
+        "slug": "خضری-دشت-بیاض",
+        "state_id": 10
+    },
+    {
+        "id": 369,
+        "name": {
+            "fa": "خوسف",
+            "en": "Khusf"
+        },
+        "slug": "خوسف",
+        "state_id": 10
+    },
+    {
+        "id": 370,
+        "name": {
+            "fa": "زهان",
+            "en": "Zohaan"
+        },
+        "slug": "زهان",
+        "state_id": 10
+    },
+    {
+        "id": 371,
+        "name": {
+            "fa": "سرایان",
+            "en": "Sarayan"
+        },
+        "slug": "سرایان",
+        "state_id": 10
+    },
+    {
+        "id": 372,
+        "name": {
+            "fa": "سربیشه",
+            "en": "Sarbisheh"
+        },
+        "slug": "سربیشه",
+        "state_id": 10
+    },
+    {
+        "id": 373,
+        "name": {
+            "fa": "سه قلعه",
+            "en": "Seh Qaleh"
+        },
+        "slug": "سه-قلعه",
+        "state_id": 10
+    },
+    {
+        "id": 374,
+        "name": {
+            "fa": "شوسف",
+            "en": "Shusf"
+        },
+        "slug": "شوسف",
+        "state_id": 10
+    },
+    {
+        "id": 375,
+        "name": {
+            "fa": "طبس",
+            "en": "Tabas"
+        },
+        "slug": "خراسان-جنوبی-طبس-",
+        "state_id": 10
+    },
+    {
+        "id": 376,
+        "name": {
+            "fa": "فردوس",
+            "en": "Ferdows"
+        },
+        "slug": "فردوس",
+        "state_id": 10
+    },
+    {
+        "id": 377,
+        "name": {
+            "fa": "قاین",
+            "en": "Ghayen"
+        },
+        "slug": "قاین",
+        "state_id": 10
+    },
+    {
+        "id": 378,
+        "name": {
+            "fa": "قهستان",
+            "en": "Quhistan"
+        },
+        "slug": "قهستان",
+        "state_id": 10
+    },
+    {
+        "id": 379,
+        "name": {
+            "fa": "محمدشهر",
+            "en": "Mohammad Shahr"
+        },
+        "slug": "خراسان-جنوبی-محمدشهر",
+        "state_id": 10
+    },
+    {
+        "id": 380,
+        "name": {
+            "fa": "مود",
+            "en": "Mud"
+        },
+        "slug": "مود",
+        "state_id": 10
+    },
+    {
+        "id": 381,
+        "name": {
+            "fa": "نهبندان",
+            "en": "Nehbandan"
+        },
+        "slug": "نهبندان",
+        "state_id": 10
+    },
+    {
+        "id": 382,
+        "name": {
+            "fa": "نیمبلوک",
+            "en": "Nimbolook"
+        },
+        "slug": "نیمبلوک",
+        "state_id": 10
+    },
+    {
+        "id": 383,
+        "name": {
+            "fa": "احمدآباد صولت",
+            "en": "Ahmad-abad-e-Solat"
+        },
+        "slug": "احمدآباد-صولت",
+        "state_id": 11
+    },
+    {
+        "id": 384,
+        "name": {
+            "fa": "انابد",
+            "en": "Anabad"
+        },
+        "slug": "انابد",
+        "state_id": 11
+    },
+    {
+        "id": 385,
+        "name": {
+            "fa": "باجگیران",
+            "en": "Bājgirān"
+        },
+        "slug": "باجگیران",
+        "state_id": 11
+    },
+    {
+        "id": 386,
+        "name": {
+            "fa": "باخرز",
+            "en": "Bakharz"
+        },
+        "slug": "باخرز",
+        "state_id": 11
+    },
+    {
+        "id": 387,
+        "name": {
+            "fa": "بار",
+            "en": "Bar"
+        },
+        "slug": "بار",
+        "state_id": 11
+    },
+    {
+        "id": 388,
+        "name": {
+            "fa": "بایگ",
+            "en": "Bayg"
+        },
+        "slug": "بایگ",
+        "state_id": 11
+    },
+    {
+        "id": 389,
+        "name": {
+            "fa": "بجستان",
+            "en": "Bajestan"
+        },
+        "slug": "بجستان",
+        "state_id": 11
+    },
+    {
+        "id": 390,
+        "name": {
+            "fa": "بردسکن",
+            "en": "Bardaskan"
+        },
+        "slug": "بردسکن",
+        "state_id": 11
+    },
+    {
+        "id": 391,
+        "name": {
+            "fa": "بیدخت",
+            "en": "Beydokht"
+        },
+        "slug": "بیدخت",
+        "state_id": 11
+    },
+    {
+        "id": 392,
+        "name": {
+            "fa": "تایباد",
+            "en": "Taybad"
+        },
+        "slug": "تایباد",
+        "state_id": 11
+    },
+    {
+        "id": 393,
+        "name": {
+            "fa": "تربت جام",
+            "en": "Torbat-e-Jam"
+        },
+        "slug": "تربت-جام",
+        "state_id": 11
+    },
+    {
+        "id": 394,
+        "name": {
+            "fa": "تربت حیدریه",
+            "en": "Torbat Heydariyeh"
+        },
+        "slug": "تربت-حیدریه",
+        "state_id": 11
+    },
+    {
+        "id": 395,
+        "name": {
+            "fa": "جغتای",
+            "en": "Joghatay"
+        },
+        "slug": "جغتای",
+        "state_id": 11
+    },
+    {
+        "id": 396,
+        "name": {
+            "fa": "جنگل",
+            "en": "Jangal"
+        },
+        "slug": "جنگل",
+        "state_id": 11
+    },
+    {
+        "id": 397,
+        "name": {
+            "fa": "چاپشلو",
+            "en": "Chapeshlu"
+        },
+        "slug": "چاپشلو",
+        "state_id": 11
+    },
+    {
+        "id": 398,
+        "name": {
+            "fa": "چکنه",
+            "en": "Chakaneh"
+        },
+        "slug": "چکنه",
+        "state_id": 11
+    },
+    {
+        "id": 399,
+        "name": {
+            "fa": "چناران",
+            "en": "Chenaran"
+        },
+        "slug": "چناران",
+        "state_id": 11
+    },
+    {
+        "id": 400,
+        "name": {
+            "fa": "خرو",
+            "en": "Kharv"
+        },
+        "slug": "خرو",
+        "state_id": 11
+    },
+    {
+        "id": 401,
+        "name": {
+            "fa": "خلیل آباد",
+            "en": "Khalil Abad"
+        },
+        "slug": "خلیل-آباد",
+        "state_id": 11
+    },
+    {
+        "id": 402,
+        "name": {
+            "fa": "خواف",
+            "en": "Khaf"
+        },
+        "slug": "خواف",
+        "state_id": 11
+    },
+    {
+        "id": 403,
+        "name": {
+            "fa": "داورزن",
+            "en": "Davarzan"
+        },
+        "slug": "داورزن",
+        "state_id": 11
+    },
+    {
+        "id": 404,
+        "name": {
+            "fa": "درگز",
+            "en": "Dargaz"
+        },
+        "slug": "درگز",
+        "state_id": 11
+    },
+    {
+        "id": 405,
+        "name": {
+            "fa": "در رود",
+            "en": "Darrod"
+        },
+        "slug": "در-رود",
+        "state_id": 11
+    },
+    {
+        "id": 406,
+        "name": {
+            "fa": "دولت آباد",
+            "en": "Dolat Abad"
+        },
+        "slug": "خراسان-رضوی-دولت-آباد",
+        "state_id": 11
+    },
+    {
+        "id": 407,
+        "name": {
+            "fa": "رباط سنگ",
+            "en": "Robat-e-Sang"
+        },
+        "slug": "رباط-سنگ",
+        "state_id": 11
+    },
+    {
+        "id": 408,
+        "name": {
+            "fa": "رشتخوار",
+            "en": "Rashtkhar"
+        },
+        "slug": "رشتخوار",
+        "state_id": 11
+    },
+    {
+        "id": 409,
+        "name": {
+            "fa": "رضویه",
+            "en": "Razaviye"
+        },
+        "slug": "رضویه",
+        "state_id": 11
+    },
+    {
+        "id": 410,
+        "name": {
+            "fa": "روداب",
+            "en": "Rudab"
+        },
+        "slug": "روداب",
+        "state_id": 11
+    },
+    {
+        "id": 411,
+        "name": {
+            "fa": "ریوش",
+            "en": "Rivash"
+        },
+        "slug": "ریوش",
+        "state_id": 11
+    },
+    {
+        "id": 412,
+        "name": {
+            "fa": "سبزوار",
+            "en": "Sabzevar"
+        },
+        "slug": "سبزوار",
+        "state_id": 11
+    },
+    {
+        "id": 413,
+        "name": {
+            "fa": "سرخس",
+            "en": "Sarkhes"
+        },
+        "slug": "سرخس",
+        "state_id": 11
+    },
+    {
+        "id": 414,
+        "name": {
+            "fa": "سفیدسنگ",
+            "en": "Sefid Sang"
+        },
+        "slug": "سفیدسنگ",
+        "state_id": 11
+    },
+    {
+        "id": 415,
+        "name": {
+            "fa": "سلامی",
+            "en": "Salami"
+        },
+        "slug": "سلامی",
+        "state_id": 11
+    },
+    {
+        "id": 416,
+        "name": {
+            "fa": "سلطان آباد",
+            "en": "Soltan Abad"
+        },
+        "slug": "سلطان-آباد",
+        "state_id": 11
+    },
+    {
+        "id": 417,
+        "name": {
+            "fa": "سنگان",
+            "en": "Sangan"
+        },
+        "slug": "سنگان",
+        "state_id": 11
+    },
+    {
+        "id": 418,
+        "name": {
+            "fa": "شادمهر",
+            "en": "Shadmehr"
+        },
+        "slug": "شادمهر",
+        "state_id": 11
+    },
+    {
+        "id": 419,
+        "name": {
+            "fa": "شاندیز",
+            "en": "Shandiz"
+        },
+        "slug": "شاندیز",
+        "state_id": 11
+    },
+    {
+        "id": 420,
+        "name": {
+            "fa": "ششتمد",
+            "en": "Sheshtamad"
+        },
+        "slug": "ششتمد",
+        "state_id": 11
+    },
+    {
+        "id": 421,
+        "name": {
+            "fa": "شهرآباد",
+            "en": "Shahrabad"
+        },
+        "slug": "شهرآباد",
+        "state_id": 11
+    },
+    {
+        "id": 422,
+        "name": {
+            "fa": "شهرزو",
+            "en": "Shahrezu"
+        },
+        "slug": "شهرزو",
+        "state_id": 11
+    },
+    {
+        "id": 423,
+        "name": {
+            "fa": "صالح آباد",
+            "en": "Salehabad"
+        },
+        "slug": "خراسان-رضوی-صالح-آباد",
+        "state_id": 11
+    },
+    {
+        "id": 424,
+        "name": {
+            "fa": "طرقبه",
+            "en": "Torghabeh"
+        },
+        "slug": "طرقبه",
+        "state_id": 11
+    },
+    {
+        "id": 425,
+        "name": {
+            "fa": "عشق آباد",
+            "en": "Eshghabad"
+        },
+        "slug": "خراسان-رضوی-عشق-آباد",
+        "state_id": 11
+    },
+    {
+        "id": 426,
+        "name": {
+            "fa": "فرهادگرد",
+            "en": "Farhādgerd"
+        },
+        "slug": "فرهادگرد",
+        "state_id": 11
+    },
+    {
+        "id": 427,
+        "name": {
+            "fa": "فریمان",
+            "en": "Farīmān"
+        },
+        "slug": "فریمان",
+        "state_id": 11
+    },
+    {
+        "id": 428,
+        "name": {
+            "fa": "فیروزه",
+            "en": "Firouzeh"
+        },
+        "slug": "فیروزه",
+        "state_id": 11
+    },
+    {
+        "id": 429,
+        "name": {
+            "fa": "فیض آباد",
+            "en": "Feyz Abad"
+        },
+        "slug": "فیض-آباد",
+        "state_id": 11
+    },
+    {
+        "id": 430,
+        "name": {
+            "fa": "قاسم آباد",
+            "en": "Qasem Abad"
+        },
+        "slug": "قاسم-آباد",
+        "state_id": 11
+    },
+    {
+        "id": 431,
+        "name": {
+            "fa": "قدمگاه",
+            "en": "Ghadamgah"
+        },
+        "slug": "قدمگاه",
+        "state_id": 11
+    },
+    {
+        "id": 432,
+        "name": {
+            "fa": "قلندرآباد",
+            "en": "Qalandarabad"
+        },
+        "slug": "قلندرآباد",
+        "state_id": 11
+    },
+    {
+        "id": 433,
+        "name": {
+            "fa": "قوچان",
+            "en": "Quchan"
+        },
+        "slug": "قوچان",
+        "state_id": 11
+    },
+    {
+        "id": 434,
+        "name": {
+            "fa": "کاخک",
+            "en": "Kakhk"
+        },
+        "slug": "کاخک",
+        "state_id": 11
+    },
+    {
+        "id": 435,
+        "name": {
+            "fa": "کاریز",
+            "en": "Kariz"
+        },
+        "slug": "کاریز",
+        "state_id": 11
+    },
+    {
+        "id": 436,
+        "name": {
+            "fa": "کاشمر",
+            "en": "Kashmar"
+        },
+        "slug": "کاشمر",
+        "state_id": 11
+    },
+    {
+        "id": 437,
+        "name": {
+            "fa": "کدکن",
+            "en": "Kadkan"
+        },
+        "slug": "کدکن",
+        "state_id": 11
+    },
+    {
+        "id": 438,
+        "name": {
+            "fa": "کلات",
+            "en": "Kalat"
+        },
+        "slug": "کلات",
+        "state_id": 11
+    },
+    {
+        "id": 439,
+        "name": {
+            "fa": "کندر",
+            "en": "Kondor"
+        },
+        "slug": "کندر",
+        "state_id": 11
+    },
+    {
+        "id": 440,
+        "name": {
+            "fa": "گلمکان",
+            "en": "Golmakan"
+        },
+        "slug": "گلمکان",
+        "state_id": 11
+    },
+    {
+        "id": 441,
+        "name": {
+            "fa": "گناباد",
+            "en": "Gonabad"
+        },
+        "slug": "گناباد",
+        "state_id": 11
+    },
+    {
+        "id": 442,
+        "name": {
+            "fa": "لطف آباد",
+            "en": "Lotfābād"
+        },
+        "slug": "لطف-آباد",
+        "state_id": 11
+    },
+    {
+        "id": 443,
+        "name": {
+            "fa": "مزدآوند",
+            "en": "Mazdavand"
+        },
+        "slug": "مزدآوند",
+        "state_id": 11
+    },
+    {
+        "id": 444,
+        "name": {
+            "fa": "مشهد",
+            "en": "Mashhad"
+        },
+        "slug": "مشهد",
+        "state_id": 11
+    },
+    {
+        "id": 445,
+        "name": {
+            "fa": "ملک آباد",
+            "en": "Molkabad"
+        },
+        "slug": "ملک-آباد",
+        "state_id": 11
+    },
+    {
+        "id": 446,
+        "name": {
+            "fa": "نشتیفان",
+            "en": "Nashtifan"
+        },
+        "slug": "نشتیفان",
+        "state_id": 11
+    },
+    {
+        "id": 447,
+        "name": {
+            "fa": "نصرآباد",
+            "en": "Nasrabad"
+        },
+        "slug": "خراسان-رضوی-نصرآباد",
+        "state_id": 11
+    },
+    {
+        "id": 448,
+        "name": {
+            "fa": "نقاب",
+            "en": "Naghab"
+        },
+        "slug": "نقاب",
+        "state_id": 11
+    },
+    {
+        "id": 449,
+        "name": {
+            "fa": "نوخندان",
+            "en": "Nokhandan"
+        },
+        "slug": "نوخندان",
+        "state_id": 11
+    },
+    {
+        "id": 450,
+        "name": {
+            "fa": "نیشابور",
+            "en": "Neyshabur"
+        },
+        "slug": "نیشابور",
+        "state_id": 11
+    },
+    {
+        "id": 451,
+        "name": {
+            "fa": "نیل شهر",
+            "en": "Nil Shahr"
+        },
+        "slug": "نیل-شهر",
+        "state_id": 11
+    },
+    {
+        "id": 452,
+        "name": {
+            "fa": "همت آباد",
+            "en": "Hemat Abad"
+        },
+        "slug": "همت-آباد",
+        "state_id": 11
+    },
+    {
+        "id": 453,
+        "name": {
+            "fa": "یونسی",
+            "en": "Younesi"
+        },
+        "slug": "یونسی",
+        "state_id": 11
+    },
+    {
+        "id": 454,
+        "name": {
+            "fa": "اسفراین",
+            "en": "Esfarāyen"
+        },
+        "slug": "اسفراین",
+        "state_id": 12
+    },
+    {
+        "id": 455,
+        "name": {
+            "fa": "ایور",
+            "en": "Ivar"
+        },
+        "slug": "ایور",
+        "state_id": 12
+    },
+    {
+        "id": 456,
+        "name": {
+            "fa": "آشخانه",
+            "en": "Ashkhaneh"
+        },
+        "slug": "آشخانه",
+        "state_id": 12
+    },
+    {
+        "id": 457,
+        "name": {
+            "fa": "بجنورد",
+            "en": "Bojnurd"
+        },
+        "slug": "بجنورد",
+        "state_id": 12
+    },
+    {
+        "id": 458,
+        "name": {
+            "fa": "پیش قلعه",
+            "en": "Pish Ghaleh"
+        },
+        "slug": "پیش-قلعه",
+        "state_id": 12
+    },
+    {
+        "id": 459,
+        "name": {
+            "fa": "تیتکانلو",
+            "en": "Titkanlu"
+        },
+        "slug": "تیتکانلو",
+        "state_id": 12
+    },
+    {
+        "id": 460,
+        "name": {
+            "fa": "جاجرم",
+            "en": "Jajarm"
+        },
+        "slug": "جاجرم",
+        "state_id": 12
+    },
+    {
+        "id": 461,
+        "name": {
+            "fa": "حصارگرمخان",
+            "en": "Hesar-e Garmkhan"
+        },
+        "slug": "حصارگرمخان",
+        "state_id": 12
+    },
+    {
+        "id": 462,
+        "name": {
+            "fa": "درق",
+            "en": "Daraq"
+        },
+        "slug": "درق",
+        "state_id": 12
+    },
+    {
+        "id": 463,
+        "name": {
+            "fa": "راز",
+            "en": "Raaz"
+        },
+        "slug": "راز",
+        "state_id": 12
+    },
+    {
+        "id": 464,
+        "name": {
+            "fa": "سنخواست",
+            "en": "Sankhast"
+        },
+        "slug": "سنخواست",
+        "state_id": 12
+    },
+    {
+        "id": 465,
+        "name": {
+            "fa": "شوقان",
+            "en": "Shoqan"
+        },
+        "slug": "شوقان",
+        "state_id": 12
+    },
+    {
+        "id": 466,
+        "name": {
+            "fa": "شیروان",
+            "en": "Shirvan"
+        },
+        "slug": "شیروان",
+        "state_id": 12
+    },
+    {
+        "id": 467,
+        "name": {
+            "fa": "صفی آباد",
+            "en": "Safi Abad"
+        },
+        "slug": "خراسان-شمالی-صفی-آباد",
+        "state_id": 12
+    },
+    {
+        "id": 468,
+        "name": {
+            "fa": "فاروج",
+            "en": "Faruj"
+        },
+        "slug": "فاروج",
+        "state_id": 12
+    },
+    {
+        "id": 469,
+        "name": {
+            "fa": "قاضی",
+            "en": "Ghazi"
+        },
+        "slug": "قاضی",
+        "state_id": 12
+    },
+    {
+        "id": 470,
+        "name": {
+            "fa": "گرمه",
+            "en": "Garmeh"
+        },
+        "slug": "گرمه",
+        "state_id": 12
+    },
+    {
+        "id": 471,
+        "name": {
+            "fa": "لوجلی",
+            "en": "Lojanli"
+        },
+        "slug": "لوجلی",
+        "state_id": 12
+    },
+    {
+        "id": 472,
+        "name": {
+            "fa": "اروندکنار",
+            "en": "Arvand Kenar"
+        },
+        "slug": "اروندکنار",
+        "state_id": 13
+    },
+    {
+        "id": 473,
+        "name": {
+            "fa": "الوان",
+            "en": "Alvan"
+        },
+        "slug": "الوان",
+        "state_id": 13
+    },
+    {
+        "id": 474,
+        "name": {
+            "fa": "امیدیه",
+            "en": "Omidiyeh"
+        },
+        "slug": "امیدیه",
+        "state_id": 13
+    },
+    {
+        "id": 475,
+        "name": {
+            "fa": "اندیمشک",
+            "en": "Andimeshk"
+        },
+        "slug": "اندیمشک",
+        "state_id": 13
+    },
+    {
+        "id": 476,
+        "name": {
+            "fa": "اهواز",
+            "en": "Ahvaz"
+        },
+        "slug": "اهواز",
+        "state_id": 13
+    },
+    {
+        "id": 477,
+        "name": {
+            "fa": "ایذه",
+            "en": "Izeh"
+        },
+        "slug": "ایذه",
+        "state_id": 13
+    },
+    {
+        "id": 478,
+        "name": {
+            "fa": "آبادان",
+            "en": "Abadan"
+        },
+        "slug": "آبادان",
+        "state_id": 13
+    },
+    {
+        "id": 479,
+        "name": {
+            "fa": "آغاجاری",
+            "en": "Aghajari"
+        },
+        "slug": "آغاجاری",
+        "state_id": 13
+    },
+    {
+        "id": 480,
+        "name": {
+            "fa": "باغ ملک",
+            "en": "Baghmalek"
+        },
+        "slug": "باغ-ملک",
+        "state_id": 13
+    },
+    {
+        "id": 481,
+        "name": {
+            "fa": "بستان",
+            "en": "Bostan"
+        },
+        "slug": "بستان",
+        "state_id": 13
+    },
+    {
+        "id": 482,
+        "name": {
+            "fa": "بندرامام خمینی",
+            "en": "Bandar Imam Khomeini"
+        },
+        "slug": "بندرامام-خمینی",
+        "state_id": 13
+    },
+    {
+        "id": 483,
+        "name": {
+            "fa": "بندرماهشهر",
+            "en": "Bandar Mahshahr"
+        },
+        "slug": "بندرماهشهر",
+        "state_id": 13
+    },
+    {
+        "id": 484,
+        "name": {
+            "fa": "بهبهان",
+            "en": "Behbahan"
+        },
+        "slug": "بهبهان",
+        "state_id": 13
+    },
+    {
+        "id": 485,
+        "name": {
+            "fa": "ترکالکی",
+            "en": "Torkalaki"
+        },
+        "slug": "ترکالکی",
+        "state_id": 13
+    },
+    {
+        "id": 486,
+        "name": {
+            "fa": "جایزان",
+            "en": "Jayezan"
+        },
+        "slug": "جایزان",
+        "state_id": 13
+    },
+    {
+        "id": 487,
+        "name": {
+            "fa": "چمران",
+            "en": "Chamran"
+        },
+        "slug": "چمران",
+        "state_id": 13
+    },
+    {
+        "id": 488,
+        "name": {
+            "fa": "چویبده",
+            "en": "Chavibdeh"
+        },
+        "slug": "چویبده",
+        "state_id": 13
+    },
+    {
+        "id": 489,
+        "name": {
+            "fa": "حر",
+            "en": "Hurr"
+        },
+        "slug": "حر",
+        "state_id": 13
+    },
+    {
+        "id": 490,
+        "name": {
+            "fa": "حسینیه",
+            "en": "Houseyniye"
+        },
+        "slug": "حسینیه",
+        "state_id": 13
+    },
+    {
+        "id": 491,
+        "name": {
+            "fa": "حمزه",
+            "en": "Hamza"
+        },
+        "slug": "حمزه",
+        "state_id": 13
+    },
+    {
+        "id": 492,
+        "name": {
+            "fa": "حمیدیه",
+            "en": "Hamidiyeh"
+        },
+        "slug": "حمیدیه",
+        "state_id": 13
+    },
+    {
+        "id": 493,
+        "name": {
+            "fa": "خرمشهر",
+            "en": "Khorramshahr"
+        },
+        "slug": "خرمشهر",
+        "state_id": 13
+    },
+    {
+        "id": 494,
+        "name": {
+            "fa": "دارخوین",
+            "en": "Darkhovin"
+        },
+        "slug": "دارخوین",
+        "state_id": 13
+    },
+    {
+        "id": 495,
+        "name": {
+            "fa": "دزآب",
+            "en": "Dezab"
+        },
+        "slug": "دزآب",
+        "state_id": 13
+    },
+    {
+        "id": 496,
+        "name": {
+            "fa": "دزفول",
+            "en": "Dezful"
+        },
+        "slug": "دزفول",
+        "state_id": 13
+    },
+    {
+        "id": 497,
+        "name": {
+            "fa": "دهدز",
+            "en": "Dehdez"
+        },
+        "slug": "دهدز",
+        "state_id": 13
+    },
+    {
+        "id": 498,
+        "name": {
+            "fa": "رامشیر",
+            "en": "Ramshir"
+        },
+        "slug": "رامشیر",
+        "state_id": 13
+    },
+    {
+        "id": 499,
+        "name": {
+            "fa": "رامهرمز",
+            "en": "Ramhormoz"
+        },
+        "slug": "رامهرمز",
+        "state_id": 13
+    },
+    {
+        "id": 500,
+        "name": {
+            "fa": "رفیع",
+            "en": "Rofayyeh"
+        },
+        "slug": "رفیع",
+        "state_id": 13
+    },
+    {
+        "id": 501,
+        "name": {
+            "fa": "زهره",
+            "en": "Zohreh"
+        },
+        "slug": "زهره",
+        "state_id": 13
+    },
+    {
+        "id": 502,
+        "name": {
+            "fa": "سالند",
+            "en": "Sāland"
+        },
+        "slug": "سالند",
+        "state_id": 13
+    },
+    {
+        "id": 503,
+        "name": {
+            "fa": "سردشت",
+            "en": "Sardasht"
+        },
+        "slug": "خوزستان-سردشت",
+        "state_id": 13
+    },
+    {
+        "id": 504,
+        "name": {
+            "fa": "سوسنگرد",
+            "en": "Susangerd"
+        },
+        "slug": "سوسنگرد",
+        "state_id": 13
+    },
+    {
+        "id": 505,
+        "name": {
+            "fa": "شادگان",
+            "en": "Shadegan"
+        },
+        "slug": "شادگان",
+        "state_id": 13
+    },
+    {
+        "id": 506,
+        "name": {
+            "fa": "شاوور",
+            "en": "Hosseinabad"
+        },
+        "slug": "شاوور",
+        "state_id": 13
+    },
+    {
+        "id": 507,
+        "name": {
+            "fa": "شرافت",
+            "en": "Sherafat"
+        },
+        "slug": "شرافت",
+        "state_id": 13
+    },
+    {
+        "id": 508,
+        "name": {
+            "fa": "شوش",
+            "en": "Shush"
+        },
+        "slug": "شوش",
+        "state_id": 13
+    },
+    {
+        "id": 509,
+        "name": {
+            "fa": "شوشتر",
+            "en": "Shooshtar"
+        },
+        "slug": "شوشتر",
+        "state_id": 13
+    },
+    {
+        "id": 510,
+        "name": {
+            "fa": "شیبان",
+            "en": "Sheyban"
+        },
+        "slug": "شیبان",
+        "state_id": 13
+    },
+    {
+        "id": 511,
+        "name": {
+            "fa": "صالح شهر",
+            "en": "Salehshahr"
+        },
+        "slug": "صالح-شهر",
+        "state_id": 13
+    },
+    {
+        "id": 512,
+        "name": {
+            "fa": "صفی آباد",
+            "en": "Safi Abad"
+        },
+        "slug": "خوزستان-صفی-آباد",
+        "state_id": 13
+    },
+    {
+        "id": 513,
+        "name": {
+            "fa": "صیدون",
+            "en": "Seydun"
+        },
+        "slug": "صیدون",
+        "state_id": 13
+    },
+    {
+        "id": 514,
+        "name": {
+            "fa": "قلعه تل",
+            "en": "Ghale Tol"
+        },
+        "slug": "قلعه-تل",
+        "state_id": 13
+    },
+    {
+        "id": 515,
+        "name": {
+            "fa": "قلعه خواجه",
+            "en": "Qaleh-ye Khvajeh"
+        },
+        "slug": "قلعه-خواجه",
+        "state_id": 13
+    },
+    {
+        "id": 516,
+        "name": {
+            "fa": "گتوند",
+            "en": "Gotvand"
+        },
+        "slug": "گتوند",
+        "state_id": 13
+    },
+    {
+        "id": 517,
+        "name": {
+            "fa": "لالی",
+            "en": "Lali"
+        },
+        "slug": "لالی",
+        "state_id": 13
+    },
+    {
+        "id": 518,
+        "name": {
+            "fa": "مسجدسلیمان",
+            "en": "Masjed Soleyman"
+        },
+        "slug": "مسجدسلیمان",
+        "state_id": 13
+    },
+    {
+        "id": 520,
+        "name": {
+            "fa": "ملاثانی",
+            "en": "Mollasani"
+        },
+        "slug": "ملاثانی",
+        "state_id": 13
+    },
+    {
+        "id": 521,
+        "name": {
+            "fa": "میانرود",
+            "en": "Mianrood"
+        },
+        "slug": "میانرود",
+        "state_id": 13
+    },
+    {
+        "id": 522,
+        "name": {
+            "fa": "مینوشهر",
+            "en": "Minushahr"
+        },
+        "slug": "مینوشهر",
+        "state_id": 13
+    },
+    {
+        "id": 523,
+        "name": {
+            "fa": "هفتگل",
+            "en": "Haftkel"
+        },
+        "slug": "هفتگل",
+        "state_id": 13
+    },
+    {
+        "id": 524,
+        "name": {
+            "fa": "هندیجان",
+            "en": "Hendijan"
+        },
+        "slug": "هندیجان",
+        "state_id": 13
+    },
+    {
+        "id": 525,
+        "name": {
+            "fa": "هویزه",
+            "en": "Hoveyzeh"
+        },
+        "slug": "هویزه",
+        "state_id": 13
+    },
+    {
+        "id": 526,
+        "name": {
+            "fa": "ویس",
+            "en": "Veys"
+        },
+        "slug": "ویس",
+        "state_id": 13
+    },
+    {
+        "id": 527,
+        "name": {
+            "fa": "ابهر",
+            "en": "Abhar"
+        },
+        "slug": "ابهر",
+        "state_id": 14
+    },
+    {
+        "id": 528,
+        "name": {
+            "fa": "ارمغان خانه",
+            "en": "Armaqankhaneh"
+        },
+        "slug": "ارمغان-خانه",
+        "state_id": 14
+    },
+    {
+        "id": 529,
+        "name": {
+            "fa": "آب بر",
+            "en": "Abbar"
+        },
+        "slug": "آب-بر",
+        "state_id": 14
+    },
+    {
+        "id": 530,
+        "name": {
+            "fa": "چورزق",
+            "en": "Chavarzagh"
+        },
+        "slug": "چورزق",
+        "state_id": 14
+    },
+    {
+        "id": 531,
+        "name": {
+            "fa": "حلب",
+            "en": "Halab"
+        },
+        "slug": "حلب",
+        "state_id": 14
+    },
+    {
+        "id": 532,
+        "name": {
+            "fa": "خرمدره",
+            "en": "Khorramdarreh"
+        },
+        "slug": "خرمدره",
+        "state_id": 14
+    },
+    {
+        "id": 533,
+        "name": {
+            "fa": "دندی",
+            "en": "Dandi"
+        },
+        "slug": "دندی",
+        "state_id": 14
+    },
+    {
+        "id": 534,
+        "name": {
+            "fa": "زرین آباد",
+            "en": "Zarinabad"
+        },
+        "slug": "زرین-آباد",
+        "state_id": 14
+    },
+    {
+        "id": 535,
+        "name": {
+            "fa": "زرین رود",
+            "en": "Zarinrood"
+        },
+        "slug": "زرین-رود",
+        "state_id": 14
+    },
+    {
+        "id": 536,
+        "name": {
+            "fa": "زنجان",
+            "en": "Zanjan"
+        },
+        "slug": "شهر-زنجان",
+        "state_id": 14
+    },
+    {
+        "id": 537,
+        "name": {
+            "fa": "سجاس",
+            "en": "Sojas"
+        },
+        "slug": "سجاس",
+        "state_id": 14
+    },
+    {
+        "id": 538,
+        "name": {
+            "fa": "سلطانیه",
+            "en": "Soltanieh"
+        },
+        "slug": "سلطانیه",
+        "state_id": 14
+    },
+    {
+        "id": 539,
+        "name": {
+            "fa": "سهرورد",
+            "en": "Sohrevard"
+        },
+        "slug": "سهرورد",
+        "state_id": 14
+    },
+    {
+        "id": 540,
+        "name": {
+            "fa": "صائین قلعه",
+            "en": "Sain Qaleh"
+        },
+        "slug": "صائین-قلعه",
+        "state_id": 14
+    },
+    {
+        "id": 541,
+        "name": {
+            "fa": "قیدار",
+            "en": "Qeydar"
+        },
+        "slug": "قیدار",
+        "state_id": 14
+    },
+    {
+        "id": 542,
+        "name": {
+            "fa": "گرماب",
+            "en": "Garmaab"
+        },
+        "slug": "گرماب",
+        "state_id": 14
+    },
+    {
+        "id": 543,
+        "name": {
+            "fa": "ماه نشان",
+            "en": "Mah Neshan"
+        },
+        "slug": "ماه-نشان",
+        "state_id": 14
+    },
+    {
+        "id": 544,
+        "name": {
+            "fa": "هیدج",
+            "en": "Hidaj"
+        },
+        "slug": "هیدج",
+        "state_id": 14
+    },
+    {
+        "id": 545,
+        "name": {
+            "fa": "امیریه",
+            "en": "Amiriyeh"
+        },
+        "slug": "امیریه",
+        "state_id": 15
+    },
+    {
+        "id": 546,
+        "name": {
+            "fa": "ایوانکی",
+            "en": "Eyvanekey"
+        },
+        "slug": "ایوانکی",
+        "state_id": 15
+    },
+    {
+        "id": 547,
+        "name": {
+            "fa": "آرادان",
+            "en": "Aradan"
+        },
+        "slug": "آرادان",
+        "state_id": 15
+    },
+    {
+        "id": 548,
+        "name": {
+            "fa": "بسطام",
+            "en": "Bastaam"
+        },
+        "slug": "بسطام",
+        "state_id": 15
+    },
+    {
+        "id": 549,
+        "name": {
+            "fa": "بیارجمند",
+            "en": "Biyārjomand"
+        },
+        "slug": "بیارجمند",
+        "state_id": 15
+    },
+    {
+        "id": 550,
+        "name": {
+            "fa": "دامغان",
+            "en": "Daamghan"
+        },
+        "slug": "دامغان",
+        "state_id": 15
+    },
+    {
+        "id": 551,
+        "name": {
+            "fa": "درجزین",
+            "en": "Darjazin"
+        },
+        "slug": "درجزین",
+        "state_id": 15
+    },
+    {
+        "id": 552,
+        "name": {
+            "fa": "دیباج",
+            "en": "Dibaj"
+        },
+        "slug": "دیباج",
+        "state_id": 15
+    },
+    {
+        "id": 553,
+        "name": {
+            "fa": "سرخه",
+            "en": "Sarkheh"
+        },
+        "slug": "سرخه",
+        "state_id": 15
+    },
+    {
+        "id": 554,
+        "name": {
+            "fa": "سمنان",
+            "en": "Semnan"
+        },
+        "slug": "شهر-سمنان",
+        "state_id": 15
+    },
+    {
+        "id": 555,
+        "name": {
+            "fa": "شاهرود",
+            "en": "Shahrood"
+        },
+        "slug": "شاهرود",
+        "state_id": 15
+    },
+    {
+        "id": 556,
+        "name": {
+            "fa": "شهمیرزاد",
+            "en": "Shahmirzad"
+        },
+        "slug": "شهمیرزاد",
+        "state_id": 15
+    },
+    {
+        "id": 557,
+        "name": {
+            "fa": "کلاته خیج",
+            "en": "Kalāte Khij"
+        },
+        "slug": "کلاته-خیج",
+        "state_id": 15
+    },
+    {
+        "id": 558,
+        "name": {
+            "fa": "گرمسار",
+            "en": "Garmsar"
+        },
+        "slug": "گرمسار",
+        "state_id": 15
+    },
+    {
+        "id": 559,
+        "name": {
+            "fa": "مجن",
+            "en": "Mojen"
+        },
+        "slug": "مجن",
+        "state_id": 15
+    },
+    {
+        "id": 560,
+        "name": {
+            "fa": "مهدی شهر",
+            "en": "Mahdishahr"
+        },
+        "slug": "مهدی-شهر",
+        "state_id": 15
+    },
+    {
+        "id": 561,
+        "name": {
+            "fa": "میامی",
+            "en": "Miamey"
+        },
+        "slug": "میامی",
+        "state_id": 15
+    },
+    {
+        "id": 562,
+        "name": {
+            "fa": "ادیمی",
+            "en": "Adimi"
+        },
+        "slug": "ادیمی",
+        "state_id": 16
+    },
+    {
+        "id": 563,
+        "name": {
+            "fa": "اسپکه",
+            "en": "Espakeh"
+        },
+        "slug": "اسپکه",
+        "state_id": 16
+    },
+    {
+        "id": 564,
+        "name": {
+            "fa": "ایرانشهر",
+            "en": "Iranshahr"
+        },
+        "slug": "ایرانشهر",
+        "state_id": 16
+    },
+    {
+        "id": 565,
+        "name": {
+            "fa": "بزمان",
+            "en": "Bazmān"
+        },
+        "slug": "بزمان",
+        "state_id": 16
+    },
+    {
+        "id": 566,
+        "name": {
+            "fa": "بمپور",
+            "en": "Bampour"
+        },
+        "slug": "بمپور",
+        "state_id": 16
+    },
+    {
+        "id": 567,
+        "name": {
+            "fa": "بنت",
+            "en": "Bennett"
+        },
+        "slug": "بنت",
+        "state_id": 16
+    },
+    {
+        "id": 568,
+        "name": {
+            "fa": "بنجار",
+            "en": "Bonjār"
+        },
+        "slug": "بنجار",
+        "state_id": 16
+    },
+    {
+        "id": 569,
+        "name": {
+            "fa": "پیشین",
+            "en": "Pishin"
+        },
+        "slug": "پیشین",
+        "state_id": 16
+    },
+    {
+        "id": 570,
+        "name": {
+            "fa": "جالق",
+            "en": "Jālq"
+        },
+        "slug": "جالق",
+        "state_id": 16
+    },
+    {
+        "id": 571,
+        "name": {
+            "fa": "چابهار",
+            "en": "Chabahar"
+        },
+        "slug": "چابهار",
+        "state_id": 16
+    },
+    {
+        "id": 572,
+        "name": {
+            "fa": "خاش",
+            "en": "Khash"
+        },
+        "slug": "خاش",
+        "state_id": 16
+    },
+    {
+        "id": 573,
+        "name": {
+            "fa": "دوست محمد",
+            "en": "Dust Mohammad"
+        },
+        "slug": "دوست-محمد",
+        "state_id": 16
+    },
+    {
+        "id": 574,
+        "name": {
+            "fa": "راسک",
+            "en": "Rask"
+        },
+        "slug": "راسک",
+        "state_id": 16
+    },
+    {
+        "id": 575,
+        "name": {
+            "fa": "زابل",
+            "en": "Zabol"
+        },
+        "slug": "زابل",
+        "state_id": 16
+    },
+    {
+        "id": 576,
+        "name": {
+            "fa": "زابلی",
+            "en": "Zaboli"
+        },
+        "slug": "زابلی",
+        "state_id": 16
+    },
+    {
+        "id": 577,
+        "name": {
+            "fa": "زاهدان",
+            "en": "Zahedan"
+        },
+        "slug": "زاهدان",
+        "state_id": 16
+    },
+    {
+        "id": 578,
+        "name": {
+            "fa": "زهک",
+            "en": "Zahak"
+        },
+        "slug": "زهک",
+        "state_id": 16
+    },
+    {
+        "id": 579,
+        "name": {
+            "fa": "سراوان",
+            "en": "Saravan"
+        },
+        "slug": "سراوان",
+        "state_id": 16
+    },
+    {
+        "id": 580,
+        "name": {
+            "fa": "سرباز",
+            "en": "Sarbaz"
+        },
+        "slug": "سرباز",
+        "state_id": 16
+    },
+    {
+        "id": 581,
+        "name": {
+            "fa": "سوران",
+            "en": "Soran"
+        },
+        "slug": "سوران",
+        "state_id": 16
+    },
+    {
+        "id": 582,
+        "name": {
+            "fa": "سیرکان",
+            "en": "Sirkan"
+        },
+        "slug": "سیرکان",
+        "state_id": 16
+    },
+    {
+        "id": 583,
+        "name": {
+            "fa": "علی اکبر",
+            "en": "Ali Akbar"
+        },
+        "slug": "علی-اکبر",
+        "state_id": 16
+    },
+    {
+        "id": 584,
+        "name": {
+            "fa": "فنوج",
+            "en": "Fanouj"
+        },
+        "slug": "فنوج",
+        "state_id": 16
+    },
+    {
+        "id": 585,
+        "name": {
+            "fa": "قصرقند",
+            "en": "Qasr-e-qand"
+        },
+        "slug": "قصرقند",
+        "state_id": 16
+    },
+    {
+        "id": 586,
+        "name": {
+            "fa": "کنارک",
+            "en": "Konarak"
+        },
+        "slug": "کنارک",
+        "state_id": 16
+    },
+    {
+        "id": 587,
+        "name": {
+            "fa": "گشت",
+            "en": "Gosht"
+        },
+        "slug": "گشت",
+        "state_id": 16
+    },
+    {
+        "id": 588,
+        "name": {
+            "fa": "گلمورتی",
+            "en": "Golmorti"
+        },
+        "slug": "گلمورتی",
+        "state_id": 16
+    },
+    {
+        "id": 589,
+        "name": {
+            "fa": "محمدان",
+            "en": "Mohammedan"
+        },
+        "slug": "محمدان",
+        "state_id": 16
+    },
+    {
+        "id": 590,
+        "name": {
+            "fa": "محمدآباد",
+            "en": "Mohammadabad"
+        },
+        "slug": "سیستان-و-بلوچستان-محمدآباد",
+        "state_id": 16
+    },
+    {
+        "id": 591,
+        "name": {
+            "fa": "محمدی",
+            "en": "Mohammadi"
+        },
+        "slug": "محمدی",
+        "state_id": 16
+    },
+    {
+        "id": 592,
+        "name": {
+            "fa": "میرجاوه",
+            "en": "Mirjaveh"
+        },
+        "slug": "میرجاوه",
+        "state_id": 16
+    },
+    {
+        "id": 593,
+        "name": {
+            "fa": "نصرت آباد",
+            "en": "Nosrat Abad"
+        },
+        "slug": "نصرت-آباد",
+        "state_id": 16
+    },
+    {
+        "id": 594,
+        "name": {
+            "fa": "نگور",
+            "en": "Negour"
+        },
+        "slug": "نگور",
+        "state_id": 16
+    },
+    {
+        "id": 595,
+        "name": {
+            "fa": "نوک آباد",
+            "en": "Noukābād"
+        },
+        "slug": "نوک-آباد",
+        "state_id": 16
+    },
+    {
+        "id": 596,
+        "name": {
+            "fa": "نیک شهر",
+            "en": "Nikshahr"
+        },
+        "slug": "نیک-شهر",
+        "state_id": 16
+    },
+    {
+        "id": 597,
+        "name": {
+            "fa": "هیدوچ",
+            "en": "Hidouj"
+        },
+        "slug": "هیدوچ",
+        "state_id": 16
+    },
+    {
+        "id": 598,
+        "name": {
+            "fa": "اردکان",
+            "en": "Ardakan"
+        },
+        "slug": "فارس-اردکان",
+        "state_id": 17
+    },
+    {
+        "id": 599,
+        "name": {
+            "fa": "ارسنجان",
+            "en": "Arsanjan"
+        },
+        "slug": "ارسنجان",
+        "state_id": 17
+    },
+    {
+        "id": 600,
+        "name": {
+            "fa": "استهبان",
+            "en": "Estahban"
+        },
+        "slug": "استهبان",
+        "state_id": 17
+    },
+    {
+        "id": 601,
+        "name": {
+            "fa": "اشکنان",
+            "en": "Ashkanan"
+        },
+        "slug": "اشکنان",
+        "state_id": 17
+    },
+    {
+        "id": 602,
+        "name": {
+            "fa": "افزر",
+            "en": "Efzar"
+        },
+        "slug": "افزر",
+        "state_id": 17
+    },
+    {
+        "id": 603,
+        "name": {
+            "fa": "اقلید",
+            "en": "Eghlid"
+        },
+        "slug": "اقلید",
+        "state_id": 17
+    },
+    {
+        "id": 604,
+        "name": {
+            "fa": "امام شهر",
+            "en": "Emamshahr"
+        },
+        "slug": "امام-شهر",
+        "state_id": 17
+    },
+    {
+        "id": 605,
+        "name": {
+            "fa": "اهل",
+            "en": "Ahel"
+        },
+        "slug": "اهل",
+        "state_id": 17
+    },
+    {
+        "id": 606,
+        "name": {
+            "fa": "اوز",
+            "en": "Evaz"
+        },
+        "slug": "اوز",
+        "state_id": 17
+    },
+    {
+        "id": 607,
+        "name": {
+            "fa": "ایج",
+            "en": "Eij"
+        },
+        "slug": "ایج",
+        "state_id": 17
+    },
+    {
+        "id": 608,
+        "name": {
+            "fa": "ایزدخواست",
+            "en": "Izad Khast"
+        },
+        "slug": "ایزدخواست",
+        "state_id": 17
+    },
+    {
+        "id": 609,
+        "name": {
+            "fa": "آباده",
+            "en": "Abadeh"
+        },
+        "slug": "آباده",
+        "state_id": 17
+    },
+    {
+        "id": 610,
+        "name": {
+            "fa": "آباده طشک",
+            "en": "Abadeh Tashk"
+        },
+        "slug": "آباده-طشک",
+        "state_id": 17
+    },
+    {
+        "id": 611,
+        "name": {
+            "fa": "باب انار",
+            "en": "Bab Anar"
+        },
+        "slug": "باب-انار",
+        "state_id": 17
+    },
+    {
+        "id": 612,
+        "name": {
+            "fa": "بالاده",
+            "en": "Baladeh"
+        },
+        "slug": "فارس-بالاده",
+        "state_id": 17
+    },
+    {
+        "id": 613,
+        "name": {
+            "fa": "بنارویه",
+            "en": "Banaruyeh"
+        },
+        "slug": "بنارویه",
+        "state_id": 17
+    },
+    {
+        "id": 614,
+        "name": {
+            "fa": "بهمن",
+            "en": "Bahman"
+        },
+        "slug": "بهمن",
+        "state_id": 17
+    },
+    {
+        "id": 615,
+        "name": {
+            "fa": "بوانات",
+            "en": "Bavanat"
+        },
+        "slug": "بوانات",
+        "state_id": 17
+    },
+    {
+        "id": 616,
+        "name": {
+            "fa": "بیرم",
+            "en": "Beyram"
+        },
+        "slug": "بیرم",
+        "state_id": 17
+    },
+    {
+        "id": 617,
+        "name": {
+            "fa": "بیضا",
+            "en": "Beyza"
+        },
+        "slug": "بیضا",
+        "state_id": 17
+    },
+    {
+        "id": 618,
+        "name": {
+            "fa": "جنت شهر",
+            "en": "Janatshahr"
+        },
+        "slug": "جنت-شهر",
+        "state_id": 17
+    },
+    {
+        "id": 619,
+        "name": {
+            "fa": "جهرم",
+            "en": "Jahrom"
+        },
+        "slug": "جهرم",
+        "state_id": 17
+    },
+    {
+        "id": 620,
+        "name": {
+            "fa": "جویم",
+            "en": "Juyom"
+        },
+        "slug": "جویم",
+        "state_id": 17
+    },
+    {
+        "id": 621,
+        "name": {
+            "fa": "زرین دشت",
+            "en": "Zarindash"
+        },
+        "slug": "زرین-دشت",
+        "state_id": 17
+    },
+    {
+        "id": 622,
+        "name": {
+            "fa": "حسن آباد",
+            "en": "Hasanabad"
+        },
+        "slug": "فارس-حسن-آباد",
+        "state_id": 17
+    },
+    {
+        "id": 623,
+        "name": {
+            "fa": "خان زنیان",
+            "en": "Khan Zenyan"
+        },
+        "slug": "خان-زنیان",
+        "state_id": 17
+    },
+    {
+        "id": 624,
+        "name": {
+            "fa": "خاوران",
+            "en": "Khavaran"
+        },
+        "slug": "خاوران",
+        "state_id": 17
+    },
+    {
+        "id": 625,
+        "name": {
+            "fa": "خرامه",
+            "en": "Kharameh"
+        },
+        "slug": "خرامه",
+        "state_id": 17
+    },
+    {
+        "id": 626,
+        "name": {
+            "fa": "خشت",
+            "en": "Khesht"
+        },
+        "slug": "خشت",
+        "state_id": 17
+    },
+    {
+        "id": 627,
+        "name": {
+            "fa": "خنج",
+            "en": "Khonj"
+        },
+        "slug": "خنج",
+        "state_id": 17
+    },
+    {
+        "id": 628,
+        "name": {
+            "fa": "خور",
+            "en": "Khor"
+        },
+        "slug": "فارس-خور",
+        "state_id": 17
+    },
+    {
+        "id": 629,
+        "name": {
+            "fa": "داراب",
+            "en": "Darab"
+        },
+        "slug": "داراب",
+        "state_id": 17
+    },
+    {
+        "id": 630,
+        "name": {
+            "fa": "داریان",
+            "en": "Dariyan"
+        },
+        "slug": "داریان",
+        "state_id": 17
+    },
+    {
+        "id": 631,
+        "name": {
+            "fa": "دبیران",
+            "en": "Dabiran"
+        },
+        "slug": "دبیران",
+        "state_id": 17
+    },
+    {
+        "id": 632,
+        "name": {
+            "fa": "دژکرد",
+            "en": "Dezhkord"
+        },
+        "slug": "دژکرد",
+        "state_id": 17
+    },
+    {
+        "id": 633,
+        "name": {
+            "fa": "دهرم",
+            "en": "Dehram"
+        },
+        "slug": "دهرم",
+        "state_id": 17
+    },
+    {
+        "id": 634,
+        "name": {
+            "fa": "دوبرجی",
+            "en": "Do Borji"
+        },
+        "slug": "دوبرجی",
+        "state_id": 17
+    },
+    {
+        "id": 635,
+        "name": {
+            "fa": "رامجرد",
+            "en": "Koushkak"
+        },
+        "slug": "رامجرد",
+        "state_id": 17
+    },
+    {
+        "id": 636,
+        "name": {
+            "fa": "رونیز",
+            "en": "Roniz"
+        },
+        "slug": "رونیز",
+        "state_id": 17
+    },
+    {
+        "id": 637,
+        "name": {
+            "fa": "زاهدشهر",
+            "en": "Zahedshahr"
+        },
+        "slug": "زاهدشهر",
+        "state_id": 17
+    },
+    {
+        "id": 638,
+        "name": {
+            "fa": "زرقان",
+            "en": "Zarghan"
+        },
+        "slug": "زرقان",
+        "state_id": 17
+    },
+    {
+        "id": 639,
+        "name": {
+            "fa": "سده",
+            "en": "Sedeh"
+        },
+        "slug": "سده",
+        "state_id": 17
+    },
+    {
+        "id": 640,
+        "name": {
+            "fa": "سروستان",
+            "en": "Sarvestan"
+        },
+        "slug": "سروستان",
+        "state_id": 17
+    },
+    {
+        "id": 641,
+        "name": {
+            "fa": "سعادت شهر",
+            "en": "Sa'adat Shahr"
+        },
+        "slug": "سعادت-شهر",
+        "state_id": 17
+    },
+    {
+        "id": 642,
+        "name": {
+            "fa": "سورمق",
+            "en": "Surmaq"
+        },
+        "slug": "سورمق",
+        "state_id": 17
+    },
+    {
+        "id": 643,
+        "name": {
+            "fa": "سیدان",
+            "en": "Seyedan"
+        },
+        "slug": "سیدان",
+        "state_id": 17
+    },
+    {
+        "id": 644,
+        "name": {
+            "fa": "ششده",
+            "en": "Sheshdeh"
+        },
+        "slug": "ششده",
+        "state_id": 17
+    },
+    {
+        "id": 645,
+        "name": {
+            "fa": "شهرپیر",
+            "en": "Pir City"
+        },
+        "slug": "شهرپیر",
+        "state_id": 17
+    },
+    {
+        "id": 646,
+        "name": {
+            "fa": "شهرصدرا",
+            "en": "Sadra"
+        },
+        "slug": "شهرصدرا",
+        "state_id": 17
+    },
+    {
+        "id": 647,
+        "name": {
+            "fa": "شیراز",
+            "en": "Shiraz"
+        },
+        "slug": "شیراز",
+        "state_id": 17
+    },
+    {
+        "id": 648,
+        "name": {
+            "fa": "صغاد",
+            "en": "Soghad"
+        },
+        "slug": "صغاد",
+        "state_id": 17
+    },
+    {
+        "id": 649,
+        "name": {
+            "fa": "صفاشهر",
+            "en": "Safashahr"
+        },
+        "slug": "صفاشهر",
+        "state_id": 17
+    },
+    {
+        "id": 650,
+        "name": {
+            "fa": "علامرودشت",
+            "en": "Alamarvdasht"
+        },
+        "slug": "علامرودشت",
+        "state_id": 17
+    },
+    {
+        "id": 651,
+        "name": {
+            "fa": "فدامی",
+            "en": "Fadami"
+        },
+        "slug": "فدامی",
+        "state_id": 17
+    },
+    {
+        "id": 652,
+        "name": {
+            "fa": "فراشبند",
+            "en": "Farashband"
+        },
+        "slug": "فراشبند",
+        "state_id": 17
+    },
+    {
+        "id": 653,
+        "name": {
+            "fa": "فسا",
+            "en": "Fasa"
+        },
+        "slug": "فسا",
+        "state_id": 17
+    },
+    {
+        "id": 654,
+        "name": {
+            "fa": "فیروزآباد",
+            "en": "Firoozabad"
+        },
+        "slug": "فارس-فیروزآباد",
+        "state_id": 17
+    },
+    {
+        "id": 655,
+        "name": {
+            "fa": "قائمیه",
+            "en": "Qaemyeh"
+        },
+        "slug": "قائمیه",
+        "state_id": 17
+    },
+    {
+        "id": 656,
+        "name": {
+            "fa": "قادرآباد",
+            "en": "Ghaderabad"
+        },
+        "slug": "قادرآباد",
+        "state_id": 17
+    },
+    {
+        "id": 657,
+        "name": {
+            "fa": "قطب آباد",
+            "en": "Qotb Abad"
+        },
+        "slug": "قطب-آباد",
+        "state_id": 17
+    },
+    {
+        "id": 658,
+        "name": {
+            "fa": "قطرویه",
+            "en": "Qatruyeh"
+        },
+        "slug": "قطرویه",
+        "state_id": 17
+    },
+    {
+        "id": 659,
+        "name": {
+            "fa": "قیر",
+            "en": "Qir"
+        },
+        "slug": "قیر",
+        "state_id": 17
+    },
+    {
+        "id": 660,
+        "name": {
+            "fa": "کارزین (فتح آباد)",
+            "en": "Karzin"
+        },
+        "slug": "کارزین-فتح-آباد",
+        "state_id": 17
+    },
+    {
+        "id": 661,
+        "name": {
+            "fa": "کازرون",
+            "en": "Kazeron"
+        },
+        "slug": "کازرون",
+        "state_id": 17
+    },
+    {
+        "id": 662,
+        "name": {
+            "fa": "کامفیروز",
+            "en": "Kamfirooz"
+        },
+        "slug": "کامفیروز",
+        "state_id": 17
+    },
+    {
+        "id": 663,
+        "name": {
+            "fa": "کره ای",
+            "en": "Kareei"
+        },
+        "slug": "کره-ای",
+        "state_id": 17
+    },
+    {
+        "id": 664,
+        "name": {
+            "fa": "کنارتخته",
+            "en": "Konartakhteh"
+        },
+        "slug": "کنارتخته",
+        "state_id": 17
+    },
+    {
+        "id": 665,
+        "name": {
+            "fa": "کوار",
+            "en": "Kavar"
+        },
+        "slug": "کوار",
+        "state_id": 17
+    },
+    {
+        "id": 666,
+        "name": {
+            "fa": "گراش",
+            "en": "Gerash"
+        },
+        "slug": "گراش",
+        "state_id": 17
+    },
+    {
+        "id": 667,
+        "name": {
+            "fa": "گله دار",
+            "en": "Galedar"
+        },
+        "slug": "گله-دار",
+        "state_id": 17
+    },
+    {
+        "id": 668,
+        "name": {
+            "fa": "لار",
+            "en": "Laar"
+        },
+        "slug": "لار",
+        "state_id": 17
+    },
+    {
+        "id": 669,
+        "name": {
+            "fa": "لامرد",
+            "en": "Lamerd"
+        },
+        "slug": "لامرد",
+        "state_id": 17
+    },
+    {
+        "id": 670,
+        "name": {
+            "fa": "لپویی",
+            "en": "Lapouyee"
+        },
+        "slug": "لپویی",
+        "state_id": 17
+    },
+    {
+        "id": 671,
+        "name": {
+            "fa": "لطیفی",
+            "en": "Latifi"
+        },
+        "slug": "لطیفی",
+        "state_id": 17
+    },
+    {
+        "id": 672,
+        "name": {
+            "fa": "مبارک آباددیز",
+            "en": "Mobarakabad"
+        },
+        "slug": "مبارک-آباددیز",
+        "state_id": 17
+    },
+    {
+        "id": 673,
+        "name": {
+            "fa": "مرودشت",
+            "en": "Marvdasht"
+        },
+        "slug": "مرودشت",
+        "state_id": 17
+    },
+    {
+        "id": 674,
+        "name": {
+            "fa": "مشکان",
+            "en": "Meshkan"
+        },
+        "slug": "مشکان",
+        "state_id": 17
+    },
+    {
+        "id": 675,
+        "name": {
+            "fa": "مصیری",
+            "en": "Masiri"
+        },
+        "slug": "مصیری",
+        "state_id": 17
+    },
+    {
+        "id": 676,
+        "name": {
+            "fa": "مهر",
+            "en": "Mehr"
+        },
+        "slug": "مهر",
+        "state_id": 17
+    },
+    {
+        "id": 677,
+        "name": {
+            "fa": "میمند",
+            "en": "Meymand"
+        },
+        "slug": "میمند",
+        "state_id": 17
+    },
+    {
+        "id": 678,
+        "name": {
+            "fa": "نوبندگان",
+            "en": "No Bandegan"
+        },
+        "slug": "نوبندگان",
+        "state_id": 17
+    },
+    {
+        "id": 679,
+        "name": {
+            "fa": "نوجین",
+            "en": "Nowjein"
+        },
+        "slug": "نوجین",
+        "state_id": 17
+    },
+    {
+        "id": 680,
+        "name": {
+            "fa": "نودان",
+            "en": "Nowdan"
+        },
+        "slug": "نودان",
+        "state_id": 17
+    },
+    {
+        "id": 681,
+        "name": {
+            "fa": "نورآباد",
+            "en": "Noorabad"
+        },
+        "slug": "فارس-نورآباد",
+        "state_id": 17
+    },
+    {
+        "id": 682,
+        "name": {
+            "fa": "نی ریز",
+            "en": "Neyriz"
+        },
+        "slug": "نی-ریز",
+        "state_id": 17
+    },
+    {
+        "id": 683,
+        "name": {
+            "fa": "وراوی",
+            "en": "Varavi"
+        },
+        "slug": "وراوی",
+        "state_id": 17
+    },
+    {
+        "id": 684,
+        "name": {
+            "fa": "ارداق",
+            "en": "Ardak"
+        },
+        "slug": "ارداق",
+        "state_id": 18
+    },
+    {
+        "id": 685,
+        "name": {
+            "fa": "اسفرورین",
+            "en": "Esfarvarin"
+        },
+        "slug": "اسفرورین",
+        "state_id": 18
+    },
+    {
+        "id": 686,
+        "name": {
+            "fa": "اقبالیه",
+            "en": "Eqbaliyeh"
+        },
+        "slug": "اقبالیه",
+        "state_id": 18
+    },
+    {
+        "id": 687,
+        "name": {
+            "fa": "الوند",
+            "en": "Alvand"
+        },
+        "slug": "الوند",
+        "state_id": 18
+    },
+    {
+        "id": 688,
+        "name": {
+            "fa": "آبگرم",
+            "en": "Abgarm"
+        },
+        "slug": "آبگرم",
+        "state_id": 18
+    },
+    {
+        "id": 689,
+        "name": {
+            "fa": "آبیک",
+            "en": "Abic"
+        },
+        "slug": "آبیک",
+        "state_id": 18
+    },
+    {
+        "id": 690,
+        "name": {
+            "fa": "آوج",
+            "en": "Avaj"
+        },
+        "slug": "آوج",
+        "state_id": 18
+    },
+    {
+        "id": 691,
+        "name": {
+            "fa": "بوئین زهرا",
+            "en": "Buin Zahra"
+        },
+        "slug": "بوئین-زهرا",
+        "state_id": 18
+    },
+    {
+        "id": 692,
+        "name": {
+            "fa": "بیدستان",
+            "en": "Bidestan"
+        },
+        "slug": "بیدستان",
+        "state_id": 18
+    },
+    {
+        "id": 693,
+        "name": {
+            "fa": "تاکستان",
+            "en": "Takestan"
+        },
+        "slug": "تاکستان",
+        "state_id": 18
+    },
+    {
+        "id": 694,
+        "name": {
+            "fa": "خاکعلی",
+            "en": "Khakali"
+        },
+        "slug": "خاکعلی",
+        "state_id": 18
+    },
+    {
+        "id": 695,
+        "name": {
+            "fa": "خرمدشت",
+            "en": "Khorramdasht"
+        },
+        "slug": "خرمدشت",
+        "state_id": 18
+    },
+    {
+        "id": 696,
+        "name": {
+            "fa": "دانسفهان",
+            "en": "Danesfahan"
+        },
+        "slug": "دانسفهان",
+        "state_id": 18
+    },
+    {
+        "id": 697,
+        "name": {
+            "fa": "رازمیان",
+            "en": "Razmian"
+        },
+        "slug": "رازمیان",
+        "state_id": 18
+    },
+    {
+        "id": 698,
+        "name": {
+            "fa": "سگزآباد",
+            "en": "Sagz Abad"
+        },
+        "slug": "سگزآباد",
+        "state_id": 18
+    },
+    {
+        "id": 699,
+        "name": {
+            "fa": "سیردان",
+            "en": "Sirdan"
+        },
+        "slug": "سیردان",
+        "state_id": 18
+    },
+    {
+        "id": 700,
+        "name": {
+            "fa": "شال",
+            "en": "Shaal"
+        },
+        "slug": "شال",
+        "state_id": 18
+    },
+    {
+        "id": 701,
+        "name": {
+            "fa": "شریفیه",
+            "en": "Sharifiye"
+        },
+        "slug": "شریفیه",
+        "state_id": 18
+    },
+    {
+        "id": 702,
+        "name": {
+            "fa": "ضیاآباد",
+            "en": "Ziaabad"
+        },
+        "slug": "ضیاآباد",
+        "state_id": 18
+    },
+    {
+        "id": 703,
+        "name": {
+            "fa": "قزوین",
+            "en": "Qazvin"
+        },
+        "slug": "شهر-قزوین",
+        "state_id": 18
+    },
+    {
+        "id": 704,
+        "name": {
+            "fa": "کوهین",
+            "en": "Kouhin"
+        },
+        "slug": "کوهین",
+        "state_id": 18
+    },
+    {
+        "id": 705,
+        "name": {
+            "fa": "محمدیه",
+            "en": "Mohammadiye"
+        },
+        "slug": "محمدیه",
+        "state_id": 18
+    },
+    {
+        "id": 706,
+        "name": {
+            "fa": "محمودآباد نمونه",
+            "en": "Mahmood Abad Nemooneh"
+        },
+        "slug": "محمودآباد-نمونه",
+        "state_id": 18
+    },
+    {
+        "id": 707,
+        "name": {
+            "fa": "معلم کلایه",
+            "en": "Moallem Kelayeh"
+        },
+        "slug": "معلم-کلایه",
+        "state_id": 18
+    },
+    {
+        "id": 708,
+        "name": {
+            "fa": "نرجه",
+            "en": "Narjeh"
+        },
+        "slug": "نرجه",
+        "state_id": 18
+    },
+    {
+        "id": 709,
+        "name": {
+            "fa": "جعفریه",
+            "en": "Jafariye"
+        },
+        "slug": "جعفریه",
+        "state_id": 19
+    },
+    {
+        "id": 710,
+        "name": {
+            "fa": "دستجرد",
+            "en": "Dastjerd"
+        },
+        "slug": "دستجرد",
+        "state_id": 19
+    },
+    {
+        "id": 711,
+        "name": {
+            "fa": "سلفچگان",
+            "en": "Salafchegan"
+        },
+        "slug": "سلفچگان",
+        "state_id": 19
+    },
+    {
+        "id": 712,
+        "name": {
+            "fa": "قم",
+            "en": "Qum"
+        },
+        "slug": "شهر-قم",
+        "state_id": 19
+    },
+    {
+        "id": 713,
+        "name": {
+            "fa": "قنوات",
+            "en": "Qanavat"
+        },
+        "slug": "قنوات",
+        "state_id": 19
+    },
+    {
+        "id": 714,
+        "name": {
+            "fa": "کهک",
+            "en": "Kahak"
+        },
+        "slug": "کهک",
+        "state_id": 19
+    },
+    {
+        "id": 715,
+        "name": {
+            "fa": "آرمرده",
+            "en": "Armardeh"
+        },
+        "slug": "آرمرده",
+        "state_id": 20
+    },
+    {
+        "id": 716,
+        "name": {
+            "fa": "بابارشانی",
+            "en": "Babarashani"
+        },
+        "slug": "بابارشانی",
+        "state_id": 20
+    },
+    {
+        "id": 717,
+        "name": {
+            "fa": "بانه",
+            "en": "بانه"
+        },
+        "state_id": 20
+    },
+    {
+        "id": 718,
+        "name": {
+            "fa": "بلبان آباد",
+            "en": "Bolbanabad"
+        },
+        "slug": "بلبان-آباد",
+        "state_id": 20
+    },
+    {
+        "id": 719,
+        "name": {
+            "fa": "بوئین سفلی",
+            "en": "Boeen-e-Sofla"
+        },
+        "slug": "بوئین-سفلی",
+        "state_id": 20
+    },
+    {
+        "id": 720,
+        "name": {
+            "fa": "بیجار",
+            "en": "Bijar"
+        },
+        "slug": "بیجار",
+        "state_id": 20
+    },
+    {
+        "id": 721,
+        "name": {
+            "fa": "چناره",
+            "en": "Chenareh"
+        },
+        "slug": "چناره",
+        "state_id": 20
+    },
+    {
+        "id": 722,
+        "name": {
+            "fa": "دزج",
+            "en": "Dezej"
+        },
+        "slug": "دزج",
+        "state_id": 20
+    },
+    {
+        "id": 723,
+        "name": {
+            "fa": "دلبران",
+            "en": "Delbaran"
+        },
+        "slug": "دلبران",
+        "state_id": 20
+    },
+    {
+        "id": 724,
+        "name": {
+            "fa": "دهگلان",
+            "en": "Dehgolan"
+        },
+        "slug": "دهگلان",
+        "state_id": 20
+    },
+    {
+        "id": 725,
+        "name": {
+            "fa": "دیواندره",
+            "en": "Divandarreh"
+        },
+        "slug": "دیواندره",
+        "state_id": 20
+    },
+    {
+        "id": 726,
+        "name": {
+            "fa": "زرینه",
+            "en": "Zarrineh"
+        },
+        "slug": "زرینه",
+        "state_id": 20
+    },
+    {
+        "id": 727,
+        "name": {
+            "fa": "سروآباد",
+            "en": "Sarvabad"
+        },
+        "slug": "سروآباد",
+        "state_id": 20
+    },
+    {
+        "id": 728,
+        "name": {
+            "fa": "سریش آباد",
+            "en": "Serish Abad"
+        },
+        "slug": "سریش-آباد",
+        "state_id": 20
+    },
+    {
+        "id": 729,
+        "name": {
+            "fa": "سقز",
+            "en": "Saghez"
+        },
+        "slug": "سقز",
+        "state_id": 20
+    },
+    {
+        "id": 730,
+        "name": {
+            "fa": "سنندج",
+            "en": "Sanandaj"
+        },
+        "slug": "سنندج",
+        "state_id": 20
+    },
+    {
+        "id": 731,
+        "name": {
+            "fa": "شویشه",
+            "en": "Shuyesheh"
+        },
+        "slug": "شویشه",
+        "state_id": 20
+    },
+    {
+        "id": 732,
+        "name": {
+            "fa": "صاحب",
+            "en": "Saheb"
+        },
+        "slug": "صاحب",
+        "state_id": 20
+    },
+    {
+        "id": 733,
+        "name": {
+            "fa": "قروه",
+            "en": "Qorveh"
+        },
+        "slug": "قروه",
+        "state_id": 20
+    },
+    {
+        "id": 734,
+        "name": {
+            "fa": "کامیاران",
+            "en": "Kamyaran"
+        },
+        "slug": "کامیاران",
+        "state_id": 20
+    },
+    {
+        "id": 735,
+        "name": {
+            "fa": "کانی دینار",
+            "en": "Kani Dinar"
+        },
+        "slug": "کانی-دینار",
+        "state_id": 20
+    },
+    {
+        "id": 736,
+        "name": {
+            "fa": "کانی سور",
+            "en": "Kani Sur"
+        },
+        "slug": "کانی-سور",
+        "state_id": 20
+    },
+    {
+        "id": 737,
+        "name": {
+            "fa": "مریوان",
+            "en": "Mariwan"
+        },
+        "slug": "مریوان",
+        "state_id": 20
+    },
+    {
+        "id": 738,
+        "name": {
+            "fa": "موچش",
+            "en": "Muchesh"
+        },
+        "slug": "موچش",
+        "state_id": 20
+    },
+    {
+        "id": 739,
+        "name": {
+            "fa": "یاسوکند",
+            "en": "Yasukand"
+        },
+        "slug": "یاسوکند",
+        "state_id": 20
+    },
+    {
+        "id": 740,
+        "name": {
+            "fa": "اختیارآباد",
+            "en": "Ekhteyarabad"
+        },
+        "slug": "اختیارآباد",
+        "state_id": 21
+    },
+    {
+        "id": 741,
+        "name": {
+            "fa": "ارزوئیه",
+            "en": "Orzueeyeh"
+        },
+        "slug": "ارزوئیه",
+        "state_id": 21
+    },
+    {
+        "id": 742,
+        "name": {
+            "fa": "امین شهر",
+            "en": "Aminshahr"
+        },
+        "slug": "امین-شهر",
+        "state_id": 21
+    },
+    {
+        "id": 743,
+        "name": {
+            "fa": "انار",
+            "en": "Anar"
+        },
+        "slug": "انار",
+        "state_id": 21
+    },
+    {
+        "id": 744,
+        "name": {
+            "fa": "اندوهجرد",
+            "en": "Andouhjerd"
+        },
+        "slug": "اندوهجرد",
+        "state_id": 21
+    },
+    {
+        "id": 745,
+        "name": {
+            "fa": "باغین",
+            "en": "Bagheyn"
+        },
+        "slug": "باغین",
+        "state_id": 21
+    },
+    {
+        "id": 746,
+        "name": {
+            "fa": "بافت",
+            "en": "Baft"
+        },
+        "slug": "بافت",
+        "state_id": 21
+    },
+    {
+        "id": 747,
+        "name": {
+            "fa": "بردسیر",
+            "en": "Bardsir"
+        },
+        "slug": "بردسیر",
+        "state_id": 21
+    },
+    {
+        "id": 748,
+        "name": {
+            "fa": "بروات",
+            "en": "Baravat"
+        },
+        "slug": "بروات",
+        "state_id": 21
+    },
+    {
+        "id": 749,
+        "name": {
+            "fa": "بزنجان",
+            "en": "Bezanjan"
+        },
+        "slug": "بزنجان",
+        "state_id": 21
+    },
+    {
+        "id": 750,
+        "name": {
+            "fa": "بم",
+            "en": "Bam"
+        },
+        "slug": "بم",
+        "state_id": 21
+    },
+    {
+        "id": 751,
+        "name": {
+            "fa": "بهرمان",
+            "en": "Bahreman"
+        },
+        "slug": "بهرمان",
+        "state_id": 21
+    },
+    {
+        "id": 752,
+        "name": {
+            "fa": "پاریز",
+            "en": "Pariz"
+        },
+        "slug": "پاریز",
+        "state_id": 21
+    },
+    {
+        "id": 753,
+        "name": {
+            "fa": "جبالبارز",
+            "en": "Jebalbarez"
+        },
+        "slug": "جبالبارز",
+        "state_id": 21
+    },
+    {
+        "id": 754,
+        "name": {
+            "fa": "جوپار",
+            "en": "Jopar"
+        },
+        "slug": "جوپار",
+        "state_id": 21
+    },
+    {
+        "id": 755,
+        "name": {
+            "fa": "جوزم",
+            "en": "Jowzam"
+        },
+        "slug": "جوزم",
+        "state_id": 21
+    },
+    {
+        "id": 756,
+        "name": {
+            "fa": "جیرفت",
+            "en": "Jiroft"
+        },
+        "slug": "جیرفت",
+        "state_id": 21
+    },
+    {
+        "id": 757,
+        "name": {
+            "fa": "چترود",
+            "en": "Chatroud"
+        },
+        "slug": "چترود",
+        "state_id": 21
+    },
+    {
+        "id": 758,
+        "name": {
+            "fa": "خاتون آباد",
+            "en": "Khatonabad"
+        },
+        "slug": "خاتون-آباد",
+        "state_id": 21
+    },
+    {
+        "id": 759,
+        "name": {
+            "fa": "خانوک",
+            "en": "Khanok"
+        },
+        "slug": "خانوک",
+        "state_id": 21
+    },
+    {
+        "id": 760,
+        "name": {
+            "fa": "خورسند",
+            "en": "Khorsand"
+        },
+        "slug": "خورسند",
+        "state_id": 21
+    },
+    {
+        "id": 761,
+        "name": {
+            "fa": "درب بهشت",
+            "en": "Darb Behesht"
+        },
+        "slug": "درب-بهشت",
+        "state_id": 21
+    },
+    {
+        "id": 762,
+        "name": {
+            "fa": "دهج",
+            "en": "Dehaj"
+        },
+        "slug": "دهج",
+        "state_id": 21
+    },
+    {
+        "id": 763,
+        "name": {
+            "fa": "رابر",
+            "en": "Rābor"
+        },
+        "slug": "رابر",
+        "state_id": 21
+    },
+    {
+        "id": 764,
+        "name": {
+            "fa": "راور",
+            "en": "Ravar"
+        },
+        "slug": "راور",
+        "state_id": 21
+    },
+    {
+        "id": 765,
+        "name": {
+            "fa": "راین",
+            "en": "Rayen"
+        },
+        "slug": "راین",
+        "state_id": 21
+    },
+    {
+        "id": 766,
+        "name": {
+            "fa": "رفسنجان",
+            "en": "Rafsanjan"
+        },
+        "slug": "رفسنجان",
+        "state_id": 21
+    },
+    {
+        "id": 767,
+        "name": {
+            "fa": "رودبار",
+            "en": "Rudbar"
+        },
+        "slug": "کرمان-رودبار",
+        "state_id": 21
+    },
+    {
+        "id": 768,
+        "name": {
+            "fa": "ریحان شهر",
+            "en": "Reyhan Shahr"
+        },
+        "slug": "ریحان-شهر",
+        "state_id": 21
+    },
+    {
+        "id": 769,
+        "name": {
+            "fa": "زرند",
+            "en": "Zarand"
+        },
+        "slug": "زرند",
+        "state_id": 21
+    },
+    {
+        "id": 770,
+        "name": {
+            "fa": "زنگی آباد",
+            "en": "Zangiabad"
+        },
+        "slug": "زنگی-آباد",
+        "state_id": 21
+    },
+    {
+        "id": 771,
+        "name": {
+            "fa": "زیدآباد",
+            "en": "Zeydabad"
+        },
+        "slug": "زیدآباد",
+        "state_id": 21
+    },
+    {
+        "id": 772,
+        "name": {
+            "fa": "سیرجان",
+            "en": "Sirjan"
+        },
+        "slug": "سیرجان",
+        "state_id": 21
+    },
+    {
+        "id": 773,
+        "name": {
+            "fa": "شهداد",
+            "en": "Shahdad"
+        },
+        "slug": "شهداد",
+        "state_id": 21
+    },
+    {
+        "id": 774,
+        "name": {
+            "fa": "شهربابک",
+            "en": "Shahrbabak"
+        },
+        "slug": "شهربابک",
+        "state_id": 21
+    },
+    {
+        "id": 775,
+        "name": {
+            "fa": "صفائیه",
+            "en": "Safaeieh"
+        },
+        "slug": "صفائیه",
+        "state_id": 21
+    },
+    {
+        "id": 776,
+        "name": {
+            "fa": "عنبرآباد",
+            "en": "Anbarabad"
+        },
+        "slug": "عنبرآباد",
+        "state_id": 21
+    },
+    {
+        "id": 777,
+        "name": {
+            "fa": "فاریاب",
+            "en": "Faryab"
+        },
+        "slug": "فاریاب",
+        "state_id": 21
+    },
+    {
+        "id": 778,
+        "name": {
+            "fa": "فهرج",
+            "en": "Fahraj"
+        },
+        "slug": "فهرج",
+        "state_id": 21
+    },
+    {
+        "id": 779,
+        "name": {
+            "fa": "قلعه گنج",
+            "en": "Ghalehganj"
+        },
+        "slug": "قلعه-گنج",
+        "state_id": 21
+    },
+    {
+        "id": 780,
+        "name": {
+            "fa": "کاظم آباد",
+            "en": "Kazemabad"
+        },
+        "slug": "کاظم-آباد",
+        "state_id": 21
+    },
+    {
+        "id": 781,
+        "name": {
+            "fa": "کرمان",
+            "en": "Kerman"
+        },
+        "slug": "شهر-کرمان",
+        "state_id": 21
+    },
+    {
+        "id": 782,
+        "name": {
+            "fa": "کشکوئیه",
+            "en": "Koshkoueieh"
+        },
+        "slug": "کشکوئیه",
+        "state_id": 21
+    },
+    {
+        "id": 783,
+        "name": {
+            "fa": "کهنوج",
+            "en": "Kahnooj"
+        },
+        "slug": "کهنوج",
+        "state_id": 21
+    },
+    {
+        "id": 784,
+        "name": {
+            "fa": "کوهبنان",
+            "en": "Kouhbanan"
+        },
+        "slug": "کوهبنان",
+        "state_id": 21
+    },
+    {
+        "id": 785,
+        "name": {
+            "fa": "کیانشهر",
+            "en": "Kiyanshahr"
+        },
+        "slug": "کیانشهر",
+        "state_id": 21
+    },
+    {
+        "id": 786,
+        "name": {
+            "fa": "گلباف",
+            "en": "Golbaf"
+        },
+        "slug": "گلباف",
+        "state_id": 21
+    },
+    {
+        "id": 787,
+        "name": {
+            "fa": "گلزار",
+            "en": "Golzar"
+        },
+        "slug": "گلزار",
+        "state_id": 21
+    },
+    {
+        "id": 788,
+        "name": {
+            "fa": "لاله زار",
+            "en": "Lalezar"
+        },
+        "slug": "لاله-زار",
+        "state_id": 21
+    },
+    {
+        "id": 789,
+        "name": {
+            "fa": "ماهان",
+            "en": "Mahan"
+        },
+        "slug": "ماهان",
+        "state_id": 21
+    },
+    {
+        "id": 790,
+        "name": {
+            "fa": "محمدآباد",
+            "en": "Mohammadabad"
+        },
+        "slug": "کرمان-محمدآباد",
+        "state_id": 21
+    },
+    {
+        "id": 791,
+        "name": {
+            "fa": "محی آباد",
+            "en": "MohyAbad"
+        },
+        "slug": "محی-آباد",
+        "state_id": 21
+    },
+    {
+        "id": 792,
+        "name": {
+            "fa": "مردهک",
+            "en": "Mardehak"
+        },
+        "slug": "مردهک",
+        "state_id": 21
+    },
+    {
+        "id": 793,
+        "name": {
+            "fa": "مس سرچشمه",
+            "en": "Mes Sarcheshmeh"
+        },
+        "slug": "مس-سرچشمه",
+        "state_id": 21
+    },
+    {
+        "id": 794,
+        "name": {
+            "fa": "منوجان",
+            "en": "Manoojān"
+        },
+        "slug": "منوجان",
+        "state_id": 21
+    },
+    {
+        "id": 795,
+        "name": {
+            "fa": "نجف شهر",
+            "en": "Nakafshahr"
+        },
+        "slug": "نجف-شهر",
+        "state_id": 21
+    },
+    {
+        "id": 796,
+        "name": {
+            "fa": "نرماشیر",
+            "en": "Narmashir"
+        },
+        "slug": "نرماشیر",
+        "state_id": 21
+    },
+    {
+        "id": 797,
+        "name": {
+            "fa": "نظام شهر",
+            "en": "Nezam Shahr"
+        },
+        "slug": "نظام-شهر",
+        "state_id": 21
+    },
+    {
+        "id": 798,
+        "name": {
+            "fa": "نگار",
+            "en": "Negar"
+        },
+        "slug": "نگار",
+        "state_id": 21
+    },
+    {
+        "id": 799,
+        "name": {
+            "fa": "نودژ",
+            "en": "Nodej"
+        },
+        "slug": "نودژ",
+        "state_id": 21
+    },
+    {
+        "id": 800,
+        "name": {
+            "fa": "هجدک",
+            "en": "Hojedk"
+        },
+        "slug": "هجدک",
+        "state_id": 21
+    },
+    {
+        "id": 801,
+        "name": {
+            "fa": "یزدان شهر",
+            "en": "Yazadan Shahr"
+        },
+        "slug": "یزدان-شهر",
+        "state_id": 21
+    },
+    {
+        "id": 802,
+        "name": {
+            "fa": "ازگله",
+            "en": "Ezgeleh"
+        },
+        "slug": "ازگله",
+        "state_id": 22
+    },
+    {
+        "id": 803,
+        "name": {
+            "fa": "اسلام آباد غرب",
+            "en": "Eslamabad-e-Gharb"
+        },
+        "slug": "اسلام-آباد-غرب",
+        "state_id": 22
+    },
+    {
+        "id": 804,
+        "name": {
+            "fa": "باینگان",
+            "en": "Bayangan"
+        },
+        "slug": "باینگان",
+        "state_id": 22
+    },
+    {
+        "id": 805,
+        "name": {
+            "fa": "بیستون",
+            "en": "Biston"
+        },
+        "slug": "بیستون",
+        "state_id": 22
+    },
+    {
+        "id": 806,
+        "name": {
+            "fa": "پاوه",
+            "en": "Paveh"
+        },
+        "slug": "پاوه",
+        "state_id": 22
+    },
+    {
+        "id": 807,
+        "name": {
+            "fa": "تازه آباد",
+            "en": "Tazeh Abad"
+        },
+        "slug": "تازه-آباد",
+        "state_id": 22
+    },
+    {
+        "id": 808,
+        "name": {
+            "fa": "جوان رود",
+            "en": "Javanrud"
+        },
+        "slug": "جوان-رود",
+        "state_id": 22
+    },
+    {
+        "id": 809,
+        "name": {
+            "fa": "حمیل",
+            "en": "Hamil"
+        },
+        "slug": "حمیل",
+        "state_id": 22
+    },
+    {
+        "id": 810,
+        "name": {
+            "fa": "ماهیدشت",
+            "en": "Mahidasht"
+        },
+        "slug": "ماهیدشت",
+        "state_id": 22
+    },
+    {
+        "id": 811,
+        "name": {
+            "fa": "روانسر",
+            "en": "Ravansar"
+        },
+        "slug": "روانسر",
+        "state_id": 22
+    },
+    {
+        "id": 812,
+        "name": {
+            "fa": "سرپل ذهاب",
+            "en": "Sarpul Zahab"
+        },
+        "slug": "سرپل-ذهاب",
+        "state_id": 22
+    },
+    {
+        "id": 813,
+        "name": {
+            "fa": "سرمست",
+            "en": "Sarmast"
+        },
+        "slug": "سرمست",
+        "state_id": 22
+    },
+    {
+        "id": 814,
+        "name": {
+            "fa": "سطر",
+            "en": "Satar"
+        },
+        "slug": "سطر",
+        "state_id": 22
+    },
+    {
+        "id": 815,
+        "name": {
+            "fa": "سنقر",
+            "en": "Sonqor"
+        },
+        "slug": "سنقر",
+        "state_id": 22
+    },
+    {
+        "id": 816,
+        "name": {
+            "fa": "سومار",
+            "en": "Soomar"
+        },
+        "slug": "سومار",
+        "state_id": 22
+    },
+    {
+        "id": 817,
+        "name": {
+            "fa": "شاهو",
+            "en": "Shaho"
+        },
+        "slug": "شاهو",
+        "state_id": 22
+    },
+    {
+        "id": 818,
+        "name": {
+            "fa": "صحنه",
+            "en": "Sahneh"
+        },
+        "slug": "صحنه",
+        "state_id": 22
+    },
+    {
+        "id": 819,
+        "name": {
+            "fa": "قصرشیرین",
+            "en": "Qasr-e Shirin"
+        },
+        "slug": "قصرشیرین",
+        "state_id": 22
+    },
+    {
+        "id": 820,
+        "name": {
+            "fa": "کرمانشاه",
+            "en": "Kermanshah"
+        },
+        "slug": "شهر-کرمانشاه",
+        "state_id": 22
+    },
+    {
+        "id": 821,
+        "name": {
+            "fa": "کرندغرب",
+            "en": "Kerend-e Gharb"
+        },
+        "slug": "کرندغرب",
+        "state_id": 22
+    },
+    {
+        "id": 822,
+        "name": {
+            "fa": "کنگاور",
+            "en": "Kangavar"
+        },
+        "slug": "کنگاور",
+        "state_id": 22
+    },
+    {
+        "id": 823,
+        "name": {
+            "fa": "کوزران",
+            "en": "Kuzaran"
+        },
+        "slug": "کوزران",
+        "state_id": 22
+    },
+    {
+        "id": 824,
+        "name": {
+            "fa": "گهواره",
+            "en": "Gahvareh"
+        },
+        "slug": "گهواره",
+        "state_id": 22
+    },
+    {
+        "id": 825,
+        "name": {
+            "fa": "گیلان غرب",
+            "en": "Gilan Gharb"
+        },
+        "slug": "گیلانغرب",
+        "state_id": 22
+    },
+    {
+        "id": 826,
+        "name": {
+            "fa": "میان راهان",
+            "en": "Miyan Rahan"
+        },
+        "slug": "میان-راهان",
+        "state_id": 22
+    },
+    {
+        "id": 827,
+        "name": {
+            "fa": "نودشه",
+            "en": "Nowdeshah"
+        },
+        "slug": "نودشه",
+        "state_id": 22
+    },
+    {
+        "id": 828,
+        "name": {
+            "fa": "نوسود",
+            "en": "Nowsud"
+        },
+        "slug": "نوسود",
+        "state_id": 22
+    },
+    {
+        "id": 829,
+        "name": {
+            "fa": "هرسین",
+            "en": "Harsin"
+        },
+        "slug": "هرسین",
+        "state_id": 22
+    },
+    {
+        "id": 830,
+        "name": {
+            "fa": "هلشی",
+            "en": "Halashi"
+        },
+        "slug": "هلشی",
+        "state_id": 22
+    },
+    {
+        "id": 831,
+        "name": {
+            "fa": "باشت",
+            "en": "Basht"
+        },
+        "slug": "باشت",
+        "state_id": 23
+    },
+    {
+        "id": 832,
+        "name": {
+            "fa": "پاتاوه",
+            "en": "Pataveh"
+        },
+        "slug": "پاتاوه",
+        "state_id": 23
+    },
+    {
+        "id": 833,
+        "name": {
+            "fa": "چرام",
+            "en": "Choram"
+        },
+        "slug": "چرام",
+        "state_id": 23
+    },
+    {
+        "id": 834,
+        "name": {
+            "fa": "چیتاب",
+            "en": "Chitab"
+        },
+        "slug": "چیتاب",
+        "state_id": 23
+    },
+    {
+        "id": 835,
+        "name": {
+            "fa": "دهدشت",
+            "en": "Dehdasht"
+        },
+        "slug": "دهدشت",
+        "state_id": 23
+    },
+    {
+        "id": 836,
+        "name": {
+            "fa": "دوگنبدان",
+            "en": "Gachsaran"
+        },
+        "slug": "دوگنبدان",
+        "state_id": 23
+    },
+    {
+        "id": 837,
+        "name": {
+            "fa": "دیشموک",
+            "en": "Dishmok"
+        },
+        "slug": "دیشموک",
+        "state_id": 23
+    },
+    {
+        "id": 838,
+        "name": {
+            "fa": "سوق",
+            "en": "Suq"
+        },
+        "slug": "سوق",
+        "state_id": 23
+    },
+    {
+        "id": 839,
+        "name": {
+            "fa": "سی سخت",
+            "en": "Sisakht"
+        },
+        "slug": "سی-سخت",
+        "state_id": 23
+    },
+    {
+        "id": 840,
+        "name": {
+            "fa": "قلعه رئیسی",
+            "en": "Qaleh Raisi"
+        },
+        "slug": "قلعه-رئیسی",
+        "state_id": 23
+    },
+    {
+        "id": 841,
+        "name": {
+            "fa": "گراب سفلی",
+            "en": "Garab-e Sofla"
+        },
+        "slug": "گراب-سفلی",
+        "state_id": 23
+    },
+    {
+        "id": 842,
+        "name": {
+            "fa": "لنده",
+            "en": "Lendeh"
+        },
+        "slug": "لنده",
+        "state_id": 23
+    },
+    {
+        "id": 843,
+        "name": {
+            "fa": "لیکک",
+            "en": "Likak"
+        },
+        "slug": "لیکک",
+        "state_id": 23
+    },
+    {
+        "id": 844,
+        "name": {
+            "fa": "مادوان",
+            "en": "Madavan"
+        },
+        "slug": "مادوان",
+        "state_id": 23
+    },
+    {
+        "id": 845,
+        "name": {
+            "fa": "مارگون",
+            "en": "Maregoon"
+        },
+        "slug": "مارگون",
+        "state_id": 23
+    },
+    {
+        "id": 846,
+        "name": {
+            "fa": "یاسوج",
+            "en": "Yasuj"
+        },
+        "slug": "یاسوج",
+        "state_id": 23
+    },
+    {
+        "id": 847,
+        "name": {
+            "fa": "انبارآلوم",
+            "en": "Anbar Olum"
+        },
+        "slug": "انبارآلوم",
+        "state_id": 24
+    },
+    {
+        "id": 848,
+        "name": {
+            "fa": "اینچه برون",
+            "en": "Incheboron"
+        },
+        "slug": "اینچه-برون",
+        "state_id": 24
+    },
+    {
+        "id": 849,
+        "name": {
+            "fa": "آزادشهر",
+            "en": "Azad Shahr"
+        },
+        "slug": "آزادشهر",
+        "state_id": 24
+    },
+    {
+        "id": 850,
+        "name": {
+            "fa": "آق قلا",
+            "en": "Aq Qala"
+        },
+        "slug": "آق-قلا",
+        "state_id": 24
+    },
+    {
+        "id": 851,
+        "name": {
+            "fa": "بندرترکمن",
+            "en": "Bandar Torkaman"
+        },
+        "slug": "بندرترکمن",
+        "state_id": 24
+    },
+    {
+        "id": 852,
+        "name": {
+            "fa": "بندرگز",
+            "en": "Bandar Gaz"
+        },
+        "slug": "بندرگز",
+        "state_id": 24
+    },
+    {
+        "id": 853,
+        "name": {
+            "fa": "جلین",
+            "en": "Jelin"
+        },
+        "slug": "جلین",
+        "state_id": 24
+    },
+    {
+        "id": 854,
+        "name": {
+            "fa": "خان ببین",
+            "en": "Khānbebin"
+        },
+        "slug": "خان-ببین",
+        "state_id": 24
+    },
+    {
+        "id": 855,
+        "name": {
+            "fa": "دلند",
+            "en": "Deland"
+        },
+        "slug": "دلند",
+        "state_id": 24
+    },
+    {
+        "id": 856,
+        "name": {
+            "fa": "رامیان",
+            "en": "Ramian"
+        },
+        "slug": "رامیان",
+        "state_id": 24
+    },
+    {
+        "id": 857,
+        "name": {
+            "fa": "سرخنکلاته",
+            "en": "Sorkhan Kalateh"
+        },
+        "slug": "سرخنکلاته",
+        "state_id": 24
+    },
+    {
+        "id": 858,
+        "name": {
+            "fa": "سیمین شهر",
+            "en": "Simin Shahr"
+        },
+        "slug": "سیمین-شهر",
+        "state_id": 24
+    },
+    {
+        "id": 859,
+        "name": {
+            "fa": "علی آباد کتول",
+            "en": "Aliabad-e-Katul"
+        },
+        "slug": "علی-آباد-کتول",
+        "state_id": 24
+    },
+    {
+        "id": 860,
+        "name": {
+            "fa": "فاضل آباد",
+            "en": "Fazel Abad"
+        },
+        "slug": "فاضل-آباد",
+        "state_id": 24
+    },
+    {
+        "id": 861,
+        "name": {
+            "fa": "کردکوی",
+            "en": "Kordkuy"
+        },
+        "slug": "کردکوی",
+        "state_id": 24
+    },
+    {
+        "id": 862,
+        "name": {
+            "fa": "کلاله",
+            "en": "Kalaleh"
+        },
+        "slug": "کلاله",
+        "state_id": 24
+    },
+    {
+        "id": 863,
+        "name": {
+            "fa": "گالیکش",
+            "en": "Galikesh"
+        },
+        "slug": "گالیکش",
+        "state_id": 24
+    },
+    {
+        "id": 864,
+        "name": {
+            "fa": "گرگان",
+            "en": "Gorgan"
+        },
+        "slug": "گرگان",
+        "state_id": 24
+    },
+    {
+        "id": 865,
+        "name": {
+            "fa": "گمیش تپه",
+            "en": "Gamish Tape"
+        },
+        "slug": "گمیش-تپه",
+        "state_id": 24
+    },
+    {
+        "id": 866,
+        "name": {
+            "fa": "گنبدکاووس",
+            "en": "Gonbad Kavus"
+        },
+        "slug": "گنبدکاووس",
+        "state_id": 24
+    },
+    {
+        "id": 867,
+        "name": {
+            "fa": "مراوه",
+            "en": "Maraveh"
+        },
+        "slug": "مراوه",
+        "state_id": 24
+    },
+    {
+        "id": 868,
+        "name": {
+            "fa": "مینودشت",
+            "en": "Minudasht"
+        },
+        "slug": "مینودشت",
+        "state_id": 24
+    },
+    {
+        "id": 869,
+        "name": {
+            "fa": "نگین شهر",
+            "en": "Negin Shahr"
+        },
+        "slug": "نگین-شهر",
+        "state_id": 24
+    },
+    {
+        "id": 870,
+        "name": {
+            "fa": "نوده خاندوز",
+            "en": "Nowdeh Khanduz"
+        },
+        "slug": "نوده-خاندوز",
+        "state_id": 24
+    },
+    {
+        "id": 871,
+        "name": {
+            "fa": "نوکنده",
+            "en": "Now Kandeh"
+        },
+        "slug": "نوکنده",
+        "state_id": 24
+    },
+    {
+        "id": 872,
+        "name": {
+            "fa": "ازنا",
+            "en": "Azna"
+        },
+        "slug": "ازنا",
+        "state_id": 25
+    },
+    {
+        "id": 873,
+        "name": {
+            "fa": "اشترینان",
+            "en": "Oshtorinan"
+        },
+        "slug": "اشترینان",
+        "state_id": 25
+    },
+    {
+        "id": 874,
+        "name": {
+            "fa": "الشتر",
+            "en": "Aleshtar"
+        },
+        "slug": "الشتر",
+        "state_id": 25
+    },
+    {
+        "id": 875,
+        "name": {
+            "fa": "الیگودرز",
+            "en": "Aligodarz"
+        },
+        "slug": "الیگودرز",
+        "state_id": 25
+    },
+    {
+        "id": 876,
+        "name": {
+            "fa": "بروجرد",
+            "en": "Borujerd"
+        },
+        "slug": "بروجرد",
+        "state_id": 25
+    },
+    {
+        "id": 877,
+        "name": {
+            "fa": "پلدختر",
+            "en": "Pol Dokhtar"
+        },
+        "slug": "پلدختر",
+        "state_id": 25
+    },
+    {
+        "id": 878,
+        "name": {
+            "fa": "چالانچولان",
+            "en": "Chalan Chulan"
+        },
+        "slug": "چالانچولان",
+        "state_id": 25
+    },
+    {
+        "id": 879,
+        "name": {
+            "fa": "چغلوندی",
+            "en": "Chaghalvandi"
+        },
+        "slug": "چغلوندی",
+        "state_id": 25
+    },
+    {
+        "id": 880,
+        "name": {
+            "fa": "چقابل",
+            "en": "Chaqabol"
+        },
+        "slug": "چقابل",
+        "state_id": 25
+    },
+    {
+        "id": 881,
+        "name": {
+            "fa": "خرم آباد",
+            "en": "Khorramabad"
+        },
+        "slug": "لرستان-خرم-آباد",
+        "state_id": 25
+    },
+    {
+        "id": 882,
+        "name": {
+            "fa": "درب گنبد",
+            "en": "Darb Gonbad"
+        },
+        "slug": "درب-گنبد",
+        "state_id": 25
+    },
+    {
+        "id": 883,
+        "name": {
+            "fa": "دورود",
+            "en": "Dorud"
+        },
+        "slug": "دورود",
+        "state_id": 25
+    },
+    {
+        "id": 884,
+        "name": {
+            "fa": "زاغه",
+            "en": "Zaghe"
+        },
+        "slug": "زاغه",
+        "state_id": 25
+    },
+    {
+        "id": 885,
+        "name": {
+            "fa": "سپیددشت",
+            "en": "Sepid Dasht"
+        },
+        "slug": "سپیددشت",
+        "state_id": 25
+    },
+    {
+        "id": 886,
+        "name": {
+            "fa": "سراب دوره",
+            "en": "Sarab Dowreh"
+        },
+        "slug": "سراب-دوره",
+        "state_id": 25
+    },
+    {
+        "id": 887,
+        "name": {
+            "fa": "فیروزآباد",
+            "en": "Firuzabad"
+        },
+        "slug": "لرستان-فیروزآباد",
+        "state_id": 25
+    },
+    {
+        "id": 888,
+        "name": {
+            "fa": "کونانی",
+            "en": "Kunani"
+        },
+        "slug": "کونانی",
+        "state_id": 25
+    },
+    {
+        "id": 889,
+        "name": {
+            "fa": "کوهدشت",
+            "en": "Kuhdasht"
+        },
+        "slug": "کوهدشت",
+        "state_id": 25
+    },
+    {
+        "id": 890,
+        "name": {
+            "fa": "گراب",
+            "en": "Garab"
+        },
+        "slug": "گراب",
+        "state_id": 25
+    },
+    {
+        "id": 891,
+        "name": {
+            "fa": "معمولان",
+            "en": "Mamulan"
+        },
+        "slug": "معمولان",
+        "state_id": 25
+    },
+    {
+        "id": 892,
+        "name": {
+            "fa": "مومن آباد",
+            "en": "Momen Abad"
+        },
+        "slug": "مومن-آباد",
+        "state_id": 25
+    },
+    {
+        "id": 893,
+        "name": {
+            "fa": "نورآباد",
+            "en": "Noorabad"
+        },
+        "slug": "لرستان-نورآباد",
+        "state_id": 25
+    },
+    {
+        "id": 894,
+        "name": {
+            "fa": "ویسیان",
+            "en": "Veysian"
+        },
+        "slug": "ویسیان",
+        "state_id": 25
+    },
+    {
+        "id": 895,
+        "name": {
+            "fa": "احمدسرگوراب",
+            "en": "Ahmadsargurab"
+        },
+        "slug": "احمدسرگوراب",
+        "state_id": 26
+    },
+    {
+        "id": 896,
+        "name": {
+            "fa": "اسالم",
+            "en": "Asalem"
+        },
+        "slug": "اسالم",
+        "state_id": 26
+    },
+    {
+        "id": 897,
+        "name": {
+            "fa": "اطاقور",
+            "en": "Otaghvar"
+        },
+        "slug": "اطاقور",
+        "state_id": 26
+    },
+    {
+        "id": 898,
+        "name": {
+            "fa": "املش",
+            "en": "Amlash"
+        },
+        "slug": "املش",
+        "state_id": 26
+    },
+    {
+        "id": 899,
+        "name": {
+            "fa": "آستارا",
+            "en": "Astara"
+        },
+        "slug": "آستارا",
+        "state_id": 26
+    },
+    {
+        "id": 900,
+        "name": {
+            "fa": "آستانه اشرفیه",
+            "en": "Astaneh-ye Ashrafiyeh"
+        },
+        "slug": "آستانه-اشرفیه",
+        "state_id": 26
+    },
+    {
+        "id": 901,
+        "name": {
+            "fa": "بازار جمعه",
+            "en": "Bazar Jomeh"
+        },
+        "slug": "بازار-جمعه",
+        "state_id": 26
+    },
+    {
+        "id": 902,
+        "name": {
+            "fa": "بره سر",
+            "en": "Barehsar"
+        },
+        "slug": "بره-سر",
+        "state_id": 26
+    },
+    {
+        "id": 903,
+        "name": {
+            "fa": "بندرانزلی",
+            "en": "Bandar Anzali"
+        },
+        "slug": "بندرانزلی",
+        "state_id": 26
+    },
+    {
+        "id": 906,
+        "name": {
+            "fa": "پره سر",
+            "en": "Parehsar"
+        },
+        "slug": "پره-سر",
+        "state_id": 26
+    },
+    {
+        "id": 907,
+        "name": {
+            "fa": "تالش",
+            "en": "Talesh"
+        },
+        "slug": "تالش",
+        "state_id": 26
+    },
+    {
+        "id": 908,
+        "name": {
+            "fa": "توتکابن",
+            "en": "Tutkabon"
+        },
+        "slug": "توتکابن",
+        "state_id": 26
+    },
+    {
+        "id": 909,
+        "name": {
+            "fa": "جیرنده",
+            "en": "Jirindih"
+        },
+        "slug": "جیرنده",
+        "state_id": 26
+    },
+    {
+        "id": 910,
+        "name": {
+            "fa": "چابکسر",
+            "en": "Chaboksar"
+        },
+        "slug": "چابکسر",
+        "state_id": 26
+    },
+    {
+        "id": 911,
+        "name": {
+            "fa": "چاف و چمخاله",
+            "en": "Chaf and Chamkhaleh"
+        },
+        "slug": "چاف-و-چمخاله",
+        "state_id": 26
+    },
+    {
+        "id": 912,
+        "name": {
+            "fa": "چوبر",
+            "en": "Choobar"
+        },
+        "slug": "چوبر",
+        "state_id": 26
+    },
+    {
+        "id": 913,
+        "name": {
+            "fa": "حویق",
+            "en": "Haviq"
+        },
+        "slug": "حویق",
+        "state_id": 26
+    },
+    {
+        "id": 914,
+        "name": {
+            "fa": "خشکبیجار",
+            "en": "Khoshkebijar"
+        },
+        "slug": "خشکبیجار",
+        "state_id": 26
+    },
+    {
+        "id": 915,
+        "name": {
+            "fa": "خمام",
+            "en": "Khomam"
+        },
+        "slug": "خمام",
+        "state_id": 26
+    },
+    {
+        "id": 916,
+        "name": {
+            "fa": "دیلمان",
+            "en": "Deylaman"
+        },
+        "slug": "دیلمان",
+        "state_id": 26
+    },
+    {
+        "id": 917,
+        "name": {
+            "fa": "رانکوه",
+            "en": "Ranekouh"
+        },
+        "slug": "رانکوه",
+        "state_id": 26
+    },
+    {
+        "id": 918,
+        "name": {
+            "fa": "رحیم آباد",
+            "en": "Rahim Abad"
+        },
+        "slug": "رحیم-آباد",
+        "state_id": 26
+    },
+    {
+        "id": 919,
+        "name": {
+            "fa": "رستم آباد",
+            "en": "Rostamabad"
+        },
+        "slug": "رستم-آباد",
+        "state_id": 26
+    },
+    {
+        "id": 920,
+        "name": {
+            "fa": "رشت",
+            "en": "Rasht"
+        },
+        "slug": "رشت",
+        "state_id": 26
+    },
+    {
+        "id": 921,
+        "name": {
+            "fa": "رضوانشهر",
+            "en": "Rezvanshahr"
+        },
+        "slug": "گیلان-رضوانشهر",
+        "state_id": 26
+    },
+    {
+        "id": 922,
+        "name": {
+            "fa": "رودبار",
+            "en": "Rudbar"
+        },
+        "slug": "گیلان-رودبار",
+        "state_id": 26
+    },
+    {
+        "id": 923,
+        "name": {
+            "fa": "رودبنه",
+            "en": "Rod Baneh"
+        },
+        "slug": "رودبنه",
+        "state_id": 26
+    },
+    {
+        "id": 924,
+        "name": {
+            "fa": "رودسر",
+            "en": "Rodsar"
+        },
+        "slug": "رودسر",
+        "state_id": 26
+    },
+    {
+        "id": 925,
+        "name": {
+            "fa": "سنگر",
+            "en": "Sangar"
+        },
+        "slug": "سنگر",
+        "state_id": 26
+    },
+    {
+        "id": 926,
+        "name": {
+            "fa": "سیاهکل",
+            "en": "Siahkal"
+        },
+        "slug": "سیاهکل",
+        "state_id": 26
+    },
+    {
+        "id": 927,
+        "name": {
+            "fa": "شفت",
+            "en": "Shaft"
+        },
+        "slug": "شفت",
+        "state_id": 26
+    },
+    {
+        "id": 928,
+        "name": {
+            "fa": "شلمان",
+            "en": "Shalman"
+        },
+        "slug": "شلمان",
+        "state_id": 26
+    },
+    {
+        "id": 929,
+        "name": {
+            "fa": "صومعه سرا",
+            "en": "Someh Sara"
+        },
+        "slug": "صومعه-سرا",
+        "state_id": 26
+    },
+    {
+        "id": 930,
+        "name": {
+            "fa": "فومن",
+            "en": "Fuman"
+        },
+        "slug": "فومن",
+        "state_id": 26
+    },
+    {
+        "id": 931,
+        "name": {
+            "fa": "کلاچای",
+            "en": "Kelachay"
+        },
+        "slug": "کلاچای",
+        "state_id": 26
+    },
+    {
+        "id": 932,
+        "name": {
+            "fa": "کوچصفهان",
+            "en": "Kuchesfahan"
+        },
+        "slug": "کوچصفهان",
+        "state_id": 26
+    },
+    {
+        "id": 933,
+        "name": {
+            "fa": "کومله",
+            "en": "Komalah"
+        },
+        "slug": "کومله",
+        "state_id": 26
+    },
+    {
+        "id": 934,
+        "name": {
+            "fa": "کیاشهر",
+            "en": "Kiashahr"
+        },
+        "slug": "کیاشهر",
+        "state_id": 26
+    },
+    {
+        "id": 935,
+        "name": {
+            "fa": "گوراب زرمیخ",
+            "en": "Gurab Zarmikh"
+        },
+        "slug": "گوراب-زرمیخ",
+        "state_id": 26
+    },
+    {
+        "id": 936,
+        "name": {
+            "fa": "لاهیجان",
+            "en": "Lahijan"
+        },
+        "slug": "لاهیجان",
+        "state_id": 26
+    },
+    {
+        "id": 937,
+        "name": {
+            "fa": "لشت نشا",
+            "en": "Lasht-e Nesha"
+        },
+        "slug": "لشت-نشا",
+        "state_id": 26
+    },
+    {
+        "id": 938,
+        "name": {
+            "fa": "لنگرود",
+            "en": "Langarud"
+        },
+        "slug": "لنگرود",
+        "state_id": 26
+    },
+    {
+        "id": 939,
+        "name": {
+            "fa": "لوشان",
+            "en": "Lowshan"
+        },
+        "slug": "لوشان",
+        "state_id": 26
+    },
+    {
+        "id": 940,
+        "name": {
+            "fa": "لولمان",
+            "en": "Louleman"
+        },
+        "slug": "لولمان",
+        "state_id": 26
+    },
+    {
+        "id": 941,
+        "name": {
+            "fa": "لوندویل",
+            "en": "Lavandvil"
+        },
+        "slug": "لوندویل",
+        "state_id": 26
+    },
+    {
+        "id": 942,
+        "name": {
+            "fa": "لیسار",
+            "en": "Lisar"
+        },
+        "slug": "لیسار",
+        "state_id": 26
+    },
+    {
+        "id": 943,
+        "name": {
+            "fa": "ماسال",
+            "en": "Masal"
+        },
+        "slug": "ماسال",
+        "state_id": 26
+    },
+    {
+        "id": 944,
+        "name": {
+            "fa": "ماسوله",
+            "en": "Masuleh"
+        },
+        "slug": "ماسوله",
+        "state_id": 26
+    },
+    {
+        "id": 945,
+        "name": {
+            "fa": "مرجقل",
+            "en": "Marjaghel"
+        },
+        "slug": "مرجقل",
+        "state_id": 26
+    },
+    {
+        "id": 946,
+        "name": {
+            "fa": "منجیل",
+            "en": "Manjil"
+        },
+        "slug": "منجیل",
+        "state_id": 26
+    },
+    {
+        "id": 947,
+        "name": {
+            "fa": "واجارگاه",
+            "en": "Vajargah"
+        },
+        "slug": "واجارگاه",
+        "state_id": 26
+    },
+    {
+        "id": 948,
+        "name": {
+            "fa": "امیرکلا",
+            "en": "Amir Kala"
+        },
+        "slug": "امیرکلا",
+        "state_id": 27
+    },
+    {
+        "id": 949,
+        "name": {
+            "fa": "ایزدشهر",
+            "en": "Ezadshahr"
+        },
+        "slug": "ایزدشهر",
+        "state_id": 27
+    },
+    {
+        "id": 950,
+        "name": {
+            "fa": "آلاشت",
+            "en": "Alasht"
+        },
+        "slug": "آلاشت",
+        "state_id": 27
+    },
+    {
+        "id": 951,
+        "name": {
+            "fa": "آمل",
+            "en": "Amol"
+        },
+        "slug": "آمل",
+        "state_id": 27
+    },
+    {
+        "id": 952,
+        "name": {
+            "fa": "بابل",
+            "en": "Babol"
+        },
+        "slug": "بابل",
+        "state_id": 27
+    },
+    {
+        "id": 953,
+        "name": {
+            "fa": "بابلسر",
+            "en": "Babolsar"
+        },
+        "slug": "بابلسر",
+        "state_id": 27
+    },
+    {
+        "id": 954,
+        "name": {
+            "fa": "بالاده",
+            "en": "Baladeh"
+        },
+        "slug": "مازندران-بالاده",
+        "state_id": 27
+    },
+    {
+        "id": 955,
+        "name": {
+            "fa": "بهشهر",
+            "en": "Behshahr"
+        },
+        "slug": "بهشهر",
+        "state_id": 27
+    },
+    {
+        "id": 956,
+        "name": {
+            "fa": "بهنمیر",
+            "en": "Bahnamir"
+        },
+        "slug": "بهنمیر",
+        "state_id": 27
+    },
+    {
+        "id": 957,
+        "name": {
+            "fa": "پل سفید",
+            "en": "Pol Sefid"
+        },
+        "slug": "پل-سفید",
+        "state_id": 27
+    },
+    {
+        "id": 958,
+        "name": {
+            "fa": "تنکابن",
+            "en": "Tonekabon"
+        },
+        "slug": "تنکابن",
+        "state_id": 27
+    },
+    {
+        "id": 959,
+        "name": {
+            "fa": "جویبار",
+            "en": "Juybar"
+        },
+        "slug": "جویبار",
+        "state_id": 27
+    },
+    {
+        "id": 960,
+        "name": {
+            "fa": "چالوس",
+            "en": "Chalos"
+        },
+        "slug": "چالوس",
+        "state_id": 27
+    },
+    {
+        "id": 961,
+        "name": {
+            "fa": "چمستان",
+            "en": "Chamestan"
+        },
+        "slug": "چمستان",
+        "state_id": 27
+    },
+    {
+        "id": 962,
+        "name": {
+            "fa": "خرم آباد",
+            "en": "Khorramabad"
+        },
+        "slug": "مازندران-خرم-آباد",
+        "state_id": 27
+    },
+    {
+        "id": 963,
+        "name": {
+            "fa": "خلیل شهر",
+            "en": "Khalil Shahr"
+        },
+        "slug": "خلیل-شهر",
+        "state_id": 27
+    },
+    {
+        "id": 964,
+        "name": {
+            "fa": "خوش رودپی",
+            "en": "Khoshrodi"
+        },
+        "slug": "خوش-رودپی",
+        "state_id": 27
+    },
+    {
+        "id": 965,
+        "name": {
+            "fa": "دابودشت",
+            "en": "Daboodasht"
+        },
+        "slug": "دابودشت",
+        "state_id": 27
+    },
+    {
+        "id": 966,
+        "name": {
+            "fa": "رامسر",
+            "en": "Ramsar"
+        },
+        "slug": "رامسر",
+        "state_id": 27
+    },
+    {
+        "id": 967,
+        "name": {
+            "fa": "رستمکلا",
+            "en": "Rostam kola"
+        },
+        "slug": "رستمکلا",
+        "state_id": 27
+    },
+    {
+        "id": 968,
+        "name": {
+            "fa": "رویان",
+            "en": "Royan"
+        },
+        "slug": "رویان",
+        "state_id": 27
+    },
+    {
+        "id": 969,
+        "name": {
+            "fa": "رینه",
+            "en": "Rineh"
+        },
+        "slug": "رینه",
+        "state_id": 27
+    },
+    {
+        "id": 970,
+        "name": {
+            "fa": "زرگرمحله",
+            "en": "Zargarmahalleh"
+        },
+        "slug": "زرگرمحله",
+        "state_id": 27
+    },
+    {
+        "id": 971,
+        "name": {
+            "fa": "زیرآب",
+            "en": "Zirab"
+        },
+        "slug": "زیرآب",
+        "state_id": 27
+    },
+    {
+        "id": 972,
+        "name": {
+            "fa": "ساری",
+            "en": "Sari"
+        },
+        "slug": "ساری",
+        "state_id": 27
+    },
+    {
+        "id": 973,
+        "name": {
+            "fa": "سرخرود",
+            "en": "Sorkh Roud"
+        },
+        "slug": "سرخرود",
+        "state_id": 27
+    },
+    {
+        "id": 974,
+        "name": {
+            "fa": "سلمان شهر",
+            "en": "Salman Shahr"
+        },
+        "slug": "سلمان-شهر",
+        "state_id": 27
+    },
+    {
+        "id": 975,
+        "name": {
+            "fa": "سورک",
+            "en": "Surak"
+        },
+        "slug": "سورک",
+        "state_id": 27
+    },
+    {
+        "id": 976,
+        "name": {
+            "fa": "شیرگاه",
+            "en": "Shirgah"
+        },
+        "slug": "شیرگاه",
+        "state_id": 27
+    },
+    {
+        "id": 977,
+        "name": {
+            "fa": "شیرود",
+            "en": "Shirod"
+        },
+        "slug": "شیرود",
+        "state_id": 27
+    },
+    {
+        "id": 978,
+        "name": {
+            "fa": "عباس آباد",
+            "en": "Abbas Abad"
+        },
+        "slug": "عباس-آباد",
+        "state_id": 27
+    },
+    {
+        "id": 979,
+        "name": {
+            "fa": "فریدونکنار",
+            "en": "Fereydunkenar"
+        },
+        "slug": "فریدونکنار",
+        "state_id": 27
+    },
+    {
+        "id": 980,
+        "name": {
+            "fa": "فریم",
+            "en": "Farim"
+        },
+        "slug": "فریم",
+        "state_id": 27
+    },
+    {
+        "id": 981,
+        "name": {
+            "fa": "قائم شهر",
+            "en": "Qaemshahr"
+        },
+        "slug": "قائم-شهر",
+        "state_id": 27
+    },
+    {
+        "id": 982,
+        "name": {
+            "fa": "کتالم",
+            "en": "Katalom"
+        },
+        "slug": "کتالم",
+        "state_id": 27
+    },
+    {
+        "id": 983,
+        "name": {
+            "fa": "کلارآباد",
+            "en": "Kelarabad"
+        },
+        "slug": "کلارآباد",
+        "state_id": 27
+    },
+    {
+        "id": 984,
+        "name": {
+            "fa": "کلاردشت",
+            "en": "Kelardasht"
+        },
+        "slug": "کلاردشت",
+        "state_id": 27
+    },
+    {
+        "id": 985,
+        "name": {
+            "fa": "کله بست",
+            "en": "Kalleh Bast"
+        },
+        "slug": "کله-بست",
+        "state_id": 27
+    },
+    {
+        "id": 986,
+        "name": {
+            "fa": "کوهی خیل",
+            "en": "Kuhi Khil"
+        },
+        "slug": "کوهی-خیل",
+        "state_id": 27
+    },
+    {
+        "id": 987,
+        "name": {
+            "fa": "کیاسر",
+            "en": "Kiasar"
+        },
+        "slug": "کیاسر",
+        "state_id": 27
+    },
+    {
+        "id": 988,
+        "name": {
+            "fa": "کیاکلا",
+            "en": "Kia Kola"
+        },
+        "slug": "کیاکلا",
+        "state_id": 27
+    },
+    {
+        "id": 989,
+        "name": {
+            "fa": "گتاب",
+            "en": "Gatab"
+        },
+        "slug": "گتاب",
+        "state_id": 27
+    },
+    {
+        "id": 990,
+        "name": {
+            "fa": "گزنک",
+            "en": "Gazanak"
+        },
+        "slug": "گزنک",
+        "state_id": 27
+    },
+    {
+        "id": 991,
+        "name": {
+            "fa": "گلوگاه",
+            "en": "Galugah"
+        },
+        "slug": "گلوگاه",
+        "state_id": 27
+    },
+    {
+        "id": 992,
+        "name": {
+            "fa": "محمودآباد",
+            "en": "Mahmodabad"
+        },
+        "slug": "مازندران-محمودآباد",
+        "state_id": 27
+    },
+    {
+        "id": 993,
+        "name": {
+            "fa": "مرزن آباد",
+            "en": "Marzan Abad"
+        },
+        "slug": "مرزن-آباد",
+        "state_id": 27
+    },
+    {
+        "id": 994,
+        "name": {
+            "fa": "مرزیکلا",
+            "en": "Marzikola"
+        },
+        "slug": "مرزیکلا",
+        "state_id": 27
+    },
+    {
+        "id": 995,
+        "name": {
+            "fa": "نشتارود",
+            "en": "Nashtarud"
+        },
+        "slug": "نشتارود",
+        "state_id": 27
+    },
+    {
+        "id": 996,
+        "name": {
+            "fa": "نکا",
+            "en": "Neka"
+        },
+        "slug": "نکا",
+        "state_id": 27
+    },
+    {
+        "id": 997,
+        "name": {
+            "fa": "نور",
+            "en": "Noor"
+        },
+        "slug": "نور",
+        "state_id": 27
+    },
+    {
+        "id": 998,
+        "name": {
+            "fa": "نوشهر",
+            "en": "Nowshahr"
+        },
+        "slug": "نوشهر",
+        "state_id": 27
+    },
+    {
+        "id": 1119,
+        "name": {
+            "fa": "سادات شهر",
+            "en": "Sadat Shahr"
+        },
+        "slug": "سادات-شهر",
+        "state_id": 27
+    },
+    {
+        "id": 999,
+        "name": {
+            "fa": "اراک",
+            "en": "Arak"
+        },
+        "slug": "اراک",
+        "state_id": 28
+    },
+    {
+        "id": 1000,
+        "name": {
+            "fa": "آستانه",
+            "en": "Astaneh"
+        },
+        "slug": "آستانه",
+        "state_id": 28
+    },
+    {
+        "id": 1001,
+        "name": {
+            "fa": "آشتیان",
+            "en": "Ashtian"
+        },
+        "slug": "آشتیان",
+        "state_id": 28
+    },
+    {
+        "id": 1002,
+        "name": {
+            "fa": "پرندک",
+            "en": "Parandak"
+        },
+        "slug": "پرندک",
+        "state_id": 28
+    },
+    {
+        "id": 1003,
+        "name": {
+            "fa": "تفرش",
+            "en": "Tafresh"
+        },
+        "slug": "تفرش",
+        "state_id": 28
+    },
+    {
+        "id": 1004,
+        "name": {
+            "fa": "توره",
+            "en": "Tureh"
+        },
+        "slug": "توره",
+        "state_id": 28
+    },
+    {
+        "id": 1005,
+        "name": {
+            "fa": "جاورسیان",
+            "en": "Javarseyan"
+        },
+        "slug": "جاورسیان",
+        "state_id": 28
+    },
+    {
+        "id": 1006,
+        "name": {
+            "fa": "خشکرود",
+            "en": "Khoshkrud"
+        },
+        "slug": "خشکرود",
+        "state_id": 28
+    },
+    {
+        "id": 1007,
+        "name": {
+            "fa": "خمین",
+            "en": "Khomein"
+        },
+        "slug": "خمین",
+        "state_id": 28
+    },
+    {
+        "id": 1008,
+        "name": {
+            "fa": "خنداب",
+            "en": "Khondab"
+        },
+        "slug": "خنداب",
+        "state_id": 28
+    },
+    {
+        "id": 1009,
+        "name": {
+            "fa": "داودآباد",
+            "en": "Davood Abad"
+        },
+        "slug": "داودآباد",
+        "state_id": 28
+    },
+    {
+        "id": 1010,
+        "name": {
+            "fa": "دلیجان",
+            "en": "Delijan"
+        },
+        "slug": "دلیجان",
+        "state_id": 28
+    },
+    {
+        "id": 1011,
+        "name": {
+            "fa": "رازقان",
+            "en": "Razeqan"
+        },
+        "slug": "رازقان",
+        "state_id": 28
+    },
+    {
+        "id": 1012,
+        "name": {
+            "fa": "زاویه",
+            "en": "Zaviyeh"
+        },
+        "slug": "زاویه",
+        "state_id": 28
+    },
+    {
+        "id": 1013,
+        "name": {
+            "fa": "ساروق",
+            "en": "Saroogh"
+        },
+        "slug": "ساروق",
+        "state_id": 28
+    },
+    {
+        "id": 1014,
+        "name": {
+            "fa": "ساوه",
+            "en": "Saveh"
+        },
+        "slug": "ساوه",
+        "state_id": 28
+    },
+    {
+        "id": 1015,
+        "name": {
+            "fa": "سنجان",
+            "en": "Sanjan"
+        },
+        "slug": "سنجان",
+        "state_id": 28
+    },
+    {
+        "id": 1016,
+        "name": {
+            "fa": "شازند",
+            "en": "Shazand"
+        },
+        "slug": "شازند",
+        "state_id": 28
+    },
+    {
+        "id": 1017,
+        "name": {
+            "fa": "غرق آباد",
+            "en": "Gharqabad"
+        },
+        "slug": "غرق-آباد",
+        "state_id": 28
+    },
+    {
+        "id": 1018,
+        "name": {
+            "fa": "فرمهین",
+            "en": "Farmahin"
+        },
+        "slug": "فرمهین",
+        "state_id": 28
+    },
+    {
+        "id": 1019,
+        "name": {
+            "fa": "قورچی باشی",
+            "en": "Ghurchi Bashi"
+        },
+        "slug": "قورچی-باشی",
+        "state_id": 28
+    },
+    {
+        "id": 1020,
+        "name": {
+            "fa": "کرهرود",
+            "en": "Karahroud"
+        },
+        "slug": "کرهرود",
+        "state_id": 28
+    },
+    {
+        "id": 1021,
+        "name": {
+            "fa": "کمیجان",
+            "en": "Komijan"
+        },
+        "slug": "کمیجان",
+        "state_id": 28
+    },
+    {
+        "id": 1022,
+        "name": {
+            "fa": "مامونیه",
+            "en": "Mamuniyeh"
+        },
+        "slug": "مامونیه",
+        "state_id": 28
+    },
+    {
+        "id": 1023,
+        "name": {
+            "fa": "محلات",
+            "en": "Mahalat"
+        },
+        "slug": "محلات",
+        "state_id": 28
+    },
+    {
+        "id": 1024,
+        "name": {
+            "fa": "مهاجران",
+            "en": "Mohajeran"
+        },
+        "slug": "مهاجران",
+        "state_id": 28
+    },
+    {
+        "id": 1025,
+        "name": {
+            "fa": "میلاجرد",
+            "en": "Milajerd"
+        },
+        "slug": "میلاجرد",
+        "state_id": 28
+    },
+    {
+        "id": 1026,
+        "name": {
+            "fa": "نراق",
+            "en": "Naragh"
+        },
+        "slug": "نراق",
+        "state_id": 28
+    },
+    {
+        "id": 1027,
+        "name": {
+            "fa": "نوبران",
+            "en": "Nowbaran"
+        },
+        "slug": "نوبران",
+        "state_id": 28
+    },
+    {
+        "id": 1028,
+        "name": {
+            "fa": "نیمور",
+            "en": "Nimvar"
+        },
+        "slug": "نیمور",
+        "state_id": 28
+    },
+    {
+        "id": 1029,
+        "name": {
+            "fa": "هندودر",
+            "en": "Hendoudar"
+        },
+        "slug": "هندودر",
+        "state_id": 28
+    },
+    {
+        "id": 1030,
+        "name": {
+            "fa": "ابوموسی",
+            "en": "Abu Musa"
+        },
+        "slug": "ابوموسی",
+        "state_id": 29
+    },
+    {
+        "id": 1031,
+        "name": {
+            "fa": "بستک",
+            "en": "Bastak"
+        },
+        "slug": "بستک",
+        "state_id": 29
+    },
+    {
+        "id": 1032,
+        "name": {
+            "fa": "بندرجاسک",
+            "en": "Bandar-e-Jask"
+        },
+        "slug": "بندرجاسک",
+        "state_id": 29
+    },
+    {
+        "id": 1033,
+        "name": {
+            "fa": "بندرچارک",
+            "en": "Bandar e Charak"
+        },
+        "slug": "بندرچارک",
+        "state_id": 29
+    },
+    {
+        "id": 1034,
+        "name": {
+            "fa": "بندرخمیر",
+            "en": "Bandar Khamir"
+        },
+        "slug": "بندرخمیر",
+        "state_id": 29
+    },
+    {
+        "id": 1035,
+        "name": {
+            "fa": "بندرعباس",
+            "en": "Bandar Abbas"
+        },
+        "slug": "بندرعباس",
+        "state_id": 29
+    },
+    {
+        "id": 1036,
+        "name": {
+            "fa": "بندرلنگه",
+            "en": "Bandar Lengeh"
+        },
+        "slug": "بندرلنگه",
+        "state_id": 29
+    },
+    {
+        "id": 1037,
+        "name": {
+            "fa": "بیکا",
+            "en": "Bika"
+        },
+        "slug": "بیکا",
+        "state_id": 29
+    },
+    {
+        "id": 1038,
+        "name": {
+            "fa": "پارسیان",
+            "en": "Parsian"
+        },
+        "slug": "پارسیان",
+        "state_id": 29
+    },
+    {
+        "id": 1039,
+        "name": {
+            "fa": "تخت",
+            "en": "Takht"
+        },
+        "slug": "تخت",
+        "state_id": 29
+    },
+    {
+        "id": 1040,
+        "name": {
+            "fa": "جناح",
+            "en": "Jenah"
+        },
+        "slug": "جناح",
+        "state_id": 29
+    },
+    {
+        "id": 1041,
+        "name": {
+            "fa": "حاجی آباد",
+            "en": "Haji Abad"
+        },
+        "slug": "هرمزگان-حاجی-آباد",
+        "state_id": 29
+    },
+    {
+        "id": 1042,
+        "name": {
+            "fa": "درگهان",
+            "en": "Dargahan"
+        },
+        "slug": "درگهان",
+        "state_id": 29
+    },
+    {
+        "id": 1043,
+        "name": {
+            "fa": "دهبارز",
+            "en": "Dehbārez"
+        },
+        "slug": "دهبارز",
+        "state_id": 29
+    },
+    {
+        "id": 1044,
+        "name": {
+            "fa": "رویدر",
+            "en": "Ruydar"
+        },
+        "slug": "رویدر",
+        "state_id": 29
+    },
+    {
+        "id": 1045,
+        "name": {
+            "fa": "زیارتعلی",
+            "en": "Ziyārat Ali"
+        },
+        "slug": "زیارتعلی",
+        "state_id": 29
+    },
+    {
+        "id": 1046,
+        "name": {
+            "fa": "سردشت",
+            "en": "Sardasht"
+        },
+        "slug": "هرمزگان-سردشت",
+        "state_id": 29
+    },
+    {
+        "id": 1047,
+        "name": {
+            "fa": "سندرک",
+            "en": "Senderk"
+        },
+        "slug": "سندرک",
+        "state_id": 29
+    },
+    {
+        "id": 1048,
+        "name": {
+            "fa": "سوزا",
+            "en": "Suzā"
+        },
+        "slug": "سوزا",
+        "state_id": 29
+    },
+    {
+        "id": 1049,
+        "name": {
+            "fa": "سیریک",
+            "en": "Sirik"
+        },
+        "slug": "سیریک",
+        "state_id": 29
+    },
+    {
+        "id": 1050,
+        "name": {
+            "fa": "فارغان",
+            "en": "Fareghan"
+        },
+        "slug": "فارغان",
+        "state_id": 29
+    },
+    {
+        "id": 1051,
+        "name": {
+            "fa": "فین",
+            "en": "Fin"
+        },
+        "slug": "فین",
+        "state_id": 29
+    },
+    {
+        "id": 1052,
+        "name": {
+            "fa": "قشم",
+            "en": "Qeshm"
+        },
+        "slug": "قشم",
+        "state_id": 29
+    },
+    {
+        "id": 1053,
+        "name": {
+            "fa": "قلعه قاضی",
+            "en": "Ghale Ghazi"
+        },
+        "slug": "قلعه-قاضی",
+        "state_id": 29
+    },
+    {
+        "id": 1054,
+        "name": {
+            "fa": "کنگ",
+            "en": "Kang"
+        },
+        "slug": "کنگ",
+        "state_id": 29
+    },
+    {
+        "id": 1055,
+        "name": {
+            "fa": "کوشکنار",
+            "en": "Koshkonar"
+        },
+        "slug": "کوشکنار",
+        "state_id": 29
+    },
+    {
+        "id": 1056,
+        "name": {
+            "fa": "کیش",
+            "en": "Kish"
+        },
+        "slug": "کیش",
+        "state_id": 29
+    },
+    {
+        "id": 1057,
+        "name": {
+            "fa": "گوهران",
+            "en": "Gouharan"
+        },
+        "slug": "گوهران",
+        "state_id": 29
+    },
+    {
+        "id": 1058,
+        "name": {
+            "fa": "میناب",
+            "en": "Minab"
+        },
+        "slug": "میناب",
+        "state_id": 29
+    },
+    {
+        "id": 1059,
+        "name": {
+            "fa": "هرمز",
+            "en": "Hormuz"
+        },
+        "slug": "هرمز",
+        "state_id": 29
+    },
+    {
+        "id": 1060,
+        "name": {
+            "fa": "هشتبندی",
+            "en": "Hasht Bandi"
+        },
+        "slug": "هشتبندی",
+        "state_id": 29
+    },
+    {
+        "id": 1061,
+        "name": {
+            "fa": "ازندریان",
+            "en": "Azandarian"
+        },
+        "slug": "ازندریان",
+        "state_id": 30
+    },
+    {
+        "id": 1062,
+        "name": {
+            "fa": "اسدآباد",
+            "en": "Asadabad"
+        },
+        "slug": "اسدآباد",
+        "state_id": 30
+    },
+    {
+        "id": 1063,
+        "name": {
+            "fa": "برزول",
+            "en": "Barzul"
+        },
+        "slug": "برزول",
+        "state_id": 30
+    },
+    {
+        "id": 1064,
+        "name": {
+            "fa": "بهار",
+            "en": "Bahar"
+        },
+        "slug": "بهار",
+        "state_id": 30
+    },
+    {
+        "id": 1065,
+        "name": {
+            "fa": "تویسرکان",
+            "en": "Tuyserkan"
+        },
+        "slug": "تویسرکان",
+        "state_id": 30
+    },
+    {
+        "id": 1066,
+        "name": {
+            "fa": "جورقان",
+            "en": "Juraqan"
+        },
+        "slug": "جورقان",
+        "state_id": 30
+    },
+    {
+        "id": 1067,
+        "name": {
+            "fa": "جوکار",
+            "en": "Jowkar"
+        },
+        "slug": "جوکار",
+        "state_id": 30
+    },
+    {
+        "id": 1068,
+        "name": {
+            "fa": "دمق",
+            "en": "Damaq"
+        },
+        "slug": "دمق",
+        "state_id": 30
+    },
+    {
+        "id": 1069,
+        "name": {
+            "fa": "رزن",
+            "en": "Razan"
+        },
+        "slug": "رزن",
+        "state_id": 30
+    },
+    {
+        "id": 1070,
+        "name": {
+            "fa": "زنگنه",
+            "en": "Zanganeh"
+        },
+        "slug": "زنگنه",
+        "state_id": 30
+    },
+    {
+        "id": 1071,
+        "name": {
+            "fa": "سامن",
+            "en": "Samen"
+        },
+        "slug": "سامن",
+        "state_id": 30
+    },
+    {
+        "id": 1072,
+        "name": {
+            "fa": "سرکان",
+            "en": "Serkan"
+        },
+        "slug": "سرکان",
+        "state_id": 30
+    },
+    {
+        "id": 1073,
+        "name": {
+            "fa": "شیرین سو",
+            "en": "Shirin Su"
+        },
+        "slug": "شیرین-سو",
+        "state_id": 30
+    },
+    {
+        "id": 1074,
+        "name": {
+            "fa": "صالح آباد",
+            "en": "Salehabad"
+        },
+        "slug": "همدان-صالح-آباد",
+        "state_id": 30
+    },
+    {
+        "id": 1075,
+        "name": {
+            "fa": "فامنین",
+            "en": "Famenin"
+        },
+        "slug": "فامنین",
+        "state_id": 30
+    },
+    {
+        "id": 1076,
+        "name": {
+            "fa": "فرسفج",
+            "en": "Farasfaj"
+        },
+        "slug": "فرسفج",
+        "state_id": 30
+    },
+    {
+        "id": 1077,
+        "name": {
+            "fa": "فیروزان",
+            "en": "Firuzan"
+        },
+        "slug": "فیروزان",
+        "state_id": 30
+    },
+    {
+        "id": 1078,
+        "name": {
+            "fa": "قروه درجزین",
+            "en": "Qorveh-e Darjazin"
+        },
+        "slug": "قروه-درجزین",
+        "state_id": 30
+    },
+    {
+        "id": 1079,
+        "name": {
+            "fa": "قهاوند",
+            "en": "Qahavand"
+        },
+        "slug": "قهاوند",
+        "state_id": 30
+    },
+    {
+        "id": 1080,
+        "name": {
+            "fa": "کبودر آهنگ",
+            "en": "Kabudrahang"
+        },
+        "slug": "کبودر-آهنگ",
+        "state_id": 30
+    },
+    {
+        "id": 1081,
+        "name": {
+            "fa": "گل تپه",
+            "en": "Gol Tappeh"
+        },
+        "slug": "گل-تپه",
+        "state_id": 30
+    },
+    {
+        "id": 1082,
+        "name": {
+            "fa": "گیان",
+            "en": "Giyan"
+        },
+        "slug": "گیان",
+        "state_id": 30
+    },
+    {
+        "id": 1083,
+        "name": {
+            "fa": "لالجین",
+            "en": "Lajin"
+        },
+        "slug": "لالجین",
+        "state_id": 30
+    },
+    {
+        "id": 1084,
+        "name": {
+            "fa": "مریانج",
+            "en": "Maryanaj"
+        },
+        "slug": "مریانج",
+        "state_id": 30
+    },
+    {
+        "id": 1085,
+        "name": {
+            "fa": "ملایر",
+            "en": "Malayer"
+        },
+        "slug": "ملایر",
+        "state_id": 30
+    },
+    {
+        "id": 1086,
+        "name": {
+            "fa": "نهاوند",
+            "en": "Nahavand"
+        },
+        "slug": "نهاوند",
+        "state_id": 30
+    },
+    {
+        "id": 1087,
+        "name": {
+            "fa": "همدان",
+            "en": "Hamedan"
+        },
+        "slug": "شهر-همدان",
+        "state_id": 30
+    },
+    {
+        "id": 1088,
+        "name": {
+            "fa": "ابرکوه",
+            "en": "Abarkooh"
+        },
+        "slug": "ابرکوه",
+        "state_id": 31
+    },
+    {
+        "id": 1089,
+        "name": {
+            "fa": "احمدآباد",
+            "en": "Ahmadabad"
+        },
+        "slug": "احمدآباد",
+        "state_id": 31
+    },
+    {
+        "id": 1090,
+        "name": {
+            "fa": "اردکان",
+            "en": "Ardakan"
+        },
+        "slug": "یزد-اردکان",
+        "state_id": 31
+    },
+    {
+        "id": 1091,
+        "name": {
+            "fa": "اشکذر",
+            "en": "Ashkezar"
+        },
+        "slug": "اشکذر",
+        "state_id": 31
+    },
+    {
+        "id": 1092,
+        "name": {
+            "fa": "بافق",
+            "en": "Bafgh"
+        },
+        "slug": "بافق",
+        "state_id": 31
+    },
+    {
+        "id": 1093,
+        "name": {
+            "fa": "بفروئیه",
+            "en": "Bafruiyeh"
+        },
+        "slug": "بفروئیه",
+        "state_id": 31
+    },
+    {
+        "id": 1094,
+        "name": {
+            "fa": "بهاباد",
+            "en": "Bahabad"
+        },
+        "slug": "بهاباد",
+        "state_id": 31
+    },
+    {
+        "id": 1095,
+        "name": {
+            "fa": "تفت",
+            "en": "Taft"
+        },
+        "slug": "تفت",
+        "state_id": 31
+    },
+    {
+        "id": 1096,
+        "name": {
+            "fa": "حمیدیا",
+            "en": "Hamidia"
+        },
+        "slug": "حمیدیا",
+        "state_id": 31
+    },
+    {
+        "id": 1097,
+        "name": {
+            "fa": "خضرآباد",
+            "en": "Khezrabad"
+        },
+        "slug": "خضرآباد",
+        "state_id": 31
+    },
+    {
+        "id": 1098,
+        "name": {
+            "fa": "دیهوک",
+            "en": "Deyhuk"
+        },
+        "slug": "دیهوک",
+        "state_id": 31
+    },
+    {
+        "id": 1099,
+        "name": {
+            "fa": "زارچ",
+            "en": "Zarach"
+        },
+        "slug": "زارچ",
+        "state_id": 31
+    },
+    {
+        "id": 1100,
+        "name": {
+            "fa": "شاهدیه",
+            "en": "Shahedieh"
+        },
+        "slug": "شاهدیه",
+        "state_id": 31
+    },
+    {
+        "id": 1101,
+        "name": {
+            "fa": "طبس",
+            "en": "Tabas"
+        },
+        "slug": "یزد-طبس",
+        "state_id": 31
+    },
+    {
+        "id": 1103,
+        "name": {
+            "fa": "عقدا",
+            "en": "Aqda"
+        },
+        "slug": "عقدا",
+        "state_id": 31
+    },
+    {
+        "id": 1104,
+        "name": {
+            "fa": "مروست",
+            "en": "Marvast"
+        },
+        "slug": "مروست",
+        "state_id": 31
+    },
+    {
+        "id": 1105,
+        "name": {
+            "fa": "مهردشت",
+            "en": "Mehrdasht"
+        },
+        "slug": "مهردشت",
+        "state_id": 31
+    },
+    {
+        "id": 1106,
+        "name": {
+            "fa": "مهریز",
+            "en": "mehriz"
+        },
+        "slug": "مهریز",
+        "state_id": 31
+    },
+    {
+        "id": 1107,
+        "name": {
+            "fa": "میبد",
+            "en": "Meybod"
+        },
+        "slug": "میبد",
+        "state_id": 31
+    },
+    {
+        "id": 1108,
+        "name": {
+            "fa": "ندوشن",
+            "en": "Nodoushan"
+        },
+        "slug": "ندوشن",
+        "state_id": 31
+    },
+    {
+        "id": 1109,
+        "name": {
+            "fa": "نیر",
+            "en": "Nir"
+        },
+        "slug": "یزد-نیر",
+        "state_id": 31
+    },
+    {
+        "id": 1110,
+        "name": {
+            "fa": "هرات",
+            "en": "Herat"
+        },
+        "slug": "هرات",
+        "state_id": 31
+    },
+    {
+        "id": 1111,
+        "name": {
+            "fa": "یزد",
+            "en": "Yazd"
+        },
+        "slug": "شهر-یزد",
+        "state_id": 31
+    }
+]

@@ -1,0 +1,80 @@
+module.exports = `
+
+    type Query {
+        getCategory(id:ID!): Category
+        getCategories(page:Int, limit:Int, filter:CategoryFilter,sort:[Sort]): CategoryPaginate
+        getAllCategories(filter:CategoryFilter,sort:[Sort]): [Category]
+    }
+
+    type Mutation {
+        createCategory(input:CategoryInput): Category
+        updateCategory(id:ID!, input:CategoryInput): Category
+        deleteCategory(id:ID!): Response
+        duplicateCategory(id:ID!, title:JSON): Category
+        sortCategories(input:[sortCategoryInput]): Response
+    }
+
+    type Category {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        active: Boolean
+        show_in_menu: Boolean
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+        type: Int
+        sort: Int
+        parent_id:ID
+        media: MediaStructure
+        seo_id: ID
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        parent: Category
+        children: [Category]
+        seo: SEO
+        blogs: [Blog]
+        products: [Product]
+        user: User
+    }
+
+    type CategoryPaginate {
+        paginate: Paginate
+        data: [Category]
+    }
+
+    input CategoryInput {
+        title: JSON # multi language
+        active: Boolean
+        show_in_menu: Boolean
+        description: JSON # multi language
+        type: Int
+        sort: Int
+        parent_id:ID
+        media: MediaStructureInput
+        seo: SEOInput
+    }
+
+    input sortCategoryInput {
+        id: ID!
+        sort: Int
+        parent_id: ID
+    }
+
+    input CategoryFilter {
+        title: [filterMultiLang]
+        active: [filterBoolean]
+        show_in_menu: [filterBoolean]
+        description: [filterMultiLang]
+        type: [filterInt]
+        parent_id: [filterID]
+        # media: [filterID]
+        seo_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

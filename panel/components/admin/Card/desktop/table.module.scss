@@ -1,0 +1,78 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.card {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+
+  h3 {
+    //margin: 1rem;
+    display: inline-block;
+  }
+
+  > .title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title, .description {
+    text-align: right;
+  }
+
+  //.description {
+  //  padding-left: 1rem;
+  //}
+  //
+  //.fields, .action, .actions {
+  //  padding-left: 3rem;
+  //}
+
+  hr {
+    border-color: $success-light;
+  }
+
+  .action {
+    //float: left;
+    text-align: left;
+    margin-top: 0.8rem;
+    //margin-bottom: 1rem;
+  }
+
+  .actions {
+    text-align: left;
+
+    @include flex-position(x, flex-end);
+
+    button {
+      position: relative;
+      top: 0;
+      cursor: pointer;
+      //padding: 0.5rem;
+      //font-size: 1.2rem;
+      @include transition(0.2s);
+      @include hover {
+        //top: -2px;
+        @include generate-color(color, $blue)
+      }
+
+    }
+  }
+
+  .link {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .fields {
+    margin: 2rem;
+
+    button:hover {
+      @include generate-color(background, darken($white, 15%));
+    }
+  }
+
+  @include box-shadow(rgba(100, 100, 111, 0.2) 0 7px 29px 0);
+  @include rounded(.5rem);
+  @include generate-color(background, $white);
+}

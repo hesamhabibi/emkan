@@ -1,0 +1,146 @@
+{%-comment-%}
+inDevelop: Boolean
+seo_settings: {
+web_layout_favicon
+google_site_verification
+shop_name
+}
+seo:{
+robots_status, // for index
+title_web
+keywords_web
+description_web
+canonical_url
+}
+og: {
+title_web
+summary_web
+updatedAt
+media: {
+url
+alt
+information {
+width
+height
+type
+}
+}
+}
+{%-endcomment-%}
+
+{%-comment-%}// robots {%-endcomment-%}
+{%if inDevelop%}
+<meta name="robots" content="noindex-nofollow">
+<meta name="googlebot" content="noindex-nofollow">
+{%else%}
+{%-if seo.robots_status == 1-%}
+<meta name="robots" content="index-follow">
+<meta name="googlebot" content="index-follow">
+{%-endif-%}
+{%-if seo.robots_status == 2-%}
+<meta name="robots" content="noindex-follow">
+<meta name="googlebot" content="noindex-follow">
+{%-endif-%}
+{%-if seo.robots_status == 3-%}
+<meta name="robots" content="index-nofollow">
+<meta name="googlebot" content="index-nofollow">
+{%-endif-%}
+{%-if seo.robots_status == 4-%}
+<meta name="robots" content="noindex-nofollow">
+<meta name="googlebot" content="noindex-nofollow">
+{%-endif-%}
+{%endif%}
+
+<meta name="samandehi" content="519496699" />
+
+{%-comment-%}// ui meta tags and standard charsets {%-endcomment-%}
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+{%-comment-%}// CRF Token{%-endcomment-%}
+<!-- <meta name="_token" content=""/> -->
+
+{%-comment-%}// favicons{%-endcomment-%}
+<link rel="icon" href="{{seo_settings.web_layout_favicon.value.url | abs_url}}" type="image/png">
+
+{%-comment-%}//title , keywords , description {%-endcomment-%}
+{%-if seo-%}
+{%if seo.title_web%}<title>{{seo.title_web|or:og.title_web}}</title>{%endif%}
+<meta name="keywords" content="{{seo.keywords_web}}" />
+<meta name="description" content="{{seo.description_web}}" />
+{%-endif-%}
+
+<meta property="og:url" content="{{fullUrl}}" />
+<meta property="og:type" content="article">
+<meta property="og:locale" content="{{lang}}">
+{%-if og.title_web-%}
+<meta property="og:site_name" content="{{seo_settings.shop_name.value_web}}"> {%-endif-%}
+{%-if og.title_web-%}
+<meta property="og:title" content="{{og.title_web}}" /> {%-endif-%}
+{%-if og.summary_web-%}
+<meta property="og:description" content="{{og.summary_web}}" /> {%-endif-%}
+{%-if og.media.media-%}
+<meta property="og:image" content="{{url_prefix}}{{og.media.media.url | abs_url}}" /> {%-endif-%}
+{%-if og.media.media-%}
+<meta property="og:image:alt" content="{{og.media.media.alt}}" /> {%-endif-%}
+{%-if og.media.media-%}
+<meta property="og:image:width" content="{{og.media.media.information.width}}"> {%-endif-%}
+{%-if og.media.media-%}
+<meta property="og:image:height" content="{{og.media.media.information.height}}"> {%-endif-%}
+{%-if og.media.media-%}
+<meta property="og:image:secure_url" content="{{url_prefix}}{{og.media.media.url | abs_url}}"> {%-endif-%}
+{%-if og.media.media-%}
+<meta property="og:image:type" content="{{og.media.media.information.type}}"> {%-endif-%}
+{%-if og.updatedAt-%}
+<meta property="og:updated_time" content="{{og.updatedAt | t2d}}"> {%-endif-%}
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{fullUrl}}">
+{%-if og.title_web-%}
+<meta name="twitter:title" content="{{og.title_web}}"> {%-endif-%}
+{%-if og.summary_web-%}
+<meta name="twitter:description" content="{{og.summary_web}}"> {%-endif-%}
+{%-if og.media.media-%}
+<meta name="twitter:image:src" content="{{url_prefix}}{{og.media.media.url | abs_url}}"> {%-endif-%}
+
+{%-comment-%}
+<!--
+{%-if article.author-%}
+<meta name="author" content="{{article.author}}" />
+{%-endif-%}
+@foreach(\App\Helpers\ArrayHelper::explode_phrases(trim($__env->yieldContent('article_tag'))) as $tag)
+<meta property="article:tag" content="{$tag}">
+@endforeach
+@if (trim($__env->yieldContent('article_section')))
+<meta property="article:section" content="@yield('article_section')">
+@endif
+@if (trim($__env->yieldContent('article_author')))
+<meta property="article:section" content="@yield('article_author')">
+@endif
+@if (trim($__env->yieldContent('article_published_time')))
+<meta property="article:published_time" content="@yield('article_published_time')">
+@endif
+@if (trim($__env->yieldContent('article_modified_time')))
+<meta property="article:modified_time" content="@yield('article_published_time')">
+@endif
+-->
+{%-endcomment-%}
+
+{%-if seo_settings.google_site_verification.value_web-%}
+<meta name="google-site-verification" content="{{seo_settings.google_site_verification.value_web}}">
+{%-endif-%}
+
+<link rel="alternate" type="application/atom+xml" title="{{lang}} RSS" href="/feed">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+{%-if seo.canonical_url-%}
+<link rel="canonical" href="{{seo.canonical_url}}" />
+{%-endif-%}

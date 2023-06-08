@@ -1,0 +1,114 @@
+@import 'styles/variables';
+@import 'styles/components/mixin/mixin';
+
+@keyframes entering {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.entering {
+  animation-name: entering;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+}
+
+.exiting {
+  animation-name: entering;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+.tabLink {
+  position: relative;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  @include grid(flex);
+  @include box-shadow(0 2px 12px 1px #e3e3e3);
+  @include rounded(0.5rem);
+  @include generate-color(background, $white);
+  @include transition(0.2s);
+
+  &.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
+
+  > button {
+    flex: 1 0;
+    padding: 1rem 0;
+    font-size: 1rem;
+    @include flex-position(xy, center, column);
+    @include transition(0.2s);
+
+    > i {
+      margin-bottom: 0.5rem;
+      margin-top: 0.3rem;
+    }
+
+    &.active {
+      color: $primary;
+    }
+
+    &.tab-success {
+
+      @include hover {
+      }
+    }
+
+    &.tab-error {
+      //@include generate-color(background, $danger-light);
+      @include generate-color(color, $danger);
+
+      @include hover {
+        //@include generate-color(background, lighten($danger, 10%));
+      }
+    }
+
+
+    &.tab-warning {
+      //@include generate-color(background, $warning-light);
+      //@include generate-color(color, $white);
+
+      @include hover {
+        //@include generate-color(background, lighten($warning, 20%));
+      }
+    }
+
+    &.tab-orange {
+      //@include generate-color(background, $orange-light);
+      //@include generate-color(color, $white);
+
+      @include hover {
+        //@include generate-color(background, lighten($orange, 10%));
+      }
+    }
+
+    @include hover {
+      //@include generate-color(color, $pink)
+      color: $primary;
+    }
+  }
+
+  > .border {
+    position: absolute;
+    bottom: 0;
+
+    height: 2px;
+    //@include generate-color(background, $pink);
+    background-color: $primary;
+    @include transition(0.2s);
+  }
+}
+
+.tabContent {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,26 @@
+{%comment%}
+inputs:
+    links: [{url: '/some-link',title: 'some title'}]
+{%endcomment%}
+
+<!-- start websit directory -->
+<div class="mx-[10px] text-gray-c400 font-shabnam-light text-[12px] flex">
+    <span class="ml-[20px] py-[15px]">
+        سایت
+    </span>
+    <ul class="list-disc inline-flex gap-5 whitespace-nowrap overflow-x-scroll py-[15px]">
+        <a href="{%route 'home'%}">
+            <li>خانه</li>
+        </a>
+        {%for link in links%}
+            {%if link.url%}
+                <a href="{{link.url}}">
+                    <li>{{link.title}}</li>
+                </a>
+            {%else%}
+                <li>{{link.title}}</li>
+            {%endif%}
+        {%endfor%}
+    </ul>
+</div>
+<!-- end websit directory -->

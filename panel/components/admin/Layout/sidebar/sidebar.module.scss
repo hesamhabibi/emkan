@@ -1,0 +1,209 @@
+@import 'styles/variables';
+@import 'styles/components/mixin/mixin';
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 290px;
+  bottom: 0;
+  z-index: 2;
+  @include transition(0.3s ease-in-out);
+  @include grid(flex, column);
+  @include box-shadow($box-shadow-1);
+  @include generate-color(background, $white);
+
+  &.hidden {
+    right: -290px;
+    @include box-shadow(0 0 0 0);
+  }
+
+  > section {
+    &.logo {
+      text-align: center;
+      height: 70px;
+      border-bottom: 1px solid rgba($blue-dark, 0.03);
+    }
+
+    i {
+      @include transition(0.2s);
+    }
+
+    &.profile {
+      .img {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        @include rounded(30%);
+        @include transition(0.2s);
+
+        img {
+          @include img-cover(cover, center);
+        }
+      }
+
+      .info {
+        flex: 1;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        direction: ltr;
+        @include transition(0.2s);
+
+        > h6 {
+          direction: rtl;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        > small {
+          direction: ltr;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+
+      > button {
+        width: 30px;
+        height: 30px;
+        @include rounded(5px);
+        @include transition(0.2s);
+        @include hover {
+          @include generate-color(color, $blue);
+          @include generate-color(background, $blue, lighten, 37%)
+        }
+      }
+    }
+
+    &.menu {
+      flex: 1 1;
+      overflow-y: auto;
+
+      > ul {
+        li {
+          a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            position: relative;
+            @include transition(0.2s);
+            @include generate-color(color, $blue-dark, rgba, 0.8);
+
+            &:not(&.activeLinkClass)::after {
+              content: '';
+              position: absolute;
+              width: 4px;
+              right: 4px;
+              top: 6px;
+              bottom: 6px;
+
+              @include rounded(5px);
+              @include transition(0.2s);
+            }
+
+            @include hover {
+              @include generate-color(color, darken($blue, 30));
+
+              &::after {
+                @include generate-color(background, $blue, rgba, 0.2);
+              }
+            }
+
+            &.activeLinkClass {
+              ::after {
+                content: '';
+                position: absolute;
+                width: 4px;
+                right: 4px;
+                top: 6px;
+                bottom: 6px;
+
+                @include rounded(5px);
+                @include transition(0.2s);
+                @include generate-color(background, $blue, rgba, 0.6);
+              }
+              pointer-events: none;
+              @include generate-color(color, $blue);
+            }
+            > .badge {
+              border-radius: 50%;
+              width: 22px;
+              height: 22px;
+              font-size: 12px;
+              display: grid;
+              place-items: center;
+
+              @include generate-color(background, #5b5b7d);
+              @include generate-color(color, $white);
+            }
+          }
+        }
+      }
+      .childrenSidebar {
+        padding-inline-start: 0;
+        background: #f3f3f38a;
+        li {
+          list-style: none;
+          border-bottom: 1px lighten(gray, 40) solid;
+          span {
+            padding-right: 10px;
+          }
+        }
+      }
+
+      > .loading {
+        text-align: center;
+        display: block;
+        i {
+          padding: 2px;
+          font-size: xx-small;
+        }
+        i:first-child {
+          animation: ellipsis 1000ms infinite;
+        }
+        i:nth-child(2) {
+          animation: ellipsis 950ms infinite;
+        }
+        i:last-child {
+          animation: ellipsis 900ms infinite;
+        }
+      }
+    }
+  }
+
+    & + #bgAside {
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      opacity: 0;
+      @include generate-color(background, $blue, rgba, 0.1);
+      @include transition(0.3s)
+    }
+
+    &:not(.hidden) + #bgAside {
+      pointer-events: auto;
+      opacity: 1
+    }
+}
+
+@keyframes ellipsis {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    opacity: 0;
+  }
+}

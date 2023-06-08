@@ -1,0 +1,107 @@
+module.exports = `
+
+    type Query {
+        getMedia(id:ID!): Media
+        getMedias(page:Int,limit:Int,filter:MediaFilter,sort:[Sort]): MediaPaginate
+        getAllMedias(filter:MediaFilter,sort:[Sort]): [Media]
+    }
+
+    type Mutation {
+        updateMedia(id:ID!,input:MediaInput): Media
+        deleteMedia(id:ID): Response
+        sortMedias(input:[sortMediaInput]): Response
+    }
+
+    type MediaInformation {
+        width: Int
+        height: Int
+        duration: Float
+        codec_name: String
+        codec_long_name: String
+    }
+
+    type Media {
+        id: ID
+        is_public: Boolean
+        url: String
+        path: String
+        extension: String
+        sort: Int
+        main: Boolean
+        type: String
+        size: Int
+        alt: String
+        filename: String
+        information: MediaInformation
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        user: User
+    }
+
+    type MediaPaginate {
+        paginate: Paginate
+        data: [Media]
+    }
+
+    input MediaInput {
+        sort: Int
+        main: Boolean
+        alt: String
+    }
+
+    input sortMediaInput {
+        id: ID!
+        sort: Int
+        main: Boolean
+        alt: String
+    }
+
+    input MediaFilter {
+        is_public: [filterBoolean]
+        url: [filterString]
+        path: [filterString]
+        extension: [filterString]
+        type: [filterString]
+        sort: [filterInt]
+        main: [filterBoolean]
+        size: [filterInt]
+        alt: [filterString]
+        filename: [filterString]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+    type MediaStructure {
+        media_id: ID
+        alt: String
+        url: String
+
+        media: Media
+    }
+
+    type MediaGalleryStructure {
+        media_id: ID
+        main: Boolean
+        alt: String
+        url: String
+
+        media: Media
+    }
+
+    input MediaStructureInput {
+        media_id: ID
+        alt: String
+        url: String
+    }
+
+    input MediaGalleryStructureInput {
+        media_id: ID
+        sort: Int
+        main: Boolean
+        alt: String
+        url: String
+    }
+
+`

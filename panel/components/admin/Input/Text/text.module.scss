@@ -1,0 +1,162 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.container {
+  position: relative;
+
+  .disabled {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  .invalid {
+
+    &::after {
+      position: absolute;
+      right: 0.35rem;
+      content: "\f06a";
+      font-size: larger;
+      font-family: $font-awesome-regular;
+      top: 50%;
+      @include transform(translateY(-50%));
+
+      @include generate-color(color, $danger);
+    }
+
+    border-color: $danger;
+
+    &.form-control-rtl {
+      input {
+        padding-right: 2rem !important;
+      }
+    }
+    &.form-control-ltr {
+      input {
+        padding-left: 2rem !important;
+      }
+    }
+    @include rounded(0.25rem);
+    @include box-shadow-important($input-shadow-error);
+  }
+
+  > .form-control-rtl, > .form-control-ltr {
+
+    &.indent {
+      > input {
+        padding: 0.4rem 0.6rem 0.4rem 7.3rem;
+      }
+
+      > .clear {
+        left: auto;
+        right: calc(100% - 7.5rem);
+      }
+
+      &.indentLeft {
+        direction: ltr;
+        > .clear {
+          right: auto;
+          left: calc(100% - 2rem);
+        }
+
+        > input {
+          padding: 0.4rem 2.5rem 0.4rem 8.5rem;
+        }
+      }
+    }
+
+    > .groupNode {
+      position: absolute;
+      left: 0.5rem;
+      height: 80%;
+      top: 10%;
+    }
+
+    > .group {
+      background-color: $gray-light;
+      position: absolute;
+      height: 80%;
+      top: 10%;
+      font-size: small;
+      min-width: 70px;
+      text-align: center;
+      display: grid;
+      align-items: center;
+      color: darken(gray, 20);
+      padding: 0 10px;
+      left: 0.5rem;
+      border: 1px solid darken($gray-light, 15);
+      border-radius: 50px;
+      //padding-left: 10px;
+
+      //&.groupLeft {
+      //  right: 0.5rem;
+      //  left: auto;
+      //}
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+
+    input[type=number] {
+      -moz-appearance:textfield; /* Firefox */
+    }
+
+    > input {
+      width: 100%;
+      border: 1px solid darken($gray-light, 70);
+      padding: 0.4rem 0.6rem 0.4rem 30px;
+      outline: none;
+      @include rounded(0.25rem);
+      @include transition(0.2s);
+      @include focus {
+        border-color: lighten($blue, 30%);
+        @include box-shadow($input-shadow-1);
+      }
+
+      &.formControlSm {
+        height: 28px;
+        padding: 0.2rem 0.4rem;
+        font-size: 0.9rem;
+      }
+
+      &.formControlLg {
+        height: 48px;
+        padding: 0.7rem 1rem;
+      }
+    }
+
+    position: relative;
+
+    > .clear {
+      position: absolute;
+      left: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+
+      > i {
+        display: flex;
+        @include generate-color(color, gray);
+      }
+    }
+  }
+  > .form-control-ltr {
+    > .clear {
+      right: 0.5rem;
+      left: auto;
+    }
+
+    //> input {
+    //  padding: 0.4rem 0.6rem 0.4rem 7.3rem;
+    //}
+
+    > input {
+      padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+      direction: ltr;
+    };
+  }
+
+}

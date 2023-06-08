@@ -1,0 +1,71 @@
+{%getBlogs newestBlogs={
+    fields:{data:["title_web","summary_web","createdAt",{seo:"url"},{media:["alt","url"]}]},
+    filter:{type: BlogTypes.blog},
+    sort:{field:'createdAt',operator:'desc'},
+    limit:4,
+    page:1,
+}-%}
+{%global newestBlogs=newestBlogs.data%}
+
+{%getCategories blogCategories={
+fields:{data:["id","title_web",{seo:'url'}]},
+filter:{type:CategoryTypes.blog,show_in_menu:true,parent_id:null},
+limit:4
+}-%}
+
+{%let newBlogCategories=[]%}
+{%for i in (0..4) %}
+    {%if blogCategories.data[i]%}
+        {%getBlogs categoryBlogs={
+            fields:{data:["title_web","summary_web","createdAt",{seo:"url"},{media:["alt","url"]}]},
+            filter:{type: BlogTypes.blog,category_ids: [blogCategories.data[i].id],},
+            sort:{field:'createdAt',operator:'desc'},
+            limit:4,
+            page:1,
+        }-%}
+        {%mergeObject categoryWithBlogs = [blogCategories.data[i],{
+            blogs: categoryBlogs.data
+        }]%}
+        {%mergeObject newBlogCategories=[newBlogCategories,[categoryWithBlogs]]%}
+    {%endif%}
+{%endfor%}
+{%global blogCategories=newBlogCategories%}
+
+{%getSettingByKeys blogsBestTags={
+fields: ["value_web"],
+keys:[
+"web_blogsPage_tags_1",
+"web_blogsPage_tags_2",
+"web_blogsPage_tags_3",
+"web_blogsPage_tags_4",
+"web_blogsPage_tags_5",
+"web_blogsPage_tags_6",
+"web_blogsPage_tags_7",
+"web_blogsPage_tags_8",
+"web_blogsPage_tags_9",
+"web_blogsPage_tags_10",
+"web_blogsPage_tags_11",
+"web_blogsPage_tags_12",
+"web_blogsPage_tags_13",
+"web_blogsPage_tags_14",
+"web_blogsPage_tags_15",
+]
+}-%}
+{%global blogsBestTags=blogsBestTags%}
+
+{%getBlogBySlug BlogsPage={slug:"#BlogsCategoriesPage",type:BlogTypes.page,fields:{seo:SingleSEOFields}}%}
+
+{% layout "/components/layout/layout",
+title: 'blogs',
+seo: BlogsPage.seo,
+%}
+
+{%block stylesheets%}
+{%endblock%}
+
+{%block main%}
+    {%render '/components/main/blogsCategories'%}
+{%endblock%}
+
+{%block scripts%}
+{%endblock%}

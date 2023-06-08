@@ -1,0 +1,135 @@
+@import "styles/components/mixin/mixin";
+@import "styles/variables";
+
+
+@keyframes enterToast {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes exitToast {
+  from {
+    bottom: 0.5rem;
+  }
+  to {
+    bottom: -5rem;
+  }
+}
+
+.toastEnter {
+  animation-name: enterToast;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+  opacity: 1;
+}
+
+.toastLeave {
+  opacity: 0;
+  //animation-name: exitToast;
+  //animation-duration: 500ms;
+  //animation-timing-function: ease-out;
+}
+
+.container {
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  z-index: 9999999;
+
+
+  &.mobile {
+    right: 0;
+    align-items: center;
+  }
+
+  @include transition(0.3s)
+}
+
+.toast {
+  bottom: 0.5rem;
+  position: relative;
+  margin: 2px 0;
+  display: flex;
+  transition: all 1s;
+  flex-direction: row-reverse;
+  justify-content: center;
+  place-items: center;
+  //bottom: -100vh;
+  //left: 0.5rem;
+  width: fit-content;
+  padding: 1rem;
+
+
+  span {
+    padding: 0 1rem 0 0;
+    text-align: left;
+  }
+
+  i {
+    width: 20px;
+    cursor: pointer;
+    text-align: right;
+  }
+
+  &.success {
+    background-color: $success;
+  }
+
+  &.error {
+    background-color: $danger;
+  }
+
+  &.orange {
+    background-color: $orange;
+  }
+
+  &.primary {
+    background-color: $primary;
+  }
+
+  &.warning {
+    background-color: $warning;
+  }
+
+  > .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > button {
+      height: 30px;
+      width: 30px;
+      display: grid;
+      margin: 0 3px;
+      border-radius: 8px;
+      place-items: center;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+
+      > i {
+        text-align: center;
+
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include transition(0.5s ease-out);
+  @include rounded(0.4rem);
+  @include generate-color(background, #323232);
+  @include generate-color(color, $white);
+}
+
+.toastLeave {
+  bottom: 1rem;
+  //animation-name: exitToast;
+  //animation-duration: 500ms;
+  //animation-timing-function: ease-out;
+}

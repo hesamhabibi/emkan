@@ -1,0 +1,20 @@
+module.exports = `
+
+    type Query {
+        getRangeCalenderEvents(date_start:String, date_end:String, types:[Int]): [CalenderEvent]
+    }
+
+    type CalenderEvent {
+        title: String
+        type: Int
+        type_title: JSON # multi language
+        type_title_panel: String @multilang(field:"type_title",type:"panel")
+        type_title_web: String @multilang(field:"type_title")
+        holiday: Boolean
+        month: Int
+        jMonth: Int
+        day: Int
+        jDay: Int
+        date: String
+    }
+`;

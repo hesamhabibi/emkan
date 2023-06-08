@@ -1,0 +1,98 @@
+@import "styles/variables";
+
+
+.container {
+  max-width: 280px;
+  margin: auto;
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  > .header {
+    align-items: center;
+    margin: 0 auto 10px auto;
+    display: flex;
+    justify-content: space-between;
+
+    > .action {
+      > i {
+        padding: .5rem .8rem;
+        border-radius: 50%;
+        transition: background 0.2s linear;
+
+        &:hover {
+          cursor: pointer;
+          background: $gray-light;
+        }
+      }
+
+      color: #5f6368;
+    }
+  }
+
+  > .body {
+    display: table;
+    table-layout: fixed;
+    width: 260px;
+    text-align: center;
+
+    > div {
+      display: table-row;
+      height: 35px;
+
+      > .today {
+        background: lighten(gray, 20);
+        color: $white;
+
+        &:hover {
+          background: lighten($purple, 15);
+        }
+      }
+
+      > .active {
+        background: $purple;
+        color: $white;
+
+        &:hover {
+          background: lighten($purple, 25);
+        }
+      }
+
+      > span {
+        width: 35px;
+        height: 35px;
+        display: table-cell;
+        font-size: 12px;
+        font-weight: 600;
+        vertical-align: middle;
+        color: #70757a;
+
+        border-radius: 50%;
+        transition: background 0.2s linear;
+
+        &:hover {
+          cursor: pointer;
+          background: $gray-light;
+        }
+
+        &[aria-disabled] {
+          &:hover {
+            cursor: auto;
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    > .tableHeader {
+      > span {
+        font-size: 10px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.bgPurple {
+  background: $purple;
+  color: $white;
+}

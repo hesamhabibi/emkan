@@ -1,0 +1,95 @@
+module.exports = `
+
+    type Query {
+        getSlider(id:ID!): Slider
+        getSliders(page:Int, limit:Int, filter:SliderFilter,sort:[Sort]): SliderPaginate
+        getAllSliders(filter:SliderFilter,sort:[Sort]): [Slider]
+    }
+
+    type Mutation {
+        createSlider(input:SliderInput): Slider
+        updateSlider(id:ID!, input:SliderInput): Slider
+        deleteSlider(id:ID): Response
+        setStatusSlider(id:ID, input:setStatusSliderInput): Slider
+        addSliderImage(id:ID,input:SliderImageInput): Slider
+        updateSliderImage(id:ID, image_id:ID, input:SliderImageInput): Slider
+        removeSliderImage(id:ID, image_id: ID): Response
+        sortSliderImages(id:ID, input: [SliderImageSortInput]): Response
+    }
+
+    type Slider {
+        id: ID
+        name: JSON # multi language
+        name_panel: String @multilang(field:"name",type:"panel")
+        name_web: String @multilang(field:"name")
+        key: String
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+        status: Int
+        images: [SliderImage]
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        user: User
+    }
+
+    type SliderImage {
+        id: ID  
+        
+        media: MediaStructure
+        sort: Int
+        
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        link: String
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+    }
+
+    type SliderPaginate {
+        paginate: Paginate
+        data: [Slider]
+    }
+
+    input setStatusSliderInput {
+        status: Int
+    }
+
+    input SliderInput {
+        name: JSON # multi language
+        key: String
+        description: JSON # multi language
+        status: Int
+        images: [SliderImageInput]
+    }
+
+    input SliderImageInput {
+        media: MediaStructureInput
+        sort: Int
+
+        title: JSON # multi language
+        link: String
+        description: JSON # multi language
+    }
+
+    input SliderImageSortInput {
+        id: ID
+        sort: Int
+    }
+
+    input SliderFilter {
+        name: [filterMultiLang]
+        key: [filterString]
+        description: [filterMultiLang]
+        status: [filterInt]
+        images: [filterArray]
+        user_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

@@ -1,0 +1,33 @@
+@import "../../../../../../../styles/variables";
+
+
+.container {
+
+}
+
+
+.form {
+  align-self: baseline;
+  //padding-left: 10px;
+  //border-left: 1px solid $gray-light;
+}
+
+.result {
+  border-right: 1px solid $gray-light;
+  min-height: 500px;
+}
+
+.icon {
+  margin-bottom: 2px;
+  transition: 0.2s ease;
+}
+
+
+.delete {
+  transition: 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $blue;
+  }
+}

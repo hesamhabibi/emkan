@@ -1,0 +1,37 @@
+module.exports = `
+
+    type Query {
+        getPaymentGateway(id:ID!): PaymentGateway
+        getAllPaymentGateways: [PaymentGateway]
+    }
+
+    type Mutation {
+        createPaymentGateway(input:PaymentGatewayInput): PaymentGateway
+        updatePaymentGateway(id:ID,input:PaymentGatewayInput): PaymentGateway
+        deletePaymentGateway(id:ID): Response
+        sortPaymentGateways(input: [sortPaymentGatewayInput]): Response
+    }
+
+    type PaymentGateway {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        gateway: Int
+        status: Boolean
+        fields: JSON
+    }
+
+    input PaymentGatewayInput {
+        title: JSON
+        gateway: Int
+        status: Boolean
+        fields: JSON
+    }
+
+    input sortPaymentGatewayInput {
+        id: ID
+        sort: Int
+    }
+
+`

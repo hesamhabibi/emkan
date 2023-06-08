@@ -1,0 +1,45 @@
+@import "styles/variables";
+
+//.header {
+//  width: 100%;
+//  text-align: center;
+//  padding: 15px;
+//  border-bottom: 1px solid $gray-light;
+//}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > .row {
+    flex: 1 1;
+    display: flex;
+    border-bottom: 1px solid $gray-light;
+    padding: 20px;
+    text-align: right;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+      background-color: lighten($gray-light, 5);
+    }
+
+    p {
+      color: gray;
+      font-size: small;
+      margin-top: 10px;
+    }
+  }
+
+  > .row:first-child {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  > .row:last-child {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}

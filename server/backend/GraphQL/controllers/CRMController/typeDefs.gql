@@ -1,0 +1,141 @@
+module.exports = `
+    
+    type Query {
+        getCRM(id:ID!): CRM
+        getCRMs(page:Int, limit:Int, filter:CRMFilter,sort:[Sort]): CRMPaginate
+        getAllCRMs(filter:CRMFilter,sort:[Sort]): [CRM]
+    }
+
+    type Mutation {
+        sendSMS(input:SendSMSInput): CRM
+        sendEmail(input:SendEmailInput): CRM
+        sendPushNotification(input:SendPushNotificationInput): CRM
+        sendPopup(input:SendPopupInput): CRM
+        sendInternalMessage(input:SendInternalMessageInput): CRM
+        sendExternalMessage(input:SendExternalMessageInput): CRM
+        deleteCRM(id:ID!): Response
+    }
+
+    type CRM {
+        id: ID
+        title: String
+        message: String
+        type: Int
+        kind: Int
+        send_to: [CRMSendTo]
+        status: Int
+        response: JSON
+        date: String
+        user_id: ID
+
+        user: User
+        createdAt: String
+        updatedAt: String
+    }
+
+    type CRMSendTo {
+        receiver_user_id: ID
+        receiver_value: String
+        seen: Int
+
+        receiver_user: User
+    }
+
+    type CRMPaginate {
+        paginate: Paginate
+        data: [CRM]
+    }
+
+
+    input SendSMSInput {
+        title: String
+        message: String
+        send_to: [SendSMSSendToInput]
+        date: String
+    }
+
+    input SendSMSSendToInput {
+        receiver_user_id: ID
+        receiver_value: String
+    }
+
+    input SendEmailInput {
+        title: String
+        message: String
+        send_to: [SendEmailSendToInput]
+        date: String
+    }
+
+    input SendEmailSendToInput {
+        receiver_user_id: ID
+        receiver_value: String
+    }
+
+    input SendPushNotificationInput {
+        title: String
+        message: String
+        link: String
+        send_to: [SendPushNotificationSendToInput]
+        date: String
+    }
+
+    input SendPushNotificationSendToInput {
+        receiver_user_id: ID
+        receiver_value: String
+    }
+
+    input SendPopupInput {
+        title: String
+        message: String
+        link: String
+        send_to: [SendPopupSendToInput]
+        date: String
+        view_count: Int
+    }
+
+    input SendPopupSendToInput {
+        receiver_user_id: ID
+    }
+
+    input SendInternalMessageInput {
+        title: String
+        message: String
+        send_to: [SendInternalMessageSendToInput]
+        date: String
+    }
+
+    input SendInternalMessageSendToInput {
+        receiver_user_id: ID
+        receiver_value: String
+    }
+
+    input SendExternalMessageInput {
+        title: String
+        message: String
+        kind: Int
+        send_to: [SendExternalMessageSendToInput]
+        status: Int
+        date: String
+        response: JSON
+    }
+
+    input SendExternalMessageSendToInput {
+        receiver_user_id: ID
+        receiver_value: String
+        seen: Int
+    }
+
+    input CRMFilter {
+        title: [filterString]
+        message: [filterString]
+        type: [filterInt]
+        kind: [filterInt]
+        send_to: [filterArray]
+        status: [filterInt]
+        date: [filterString]
+        user_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

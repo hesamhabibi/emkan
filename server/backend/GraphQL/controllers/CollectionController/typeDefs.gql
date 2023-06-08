@@ -1,0 +1,182 @@
+module.exports = `
+
+    type Query {
+        getCollection(id:ID!): Collection
+        getCollections(page:Int, limit:Int, filter:CollectionFilter,sort:[Sort]): CollectionPaginate
+        getAllCollections(filter:CollectionFilter,sort:[Sort]): [Collection]
+
+        getBagCollection(id:ID!): Collection
+        getBagCollections(page:Int, limit:Int, filter:CollectionFilter,sort:[Sort]): CollectionPaginate
+        getAllBagCollections(filter:CollectionFilter,sort:[Sort]): [Collection]
+
+        getCampaignCollection(id:ID!): Collection
+        getCampaignCollections(page:Int, limit:Int, filter:CollectionFilter,sort:[Sort]): CollectionPaginate
+        getAllCampaignCollections(filter:CollectionFilter,sort:[Sort]): [Collection]
+
+        getGiftCollection(id:ID!): Collection
+        getGiftCollections(page:Int, limit:Int, filter:CollectionFilter,sort:[Sort]): CollectionPaginate
+        getAllGiftCollections(filter:CollectionFilter,sort:[Sort]): [Collection]
+
+        getRelatedProductCollection(id:ID!): Collection
+        getRelatedProductCollections(page:Int, limit:Int, filter:CollectionFilter,sort:[Sort]): CollectionPaginate
+        getAllRelatedProductCollections(filter:CollectionFilter,sort:[Sort]): [Collection]
+
+        getCollectionProducts(id:ID, filter: ProductFilter,sort:[Sort]): [Product]
+        getConditionProducts(condition: CollectionConditionInput, filter: ProductFilter,sort:[Sort]): [Product]
+    }
+
+    type Mutation {
+        createCollection(input:CollectionInput): Collection
+        updateCollection(id:ID!, input:CollectionInput): Collection
+        deleteCollection(id:ID!): Response
+
+        createBagCollection(input:CollectionInput): Collection
+        updateBagCollection(id:ID!, input:CollectionInput): Collection
+        deleteBagCollection(id:ID!): Response
+
+        createCampaignCollection(input:CollectionInput): Collection
+        updateCampaignCollection(id:ID!, input:CollectionInput): Collection
+        deleteCampaignCollection(id:ID!): Response
+
+        createGiftCollection(input:CollectionInput): Collection
+        updateGiftCollection(id:ID!, input:CollectionInput): Collection
+        deleteGiftCollection(id:ID!): Response
+
+        createRelatedProductCollection(input:CollectionInput): Collection
+        updateRelatedProductCollection(id:ID!, input:CollectionInput): Collection
+        deleteRelatedProductCollection(id:ID!): Response
+    }
+
+    type Collection {
+        id: ID
+        type: Int
+        condition: CollectionCondition
+        list: [CollectionList]
+        extra_fields: CollectionExtraFields
+        source: Int
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        user: User
+    }
+
+    type CollectionCondition {
+        model_name: String
+        limit: Int
+        logic: Int
+        orders: [CollectionConditionOrders]
+        wheres: [CollectionConditionWheres]
+    }
+
+    type CollectionConditionOrders {
+        type: Int
+        field: String
+    }
+
+    type CollectionConditionWheres {
+        operator: Int
+        where_field: String
+        where_value: JSON
+    }
+
+    type CollectionList {
+        product_id: ID
+        has_variant_key: Boolean
+        mix_variant_keys: [String]
+        sort: Int
+        price_id: ID
+        show: Boolean
+        expireAt: String
+
+        product: Product
+        price: Price
+    }
+
+    type CollectionExtraFields {
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+        show: Boolean
+        seo_id: ID
+        media: MediaStructure
+        score: Int
+        startAt: String
+        expireAt: String
+        has_timer: Boolean
+        cover: MediaStructure
+        cover_position: Int
+
+        seo: SEO
+    }
+
+    type CollectionPaginate {
+        paginate: Paginate
+        data: [Collection]
+    }
+
+    input CollectionInput {
+        type: Int
+        condition: CollectionConditionInput
+        list: [CollectionListInput]
+        extra_fields: CollectionExtraFieldsInput
+        source: Int
+    }
+
+    input CollectionConditionInput {
+        model_name: String
+        limit: Int
+        logic: Int
+        orders: [CollectionConditionOrdersInput]
+        wheres: [CollectionConditionWheresInput]
+    }
+
+    input CollectionConditionOrdersInput {
+        type: Int
+        field: String
+    }
+
+    input CollectionConditionWheresInput {
+        operator: Int
+        where_field: String
+        where_value: JSON
+    }
+
+    input CollectionListInput {
+        product_id: ID
+        has_variant_key: Boolean
+        mix_variant_keys: [String]
+        sort: Int
+        show: Boolean
+        expireAt: String
+    }
+
+    input CollectionExtraFieldsInput {
+        title: JSON # multi language
+        description: JSON # multi language
+        show: Boolean
+        seo: SEOInput
+        media: MediaStructureInput
+        score: Int
+        startAt: String
+        expireAt: String
+        has_timer: Boolean
+        cover: MediaStructureInput
+        cover_position: Int
+    }
+
+    input CollectionFilter {
+        type: [filterInt]
+        # condition: [filterJSON]
+        # list: [filterArray]
+        # extra_fields: [filterJSON]
+        source: [filterInt]
+        user_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

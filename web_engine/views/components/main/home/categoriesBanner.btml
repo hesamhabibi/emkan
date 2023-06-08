@@ -1,0 +1,78 @@
+<!-- start categories -->
+<div class="grid md:grid-cols-3 grid-cols-1 sm:grid-cols-2 md:mt-[80px] mt-[50px] lg:gap-6 gap-3 mx-[15px]">
+
+    {%if homeSettings.web_homePage_categories_title_1.value_web%}
+        <div class="category-item transitions">
+            <a href="{{homeSettings.web_homePage_categories_link_1.value_web}}" class="">
+                <span class="leading-[1.35rem]">
+                    {{homeSettings.web_homePage_categories_title_1.value_web}}
+                    <span class="category-svg bottom-[-3px]">
+                        <img class="!inline h-[80px] w-[80px] lg:w-[90px] lg:h-[90px]" src="{{homeSettings.web_homePage_categories_image_1.value.url | abs_url}}" alt="{{homeSettings.web_homePage_categories_image_1.value.alt}}">
+                    </span>
+                </span>
+            </a>
+        </div>
+    {%endif%}
+    {%if homeSettings.web_homePage_categories_title_2.value_web%}
+        <div class="category-item transitions">
+            <a href="{{homeSettings.web_homePage_categories_link_2.value_web}}" class="">
+                <span class="leading-[1.35rem]">
+                    {{homeSettings.web_homePage_categories_title_2.value_web}}
+                    <span class="category-svg bottom-[-3px]">
+                        <img class="!inline h-[80px] w-[80px] lg:w-[90px] lg:h-[90px]" src="{{homeSettings.web_homePage_categories_image_2.value.url | abs_url}}" alt="{{homeSettings.web_homePage_categories_image_2.value.alt}}">
+                    </span>
+                </span>
+            </a>
+        </div>
+    {%endif%}
+    {%if homeSettings.web_homePage_categories_title_3.value_web%}
+        <div class="category-item transitions">
+            <a href="{{homeSettings.web_homePage_categories_link_3.value_web}}" class="">
+                <span class="leading-[1.35rem]">
+                    {{homeSettings.web_homePage_categories_title_3.value_web}}
+                    <span class="category-svg bottom-[-3px]">
+                        <img class="!inline h-[80px] w-[80px] lg:w-[90px] lg:h-[90px]" src="{{homeSettings.web_homePage_categories_image_3.value.url | abs_url}}" alt="{{homeSettings.web_homePage_categories_image_3.value.alt}}">
+                    </span>
+                </span>
+            </a>
+        </div>
+    {%endif%}
+    {%if homeSettings.web_homePage_categories_title_4.value_web%}
+        <div class="category-item transitions">
+            <a href="{{homeSettings.web_homePage_categories_link_4.value_web}}" class="">
+                <span class="leading-[1.35rem]">
+                    {{homeSettings.web_homePage_categories_title_4.value_web}}
+                    <span class="category-svg bottom-[-3px]">
+                        <img class="!inline h-[80px] w-[80px] lg:w-[90px] lg:h-[90px]" src="{{homeSettings.web_homePage_categories_image_4.value.url | abs_url}}" alt="{{homeSettings.web_homePage_categories_image_4.value.alt}}">
+                    </span>
+                </span>
+            </a>
+        </div>
+    {%endif%}
+    {%if homeSettings.web_homePage_categories_title_5.value_web%}
+        <div class="category-item transitions">
+            <a href="{{homeSettings.web_homePage_categories_link_5.value_web}}" class="">
+                <span class="leading-[1.35rem]">
+                    {{homeSettings.web_homePage_categories_title_5.value_web}}
+                    <span class="category-svg bottom-[-3px]">
+                        <img class="!inline h-[80px] w-[80px] lg:w-[90px] lg:h-[90px]" src="{{homeSettings.web_homePage_categories_image_5.value.url | abs_url}}" alt="{{homeSettings.web_homePage_categories_image_5.value.alt}}">
+                    </span>
+                </span>
+            </a>
+        </div>
+    {%endif%}
+    {%if homeSettings.web_homePage_categories_title_6.value_web%}
+        <div class="category-item transitions">
+            <a href="{{homeSettings.web_homePage_categories_link_6.value_web}}" class="">
+                <span class="leading-[1.35rem]">
+                    {{homeSettings.web_homePage_categories_title_6.value_web}}
+                    <span class="category-svg bottom-[-3px]">
+                        <img class="!inline h-[80px] w-[80px] lg:w-[90px] lg:h-[90px]" src="{{homeSettings.web_homePage_categories_image_6.value.url | abs_url}}" alt="{{homeSettings.web_homePage_categories_image_6.value.alt}}">
+                    </span>
+                </span>
+            </a>
+        </div>
+    {%endif%}
+
+</div>
+<!-- end categories -->

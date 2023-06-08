@@ -1,0 +1,170 @@
+[
+  {
+    "name": {
+      "fa": "عدد",
+      "en": "number"
+    },
+    "id": 1
+  },
+  {
+    "name": {
+      "fa": "کیلو گرم",
+      "en": "kilograms"
+    },
+    "id": 2
+  },
+  {
+    "name": {
+      "fa": "گرم",
+      "en": "grams"
+    },
+    "id": 3
+  },
+  {
+    "name": {
+      "fa": "بسته",
+      "en": "boxes"
+    },
+    "id": 4
+  },
+  {
+    "name": {
+      "fa": "جعبه",
+      "en": "boxes"
+    },
+    "id": 5
+  },
+  {
+    "name": {
+      "fa": "کارتن",
+      "en": "boxes"
+    },
+    "id": 6
+  },
+  {
+    "name": {
+      "fa": "متر",
+      "en": "meters"
+    },
+    "id": 7
+  },
+  {
+    "name": {
+      "fa": "سانتیمتر",
+      "en": "centimeters"
+    },
+    "id": 8
+  },
+  {
+    "name": {
+      "fa": "میلیمتر",
+      "en": "millimeters"
+    },
+    "id": 9
+  },
+  {
+    "name": {
+      "fa": "قطعه",
+      "en": "Pieces"
+    },
+    "id": 10
+  },
+  {
+    "name": {
+      "fa": "متر مربع",
+      "en": "square meter"
+    },
+    "id": 11
+  },
+  {
+    "name": {
+      "fa": "دستگاه",
+      "en": "devices"
+    },
+    "id": 12
+  },
+  {
+    "name": {
+      "fa": "لیتر",
+      "en": "litter"
+    },
+    "id": 13
+  },
+  {
+    "name": {
+      "fa": "جلد",
+      "en": "volumes"
+    },
+    "id": 14
+  },
+  {
+    "name": {
+      "fa": "تن",
+      "en": "tons"
+    },
+    "id": 15
+  },
+  {
+    "name": {
+      "fa": "سی سی",
+      "en": "cc"
+    },
+    "id": 16
+  },
+  {
+    "name": {
+      "fa": "نفر",
+      "en": "peoples"
+    },
+    "id": 17
+  },
+  {
+    "name": {
+      "fa": "تخته",
+      "en": "boards"
+    },
+    "id": 18
+  },
+  {
+    "name": {
+      "fa": "رول",
+      "en": "rolls"
+    },
+    "id": 19
+  },
+  {
+    "name": {
+      "fa": "جفت",
+      "en": "pairs"
+    },
+    "id": 20
+  },
+  {
+    "name": {
+      "fa": "یارد",
+      "en": "yards"
+    },
+    "id": 21
+  },
+  {
+    "name": {
+      "fa": "دسته",
+      "en": "groups"
+    },
+    "id": 22
+  },
+  {
+    "name": {
+      "fa": "شاخه",
+      "en": "branches"
+    },
+    "id": 23
+  },
+  {
+    "name": {
+      "fa": "ست",
+      "en": "sets"
+    },
+    "id": 24
+  }
+]

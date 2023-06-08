@@ -1,0 +1,85 @@
+module.exports = `
+
+    type Query {
+        getForm(id:ID!): Form
+        getForms(page:Int, limit:Int, filter:FormFilter,sort:[Sort]): FormPaginate
+        getAllForms(filter:FormFilter,sort:[Sort]): [Form]
+    }
+
+    type Mutation {
+        createForm(input:FormInput): Form
+        updateForm(id:ID!, input:FormInput): Form
+        deleteForm(id:ID!): Response
+    }
+
+    type Form {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        name: String
+        fields: [Field]
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        user: User
+        category: Category
+    }
+
+    type Field {
+        label: JSON # multi language
+        label_panel: String @multilang(field:"label",type:"panel")
+        label_web: String @multilang(field:"label")
+        name: String
+        size: Int
+        default_value: JSON
+        data: [FieldData]
+        field_type_id: ID
+
+        field_type: FieldType
+        field_validations: [FieldValidation]
+    }
+
+    type FieldData {
+        name: JSON # multi language
+        name_panel: String @multilang(field:"name",type:"panel")
+        name_web: String @multilang(field:"name")
+        id: String
+    }
+
+    type FormPaginate {
+        paginate: Paginate
+        data: [Form]
+    }
+
+    input FormInput {
+        title: JSON # multi language
+        name: String
+        fields: [FieldInput]
+    }
+
+    input FieldInput {
+        label: JSON # multi language
+        name: String
+        size: Int
+        default_value: JSON
+        data: [FieldDataInput]
+        field_type_id: ID
+        field_validation_ids: [ID]
+    }
+
+    input FieldDataInput {
+        name: JSON # multi language
+        id: String
+    }
+
+    input FormFilter {
+        title: [filterMultiLang]
+        name: [filterString]
+        fields: [filterArray]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

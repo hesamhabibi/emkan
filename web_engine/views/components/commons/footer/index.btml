@@ -1,0 +1,31 @@
+{%getSettingByKeys footer_settings={fields:["value","value_web"],keys:[
+"web_logo_image",
+
+"web_footer_social_media_instagram",
+"web_footer_social_media_telegram",
+"web_footer_social_media_whatsapp",
+
+"web_footer_link_1_title",
+"web_footer_link_1_url",
+"web_footer_link_2_title",
+"web_footer_link_2_url",
+"web_footer_link_3_title",
+"web_footer_link_3_url",
+"web_footer_link_4_title",
+"web_footer_link_4_url",
+"web_footer_link_5_title",
+"web_footer_link_5_url",
+
+"web_footer_addresses_phone",
+"web_footer_addresses_phone_link",
+"web_footer_addresses_email",
+"web_footer_addresses_email_link",
+"web_footer_addresses_address",
+"web_footer_addresses_address_link",
+
+"web_footer_copyrights",
+
+]}%}
+{%global footer_settings=footer_settings%}
+
+{%render '/components/commons/footer/_footer'%}

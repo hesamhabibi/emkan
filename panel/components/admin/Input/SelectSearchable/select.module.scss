@@ -1,0 +1,145 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.formGroup {
+  position: relative;
+
+  > .formSelect {
+    position: relative;
+    @include flex-position(y, center);
+
+    &.invalid {
+
+      &::after {
+        position: absolute;
+        right: 0.35rem;
+        content: "\f06a";
+        font-size: larger;
+        font-family: $font-awesome-regular;
+
+        @include generate-color(color, $danger);
+      }
+
+      border-color: $danger;
+      >.formControl {
+        margin-bottom: 0;
+        padding-right: 2rem;
+      }
+      @include rounded(0.25rem);
+      @include box-shadow-important($input-shadow-error);
+    }
+
+
+    .formControl {
+      width: 100%;
+      border: 1px solid darken($gray-light, 70);
+      padding: 0.4rem 0.6rem;
+      min-height: 37px;
+      outline: none;
+      @include rounded(0.25rem);
+      @include transition(0.2s);
+      //@include focus {
+      //  border-color: lighten($blue, 30%);
+      //  @include box-shadow($input-shadow-1);
+      //}
+
+      &.focus {
+        border-color: lighten($blue, 30%);
+        @include box-shadow($input-shadow-1);
+      }
+
+      cursor: pointer;
+
+      &.formControlSm {
+        height: 28px;
+        padding: 0.2rem 0.4rem;
+        font-size: 0.9rem;
+      }
+
+      &.formControlLg {
+        height: 48px;
+        padding: 0.7rem 1rem;
+      }
+    }
+
+    > .icon {
+      position: absolute;
+      left: 0.5rem;
+      top: 50%;
+      transform: translateY(-70%);
+
+      > i {
+        pointer-events: none;
+        @include transition(0.2s);
+      }
+    }
+
+
+    > .close {
+      color: gray;
+      left: 2rem;
+      cursor: pointer;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: grid;
+      place-items: center;
+      pointer-events: auto;
+      border-radius: 50%;
+      transition: 0.2s;
+
+      &:hover {
+        background-color: #d0d0d0;
+      }
+    }
+
+  }
+  > ul.selectDropDown {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1307;
+    width: 100%;
+    top: 115%;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0.3rem 0;
+    list-style-type: none;
+    border: 1px solid darken($gray-light, 70);
+    @include rounded(0.25rem);
+    @include transition(0.2s);
+    @include box-shadow($box-shadow-1);
+    @include generate-color(background, $white);
+
+    &.active {
+      top: 105%;
+      visibility: visible;
+      pointer-events: visible;
+      opacity: 1;
+    }
+
+    > li {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      @include transition(0.2s);
+
+      &.search {
+        &:hover {
+          background: $white !important;
+          color: $blue-dark !important;
+        }
+      }
+
+      @include hover {
+        @include generate-color(background, $blue, lighten, 37%);
+        @include generate-color(color, $pink);
+      }
+
+      &[disabled] {
+        cursor: no-drop;
+        @include generate-color(color, $blue-dark, lighten, 50%);
+      }
+    }
+  }
+}

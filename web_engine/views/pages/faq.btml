@@ -1,0 +1,27 @@
+{%getBlogBySlug FAQPage={slug:"#FAQPage",type:BlogTypes.page,fields:["description_web",{seo:SingleSEOFields}]}%}
+{%global FAQPage=FAQPage%}
+
+{%getSettingByKeys FAQSettings={
+fields: ["value","value_web"],
+keys:[
+"web_FAQPage_page_title",
+"web_FAQPage_page_description",
+]
+}-%}
+{%global FAQSettings=FAQSettings%}
+
+{% layout "/components/layout/layout",
+title: 'faq',
+seo:aboutUsPage.seo%}
+
+{%block stylesheets%}
+{%endblock%}
+
+{%block main%}
+
+    {%render '/components/main/faq'%}
+
+{%endblock%}
+
+{%block scripts%}
+{%endblock%}

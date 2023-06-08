@@ -1,0 +1,52 @@
+@import "styles/variables";
+
+.button {
+  background: $pink;
+  padding: 3px 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10000001;
+  border-radius: 10px;
+
+}
+
+.container {
+  direction: ltr;
+  text-align: center;
+  color: $white;
+  padding: 10px;
+  position: absolute;
+  z-index: 10000000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  // animation: 1s ease 1;
+  overflow: auto;
+  width: 300px;
+  background: #24253b;
+  transition: 0.2s ease;
+
+  h6 {
+    cursor: pointer;
+  }
+
+  &.active {
+    left: 0;
+  }
+
+  .code {
+    font-size: small;
+    text-align: left;
+    color: #e4a05c;
+    background: #202024;
+    word-break: break-all;
+    > .bracket {
+      color: #a9b3c6;
+    }
+  }
+
+  > .errors {
+    text-align: left;
+  }
+}

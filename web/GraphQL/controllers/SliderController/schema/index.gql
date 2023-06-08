@@ -1,0 +1,31 @@
+module.exports = `
+
+    type Query {
+        getSliderByKey(key: String ): Slider
+    }  
+
+    type  Slider {
+        id: ID
+        name: JSON
+        name_web: String @multilang(field: "title")
+        description: JSON
+        description_web: String @multilang(field:"description")
+        key: String
+        images: [SliderImage]
+        createdAt: String
+        updatedAt: String
+    }
+
+    type SliderImage {
+        media_id: ID
+        sort: Int
+        alt: String
+        url: String
+        title: JSON # multi language
+        title_web: String @multilang(field:"title")
+        link: String
+        description: JSON # multi language
+        description_web: String @multilang(field:"description")
+        media: Media
+    }
+`;

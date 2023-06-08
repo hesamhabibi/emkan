@@ -1,0 +1,40 @@
+[
+  {
+    "title": {
+      "fa": "بانک ملت",
+      "en": "iranian bank: mellat"
+    },
+    "logo": "/default-images/mellat.png",
+    "gateway": 1,
+    "fields": [
+      {
+        "type": 6,
+        "type_name": "boolean",
+        "title": "sandBox",
+        "name": "sandBox",
+        "size": 6
+      },
+      {
+        "type": 3,
+        "type_name": "text",
+        "title": "terminalId",
+        "name": "terminalId",
+        "size": 12
+      },
+      {
+        "type": 3,
+        "type_name": "text",
+        "title": "userName",
+        "name": "userName",
+        "size": 6
+      },
+      {
+        "type": 3,
+        "type_name": "text",
+        "title": "userPassword",
+        "name": "userPassword",
+        "size": 6
+      }
+    ]
+  }
+]

@@ -1,0 +1,226 @@
+module.exports = `
+
+    type Query {
+        getProducts(filter: ProductFilter ,page: Int , limit: Int , sort: ProductSort): ProductData
+        getUserTutorials: [Product]
+        getProductBySlug(slug: String, type: Int): Product
+    }  
+
+    type ProductData {
+        data: [Product]
+        paginate: Paginate
+    }
+
+    type  Product {
+        id: ID
+        type: Int
+        title: JSON # multi language
+        title_web: String @multilang(field:"title")
+        summary: JSON # multi language
+        summary_web: String @multilang(field:"summary")
+        description: JSON # multi language
+        description_web: String @multilang(field:"description")
+        strengths: [JSON] # multi language
+        strengths_web: [String] @multilang(field:"strengths")
+        weaknesses: [JSON] # multi language
+        weaknesses_web: [String] @multilang(field:"weaknesses")
+        main_features: [JSON] # multi language
+        main_features_web: [String] @multilang(field:"main_features")
+        has_rating: Boolean
+        has_comment: Boolean
+        is_special: Boolean
+        only_description: Boolean
+        show_price: Boolean
+        price: Price
+        details: ProductDetails
+
+        category_id: ID
+        seo_id: ID
+        brand_id: ID
+        tag_ids: [ID]
+        tag_group_id: ID
+
+        attribute_groups: [ProductAttributeGroup]
+        has_variant: Boolean
+        variant: [VariantValue]
+        mix_variant: [MixVariantValue]
+
+        media: MediaStructure
+        media_gallery: [MediaGalleryStructure]
+        video: MediaStructure
+        files: [MediaGalleryStructure]
+
+        collections: ProductCollection
+        related_products: [Product]
+        tutorials: [Tutorial]
+        access_tutorials: [Tutorial]
+
+        createdAt: String
+        updatedAt: String
+
+        category: Category
+        brand: Brand
+        seo: SEO
+        tags: [Tag]
+        comments:[Comment]
+        tag_group: Tag
+        average_rate: Float
+        user_rate: Float
+        view_count: Int
+        
+    }
+
+    type ProductCollection {
+        related_products: [Product]
+    }
+
+    type ProductDetails {
+        product_code: String
+        warehouse: String
+        use_count: Boolean
+        count: Int
+        count_status: Int
+        count_unit: Int
+        limit_min: Int
+        limit_max: Int
+        length: Int
+        width: Int
+        height: Int
+        weight: Int
+    }
+
+    type ProductAttribute {
+        attribute_id: ID
+        attribute_value_id: ID
+
+        attribute: Attribute
+        attribute_value: AttributeValue
+        value: JSON # multi language, for easy access
+        value_web: String @multilang(field:"value")
+    }
+
+    type ProductAttributeGroup {
+        attribute_group_id: ID
+        attributes: [ProductAttribute]
+        
+        attribute_group: Attribute
+    }
+
+    type VariantValue {
+        name: JSON # multi language
+        name_web: String @multilang(field:"name")
+        type: Int
+        labels: [VariantLabel]
+    }
+
+    type VariantLabel {
+        key: String
+        title: JSON # multi language
+        title_web: String @multilang(field:"title")
+        values: JSON
+    }
+
+    type MixVariantValue {
+        title: JSON
+        title_web: String @multilang(field:"title")
+        keys: [String]
+        is_main_price: Boolean
+        is_active: Boolean
+        sort: Int
+        details: ProductDetails
+        
+        has_media_gallery: Boolean
+        media: MediaStructure
+        media_gallery: [MediaGalleryStructure]
+        
+        price_id: ID
+        price: Price
+    }
+
+    type Tutorial {
+        file_key: String
+        title: JSON # multi language
+        title_web: String @multilang(field:"title")
+
+        has_access: Boolean
+        file: TutorialFile
+    }
+
+    type TutorialFile{
+        title: String,
+        key: String,
+        path: String,
+    }
+
+    input ProductFilter {
+        type: Int
+        search_text: String
+        category_ids: [ID]
+        brand_ids: [ID]
+        tag_ids: [ID]
+        min_price: Int
+        max_price: Int
+        is_special: Boolean
+        only_description: Boolean
+        show_price: Boolean
+        is_main: Boolean
+    }
+
+
+    enum ProductSortFields {
+        createdAt
+        updatedAt
+        price
+    }
+
+    input ProductSort {
+        field: ProductSortFields
+        operator: sortEnum 
+    }
+
+    type Attribute {
+        id: ID
+        parent_id: ID
+        sort: Int
+        deep: Int
+        title: JSON # multi language
+        title_web: String @multilang(field:"title")
+        active: Boolean
+        
+        # deep 1
+        attribute_group_ids: [ID]
+        # deep 2
+        attribute_ids: [ID]
+        # deep 3
+        type: Int
+        default_attribute_value_id: ID
+        description: JSON # multi language
+        description_web: String @multilang(field:"description")
+        
+        createdAt: String
+        updatedAt: String
+
+        attribute_groups: [Attribute]
+        attributes: [Attribute]
+        attribute_values: [AttributeValue]
+        default_attribute_value: AttributeValue
+        default_value: JSON
+        products: [Product]
+        parent: Attribute
+        children: [Attribute]
+    }
+
+    type AttributeValue {
+        id: ID
+        attribute_id: ID
+        product_id: ID
+        value: JSON
+        value_web: String @multilang(field:"value")
+
+        createdAt: String
+        updatedAt: String
+
+        attribute: Attribute
+        product: Product
+    }
+`;

@@ -1,0 +1,1115 @@
+{
+	"info": {
+		"_postman_id": "e12f6e98-e8ee-4923-b12e-80a05f485790",
+		"name": "iportalWeb V0.9.5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GraphQL",
+			"item": [
+				{
+					"name": "Blog",
+					"item": [
+						{
+							"name": "getBlogs",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($page: Int, $limit: Int, $filter: BlogFilter, $sort: BlogSort) {\r\n    result: getBlogs(page: $page, limit: $limit, filter: $filter, sort: $sort) {\r\n        paginate {\r\n            total\r\n            limit\r\n            page\r\n      \t\tpages\r\n            hasPrevPage\r\n            hasNextPage\r\n        }\r\n        data {\r\n            id\r\n            title\r\n            title_web\r\n            summary\r\n            summary_web\r\n            description\r\n            description_web\r\n            category_id\r\n            user_id\r\n            seo_id\r\n            tag_ids\r\n            tag_group_id\r\n            has_comment\r\n            has_rating\r\n            average_rate\r\n            user_rate\r\n            view_count\r\n            createdAt\r\n            updatedAt\r\n            media {\r\n                media_id\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n            media_gallery {\r\n                media_id\r\n                main\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n            document {\r\n                media_id\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n            seo {\r\n                id\r\n                title\r\n                title_web\r\n                description\r\n                description_web\r\n                keywords\r\n                keywords_web\r\n                url\r\n                url_status\r\n                canonical_url\r\n                redirect_url_301\r\n                redirect_url_404\r\n                robots_status\r\n                createdAt\r\n                updatedAt\r\n            }\r\n            user {\r\n                id\r\n                name\r\n                last_name\r\n                full_name\r\n                email\r\n\r\n                # media\r\n            }\r\n\r\n            # category\r\n            # tags\r\n            # comments\r\n            # related_blogs\r\n        }\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"page\": 1,\r\n    \"limit\": 15,\r\n    \"filter\": {\r\n        \"type\": 1,\r\n        \"search_text\": \"test\",\r\n        \"category_ids\": [\"6108fc8787b0282678a97ac2\"],\r\n        \"tag_ids\": [\"610b99cbd855203f1c4c17ff\"]\r\n    },\r\n    \"sort\": {\r\n        \"field\": \"createdAt\",\r\n        \"operator\": \"asc\"\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getBlog",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($blog_id: ID) {\r\n    result: getBlog(blog_id: $blog_id) {\r\n        id\r\n        title\r\n        title_web\r\n        summary\r\n        summary_web\r\n        description\r\n        description_web\r\n        category_id\r\n        user_id\r\n        seo_id\r\n        tag_ids\r\n        tag_group_id\r\n        has_comment\r\n        has_rating\r\n        average_rate\r\n        user_rate\r\n        view_count\r\n        createdAt\r\n        updatedAt\r\n        media {\r\n            media_id\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        media_gallery {\r\n            media_id\r\n            main\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        document {\r\n            media_id\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        seo {\r\n            id\r\n            title\r\n            title_web\r\n            description\r\n            description_web\r\n            keywords\r\n            keywords_web\r\n            url\r\n            url_status\r\n            canonical_url\r\n            redirect_url_301\r\n            redirect_url_404\r\n            robots_status\r\n            createdAt\r\n            updatedAt\r\n        }\r\n        user {\r\n            id\r\n            name\r\n            last_name\r\n            full_name\r\n            email\r\n\r\n            # media\r\n        }\r\n\r\n        # category\r\n        # tags\r\n        # comments\r\n        # related_blogs\r\n    }\r\n}",
+										"variables": "{\r\n  \t\"blog_id\": \"61ada624735431288d19c15d\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getBlogBySlug",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($slug: String, $type: Int) {\r\n    result: getBlogBySlug(slug: $slug, type: $type) {\r\n        id\r\n        title\r\n        title_web\r\n        summary\r\n        summary_web\r\n        description\r\n        description_web\r\n        category_id\r\n        user_id\r\n        seo_id\r\n        tag_ids\r\n        tag_group_id\r\n        has_comment\r\n        has_rating\r\n        average_rate\r\n        user_rate\r\n        view_count\r\n        createdAt\r\n        updatedAt\r\n        media {\r\n            media_id\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        media_gallery {\r\n            media_id\r\n            main\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        document {\r\n            media_id\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        seo {\r\n            id\r\n            title\r\n            title_web\r\n            description\r\n            description_web\r\n            keywords\r\n            keywords_web\r\n            url\r\n            url_status\r\n            canonical_url\r\n            redirect_url_301\r\n            redirect_url_404\r\n            robots_status\r\n            createdAt\r\n            updatedAt\r\n        }\r\n        user {\r\n            id\r\n            name\r\n            last_name\r\n            full_name\r\n            email\r\n\r\n            # media\r\n        }\r\n\r\n        # category\r\n        # tags\r\n        # comments\r\n        # related_blogs\r\n    }\r\n}\r\n",
+										"variables": "{\r\n  \t\"slug\": \"Chair-Bacon-Car\",\r\n  \t\"type\": 1\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Brand",
+					"item": [
+						{
+							"name": "getBrands",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($page: Int, $limit: Int, $filter: BrandFilter, $sort: BrandSort) {\r\n    getBrands(page: $page, limit: $limit, filter: $filter, sort: $sort) {\r\n        paginate {\r\n            total\r\n            limit\r\n            page\r\n            pages\r\n            hasPrevPage\r\n            hasNextPage\r\n        }\r\n        data {\r\n            id\r\n            title\r\n            title_web\r\n            description\r\n            description_web\r\n            show_in_menu\r\n            media {\r\n                media_id\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n            seo_id\r\n            createdAt\r\n            updatedAt\r\n\r\n            seo {\r\n                id\r\n                title\r\n                title_web\r\n                description\r\n                description_web\r\n                keywords\r\n                keywords_web\r\n                url\r\n                url_status\r\n                canonical_url\r\n                redirect_url_301\r\n                redirect_url_404\r\n                robots_status\r\n                createdAt\r\n                updatedAt\r\n            }\r\n\r\n            # products\r\n        }\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"page\": 1,\r\n    \"limit\": 15,\r\n  \t\"filter\": {\r\n      \t\"show_in_menu\": true\r\n    },\r\n    \"sort\": {\r\n        \"field\": \"createdAt\",\r\n        \"operator\": \"asc\"\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "getProducts",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($page: Int, $limit: Int, $filter: ProductFilter, $sort: ProductSort) {\r\n    result: getProducts(page: $page, limit: $limit, filter: $filter, sort: $sort) {\r\n        paginate {\r\n            total\r\n            limit\r\n            page\r\n            pages\r\n            hasPrevPage\r\n            hasNextPage\r\n        }\r\n        data {\r\n            id\r\n            type\r\n            title\r\n            title_web\r\n            summary\r\n            summary_web\r\n            description\r\n            description_web\r\n            strengths\r\n            strengths_web\r\n            weaknesses\r\n            weaknesses_web\r\n            main_features\r\n            main_features_web\r\n            has_rating\r\n            has_comment\r\n            is_special\r\n            average_rate\r\n            user_rate\r\n            price {\r\n                id\r\n                price\r\n                offer_price\r\n                main_price\r\n                has_offer\r\n                offer_startAt\r\n                offer_expireAt\r\n                discount_percent\r\n                createdAt\r\n                updatedAt\r\n            }\r\n            details {\r\n                product_code\r\n                warehouse\r\n                use_count\r\n                count\r\n                count_status\r\n                count_unit\r\n                limit_min\r\n                limit_max\r\n                length\r\n                width\r\n                height\r\n                weight\r\n            }\r\n            category_id\r\n            seo_id\r\n            seo {\r\n                id\r\n                title\r\n                title_web\r\n                description\r\n                description_web\r\n                keywords\r\n                keywords_web\r\n                url\r\n                url_status\r\n                canonical_url\r\n                redirect_url_301\r\n                redirect_url_404\r\n                robots_status\r\n                createdAt\r\n                updatedAt\r\n            }\r\n            brand_id\r\n            tag_ids\r\n            tag_group_id\r\n            attribute_groups {\r\n                attribute_group_id\r\n                attribute_group {\r\n                    id\r\n                    parent_id\r\n                    sort\r\n                    deep\r\n                    title\r\n                    title_web\r\n                    active\r\n                    attribute_group_ids\r\n                    type\r\n                    default_attribute_value_id\r\n                    description\r\n                    description_web\r\n                    createdAt\r\n                    updatedAt\r\n\r\n                    # ...\r\n                }\r\n                attributes {\r\n                    attribute_id\r\n                    attribute_value_id\r\n                    value\r\n                    value_web\r\n\r\n                    attribute {\r\n                        id\r\n                        parent_id\r\n                        sort\r\n                        deep\r\n                        title\r\n                        title_web\r\n                        active\r\n                        attribute_group_ids\r\n                        attribute_ids\r\n                        type\r\n                        default_attribute_value_id\r\n                        description\r\n                        description_web\r\n                        createdAt\r\n                        updatedAt\r\n\r\n                        # attribute_groups\r\n                        # attributes\r\n                        # attribute_values\r\n                        # default_attribute_value\r\n                        # default_value\r\n                        # products\r\n                        # parent\r\n                        # children\r\n                    }\r\n                    attribute_value {\r\n                        id\r\n                        attribute_id\r\n                        product_id\r\n                        value\r\n                        value_web\r\n                        user_id\r\n                        createdAt\r\n                        updatedAt\r\n\r\n                        # attribute\r\n                        # product\r\n                    }\r\n                }\r\n            }\r\n            has_variant\r\n            variant {\r\n                name\r\n                name_web\r\n                type\r\n                labels {\r\n                    key\r\n                    title\r\n                    title_web\r\n                    values\r\n                }\r\n            }\r\n            mix_variant {\r\n                keys\r\n                is_main_price\r\n                is_active\r\n                sort\r\n                price_id\r\n\r\n                price {\r\n                    id\r\n                    price\r\n                    offer_price\r\n                    main_price\r\n                    has_offer\r\n                    offer_startAt\r\n                    offer_expireAt\r\n                    discount_percent\r\n                    createdAt\r\n                    updatedAt\r\n                }\r\n                details {\r\n                    product_code\r\n                    warehouse\r\n                    use_count\r\n                    count\r\n                    count_status\r\n                    count_unit\r\n                    limit_min\r\n                    limit_max\r\n                    length\r\n                    width\r\n                    height\r\n                    weight\r\n                }\r\n                has_media_gallery\r\n                media {\r\n                    media_id\r\n                    alt\r\n                    url\r\n\r\n                    # media\r\n                }\r\n                media_gallery {\r\n                    media_id\r\n                    main\r\n                    alt\r\n                    url\r\n\r\n                    # media\r\n                }\r\n            }\r\n            media {\r\n                media_id\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n            media_gallery {\r\n                media_id\r\n                main\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n            video {\r\n                media_id\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n            files {\r\n                media_id\r\n                main\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n            # collections {\r\n            #     related_products\r\n            # }\r\n            tutorials {\r\n                file_key\r\n                title\r\n                title_web\r\n                has_access\r\n                file {\r\n                    title\r\n                    key\r\n                    path\r\n                }\r\n            }\r\n            access_tutorials {\r\n                file_key\r\n                title\r\n                title_web\r\n                has_access\r\n                file {\r\n                    title\r\n                    key\r\n                    path\r\n                }\r\n            }\r\n            createdAt\r\n            updatedAt\r\n\r\n            tags {\r\n                id\r\n                title\r\n                title_web\r\n                tag_group_ids\r\n                createdAt\r\n                updatedAt\r\n            }\r\n            tag_group {\r\n                title\r\n                title_web\r\n                createdAt\r\n                updatedAt\r\n            }\r\n            comments {\r\n                id\r\n                title\r\n                text\r\n                reply_id\r\n                user_id\r\n                createdAt\r\n                updatedAt\r\n\r\n                # reply_to\r\n                # replies\r\n                user {\r\n                    id\r\n                    name\r\n                    last_name\r\n                    full_name\r\n\r\n                    access_name\r\n                    # media\r\n                }\r\n            }\r\n\r\n            # category\r\n            # brand\r\n        }\r\n    }\r\n}\r\n",
+										"variables": "{\r\n  \t\r\n    \"page\": 1,\r\n    \"limit\": 15,\r\n  \t\"filter\": {\r\n      \t\"type\": 1,\r\n        \"search_text\": \"text\",\r\n        \"category_ids\": [\"6108fc8787b0282678a97ac2\"],\r\n        \"tag_ids\": [\"6108fc8787b0282678a97ac2\"],\r\n        \"min_price\": 100,\r\n        \"max_price\": 1000,\r\n        \"is_special\": true\r\n    },\r\n    \"sort\": {\r\n        \"field\": \"createdAt\",\r\n        \"operator\": \"asc\"\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductBySlug",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($slug: String, $type: Int) {\r\n    result: getProductBySlug(slug: $slug, type: $type) {\r\n        id\r\n        type\r\n        title\r\n        title_web\r\n        summary\r\n        summary_web\r\n        description\r\n        description_web\r\n        strengths\r\n        strengths_web\r\n        weaknesses\r\n        weaknesses_web\r\n        main_features\r\n        main_features_web\r\n        has_rating\r\n        has_comment\r\n        is_special\r\n        average_rate\r\n        user_rate\r\n        price {\r\n            id\r\n            price\r\n            offer_price\r\n            main_price\r\n            has_offer\r\n            offer_startAt\r\n            offer_expireAt\r\n            discount_percent\r\n            createdAt\r\n            updatedAt\r\n        }\r\n        details {\r\n            product_code\r\n            warehouse\r\n            use_count\r\n            count\r\n            count_status\r\n            count_unit\r\n            limit_min\r\n            limit_max\r\n            length\r\n            width\r\n            height\r\n            weight\r\n        }\r\n        category_id\r\n        seo_id\r\n        seo {\r\n            id\r\n            title\r\n            title_web\r\n            description\r\n            description_web\r\n            keywords\r\n            keywords_web\r\n            url\r\n            url_status\r\n            canonical_url\r\n            redirect_url_301\r\n            redirect_url_404\r\n            robots_status\r\n            createdAt\r\n            updatedAt\r\n        }\r\n        brand_id\r\n        tag_ids\r\n        tag_group_id\r\n        attribute_groups {\r\n            attribute_group_id\r\n            attribute_group {\r\n                id\r\n                parent_id\r\n                sort\r\n                deep\r\n                title\r\n                title_web\r\n                active\r\n                attribute_group_ids\r\n                type\r\n                default_attribute_value_id\r\n                description\r\n                description_web\r\n                createdAt\r\n                updatedAt\r\n\r\n                # ...\r\n            }\r\n            attributes {\r\n                attribute_id\r\n                attribute_value_id\r\n                value\r\n                value_web\r\n\r\n                attribute {\r\n                    id\r\n                    parent_id\r\n                    sort\r\n                    deep\r\n                    title\r\n                    title_web\r\n                    active\r\n                    attribute_group_ids\r\n                    attribute_ids\r\n                    type\r\n                    default_attribute_value_id\r\n                    description\r\n                    description_web\r\n                    createdAt\r\n                    updatedAt\r\n\r\n                    # attribute_groups\r\n                    # attributes\r\n                    # attribute_values\r\n                    # default_attribute_value\r\n                    # default_value\r\n                    # products\r\n                    # parent\r\n                    # children\r\n                }\r\n                attribute_value {\r\n                    id\r\n                    attribute_id\r\n                    product_id\r\n                    value\r\n                    value_web\r\n                    user_id\r\n                    createdAt\r\n                    updatedAt\r\n\r\n                    # attribute\r\n                    # product\r\n                }\r\n            }\r\n        }\r\n        has_variant\r\n        variant {\r\n            name\r\n            name_web\r\n            type\r\n            labels {\r\n                key\r\n                title\r\n                title_web\r\n                values\r\n            }\r\n        }\r\n        mix_variant {\r\n            keys\r\n            is_main_price\r\n            is_active\r\n            sort\r\n            price_id\r\n\r\n            price {\r\n                id\r\n                price\r\n                offer_price\r\n                main_price\r\n                has_offer\r\n                offer_startAt\r\n                offer_expireAt\r\n                discount_percent\r\n                createdAt\r\n                updatedAt\r\n            }\r\n            details {\r\n                product_code\r\n                warehouse\r\n                use_count\r\n                count\r\n                count_status\r\n                count_unit\r\n                limit_min\r\n                limit_max\r\n                length\r\n                width\r\n                height\r\n                weight\r\n            }\r\n            has_media_gallery\r\n            media {\r\n                media_id\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n            media_gallery {\r\n                media_id\r\n                main\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n        }\r\n        media {\r\n            media_id\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        media_gallery {\r\n            media_id\r\n            main\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        video {\r\n            media_id\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        files {\r\n            media_id\r\n            main\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        # collections {\r\n        #     related_products\r\n        # }\r\n        tutorials {\r\n            file_key\r\n            title\r\n            title_web\r\n            has_access\r\n            file {\r\n                title\r\n                key\r\n                path\r\n            }\r\n        }\r\n        access_tutorials {\r\n            file_key\r\n            title\r\n            title_web\r\n            has_access\r\n            file {\r\n                title\r\n                key\r\n                path\r\n            }\r\n        }\r\n        createdAt\r\n        updatedAt\r\n\r\n        tags {\r\n            id\r\n            title\r\n            title_web\r\n            tag_group_ids\r\n            createdAt\r\n            updatedAt\r\n        }\r\n        tag_group {\r\n            title\r\n            title_web\r\n            createdAt\r\n            updatedAt\r\n        }\r\n        comments {\r\n            id\r\n            title\r\n            text\r\n            reply_id\r\n            user_id\r\n            createdAt\r\n            updatedAt\r\n\r\n            # reply_to\r\n            # replies\r\n            user {\r\n                id\r\n                name\r\n                last_name\r\n                full_name\r\n\r\n                access_name\r\n                # media\r\n            }\r\n        }\r\n\r\n        # category\r\n        # brand\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"slug\": \"Hat-Gloves-Hat\",\r\n    \"type\": 1\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserToturials",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query getUserToturials{\r\n  getUserToturials\r\n       {\r\n        id\r\n        title # multi language\r\n        title_web\r\n        summary # multi language\r\n        summary_web\r\n        description # multi language\r\n        description_web\r\n        strengths\r\n        strengths_web\r\n        weaknesses\r\n        weaknesses_web\r\n        main_features\r\n        main_features_web\r\n\r\n        has_rating\r\n        has_comment\r\n        is_special\r\n        \r\n        category_id\r\n        brand_id\r\n        seo_id\r\n        tag_ids\r\n        tag_group_id\r\n        \r\n        view_count\r\n        createdAt\r\n        updatedAt\r\n\r\n        details {\r\n            product_code # String\r\n            warehouse # String\r\n            use_count # Boolean\r\n            count # Int\r\n            count_status # Int\r\n            count_unit # Int\r\n            limit_min # Int\r\n            limit_max # Int\r\n            length # Int cm\r\n            width # Int cm\r\n            height # Int cm\r\n            weight # Int grams\r\n        }\r\n        price {\r\n            id\r\n            price\r\n            offer_price\r\n            offer_startAt\r\n            offer_expireAt\r\n            discount_percent\r\n            createdAt\r\n            updatedAt\r\n        }\r\n        seo {\r\n            title # multi language\r\n            title_web\r\n            description # multi language\r\n            description_web\r\n            keywords # multi language\r\n            keywords_web\r\n            url\r\n            url_status\r\n            canonical_url\r\n            redirect_url_301\r\n            redirect_url_404\r\n            robots_status\r\n            createdAt\r\n            updatedAt\r\n        }\r\n        media {\r\n            media_id\r\n            alt # multi language\r\n            alt_web\r\n            url\r\n\r\n            # media\r\n        }\r\n        media_gallery {\r\n            media_id\r\n            main\r\n            alt # multi language\r\n            alt_web\r\n            url\r\n            \r\n            # media\r\n        }\r\n        video {\r\n            media_id\r\n            alt # multi language\r\n            alt_web\r\n            url\r\n\r\n            # media\r\n        }\r\n        files {\r\n            media_id\r\n            alt # multi language\r\n            alt_web\r\n            url\r\n            \r\n            # media\r\n        }\r\n        attribute_groups {\r\n            attribute_group_id\r\n            attributes {\r\n                attribute_id\r\n                attribute_value_id\r\n\r\n                # attribute\r\n                # attribute_value\r\n                # value # multi language\r\n                # value_web\r\n            }\r\n\r\n            # attribute_group\r\n        }\r\n\r\n        has_variant # boolean\r\n        variant {\r\n            name # multi language\r\n            name_web\r\n            type # {\"text\": 1, \"color\": 2, \"shop\": 3, \"file\":4 }\r\n            labels {\r\n                key\r\n                title # multi language\r\n                title_web\r\n                values # JSON\r\n            }\r\n        }\r\n        mix_variant {\r\n            keys # array of String\r\n            is_main_price # boolean\r\n            is_active # boolean\r\n            sort\r\n            price_id\r\n            details {\r\n                product_code # String\r\n                warehouse # String\r\n                use_count # Boolean\r\n                count # Int\r\n                count_status # Int\r\n                count_unit # Int\r\n                limit_min # Int\r\n                limit_max # Int\r\n                length # Int cm\r\n                width # Int cm\r\n                height # Int cm\r\n                weight # Int grams\r\n            }\r\n            \r\n            # price\r\n            # price_history\r\n        }\r\n\r\n        collections {\r\n            related_products{ # product list\r\n                id\r\n            }\r\n        }\r\n            \r\n            \r\n\r\n        tutorials {\r\n            file_key\r\n            title\r\n            title_web\r\n            \r\n        }\r\n\r\n\r\n        # category\r\n        # brand\r\n        # tags\r\n        # tag_group\r\n        # comments\r\n\r\n    }\r\n}",
+										"variables": "{\r\n    \r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "getCategories",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($page: Int, $limit: Int, $filter: CategoryFilter, $sort: CategorySort) {\r\n    result: getCategories(page: $page, limit: $limit, filter: $filter, sort: $sort) {\r\n        paginate {\r\n            total\r\n            limit\r\n            page\r\n            pages\r\n            hasPrevPage\r\n            hasNextPage\r\n        }\r\n        data {\r\n            id\r\n            title\r\n            title_web\r\n            active\r\n            show_in_menu\r\n            description\r\n            description_web\r\n            type\r\n            sort\r\n            parent_id\r\n            media {\r\n                media_id\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n            seo_id\r\n            seo {\r\n                id\r\n                title\r\n                title_web\r\n                description\r\n                description_web\r\n                keywords\r\n                keywords_web\r\n                url\r\n                url_status\r\n                canonical_url\r\n                redirect_url_301\r\n                redirect_url_404\r\n                robots_status\r\n                createdAt\r\n                updatedAt\r\n            }\r\n            createdAt\r\n            updatedAt\r\n\r\n            # parent\r\n            # children\r\n            # blogs\r\n            # products\r\n        }\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"page\": 1,\r\n    \"limit\": 15,\r\n    \"filter\": {\r\n        \"type\": 1,\r\n        \"show_in_menu\": true,\r\n        \"parent_id\": \"6108fc8787b0282678a97ac2\"\r\n    },\r\n    \"sort\": {\r\n        \"field\": \"createdAt\",\r\n        \"operator\": \"asc\"\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllCategories",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($filter: CategoryFilter, $sort: CategorySort) {\r\n    getAllCategories(filter: $filter, sort: $sort) {\r\n        id\r\n        title\r\n        title_web\r\n        active\r\n        show_in_menu\r\n        description\r\n        description_web\r\n        type\r\n        sort\r\n        parent_id\r\n        media {\r\n            media_id\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        seo_id\r\n        seo {\r\n            id\r\n            title\r\n            title_web\r\n            description\r\n            description_web\r\n            keywords\r\n            keywords_web\r\n            url\r\n            url_status\r\n            canonical_url\r\n            redirect_url_301\r\n            redirect_url_404\r\n            robots_status\r\n            createdAt\r\n            updatedAt\r\n        }\r\n        createdAt\r\n        updatedAt\r\n\r\n        # parent\r\n        # children\r\n        # blogs\r\n        # products\r\n    }\r\n}\r\n",
+										"variables": "{\n    \"filter\": {\n        \"type\": 1,\n        \"show_in_menu\": true,\n        \"parent_id\": \"6108fc8787b0282678a97ac2\"\n    },\n    \"sort\": {\n        \"field\": \"createdAt\",\n        \"operator\": \"asc\"\n    }\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCategory",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($category_id: ID) {\r\n    getCategory(category_id: $category_id) {\r\n        id\r\n        title\r\n        title_web\r\n        active\r\n        show_in_menu\r\n        description\r\n        description_web\r\n        type\r\n        sort\r\n        parent_id\r\n        media {\r\n            media_id\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        seo_id\r\n        seo {\r\n            id\r\n            title\r\n            title_web\r\n            description\r\n            description_web\r\n            keywords\r\n            keywords_web\r\n            url\r\n            url_status\r\n            canonical_url\r\n            redirect_url_301\r\n            redirect_url_404\r\n            robots_status\r\n            createdAt\r\n            updatedAt\r\n        }\r\n        createdAt\r\n        updatedAt\r\n\r\n        # parent\r\n        # children\r\n        # blogs\r\n        # products\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"category_id\": \"6110c38ffc5cbb17d4b28ed9\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCategoryBySlug",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($slug: String, $type: Int) {\r\n    result: getCategoryBySlug(slug: $slug, type: $type) {\r\n        id\r\n        title\r\n        title_web\r\n        active\r\n        show_in_menu\r\n        description\r\n        description_web\r\n        type\r\n        sort\r\n        parent_id\r\n        media {\r\n            media_id\r\n            alt\r\n            url\r\n\r\n            # media\r\n        }\r\n        seo_id\r\n        seo {\r\n            id\r\n            title\r\n            title_web\r\n            description\r\n            description_web\r\n            keywords\r\n            keywords_web\r\n            url\r\n            url_status\r\n            canonical_url\r\n            redirect_url_301\r\n            redirect_url_404\r\n            robots_status\r\n            createdAt\r\n            updatedAt\r\n        }\r\n        createdAt\r\n        updatedAt\r\n\r\n        # parent\r\n        # children\r\n        # blogs\r\n        # products\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"slug\": \"cat-dog\",\r\n  \t\"type\": 1\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Comment",
+					"item": [
+						{
+							"name": "getBlogComments",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query(\r\n    $model_id: ID\r\n    $page: Int\r\n    $limit: Int\r\n    $filter: CommentFilter\r\n    $sort: CommentSort\r\n) {\r\n    result: getBlogComments(\r\n        model_id: $model_id\r\n        page: $page\r\n        limit: $limit\r\n        filter: $filter\r\n        sort: $sort\r\n    ) {\r\n        paginate {\r\n            total\r\n            limit\r\n            page\r\n            pages\r\n            hasPrevPage\r\n            hasNextPage\r\n        }\r\n        data {\r\n            id\r\n            title\r\n            text\r\n            reply_id\r\n            user_id\r\n            createdAt\r\n            updatedAt\r\n\r\n            user {\r\n                id\r\n                name\r\n                last_name\r\n                full_name\r\n                access_name\r\n                media {\r\n                    media_id\r\n                    alt\r\n                    url\r\n\r\n                    # media\r\n                }\r\n            }\r\n\r\n            # reply_to\r\n            # replies\r\n        }\r\n    }\r\n}\r\n",
+										"variables": "{\n    \"model_id\": \"6108fc8787b0282678a97ac2\",\n    \"page\": 1,\n    \"limit\": 15,\n    \"filter\": {\n        \"reply_to_id\": \"6108fc8787b0282678a97ac2\"\n    },\n    \"sort\": {\n        \"field\": \"createdAt\",\n        \"operator\": \"asc\"\n    }\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductComments",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query(\r\n    $model_id: ID\r\n    $page: Int\r\n    $limit: Int\r\n    $filter: CommentFilter\r\n    $sort: CommentSort\r\n) {\r\n    result: getProductComments(\r\n        model_id: $model_id\r\n        page: $page\r\n        limit: $limit\r\n        filter: $filter\r\n        sort: $sort\r\n    ) {\r\n        paginate {\r\n            total\r\n            limit\r\n            page\r\n            pages\r\n            hasPrevPage\r\n            hasNextPage\r\n        }\r\n        data {\r\n            id\r\n            title\r\n            text\r\n            reply_id\r\n            user_id\r\n            createdAt\r\n            updatedAt\r\n\r\n            user {\r\n                id\r\n                name\r\n                last_name\r\n                full_name\r\n                access_name\r\n                media {\r\n                    media_id\r\n                    alt\r\n                    url\r\n\r\n                    # media\r\n                }\r\n            }\r\n\r\n            # reply_to\r\n            # replies\r\n        }\r\n    }\r\n}\r\n",
+										"variables": "{\n    \"model_id\": \"6108fc8787b0282678a97ac2\",\n    \"page\": 1,\n    \"limit\": 15,\n    \"filter\": {\n        \"reply_to_id\": \"6108fc8787b0282678a97ac2\"\n    },\n    \"sort\": {\n        \"field\": \"createdAt\",\n        \"operator\": \"asc\"\n    }\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserComments",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($page: Int, $limit: Int, $filter: CommentFilter, $sort: CommentSort) {\r\n    result: getUserComments(page: $page, limit: $limit, filter: $filter, sort: $sort) {\r\n        paginate {\r\n            total\r\n            limit\r\n            page\r\n            pages\r\n            hasPrevPage\r\n            hasNextPage\r\n        }\r\n        data {\r\n            id\r\n            title\r\n            text\r\n            reply_id\r\n            user_id\r\n            createdAt\r\n            updatedAt\r\n\r\n            user {\r\n                id\r\n                name\r\n                last_name\r\n                full_name\r\n                access_name\r\n                media {\r\n                    media_id\r\n                    alt\r\n                    url\r\n\r\n                    # media\r\n                }\r\n            }\r\n\r\n            # reply_to\r\n            # replies\r\n        }\r\n    }\r\n}\r\n",
+										"variables": "{\n    \"page\": 1,\n    \"limit\": 15,\n    \"filter\": {\n        \"reply_to_id\": \"6108fc8787b0282678a97ac2\",\n        \"model_id\": \"6108fc8787b0282678a97ac2\",\n        \"confirmed\": true\n    },\n    \"sort\": {\n        \"field\": \"createdAt\",\n        \"operator\": \"asc\"\n    }\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createBlogComment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation($input: CreateCommentInput) {\r\n    createBlogComment(input: $input) {\r\n        id\r\n        title\r\n        text\r\n        reply_id\r\n        user_id\r\n        createdAt\r\n        updatedAt\r\n\r\n        user {\r\n            id\r\n            name\r\n            last_name\r\n            full_name\r\n            access_name\r\n            media {\r\n                media_id\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n        }\r\n\r\n        # reply_to\r\n        # replies\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"input\": {\r\n        \"title\": \"title of comment\",\r\n        \"text\": \"body of comment\",\r\n        \"model_id\": \"6108fc8787b0282678a97ac2\",\r\n        \"reply_to_id\": \"6108fc8787b0282678a97ac2\"\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createProductComment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation($input: CreateCommentInput) {\r\n    createProductComment(input: $input) {\r\n        id\r\n        title\r\n        text\r\n        reply_id\r\n        user_id\r\n        createdAt\r\n        updatedAt\r\n\r\n        user {\r\n            id\r\n            name\r\n            last_name\r\n            full_name\r\n            access_name\r\n            media {\r\n                media_id\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n        }\r\n\r\n        # reply_to\r\n        # replies\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"input\": {\r\n        \"title\": \"title of comment\",\r\n        \"text\": \"body of comment\",\r\n        \"model_id\": \"6108fc8787b0282678a97ac2\",\r\n        \"reply_to_id\": \"6108fc8787b0282678a97ac2\"\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "replyComment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation($input: ReplyCommentInput) {\r\n    result: replyComment(input: $input) {\r\n        id\r\n        title\r\n        text\r\n        reply_id\r\n        user_id\r\n        createdAt\r\n        updatedAt\r\n\r\n        user {\r\n            id\r\n            name\r\n            last_name\r\n            full_name\r\n            access_name\r\n            media {\r\n                media_id\r\n                alt\r\n                url\r\n\r\n                # media\r\n            }\r\n        }\r\n\r\n        # reply_to\r\n        # replies\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"input\": {\r\n        \"title\": \"title of reply\",\r\n        \"text\": \"body of reply\"\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Slider",
+					"item": [
+						{
+							"name": "getSliderByKey",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($key: String) {\r\n    getSliderByKey(key: $key) {\r\n        id\r\n        name\r\n        name_web\r\n        description\r\n        description_web\r\n        key\r\n\r\n        createdAt\r\n        updatedAt\r\n        images {\r\n            media_id\r\n            sort\r\n            alt\r\n            url\r\n            title\r\n            title_web\r\n            description\r\n            description_web\r\n            link\r\n\r\n            # media\r\n        }\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"key\": \"HomeSlider\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Setting",
+					"item": [
+						{
+							"name": "getSettingByKey",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($key: String) {\r\n    getSettingByKey(key: $key) {\r\n        id\r\n        value\r\n        value_web\r\n        parsed_value\r\n        key\r\n        description\r\n        description_web\r\n        format\r\n        is_main\r\n        createdAt\r\n        updatedAt\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"key\": \"web_content_languages\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSettingByKeys",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query($keys: [String]) {\r\n    getSettingByKeys(keys: $keys) {\r\n        id\r\n        value\r\n        value_web\r\n        parsed_value\r\n        key\r\n        description\r\n        description_web\r\n        format\r\n        is_main\r\n        createdAt\r\n        updatedAt\r\n    }\r\n}\r\n",
+										"variables": "{\r\n    \"keys\": [\r\n        \"web_default_language\",\r\n        \"web_content_languages\"\r\n    ]\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "applyDiscount",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation ApplyDiscount{\r\n  applyDiscount(\r\n      order_id: \"610fb1c99e7f8b619beae202\",\r\n       discount_code: \"2525\" ){\r\n    id\r\n    products{\r\n        product_id\r\n        mix_variant_keys\r\n        count\r\n\r\n    }\r\n    discount_id\r\n    transaction_id\r\n    # sum\r\n    # pay_amount\r\n    # sum_without_discount\r\n\r\n  }\r\n}",
+										"variables": "{\r\n  \"key\": \"web_content_languages\",\r\n  \"product_id\": \"610fb1c99e7f8b619beae202\",\r\n  \"product_id2\": \"60843039101d562490e0b2e7\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addToCart",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation AddToCart{\r\n  addToCart(\r\n      product_id: \"60843039101d562490e0b2e7\",\r\n       mix_variant: [\"1\",\"2\"] , count: 4 ){\r\n    id\r\n    products{\r\n        product_id\r\n        mix_variant_keys\r\n        count\r\n\r\n    }\r\n    discount_id\r\n    transaction_id\r\n    # sum\r\n    # pay_amount\r\n    # sum_without_discount\r\n\r\n  }\r\n}",
+										"variables": "{\r\n  \"key\": \"web_content_languages\",\r\n  \"product_id\": \"610fb1c99e7f8b619beae202\",\r\n  \"product_id2\": \"60843039101d562490e0b2e7\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "removeFromCart",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation RemoveFromCart{\r\n  removeFromCart(\r\n      product_id: \"610fb1c99e7f8b619beae202\",\r\n       mix_variant: [\"1\",\"2\"]){\r\n    id\r\n    products{\r\n        product_id\r\n        mix_variant_keys\r\n        count\r\n\r\n    }\r\n    discount_id\r\n    transaction_id\r\n    # sum\r\n    # pay_amount\r\n    # sum_without_discount\r\n\r\n  }\r\n}",
+										"variables": "{\r\n  \"key\": \"web_content_languages\",\r\n  \"product_id\": \"610fb1c99e7f8b619beae202\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCartDetails",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query GetCartDetails{\r\n  getCartDetails\r\n  {\r\n    id\r\n    products{\r\n        product_id\r\n        mix_variant_keys\r\n        count\r\n\r\n    }\r\n    discount_id\r\n    transaction_id\r\n    # sum\r\n    # pay_amount\r\n    # sum_without_discount\r\n\r\n  }\r\n}",
+										"variables": "{\r\n  \"key\": \"web_content_languages\",\r\n  \"product_id\": \"610fb1c99e7f8b619beae202\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getOrderDetails",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query GetOrderDetails{\r\n  getOrderDetails(order_id: \"61715c9343cb8836ebe872e8\")\r\n  {\r\n    id\r\n    products{\r\n        product_id\r\n        mix_variant_keys\r\n        count\r\n\r\n    }\r\n    discount_id\r\n    transaction_id\r\n    # sum\r\n    # pay_amount\r\n    # sum_without_discount\r\n\r\n  }\r\n}",
+										"variables": "{\r\n  \"key\": \"web_content_languages\",\r\n  \"product_id\": \"610fb1c99e7f8b619beae202\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getOrderHistory",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query GetOrderHistory{\r\n  getOrderHistory(filter: {\r\n    shipping_method: 2,\r\n    payment_method: 1,\r\n    # status: 1\r\n  }\r\n  ,sort:{ field: createdAt , operator: asc }\r\n  ,page: 1, limit:15)\r\n  {\r\n    data{\r\n        id\r\n    products{\r\n        product_id\r\n        mix_variant_keys\r\n        count\r\n\r\n    }\r\n    discount_id\r\n    transaction_id\r\n    # sum\r\n    # pay_amount\r\n    # sum_without_discount\r\n    }\r\n    paginate {\r\n      total\r\n      limit\r\n      page\r\n      hasPrevPage\r\n      hasNextPage\r\n    }\r\n\r\n  }\r\n}",
+										"variables": "{\r\n  \"key\": \"web_content_languages\",\r\n  \"product_id\": \"610fb1c99e7f8b619beae202\"\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"try {\r",
+											"    const token = JSON.parse(responseBody)['data']['login']['token']\r",
+											"    postman.setEnvironmentVariable(\"token\",token);\r",
+											"} catch {\r",
+											"    console.log(\"token not found\")\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation Login($input: UserLoginInput){\r\n  login(input: $input){\r\n      user{\r\n          id\r\n          name\r\n          last_name\r\n      }\r\n    token\r\n  }\r\n}",
+										"variables": "{\r\n    \"input\": {\r\n        \"username\": \"user2\",\r\n        \"password\": \"password\"\r\n\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCurentUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query GetCurrentUser{\r\n  getCurrentUser{\r\n    id\r\n    \r\n  }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation Register($input: UserRegisterInput){\r\n  register(input: $input){\r\n      user{\r\n          id\r\n      }\r\n    token\r\n  }\r\n}",
+										"variables": "{\r\n    \"input\": {\r\n        \"username\": \"user2\",\r\n        \"name\": \"jafar\",\r\n        \"email\": \"test@gmail.com\",\r\n        \"mobile\": \"09365484814\",\r\n        \"password\": \"password\",\r\n        \"password_confirmation\": \"password\"\r\n\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registerSendSMS",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation RegisterSendSMS($input: UserRegisterSendSmsInput){\r\n  registerSendSMS(input: $input){\r\n      success\r\n      message\r\n  }\r\n}",
+										"variables": "{\r\n    \"input\": {\r\n        \"username\": \"user1\",\r\n        \"name\": \"jafar\",\r\n        \"email\": \"test@gmail.com\",\r\n        \"mobile\": \"09365484814\",\r\n        \"last_name\": \"password\"\r\n        \r\n\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "loginSendSMS",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation LoginSendSMS{\r\n  loginSendSMS(mobile: \"09365484814\"){\r\n      success\r\n      message\r\n  }\r\n}",
+										"variables": "{\r\n    \r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Address",
+					"item": [
+						{
+							"name": "createUserAddress",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation CreateUserAddress($input: UserAddressInput){\r\n  createUserAddress(input: $input){\r\n    \r\n        id\r\n        postal_code\r\n        city_id\r\n        state_id\r\n        address\r\n        location\r\n        is_default\r\n      \r\n  }\r\n}",
+										"variables": "{\r\n    \"input\": {\r\n        \"postal_code\": \"5878598548\",\r\n        \"city_id\": null,\r\n        \"state_id\": null,\r\n        \"address\": \"shiraz\",\r\n        \"location\": \"json\"\r\n    \r\n\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "setUserDefaultAddress",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation SetUserDefaultAddress{\r\n  setUserDefaultAddress(address_id: \"61654ada86aacde7a209f20b\"){\r\n    \r\n    success\r\n    message\r\n\r\n      \r\n  }\r\n}",
+										"variables": "{\r\n    \"input\": {\r\n        \"postal_code\": \"5878598548\",\r\n        \"city_id\": null,\r\n        \"state_id\": null,\r\n        \"address\": \"shiraz\",\r\n        \"location\": \"json\",\r\n        \"user_id\": \"6163ffc92420f0960535c0c1\"\r\n\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllUserAddreses",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query GetAllUserAddreses{\r\n  getAllUserAddreses{\r\n        id\r\n        postal_code\r\n        city_id\r\n        state_id\r\n        location\r\n        is_default\r\n      \r\n  }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserDafaultAddress",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query GetUserDafaultAddress{\r\n  getUserDefaultAddress{\r\n        id\r\n        postal_code\r\n        city_id\r\n        state_id\r\n        location\r\n        is_default\r\n      \r\n  }\r\n}",
+										"variables": "{\r\n    \"input\": {\r\n        \"postal_code\": \"4545858\",\r\n        \"city_id\": \"60843039101d562490e0b2e2\",\r\n        \"state_id\": \"60843039101d562490e0b2e3\",\r\n        \"address\": \"shiraz\",\r\n        \"location\": \"json\",\r\n        \"user_id\": \"61251ff1d7502c1e5c476d60\"\r\n\r\n    }\r\n}"
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CRM",
+					"item": [
+						{
+							"name": "getUserPopups",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query GetUserPopups{\r\n  getUserPopups{\r\n        id\r\n        title\r\n        message\r\n        seen\r\n        createdAt\r\n        updatedAt\r\n      \r\n  }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserInternalMessages",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query GetUserInternalMessages{\r\n  getUserInternalMessages{\r\n        id\r\n        title\r\n        message\r\n        seen\r\n        createdAt\r\n        updatedAt\r\n      \r\n  }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "seenPopup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation seenPopup{\r\n  seenPopup(popup_id: \"610947ad87b0282678a9a463\"){\r\n      success\r\n      message\r\n  }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "seenInternalMessage",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation seenInternalMessage{\r\n  seenInternalMessage(internal_message_id: \"610947ad87b0282678a9a463\"){\r\n      success\r\n      message\r\n  }\r\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{gql_prefix}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{gql_prefix}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "REST",
+			"item": [
+				{
+					"name": "test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "father_name",
+									"value": "here",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"type": "file",
+									"src": "/home/majid/Music/AlbumArt_{B5020207-474E-4720-5ABF-8F0DB0F9F700}_Small.jpg"
+								},
+								{
+									"key": "resume2",
+									"type": "file",
+									"src": "/home/majid/Music/AlbumArt_{B5020207-474E-4720-383B-580FFED14600}_Small.jpg"
+								},
+								{
+									"key": "email",
+									"value": "dsd",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "dsd",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "wew",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "wer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/careerForm/submit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"careerForm",
+								"submit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

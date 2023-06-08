@@ -1,0 +1,10 @@
+{
+    "ext": "js,mjs,json,gql,jsx,html",
+    "watch": [
+        "."
+    ],
+    "ignore": [
+        "./public/*",
+        "./node_modules/*"
+    ]
+}

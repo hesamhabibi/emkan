@@ -1,0 +1,234 @@
+@import 'styles/variables';
+@import 'styles/components/mixin/mixin';
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.3);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  @include grid(flex, column);
+  @include animation(openModal, 0.3s, $mode: forwards);
+  @include keyframes(openModal) {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  > .body {
+    @include animation(openModalBody, 0.2s, $mode: forwards);
+    @include keyframes(openModalBody) {
+      from {
+        @include transform(scale(0.5));
+      }
+      to {
+        @include transform(scale(1));
+      }
+    }
+  }
+
+  &.sm {
+    > .body {
+      width: 500px;
+      min-height: 300px;
+    }
+  }
+
+  &.xs {
+    > .body {
+      width: 40%;
+      height: 80%;
+      overflow: visible;
+      > main {
+        height: 100%;
+        //overflow: hidden;
+      }
+    }
+  }
+
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 2;
+
+  .title {
+    display: inline;
+  }
+
+  .info {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+
+    > i {
+      color: $primary;
+      --fa-secondary-opacity: 0.15;
+    }
+
+    &.active {
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        animation: pulse 1s ease infinite;
+        border-radius: 50%;
+        border: 2px solid #cfe3fa;
+      }
+    }
+  }
+
+  &.closeModal {
+    @include animation(closeModal, 0.3s, $mode: forwards);
+    @include keyframes(closeModal) {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+  }
+
+  > .btnClose {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 1rem;
+    top: 1rem;
+    @include rounded(100%);
+    @include transition(0.2s);
+    @include generate-color(background, $blue, lighten, 37%);
+
+    @include hover {
+      background-color: $gray-light;
+      //@include generate-color(background, $pink, lighten, 37%);
+      //@include generate-color(color, $pink);
+      color: $primary;
+    }
+
+    &.btnCloseLTR {
+      right: 1rem !important;
+    }
+  }
+
+  > .fullScreen {
+    width: 97% !important;
+  }
+
+  > .body {
+    width: 70%;
+    height: 90%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid darken($gray-light, 10);
+    @include generate-color(background, $white);
+    @include box-shadow($box-shadow-1);
+    @include rounded(1rem);
+
+
+    > main {
+      overflow-x: hidden;
+      height: calc(100% - 56px);
+      overflow-y: auto;
+
+      &.noAction {
+        height: 100%;
+      }
+
+      > section:last-child {
+        padding: 1rem;
+      }
+    }
+
+    > footer {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      border-top: 1px solid darken($gray-light, 10);
+      @include flex-position(y, center);
+
+      > button {
+        padding: 1rem;
+        flex-basis: 0;
+        -webkit-flex-basis: 0;
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+        @include transition(0.2s);
+
+        &:not(:last-child) {
+          border-left: 1px solid darken($gray-light, 10);
+        }
+
+        @include hover {
+          @include generate-color(background, $blue, lighten, 37%);
+          //@include generate-color(color, $pink);
+          color: $primary;
+        }
+
+        &[disabled] {
+          cursor: no-drop;
+          @include generate-color(color, $blue-dark, lighten, 50%);
+        }
+      }
+
+      @include keyframes(rotate) {
+        from {
+          @include transform(rotate(0deg))
+        }
+        to {
+          @include transform(rotate(360deg))
+        }
+      }
+
+      > button[disabled]::after {
+        content: '\f110';
+        padding: 0 0.3rem;
+        background: transparent !important;
+        display: inline-block;
+        font-family: $font-awesome-solid;
+        //@include animation(rotate, 1s,0,alternate,infinite,forwards);
+        animation-name: rotate;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-direction: inherit;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  > .backDrop {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    @include generate-color(background, $white, rgba, 0.95)
+  }
+}

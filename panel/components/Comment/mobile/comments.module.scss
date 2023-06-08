@@ -1,0 +1,103 @@
+@import "styles/variables";
+
+.container {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 0 10px;
+  margin-bottom: 7rem;
+
+  .bold {
+    font-weight: 550;
+    font-size: 12px;
+  }
+
+  .content {
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+
+  .comment {
+    //border: 1px solid $gray-light;
+    background: #d6daff47;
+    //color: $black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+    margin-right: auto;
+    word-break: break-all;
+
+    >.profile {
+      display: flex;
+      align-items: center;
+      > img {
+        border-radius: 50%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+    }
+
+    &.user {
+      background: $gray-light;
+    }
+
+    > .actions {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      > i {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.replyComment {
+  @extend .comment;
+  background: none !important;
+  padding: 0 !important;
+
+}
+
+.hasReply {
+  border-top: 1px dashed $black;
+  margin: 1rem 0;
+}
+
+.reply {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+  border-radius: 5px;
+  margin: 5px 0;
+
+  border: 1px dashed $black;
+
+  i {
+    cursor: pointer;
+  }
+}
+
+.footer {
+  background: $gray-light;
+  position: sticky;
+  top: 20px;
+  //top: 50%;
+  //transform: translateY(-50%);
+  height: fit-content;
+
+  border-radius: 7px;
+  padding: 10px;
+  textarea {
+    //resize: none;
+  }
+
+  .button {
+    margin-bottom: 1rem;
+    padding: 10px 20px;
+    margin-right: auto;
+  }
+}

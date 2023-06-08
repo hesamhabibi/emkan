@@ -1,0 +1,62 @@
+module.exports = `
+
+    type Query {
+        getBlogComments(model_id:ID, page:Int , limit:Int , filter:CommentFilter,  sort:CommentSort ): CommentData
+        getProductComments(model_id:ID, page:Int , limit:Int , filter:CommentFilter,  sort:CommentSort ): CommentData
+        getUserComments(page:Int , limit:Int , filter:CommentFilter,  sort:CommentSort ): CommentData
+    }
+
+    type Mutation {
+        createBlogComment(input:CreateCommentInput): Comment
+        createProductComment(input:CreateCommentInput): Comment
+        replyComment(reply_id:ID , input:ReplyCommentInput): Comment
+    }
+
+    type CommentData {
+        data: [Comment]
+        paginate: Paginate
+    }
+
+    type Comment {
+        id: ID
+        title: String
+        text: String
+        reply_id: ID
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        reply_to: Comment
+        replies: [Comment]
+        user: User
+    }
+
+    input CreateCommentInput {
+        title: String
+        text: String
+        reply_to_id:ID
+        model_id: ID
+    }
+
+    input ReplyCommentInput {
+        title: String
+        text: String
+    }
+
+    input CommentFilter {
+        reply_to_id: String
+        confirmed: Boolean
+        model_id: ID
+    }
+
+    enum CommentSortFields {
+        createdAt
+        updatedAt
+    }
+
+    input CommentSort {
+        field: CommentSortFields
+        operator: sortEnum 
+
+    }
+`;

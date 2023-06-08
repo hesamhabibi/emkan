@@ -1,0 +1,21 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.container {
+
+  .calendar {
+    //position: fixed;
+    position: relative;
+    display: inline-block;
+    width: 271px;
+  }
+
+  .view {
+    display: inline-block;
+    width: calc(100% - 271px);
+    overflow-x: auto;
+  }
+
+  padding: 20px;
+  background: $white;
+}

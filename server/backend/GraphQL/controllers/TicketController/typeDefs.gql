@@ -1,0 +1,79 @@
+module.exports = `
+
+    type Query {
+        getTicket(id:ID): Ticket
+        getTickets(page:Int, limit:Int, filter:TicketFilter,sort:[Sort]): TicketPaginate
+        getAllTickets(filter:TicketFilter,sort:[Sort]): [Ticket]
+        getTicketDepartments: [TicketDepartment]
+    }
+
+    type Mutation {
+        replyTicket(id:ID,input:TicketInput): Ticket
+        setStatusTicket(id:ID,input:TicketSetStatusInput): Ticket
+    }
+
+    type Ticket {
+        id: ID
+        title: String
+        text: String
+        status: Int
+        department: Int
+        number: String
+        name: String
+        last_name: String
+        email: String
+        mobile: String
+        media: MediaStructure
+        user_id: ID
+        reply_to_id: ID
+        createdAt: String
+        updatedAt: String
+
+        user: User
+        reply_to: Ticket
+        replies: [Ticket]
+    }
+
+    type TicketPaginate {
+        paginate: Paginate
+        data: [Ticket]
+    }
+
+    type TicketDepartment {
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        number: Int
+
+        tickets: [Ticket]
+    }
+
+
+    input TicketInput {
+        title: String
+        text: String
+        media: MediaStructureInput
+        send_with: Int
+    }
+
+    input TicketSetStatusInput {
+        status: Int
+    }
+
+    input TicketFilter {
+        title: [filterString]
+        text: [filterString]
+        status: [filterInt]
+        department: [filterInt]
+        number: [filterString]
+        name: [filterString]
+        last_name: [filterString]
+        email: [filterString]
+        mobile: [filterString]
+        user_id: [filterID]
+        reply_to_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

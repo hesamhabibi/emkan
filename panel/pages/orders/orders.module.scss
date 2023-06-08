@@ -1,0 +1,95 @@
+@import "styles/variables";
+
+.bgRed {
+  background-color: $danger-light !important;
+
+  td:last-child {
+
+    background-color: $danger-light !important;
+  }
+}
+
+
+.wrapper {
+  overflow-x: auto;
+  margin: 10px;
+  //border: 1px solid #444444;
+  padding: 5px;
+
+  > .header {
+    display: flex;
+    justify-content: space-between;
+
+    strong {
+      font-weight: 550;
+    }
+  }
+
+
+  > table {
+    width: 100%;
+    border-collapse: collapse;
+    color: black;
+
+    th, td {
+      border: 2px solid #999999;
+      padding: 10px;
+    }
+
+    .footer {
+      text-align: right;
+      background-color: $gray-light;
+
+      td {
+        border-right: none;
+        border-left: none;
+      }
+
+      p {
+        margin-bottom: 0.4rem;
+        font-size: smaller;
+        font-weight: 500;
+      }
+
+      &.noBorder {
+        border-bottom: 2px solid #999999;
+
+        td {
+          border-bottom: none;
+          border-top: none;
+        }
+      }
+
+      .borderLeft {
+        border-left: 2px solid #999999;
+      }
+
+      .border {
+        border: 2px solid #999999 !important;
+        //border-left: 2px solid #999999;
+      }
+
+
+      .borderRight {
+        border-right: 2px solid #999999;
+      }
+
+      td:first-child {
+        border-right: 2px solid #999999;
+      }
+
+      td:last-child {
+        border-left: 2px solid #999999;
+      }
+    }
+
+    th {
+      //font-weight: normal;
+      font-size: small;
+    }
+
+    > thead {
+      background: #ededed;
+    }
+  }
+}

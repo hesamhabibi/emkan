@@ -1,0 +1,1761 @@
+{
+  "/crm/email": [
+    {
+      "name": "ستون دسترسی به تایتل",
+      "key": "crm_email_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به وضعیت",
+      "key": "crm_email_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به زمان ارسال",
+      "key": "crm_email_date_column",
+      "action": ""
+    }
+  ],
+  "/crm/sms": [
+    {
+      "name": "ستون دسترسی به تایتل",
+      "key": "crm_sms_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به وضعیت",
+      "key": "crm_sms_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به زمان ارسال",
+      "key": "crm_sms_date_column",
+      "action": ""
+    }
+  ],
+  "/crm/internal-message": [
+    {
+      "name": "ستون دسترسی به تایتل",
+      "key": "crm_internal_message_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به وضعیت",
+      "key": "crm_internal_message_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به زمان ارسال",
+      "key": "crm_internal_message_date_column",
+      "action": ""
+    }
+  ],
+  "/crm/external-message": [
+    {
+      "name": "ستون دسترسی به تایتل",
+      "key": "crm_external_message_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به وضعیت",
+      "key": "crm_external_message_status_column",
+      "action": ""
+    }
+  ],
+  "/crm/popup": [
+    {
+      "name": "ستون دسترسی به تایتل",
+      "key": "crm_popup_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به وضعیت",
+      "key": "crm_popup_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به زمان ارسال",
+      "key": "crm_popup_date_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به زمان ارسال شدن",
+      "key": "crm_popup_date_column",
+      "action": ""
+    }
+  ],
+  "/crm/push-notification": [
+    {
+      "name": "ستون دسترسی به تایتل",
+      "key": "crm_push_notification_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به وضعیت",
+      "key": "crm_push_notification_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون دسترسی به زمان ارسال",
+      "key": "crm_push_notification_date_column",
+      "action": ""
+    }
+  ],
+  "/blogs": [
+    {
+      "name": "فیلد تایتل",
+      "key": "blogs_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد خلاصه",
+      "key": "blogs_summary_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد قابلیت کامنت",
+      "key": "blogs_has_comment_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد قابلیت امتیاز دهی",
+      "key": "blogs_has_rate_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "blogs_status_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین زمان انتشار",
+      "key": "blogs_publish_at_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین دسته بندی",
+      "key": "blogs_category_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین برچسب",
+      "key": "blogs_tag_ids_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین گروه برچسب",
+      "key": "blogs_tag_group_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد گالری تصاویر",
+      "key": "blogs_media_gallery_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "blogs_description_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "blogs_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "blogs_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "blogs_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "blogs_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "blogs_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "blogs_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "blogs_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "blogs_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب سئو",
+      "key": "blogs_seo_tab",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب اصلی بلاگ",
+      "key": "blogs_main_tab",
+      "action": ""
+    }
+  ],
+  "/blogs/catalogue": [
+    {
+      "name": "فیلد تایتل",
+      "key": "blogs_catalogue_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد خلاصه",
+      "key": "blogs_catalogue_summary_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد انتخاب فایل",
+      "key": "blogs_catalogue_file_field"
+    },
+    {
+      "name": "فیلد قابلیت کامنت",
+      "key": "blogs_catalogue_has_comment_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد قابلیت امتیاز دهی",
+      "key": "blogs_catalogue_has_rate_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "blogs_catalogue_status_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین زمان انتشار",
+      "key": "blogs_catalogue_publish_at_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین دسته بندی",
+      "key": "blogs_catalogue_category_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین برچسب",
+      "key": "blogs_catalogue_tag_ids_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین گروه برچسب",
+      "key": "blogs_catalogue_tag_group_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد گالری تصاویر",
+      "key": "blogs_catalogue_media_gallery_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "blogs_catalogue_description_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "blogs_catalogue_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "blogs_catalogue_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "blogs_catalogue_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "blogs_catalogue_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "blogs_catalogue_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "blogs_catalogue_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "blogs_catalogue_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "blogs_catalogue_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب سئو",
+      "key": "blogs_catalogue_seo_tab",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب اصلی بلاگ",
+      "key": "blogs_catalogue_main_tab",
+      "action": ""
+    }
+  ],
+  "/blogs/page": [
+    {
+      "name": "فیلد تایتل",
+      "key": "blogs_page_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد خلاصه",
+      "key": "blogs_page_summary_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد انتخاب فایل",
+      "key": "blogs_page_file_field"
+    },
+    {
+      "name": "فیلد قابلیت کامنت",
+      "key": "blogs_page_has_comment_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد قابلیت امتیاز دهی",
+      "key": "blogs_page_has_rate_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "blogs_page_status_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین زمان انتشار",
+      "key": "blogs_page_publish_at_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین دسته بندی",
+      "key": "blogs_page_category_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین برچسب",
+      "key": "blogs_page_tag_ids_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین گروه برچسب",
+      "key": "blogs_page_tag_group_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد گالری تصاویر",
+      "key": "blogs_page_media_gallery_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "blogs_page_description_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "blogs_page_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "blogs_page_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "blogs_page_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "blogs_page_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "blogs_page_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "blogs_page_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "blogs_page_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "blogs_page_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب سئو",
+      "key": "blogs_page_seo_tab",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب اصلی بلاگ",
+      "key": "blogs_page_main_tab",
+      "action": ""
+    }
+  ],
+  "/blogs/project": [
+    {
+      "name": "فیلد تایتل",
+      "key": "blogs_project_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد خلاصه",
+      "key": "blogs_project_summary_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد قابلیت کامنت",
+      "key": "blogs_project_has_comment_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد قابلیت امتیاز دهی",
+      "key": "blogs_project_has_rate_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "blogs_project_status_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین زمان انتشار",
+      "key": "blogs_project_publish_at_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین دسته بندی",
+      "key": "blogs_project_category_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین برچسب",
+      "key": "blogs_project_tag_ids_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین گروه برچسب",
+      "key": "blogs_project_tag_group_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد گالری تصاویر",
+      "key": "blogs_project_media_gallery_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "blogs_project_description_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "blogs_project_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "blogs_project_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "blogs_project_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "blogs_project_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "blogs_project_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "blogs_project_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "blogs_project_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "blogs_project_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب سئو",
+      "key": "blogs_project_seo_tab",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب اصلی بلاگ",
+      "key": "blogs_project_main_tab",
+      "action": ""
+    }
+  ],
+  "/blogs/event": [
+    {
+      "name": "فیلد تایتل",
+      "key": "blogs_event_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد خلاصه",
+      "key": "blogs_event_summary_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد قابلیت کامنت",
+      "key": "blogs_event_has_comment_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد قابلیت امتیاز دهی",
+      "key": "blogs_event_has_rate_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "blogs_event_status_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین زمان انتشار",
+      "key": "blogs_event_publish_at_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین دسته بندی",
+      "key": "blogs_event_category_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین برچسب",
+      "key": "blogs_event_tag_ids_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین گروه برچسب",
+      "key": "blogs_event_tag_group_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد گالری تصاویر",
+      "key": "blogs_event_media_gallery_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "blogs_event_description_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "blogs_event_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "blogs_event_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "blogs_event_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "blogs_event_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "blogs_event_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "blogs_event_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "blogs_event_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "blogs_event_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب سئو",
+      "key": "blogs_event_seo_tab",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب اصلی بلاگ",
+      "key": "blogs_event_main_tab",
+      "action": ""
+    }
+  ],
+  "/blogs/service": [
+    {
+      "name": "فیلد تایتل",
+      "key": "blogs_service_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد خلاصه",
+      "key": "blogs_service_summary_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد قابلیت کامنت",
+      "key": "blogs_service_has_comment_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد قابلیت امتیاز دهی",
+      "key": "blogs_service_has_rate_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "blogs_service_status_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین زمان انتشار",
+      "key": "blogs_service_publish_at_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین دسته بندی",
+      "key": "blogs_service_category_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین برچسب",
+      "key": "blogs_service_tag_ids_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تایین گروه برچسب",
+      "key": "blogs_service_tag_group_id_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد گالری تصاویر",
+      "key": "blogs_service_media_gallery_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "blogs_service_description_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "blogs_service_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "blogs_service_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "blogs_service_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "blogs_service_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "blogs_service_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "blogs_service_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "blogs_service_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "blogs_service_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب سئو",
+      "key": "blogs_service_seo_tab",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب اصلی بلاگ",
+      "key": "blogs_service_main_tab",
+      "action": ""
+    }
+  ],
+  "/brands": [
+    {
+      "name": "فیلد عنوان",
+      "key": "brands_title_field"
+    },
+    {
+      "name": "فیلد وضعیت",
+      "key": "brands_status_field"
+    },
+    {
+      "name": "فیلد نمایش در منو",
+      "key": "brands_show_in_menu_field"
+    },
+    {
+      "name": "فیلد تصویر",
+      "key": "brands_media_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "brands_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "brands_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "brands_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "brands_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "brands_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "brands_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "brands_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "brands_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب سئو",
+      "key": "brands_seo_tab",
+      "action": ""
+    },
+    {
+      "name": "فیلد تب اصلی بلاگ",
+      "key": "brands_main_tab",
+      "action": ""
+    }
+  ],
+  "/calendar": [
+    {
+      "name": "فیلد عنوان",
+      "key": "calendar_title_field"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "calendar_description_field"
+    },
+    {
+      "name": "فیلد زمان شروع",
+      "key": "calendar_start_date_field"
+    },
+    {
+      "name": "فیلد زمان پایان",
+      "key": "calendar_end_date_field"
+    },
+    {
+      "name": "فیلد انتخاب کاربران",
+      "key": "calendar_access_user_ids_field"
+    }
+  ],
+  "/products": [
+    {
+      "name": "فیلد ویدیو فیزیکی",
+      "key": "products_physical_video_field"
+    },
+    {
+      "name": "فیلد ویدیو دیجیتال",
+      "key": "products_physical_video_field"
+    },
+    {
+      "name": "فیلد ویدیو پیش نمایش",
+      "key": "products_preview_video_field"
+    },
+    {
+      "name": "فیلد ویدیو سرویس",
+      "key": "products_service_video_field"
+    },
+    {
+      "name": "انتخاب گونه فیزیکی",
+      "key": "products_attribute_id_field"
+    },
+    {
+      "name": "تب گونه ها فیزیکی",
+      "key": "products_attributes_tab"
+    },
+    {
+      "name": "تب اصلی فیزیکی",
+      "key": "products_main_tab"
+    },
+    {
+      "name": "تب سئو فیزیکی",
+      "key": "products_seo_tab"
+    },
+    {
+      "name": "تب گالری تصاویر فیزیکی",
+      "key": "products_images_tab",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "تب جدول محصول فیزیکی",
+      "key": "products_table_tab"
+    },
+    {
+      "name": "تب قیمت محصول فیزیکی",
+      "key": "products_price_tab"
+    },
+    {
+      "name": "تب پیشرفته محصول فیزیکی",
+      "key": "products_advanced_tab"
+    },
+    {
+      "name": "تب محصولات مشابه فیزیکی",
+      "key": "products_related_tab",
+      "action":"getAllCollections"
+    },
+    {
+      "name": "تب آموزش فیزیکی",
+      "key": "products_tutorial_tab"
+    },
+    {
+      "name": "انتخاب گونه پیش نمایش",
+      "key": "products_preview_attribute_id_field"
+    },
+    {
+      "name": "تب گونه ها پیش نمایش",
+      "key": "products_preview_attributes_tab"
+    },
+    {
+      "name": "تب اصلی پیش نمایش",
+      "key": "products_preview_main_tab"
+    },
+    {
+      "name": "تب سئو پیش نمایش",
+      "key": "products_preview_seo_tab"
+    },
+    {
+      "name": "تب گالری تصاویر پیش نمایش",
+      "key": "products_preview_images_tab",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "تب جدول محصول پیش نمایش",
+      "key": "products_preview_table_tab"
+    },
+    {
+      "name": "تب قیمت محصول پیش نمایش",
+      "key": "products_preview_price_tab"
+    },
+    {
+      "name": "تب پیشرفته محصول پیش نمایش",
+      "key": "products_preview_advanced_tab"
+    },
+    {
+      "name": "تب محصولات مشابه پیش نمایش",
+      "key": "products_preview_related_tab",
+      "action":"getAllCollections"
+    },
+    {
+      "name": "تب آموزش پیش نمایش",
+      "key": "products_preview_tutorial_tab"
+    },
+    {
+      "name": "انتخاب گونه سرویس",
+      "key": "products_service_attribute_id_field"
+    },
+    {
+      "name": "تب گونه ها سرویس",
+      "key": "products_service_attributes_tab"
+    },
+    {
+      "name": "تب اصلی سرویس",
+      "key": "products_service_main_tab"
+    },
+    {
+      "name": "تب سئو سرویس",
+      "key": "products_service_seo_tab"
+    },
+    {
+      "name": "تب گالری تصاویر سرویس",
+      "key": "products_service_images_tab",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "تب جدول محصول سرویس",
+      "key": "products_service_table_tab"
+    },
+    {
+      "name": "تب قیمت محصول سرویس",
+      "key": "products_service_price_tab"
+    },
+    {
+      "name": "تب پیشرفته محصول سرویس",
+      "key": "products_service_advanced_tab"
+    },
+    {
+      "name": "تب محصولات مشابه سرویس",
+      "key": "products_service_related_tab",
+      "action":"getAllCollections"
+    },
+    {
+      "name": "تب آموزش سرویس",
+      "key": "products_service_tutorial_tab"
+    }
+  ],
+  "/attributes": [
+    {
+      "name": "فیلد عنوان",
+      "key": "attributes_title_field"
+    },
+    {
+      "name": "فیلد وضعیت",
+      "key": "attributes_status_field"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "attribute_description_field"
+    },
+    {
+      "name": "فیلد نوع گونه",
+      "key": "attributes_type_field"
+    }
+  ],
+  "/categories/blog": [
+    {
+      "key": "categories_blog_title_field",
+      "name": "فیلد عنوان"
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "categories_blog_active_field"
+    },
+    {
+      "name": "فیلد نمایش در منو",
+      "key": "categories_blog_show_in_menu_field"
+    },
+    {
+      "name": "فیلد تصویر",
+      "key": "categories_blog_image_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "categories_blog_description_field"
+    },
+    {
+      "name": "دسترسی به تب اصلی",
+      "key": "categories_blog_main_tab"
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "categories_blog_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "categories_blog_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "categories_blog_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "categories_blog_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "categories_blog_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "categories_blog_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "categories_blog_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "categories_blog_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_blog_seo_tab"
+    }
+  ],
+  "/categories/catalogue": [
+    {
+      "key": "categories_catalogue_title_field",
+      "name": "فیلد عنوان"
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "categories_catalogue_active_field"
+    },
+    {
+      "name": "فیلد نمایش در منو",
+      "key": "categories_catalogue_show_in_menu_field"
+    },
+    {
+      "name": "فیلد تصویر",
+      "key": "categories_catalogue_image_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "categories_catalogue_description_field"
+    },
+    {
+      "name": "دسترسی به تب اصلی",
+      "key": "categories_catalogue_main_tab"
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_catalogue_seo_tab"
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "categories_catalogue_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "categories_catalogue_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "categories_catalogue_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "categories_catalogue_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "categories_catalogue_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "categories_catalogue_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "categories_catalogue_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "categories_catalogue_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_catalogue_seo_tab"
+    }
+  ],
+  "/categories/page": [
+    {
+      "key": "categories_page_title_field",
+      "name": "فیلد عنوان"
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "categories_page_active_field"
+    },
+    {
+      "name": "فیلد نمایش در منو",
+      "key": "categories_page_show_in_menu_field"
+    },
+    {
+      "name": "فیلد تصویر",
+      "key": "categories_page_image_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "categories_page_description_field"
+    },
+    {
+      "name": "دسترسی به تب اصلی",
+      "key": "categories_page_main_tab"
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_page_seo_tab"
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "categories_page_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "categories_page_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "categories_page_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "categories_page_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "categories_page_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "categories_page_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "categories_page_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "categories_page_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_page_seo_tab"
+    }
+  ],
+  "/categories/project": [
+    {
+      "key": "categories_project_title_field",
+      "name": "فیلد عنوان"
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "categories_project_active_field"
+    },
+    {
+      "name": "فیلد نمایش در منو",
+      "key": "categories_project_show_in_menu_field"
+    },
+    {
+      "name": "فیلد تصویر",
+      "key": "categories_project_image_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "categories_project_description_field"
+    },
+    {
+      "name": "دسترسی به تب اصلی",
+      "key": "categories_project_main_tab"
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_project_seo_tab"
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "categories_project_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "categories_project_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "categories_project_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "categories_project_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "categories_project_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "categories_project_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "categories_project_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "categories_project_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_project_seo_tab"
+    }
+  ],
+  "/categories/event": [
+    {
+      "key": "categories_event_title_field",
+      "name": "فیلد عنوان"
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "categories_event_active_field"
+    },
+    {
+      "name": "فیلد نمایش در منو",
+      "key": "categories_event_show_in_menu_field"
+    },
+    {
+      "name": "فیلد تصویر",
+      "key": "categories_event_image_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "categories_event_description_field"
+    },
+    {
+      "name": "دسترسی به تب اصلی",
+      "key": "categories_event_main_tab"
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_event_seo_tab"
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "categories_event_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "categories_event_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "categories_event_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "categories_event_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "categories_event_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "categories_event_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "categories_event_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "categories_event_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_event_seo_tab"
+    }
+  ],
+  "/categories/service": [
+    {
+      "key": "categories_service_title_field",
+      "name": "فیلد عنوان"
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "categories_service_active_field"
+    },
+    {
+      "name": "فیلد نمایش در منو",
+      "key": "categories_service_show_in_menu_field"
+    },
+    {
+      "name": "فیلد تصویر",
+      "key": "categories_service_image_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "categories_service_description_field"
+    },
+    {
+      "name": "دسترسی به تب اصلی",
+      "key": "categories_service_main_tab"
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_service_seo_tab"
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "categories_service_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "categories_service_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "categories_service_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "categories_service_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "categories_service_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "categories_service_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "categories_service_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "categories_service_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_service_seo_tab"
+    }
+  ],
+  "/categories/product": [
+    {
+      "key": "categories_product_title_field",
+      "name": "فیلد عنوان"
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "categories_product_active_field"
+    },
+    {
+      "name": "فیلد نمایش در منو",
+      "key": "categories_product_show_in_menu_field"
+    },
+    {
+      "name": "فیلد تصویر",
+      "key": "categories_product_image_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "categories_product_description_field"
+    },
+    {
+      "name": "دسترسی به تب اصلی",
+      "key": "categories_product_main_tab"
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_product_seo_tab"
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "categories_product_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "categories_product_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "categories_product_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "categories_product_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "categories_product_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "categories_product_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "categories_product_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "categories_product_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_product_seo_tab"
+    }
+  ],
+  "/categories/device": [
+    {
+      "key": "categories_device_title_field",
+      "name": "فیلد عنوان"
+    },
+    {
+      "name": "فیلد تایین وضعیت",
+      "key": "categories_device_active_field"
+    },
+    {
+      "name": "فیلد نمایش در منو",
+      "key": "categories_device_show_in_menu_field"
+    },
+    {
+      "name": "فیلد تصویر",
+      "key": "categories_device_image_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "categories_device_description_field"
+    },
+    {
+      "name": "دسترسی به تب اصلی",
+      "key": "categories_device_main_tab"
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_device_seo_tab"
+    },
+    {
+      "name": "فیلد تاتیل سئو",
+      "key": "categories_device_seo_title",
+      "action": ""
+    },
+    {
+      "name": "فیلد keywords سئو",
+      "key": "categories_device_seo_keywords",
+      "action": ""
+    },
+    {
+      "name": "فیلد توضیحات سئو",
+      "key": "categories_device_seo_description",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک سئو",
+      "key": "categories_device_seo_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 301 سئو",
+      "key": "categories_device_seo_redirect_url_301",
+      "action": ""
+    },
+    {
+      "name": "فیلد ریدایرکت 404 سئو",
+      "key": "categories_device_seo_redirect_url_404",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک ابتدایی سئو",
+      "key": "categories_device_seo_canonical_url",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت ربات سئو",
+      "key": "categories_device_seo_robots_status",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "categories_device_seo_tab"
+    }
+  ],
+  "/tags": [
+    {
+      "name": "فیلد عنوان تگ",
+      "key": "tags_tag_title_field"
+    },
+    {
+      "name": "فیلد عنوان کروه تگ",
+      "key": "tags_tag_group_title_field"
+    },
+    {
+      "name": "فیلد تگ های گروه تگ",
+      "key": "tags_tag_group_tags_field"
+    }
+  ],
+  "/campaigns": [
+    {
+      "name": "دسترسی به تب عمومی کالکشن",
+      "key": "campaigns_collection_tab"
+    },
+    {
+      "name": "دسترسی به تب انتخاب مقادیر کالکشن",
+      "key": "campaigns_collection_values_tab"
+    },
+    {
+      "name": "دسترسی به تب سئو",
+      "key": "campaigns_collection_tab"
+    }
+  ],
+  "/sliders": [
+    {
+      "name": "فیلد نام اسلایدر",
+      "key": "sliders_name_field"
+    },
+    {
+      "name": "فیلد کلید اسلایذر",
+      "key": "sliders_key_field"
+    },
+    {
+      "name": "فیلد وضعیت",
+      "key": "sliders_status_field"
+    },
+    {
+      "name": "فیلد عنوان تصویر",
+      "key": "sliders_image_title_field"
+    },
+    {
+      "name": "فیلد لینک تصویر",
+      "key": "sliders_image_link_field"
+    },
+    {
+      "name": "فیلد تصویر اسلایدر",
+      "key": "sliders_image_image_field",
+      "action": "deleteMedia"
+    },
+    {
+      "name": "فیلد توضیحات تصویر اسلایدر",
+      "key": "sliders_image_description_field"
+    }
+  ],
+  "/discount-codes": [
+    {
+      "name": "فیلد نام",
+      "key": "discount_codes_name_field"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "discount_codes_description_field"
+    }
+  ],
+  "/deputations": [
+    {
+      "name": "فیلد عنوان",
+      "key": "deputations_title_action"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "deputations_description_action"
+    },
+    {
+      "name": "فیلد برچسب",
+      "key": "deputations_label_action"
+    },
+    {
+      "name": "فیلد کد پستی",
+      "key": "deputations_postal_code_action"
+    },
+    {
+      "name": "فیلد شماره موبایل",
+      "key": "deputations_cell_phone_action"
+    },
+    {
+      "name": "فیلد استان",
+      "key": "deputations_state_action"
+    },
+    {
+      "name": "فیلد شهر",
+      "key": "deputations_city_action"
+    },
+    {
+      "name": "فیلد منطقه",
+      "key": "deputations_location_action"
+    },
+    {
+      "name": "فیلد گالری تصاویر",
+      "key": "deputations_image_gallery_action",
+      "action": "deleteMedia"
+    }
+  ],
+  "/shipping-methods": [
+    {
+      "name": "فیلد عنوان",
+      "key": "shipping_methods_title_field"
+    },
+    {
+      "name": "فیلد وضعیت",
+      "key": "shipping_methods_status_field"
+    },
+    {
+      "name": "فیلد حساس به وزن بودن",
+      "key": "shipping_methods_weight_sensitivity_field"
+    },
+    {
+      "name": "فیلد اضافه کردن حساسیت وزن",
+      "key": "shipping_methods_weight_sensitivity_content_field"
+    },
+    {
+      "name": "فیلد توضیحات",
+      "key": "shipping_methods_description_field"
+    },
+    {
+      "name": "فیلد مدیریت شرط ها",
+      "key": "shipping_methods_conditions_field"
+    }
+  ],
+  "/payment-gateways": [
+    {
+      "name": "فیلد عنوان",
+      "key": "payment_gateways_title_field"
+    },
+    {
+      "name": "فیلد وضعیت",
+      "key": "payment_gateways_status_field"
+    }
+  ],
+  "/comments/hidden": [
+    {
+      "name": "فیلد عنوان کامنت",
+      "key": "comments_title_field"
+    },
+    {
+      "name": "فیلد متن",
+      "key": "comments_text_field"
+    },
+    {
+      "name": "فیلد پاسخ به",
+      "key": "comments_reply_field"
+    }
+  ]
+}

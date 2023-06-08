@@ -1,0 +1,67 @@
+module.exports = `
+
+    type Query {
+        getCurrentUser: User
+    }
+
+    type Mutation {
+        login(input: UserLoginInput): TokenResponse
+        register(input: UserRegisterInput): TokenResponse
+        updateUser (input:updateUserInput): Response
+        changePassword (input:changePasswordInput): Response
+        loginSendSMS (mobile:String): Response
+        registerSendSMS (input: UserRegisterSendSmsInput): Response
+        SMSLoginVerifyToken (mobile:String, token:String): TokenResponse
+        resetPasswordSendEmail (email:String): Response
+        resetPasswordVerify (input:resetPasswordVerifyInput): Response
+    }
+
+    input UserLoginInput {
+        username: String
+        password: String
+    }
+
+    input UserRegisterInput {
+        name: String
+        username: String
+        last_name: String
+        email: String
+        mobile: String
+        password: String
+        password_confirmation: String
+    }
+
+    input updateUserInput {
+        name: String
+        last_name: String
+        username: String
+        email: String
+    }
+
+    input changePasswordInput {
+        old_password: String
+        password: String
+        password_confirmation: String
+    }
+
+    input UserRegisterSendSmsInput {
+        mobile: String
+        email: String
+        name: String
+        username: String
+        last_name: String
+    }
+
+    input resetPasswordVerifyInput {
+        email: String
+        token: String
+        password: String
+        password_confirmation: String
+    }
+
+    type TokenResponse {
+        token: String
+        user: User
+    }
+
+`;

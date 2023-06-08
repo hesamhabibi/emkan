@@ -1,0 +1,63 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+
+.container {
+  padding: 20px;
+
+  > .muted {
+    font-weight: lighter;
+    color: gray;
+    display: flex;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  > section {
+    margin-top: 10px;
+    padding: 10px;
+
+    > div {
+      direction: ltr;
+      text-align: left;
+    }
+
+    @include rounded(8px);
+    @include generate-color(background, #f5f5f5);
+  }
+
+  @include generate-color(background, $white);
+}
+
+
+.purple, .green {
+  display: grid;
+  place-items: center;
+  min-height: 100px;
+  font-size: larger;
+
+  @include rounded(4px);
+  @include generate-color(color, $white);
+}
+
+.purple {
+  @include generate-color(background, $purple);
+}
+
+.green {
+  @include generate-color(background, $success);
+}
+
+.inline {
+  display: inline-block;
+  display: -moz-inline-block;
+}
+
+.blue {
+  input {
+    @include generate-color(background, $blue);
+    @include generate-color(color, $white);
+  }
+}

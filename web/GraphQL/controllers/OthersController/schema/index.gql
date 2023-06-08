@@ -1,0 +1,40 @@
+module.exports = `
+
+    type Query {
+        getUserShippingMethods(key: String ): [ShippingMethod]
+        getUserPaymentMethods(key: String ): [PaymentMethod]
+        getTag(tag_id: ID): Tag
+    }
+
+    type Tag {
+        id: ID
+        title: JSON # multi language
+        title_web: String @multilang(field:"title")
+        tag_group_ids: [ID]
+        createdAt: String
+        updatedAt: String
+    }
+
+    type ShippingMethod {
+        id: ID
+        title: JSON # multi language
+        title_web: String @multilang(field:"title")
+        description: JSON # multi language
+        description_web: String @multilang(field:"description")
+        is_default: Boolean
+        price: Int
+        createdAt: String
+        updatedAt: String
+    }
+
+    type PaymentMethod {
+        id: ID
+        title: JSON # multi language
+        title_web: String @multilang(field:"title")
+        gateway: Int
+    }
+
+`
+
+
+    

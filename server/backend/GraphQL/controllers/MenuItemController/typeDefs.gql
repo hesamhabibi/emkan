@@ -1,0 +1,86 @@
+module.exports = `
+
+    type Query {
+        getMenuItem(id:ID!): MenuItem
+        getMenuItems(page:Int,limit:Int,filter:MenuItemFilter,sort:[Sort]): MenuItemPaginate
+        getAllMenuItems(filter:MenuItemFilter,sort:[Sort]): [MenuItem]
+        getMenuItemsByAccess: [AccessMenuItem]
+    }
+
+    type Mutation {
+        createMenuItem(input:MenuItemInput): MenuItem
+        updateMenuItem(id:ID!input:MenuItemInput): MenuItem
+        deleteMenuItem(id:ID!): Response
+        sortMenuItems(input:[sortMenuItemInput]): Response
+    }
+
+    type MenuItem {
+        id: ID
+        title: String
+        icon: String
+        sort: Int
+        show_in_menu: Boolean
+        badge_key: String
+        access_id: ID
+        access_component_id: ID
+        parent_id: ID
+        createdAt: String
+        updatedAt: String
+
+        access: Access
+        access_component: AccessComponent
+        parent: MenuItem
+        children: [MenuItem]
+    }
+
+    type AccessMenuItem {
+        id: ID
+        access_component_id: ID
+        parent_id: ID
+        sort: Int
+        badge_key: String
+        title: String
+        icon: String
+        route: String
+        columns: [String]
+        fields: [String]
+        actions: [String]
+        child_access_components_keys: [String]
+    }
+
+    type MenuItemPaginate {
+        paginate: Paginate
+        data: [MenuItem]
+    }
+
+    input MenuItemInput {
+        title: String
+        icon: String
+        sort: Int
+        show_in_menu: Boolean
+        badge_key: String
+        access_id: ID
+        access_component_id: ID
+        parent_id: ID
+    }
+
+    input sortMenuItemInput {
+        id: ID!
+        sort: Int
+        parent_id: ID
+    }
+
+    input MenuItemFilter {
+        title: [filterString]
+        icon: [filterString]
+        sort: [filterInt]
+        show_in_menu: [filterBoolean]
+        badge_key: [filterString]
+        access_id: [filterID]
+        access_component_id: [filterID]
+        parent_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`

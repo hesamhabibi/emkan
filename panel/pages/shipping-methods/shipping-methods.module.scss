@@ -1,0 +1,64 @@
+@import "styles/variables";
+
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+
+
+.container {
+
+
+  .row {
+    //display: flex;
+    //align-items: center;
+    //justify-content: space-evenly;
+    margin: 10px;
+
+    > .button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      //background: lighten(lightgray, 15);
+      background: $white;
+      padding: 12px 10px;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      transition: 0.2s ease;
+      border: 1px solid lightgray;
+
+      > .buttonActions {
+        > i {
+          transition: 0.2s ease;
+        }
+      }
+
+      &:hover {
+        background: lighten($gray-light, 10);
+      }
+    }
+    .content {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 0.5rem;
+      background: $white;
+      padding: 10px;
+      margin-top: 10px;
+
+      .section {
+        margin-bottom: 1.75rem;
+      }
+    }
+
+  }
+
+}
+
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}

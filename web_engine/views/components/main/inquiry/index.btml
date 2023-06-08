@@ -1,0 +1,288 @@
+<script>
+    function update_total_prices(result) {
+        console.log ({result});
+        // $('.total_prices_payment_price').text(result?.total_prices?.payment_price);
+        // $('.total_prices_sum_product_price_without_offer').text(result?.total_prices?.sum_product_price_without_offer);
+        // $('.total_prices_profit').text(result?.total_prices?.sum_product_price_without_offer - result?.total_prices?.payment_price);
+        $('.cart_products_count').text(result?.products?.length);
+    }
+
+
+    async function close_inquiry() {
+        if (!(parseInt(getCookie('InquiryProductsCount')) > 0)) {
+            showToast('لیست استعلام قیمت شما خالی است!', 'danger');
+            return;
+        }
+
+        const query = `
+            mutation closeCart ($input:closeCartInput){
+                result: closeCart(input: $input){
+                    payment_url
+                }
+            }
+        `;
+
+        // const address_id = $('input[name="address"]:checked').data('id') || '{{userDefaultAddress.id}}';
+        // const payment_gateway_id = $('input[name="payment_gateway"]:checked').data('id');
+        // const shipping_method_id = document.getElementById('post_price_select').value;
+        
+        const name = $('input[name="name"]').val();
+        const mobile = $('input[name="mobile"]').val();
+        const state = $('input[name="state"]').val();
+        const note = $('textarea[name="note"]').val();
+
+        const variables = {
+            input: {
+                // address_id,
+                // payment_gateway_id,
+                // shipping_method_id,
+                note: `${name}~${mobile}~${state}~${note}`,
+                is_inquiry: 1,
+            },
+        }
+
+        let result;
+        try {
+            result = await (await graphqlApi(query, variables)).json();
+        } catch (e) {
+            console.log(e);
+        }
+
+        if (result.errors?.length > 0) {
+            showToast((result.errors || [])[0]?.message || trans("error"), 'danger');
+        } else {
+            // success
+            showToast(trans("done"), 'success');
+            window.location.href = "{%route 'profile',tab='inquiryHistory'%}";
+            return null;
+        }
+    }
+
+</script>
+
+<!-- start main content -->
+    <div class="bg-gray-c100 dir-right">
+        <div class="container mx-auto font-shabnam-normal-digit">
+
+            <!-- start websit directory -->
+            {%render '/components/commons/breadCrumb', links=[{title: 'پروفایل', url: 'profile' | route},{title:'استعلام قیمت',url:url}]%}
+            <!-- end websit directory -->
+
+            <h4 class="font-shabnam-bold-digit text-[20px] pb-[15px] mr-[15px]">لیست استعلام شما</h4>
+
+            <div class="md:flex gap-3 lg:gap-6 pb-[75px]">
+                <!-- right side section -->
+                <div class="mb-[50px] md:w-[60%] lg:w-[65%] xl:w-[70%] font-shabnam-normal-digit">
+                    <div class="mb-[5px] bg-white rounded-[10px] flex justify-between items-center px-[15px] py-[12px] md:px-[25px] md:py-[15px]">
+                        <div>
+                            <svg class="!inline" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.9883 5.66708L19.3329 2.01167C18.6069 1.28476 17.622 0.875904 16.5946 0.875H8.40542C7.37805 0.875904 6.39309 1.28476 5.66708 2.01167L2.01167 5.66708C1.28476 6.39309 0.875904 7.37805 0.875 8.40542V20.25C0.875 21.2777 1.28326 22.2633 2.00996 22.99C2.73666 23.7167 3.72229 24.125 4.75 24.125H20.25C21.2777 24.125 22.2633 23.7167 22.99 22.99C23.7167 22.2633 24.125 21.2777 24.125 20.25V8.40542C24.1241 7.37805 23.7152 6.39309 22.9883 5.66708ZM7.48833 3.83292C7.73586 3.59689 8.06343 3.46309 8.40542 3.45833H16.5946C16.9366 3.46309 17.2641 3.59689 17.5117 3.83292L19.7204 6.04167H5.27958L7.48833 3.83292ZM20.25 21.5417H4.75C4.40743 21.5417 4.07889 21.4056 3.83665 21.1633C3.59442 20.9211 3.45833 20.5926 3.45833 20.25V8.625H21.5417V20.25C21.5417 20.5926 21.4056 20.9211 21.1633 21.1633C20.9211 21.4056 20.5926 21.5417 20.25 21.5417Z" fill="#636363"/>
+                            </svg>
+                            <!-- <span class="font-shabnam-bold text-[13px] text-gray-c500">ارسال کالاهای عادی</span> -->
+                            <span class="font-shabnam-normal-digit text-[12px] lg:text-[16px] text-gray-c300 mr-[10px]">
+                                (
+                                <span class="cart_products_count">
+                                    {{inquiry.products.length}}
+                                </span>
+                                کالا)
+                            </span>
+                        </div>
+                        
+                        {%if show_prices%}
+                            <div class="font-shabnam-bold-digit text-[13px] lg:text-[16px] text-gray-c500 ">
+                                جمع کالاها :
+                                <span class="text-black mx-[6px] total_prices_payment_price"> {{inquiry.total_prices.payment_price}} </span>
+                                <span class="font-shabnam-normal-digit text-[12px] text-gray-c300">تومان</span>
+                            </div>
+                        {%endif%}
+
+                    </div>
+                    <div class="bg-white rounded-[10px] px-[25px] py-[20px]">
+
+                        {%for orderProduct in inquiry.products%}
+                            <!-- کالا -->
+                            <div class="{%if forloop.last | not%} border-b border-gray-c300 {%endif%} pb-[15px] pt-[15px] lg:flex lg:justify-between">
+                                <!-- عکس و مشخصات کالا -->
+                                <div class="flex">
+                                    <div class="relative">
+                                        <svg class="absolute top-[-10px] right-0 !inline" width="22" height="22" viewBox="0 0 35 35" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.47404 3.42824C10.857 3.31782 12.17 2.77385 13.2258 1.87379C14.4183 0.858112 15.9336 0.300293 17.5 0.300293C19.0664 0.300293 20.5817 0.858112 21.7742 1.87379C22.83 2.77385 24.1429 3.31782 25.5259 3.42824C27.0878 3.55306 28.5541 4.23011 29.662 5.33801C30.7699 6.44591 31.4469 7.91221 31.5717 9.47404C31.6814 10.8565 32.2253 12.1701 33.1262 13.2258C34.1419 14.4183 34.6997 15.9336 34.6997 17.5C34.6997 19.0664 34.1419 20.5817 33.1262 21.7742C32.2261 22.83 31.6822 24.1429 31.5717 25.5259C31.4469 27.0878 30.7699 28.5541 29.662 29.662C28.5541 30.7699 27.0878 31.4469 25.5259 31.5717C24.1429 31.6822 22.83 32.2261 21.7742 33.1262C20.5817 34.1419 19.0664 34.6997 17.5 34.6997C15.9336 34.6997 14.4183 34.1419 13.2258 33.1262C12.17 32.2261 10.857 31.6822 9.47404 31.5717C7.91221 31.4469 6.44591 30.7699 5.33801 29.662C4.23011 28.5541 3.55306 27.0878 3.42824 25.5259C3.31782 24.1429 2.77385 22.83 1.87379 21.7742C0.858112 20.5817 0.300293 19.0664 0.300293 17.5C0.300293 15.9336 0.858112 14.4183 1.87379 13.2258C2.77385 12.17 3.31782 10.857 3.42824 9.47404C3.55306 7.91221 4.23011 6.44591 5.33801 5.33801C6.44591 4.23011 7.91221 3.55306 9.47404 3.42824ZM25.47 14.72C25.8617 14.3145 26.0784 13.7715 26.0735 13.2077C26.0686 12.644 25.8425 12.1048 25.4439 11.7061C25.0452 11.3075 24.506 11.0814 23.9423 11.0765C23.3785 11.0716 22.8354 11.2883 22.4299 11.6799L15.35 18.7599L12.57 15.9799C12.1645 15.5883 11.6215 15.3716 11.0577 15.3765C10.494 15.3814 9.95476 15.6075 9.55613 16.0061C9.15751 16.4048 8.93139 16.944 8.92649 17.5077C8.92159 18.0715 9.1383 18.6145 9.52994 19.02L13.8299 23.32C14.2331 23.7231 14.7799 23.9495 15.35 23.9495C15.9201 23.9495 16.4669 23.7231 16.87 23.32L25.47 14.72Z"
+                                                fill="#0078C8"/>
+                                        </svg>
+                                        <img class="ml-[10px]" style="max-width: 110px;max-height: 110px;" src="{{orderProduct.product.media.url | or: default_card_image_url | abs_url}}" alt="{{orderProduct.product.media.alt}}">
+                                    </div>
+                                    <div class="w-full pt-[10px]">
+                                        <p class="font-shabnam-bold-digit text-[16px]">{{orderProduct.product.title_web}}</p>
+                                        <div class="py-[15px] flex items-center text[10px] text-gray-c500">
+                                            <!-- <span class="w-[15px] h-[15px] bg-gray-c300 rounded-full ml-[15px]"></span> -->
+                                            <span class=" font-shabnam-normal-digit text-[16px]">{{orderProduct.product.mix_variant[0].title_web}}</span>
+                                        </div>
+                                        <!-- <div>
+                                            <svg class="!inline" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22.7452 7.76233C22.7272 7.57327 22.6633 7.39204 22.5595 7.23562C22.4556 7.0792 22.3153 6.9527 22.1515 6.86795L13.4849 2.36795C13.3344 2.28974 13.1684 2.24902 13.0001 2.24902C12.8318 2.24902 12.6658 2.28974 12.5153 2.36795L3.84863 6.86795C3.68534 6.95318 3.54542 7.07983 3.44183 7.23618C3.33824 7.39253 3.27434 7.5735 3.25605 7.76233C3.24413 7.8827 2.21496 19.8752 12.5608 24.6531C12.699 24.7179 12.849 24.7514 13.0006 24.7514C13.1523 24.7514 13.3022 24.7179 13.4405 24.6531C23.7863 19.8752 22.7571 7.88383 22.7452 7.76233V7.76233ZM13.0006 22.384C5.66755 18.703 5.32088 10.8471 5.38046 8.5892L13.0006 4.63258L20.6154 8.58695C20.6555 10.8246 20.26 18.7322 13.0006 22.384Z" fill="#636363"/>
+                                                <path d="M11.9183 14.1587L9.43418 11.5791L7.90234 13.1699L11.9183 17.3402L18.1008 10.9199L16.569 9.3291L11.9183 14.1587Z" fill="#636363"/>
+                                            </svg>
+                                            <span class=" font-shabnam-normal text-[14px] text-gray-c500">گارانتی ۷۲ ماهه شادان</span>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- قیمت کالا -->
+                                <div class="flex justify-between items-end pt-[10px] lg:dir-left lg:justify-start lg:items-center">
+                                    <button class="addToCart d-none bg-blue-c100 text-white p-[10px] rounded font-shabnam-bold-digit text-[14px] mr-[10px]"
+                                        onclick="addToCart(this,'{{orderProduct.product.id}}','{{orderProduct.product.mix_variant[0].keys}}',true)">
+                                        اضافه کردن دوباره
+                                    </button>
+                                    <span class="setCount border border-gray-c300 rounded-[5px] text-gray-c500 px-[10px] py-[5px] text-[13px] flex mr-[20px] lg:dir-right">
+                                        <button class="plus">+</button>
+                                        <!-- <span class="px-[15px]">{{orderProduct.count}}</span> -->
+                                        <input class="px-[15px] item_count_input w-[60px] bg-transparent focus:border-none focus:outline-none text-center" type="number" value="{{orderProduct.count}}" data-product-id="{{orderProduct.product.id}}" data-mix-variant-keys="{{orderProduct.product.mix_variant[0].keys}}" data-is-inquiry="1">
+                                        <!-- <button>
+                                            <svg width="13" height="15" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                d="M5.8 4.6V6.6M1.8 2.6H8.2L7.568 8.288C7.54634 8.48375 7.45323 8.66463 7.3065 8.796C7.15978 8.92738 6.96975 9.00001 6.7728 9H3.2272C3.03025 9.00001 2.84022 8.92738 2.6935 8.796C2.54677 8.66463 2.45366 8.48375 2.432 8.288L1.8 2.6ZM3.138 1.4588C3.2027 1.32159 3.30508 1.2056 3.4332 1.12436C3.56132 1.04313 3.7099 0.999998 3.8616 1H6.1384C6.29017 0.999922 6.43883 1.04302 6.56703 1.12426C6.69523 1.2055 6.79767 1.32153 6.8624 1.4588L7.4 2.6H2.6L3.138 1.4588V1.4588ZM1 2.6H9H1ZM4.2 4.6V6.6V4.6Z"
+                                                stroke="#979797" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button> -->
+                                        <button class="minus">-</button>
+                                    </span>
+                                    {%if show_prices%}
+                                        <div class="lg:text-right">
+                                            {%if orderProduct.product.mix_variant[0].price.has_offer%}
+                                                <div class="text-left lg:text-right lg:dir-right">
+                                                    <span class="px-[10px] py-[3px] bg-blue-c100 text-white rounded-[5px] text-[18px] font-shabnam-bold-digit">{{orderProduct.product.mix_variant[0].price.discount_percent}}%</span>
+                                                    <span class="mr-[8px] text-gray-c400 line-through text-[12px]">{{orderProduct.product.mix_variant[0].price.price}}</span>
+                                                </div>
+                                            {%endif%}
+                                            <div class="text-[18px] text-left mt-[10px]">{{orderProduct.product.mix_variant[0].price.main_price}} تومان</div>
+                                        </div>
+                                    {%endif%}
+
+                                </div>
+                            </div>
+                            <!-- کالا -->
+
+                        {%endfor%}
+
+                    </div>
+                </div>
+                <!-- right side section -->
+
+                <!-- left side section -->
+                <div class="w-full md:w-[40%] lg:w-[35%] xl:w-[30%]">
+                    <div class="bg-white rounded-[10px] mt-[30px] md:mt-0 px-[13px] py-[25px] md:py-[15px]">
+                        {%comment%}
+                        <!-- مجموع قیمت ها -->
+                        <div class="border-b border-gray-c300 pb-[25px] md:pb-[10px]">
+                            <div class="flex justify-between">
+                                <div>
+                                    <span class="font-shabnam-normal-digit text-[15px] md:text-[14px] lg:text-[17px]">مجموع قیمت کالاها :</span>
+                                    <span class="font-shabnam-normal-digit text-[14px] md:text-[13px] lg:text-[15px] mr-[5px]">
+                                        (
+                                        <span class="cart_products_count">
+                                            {{inquiry.products.length}}
+                                        </span>
+                                        کالا)
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="total_prices_sum_product_price_without_offer font-shabnam-normal-digit text-[14px] md:text-[14px] lg:text-[17px] mx-[6px]">
+                                        {{cart.total_prices.sum_product_price_without_offer}}
+                                    </span>
+                                    <span class="font-shabnam-normal-digit text-[14px] md:text-[13px] lg:text-[16px] text-gray-c400">تومان</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-[18px] md:mt-[7px]">
+                                <span class="font-shabnam-normal-digit text-[14px] md:text-[14px] lg:text-[18px] text-blue-c100">سود شما :</span>
+                                <div>
+                                    <span class="total_prices_profit font-shabnam-normal-digit text-[14px] md:text-[14px] lg:text-[18px] text-blue-c100 mx-[6px]">
+                                        {{cart.total_prices.sum_product_price_without_offer | minus: cart.total_prices.payment_price}}
+                                    </span>
+                                    <span class="font-shabnam-normal-digit text-[14px] md:text-[13px] lg:text-[16px] text-gray-c400">تومان</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- مجموع قیمت ها -->
+
+                        <!-- ارسال رایگان -->
+                        <!-- <div class="px-[25px] py-[20px] md:px-0 border-b border-gray-c300">
+                            <button class="border border-green-c200 rounded-[10px] font-shabnam-bold text-[18px] md:text-[14px] bg-green-c50 w-full py-[13px] mx-auto text-green-c200">ارسال رایگان</button>
+                        </div> -->
+                        <!-- ارسال رایگان -->
+
+                        <!-- مبلغ قابل پرداخت -->
+                        <div class="flex justify-between py-[25px]">
+                            <span class="font-shabnam-normal-digit text-[18px] md:text-[14px] lg:text-[18px]">مبلغ قابل پرداخت :</span>
+                            <div>
+                                <span class="total_prices_payment_price font-shabnam-normal-digit text-[18px] md:text-[14px] lg:text-[18px] mx-[6px]">
+                                    {{cart.total_prices.payment_price}}
+                                </span>
+                                <span class="font-shabnam-normal-digit text-[16px] md:text-[13px] lg:text-[18px] text-gray-c400">تومان</span>
+                            </div>
+                        </div>
+                        <!-- مبلغ قابل پرداخت -->
+                        {%endcomment%}
+
+                        <div class="px-[10px]">
+                            <label for="name" class="block pt-[25px] pb-[10px] font-shabnam-normal-digit text-[18px] md:text-[14px] lg:text-[18px]">نام و نام خانوادگی :</label>
+                            <input id="name" type="text" name="name" value="{{AuthUser.full_name}}" placeholder="نام و نام خانوادگی" class="block w-full setCount border border-gray-c300 rounded-[5px] text-gray-c500 p-[10px] text-[13px]">
+    
+                            <label for="mobile" class="block pt-[25px] pb-[10px] font-shabnam-normal-digit text-[18px] md:text-[14px] lg:text-[18px]">شماره موبایل :</label>
+                            <input id="mobile" type="text" name="mobile" value="{{userDefaultAddress.mobile}}" placeholder="شماره موبایل" class="block w-full setCount border border-gray-c300 rounded-[5px] text-gray-c500 p-[10px] text-[13px]">
+    
+                            <label for="state" class="block pt-[25px] pb-[10px] font-shabnam-normal-digit text-[18px] md:text-[14px] lg:text-[18px]">استان :</label>
+                            <input id="state" type="text" name="state" value="{{userDefaultAddress.state.name_web}}" placeholder="استان" class="block w-full setCount border border-gray-c300 rounded-[5px] text-gray-c500 p-[10px] text-[13px]">
+    
+                            <label for="note" class="block pt-[25px] pb-[10px] font-shabnam-normal-digit text-[18px] md:text-[14px] lg:text-[18px]">یاداشت :</label>
+                            <textarea id="note" type="text" name="note" value="" placeholder="یاداشت" class="block w-full setCount border border-gray-c300 rounded-[5px] text-gray-c500 p-[10px] text-[13px]"></textarea>
+
+                        </div>
+
+                        <div class="px-[25px] md:px-0 py-[20px]">
+                            <button onclick="close_inquiry();" class="block text-center rounded-[10px] py-[12px] w-full bg-gradient-to-r from-blue-c100 to-blue-c200 hover:shadow-[0_0px_8px_1px_rgba(0,0,0,0.3)] transition-all duration-300 text-white font-shabnam-normal-digit text-[17px] md:text-[14px]">
+                                استعلام
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- left side section -->
+
+                <!-- left side section -->
+                <!-- <div class="w-full md:w-[40%] lg:w-[35%] xl:w-[30%]">
+                    <div class="bg-white rounded-[10px] mt-[30px] md:mt-0 px-[13px] py-[25px] md:py-[15px]">
+                        <p class="font-shabnam-normal text-[12px] mb-[20px]">لطفا مشخصات خود را جهت دریافت استعلام وارد نمایید</p>
+                        <div class="font-shabnam-normal text-[13px] mb-[20px]">
+                            <label for="username" class="text-gray-c500">نام و نام خانوادگی</label>
+                            <input class="p-[10px] mt-[10px] rounded-[10px] border border-gray-c300 w-full placeholder:text-gray-c300 focus:outline-none focus:ring-0 focus:border-green-c200" type="text" id="username" placeholder="محمد ناصری">
+                        </div>
+
+                        <div class="font-shabnam-normal text-[13px] mb-[20px]">
+                            <label for="username" class="text-gray-c500">شماره تلفن همراه جهت دریافت استعلام</label>
+                            <input class="p-[10px] mt-[10px] rounded-[10px] border border-gray-c300 w-full placeholder:text-left placeholder:text-gray-c300 text-left focus:outline-none focus:ring-0 focus:border-green-c200" type="text" id="username" placeholder="09179876543">
+                        </div>
+
+                        <div class="font-shabnam-normal text-[13px] mb-[20px]">
+                            <label for="address" class="text-gray-c500">استان</label>
+                            <select class="relative appearance-none bg-[url('/images/down-arrow.png')] bg-no-repeat bg-position bg-white p-[10px] mt-[10px] rounded-[10px] border border-gray-c300 w-full placeholder:text-gray-c300 focus:outline-none focus:ring-0 focus:border-green-c200" type="text" id="address">
+                                <option selected value="">انتخاب کنید</option>
+                                <option value="">شیراز</option>
+                                <option value="">تهران</option>
+                                <option value="">مشهد</option>
+                                <option value="">اصفهان</option>
+                                <option value="">بوشهر</option>
+                            </select>
+                        </div>
+
+                        <div class="px-[25px] md:px-0 py-[20px]">
+                            <button class="rounded-[10px] py-[12px] w-full bg-gradient-to-r from-green-c100 to-green-c300 hover:shadow-[0_0px_8px_1px_rgba(0,0,0,0.3)] transition-all duration-300 text-white font-shabnam-normal text-[17px] md:text-[14px]">ثبت نهایی لیست جهت استعلام</button>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- left side section -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end main content -->

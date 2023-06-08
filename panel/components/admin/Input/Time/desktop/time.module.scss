@@ -1,0 +1,127 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+
+.container {
+  position: relative;
+  height: 100%;
+
+  > .formControl {
+    height: 39px;
+    > .now {
+      position: absolute;
+      left: 0.5rem;
+      top: 55%;
+      //transform: translateY(20%);
+      cursor: pointer;
+      width: 100px;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+
+
+      @include transform(translateY(-10%));
+      @include rounded(25px);
+      @include generate-color(background, $primary);
+      @include generate-color(color, $white);
+    }
+
+    > input {
+      height: 100%;
+      width: 100%;
+      border: 1px solid darken($gray-light, 15);
+      cursor: pointer;
+      padding: 0.4rem 0.6rem 0.4rem 30px;
+      outline: none;
+      @include rounded(0.25rem);
+      @include transition(0.2s);
+      @include focus {
+        border-color: lighten($blue, 30%);
+        @include box-shadow($input-shadow-1);
+      }
+
+      &.formControlSm {
+        height: 28px;
+        padding: 0.2rem 0.4rem;
+        font-size: 0.9rem;
+      }
+
+      &.formControlLg {
+        height: 48px;
+        padding: 0.7rem 1rem;
+      }
+    }
+    > .dropDown {
+      position: absolute;
+      visibility: hidden;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 1307;
+      right: 50%;
+      transform: translateX(50%);
+
+      //width: 100%;
+      top: 115%;
+      border: 1px solid darken($gray-light, 70);
+      padding: 0.3rem 0;
+
+
+      &.active {
+        top: 105%;
+        visibility: visible;
+        pointer-events: visible;
+        opacity: 1;
+      }
+
+      > .nav {
+        text-align: center;
+        margin-bottom: 10px;
+
+        @include flex-position(x, space-between);
+
+        > button {
+          display: flex;
+          align-items: center;
+          width: 100%;
+
+          @include hover {
+            @include generate-color(background, lighten($purple, 10));
+            @include generate-color(color, $white);
+          }
+        }
+      }
+
+      > .clock {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding: 10px;
+        > .header {
+          > h4 {
+            display: inline-block;
+            margin-left: 10px;
+          }
+          margin-bottom: 10px;
+          text-align: center;
+          padding-bottom: 5px;
+          border-bottom: 1px solid $gray-light;
+        }
+
+        > .body {
+          place-items: end;
+          //text-align: center;
+          //display: flex;
+          //justify-content: space-between;
+          //align-items: center;
+        }
+      }
+
+      @include rounded(0.25rem);
+      @include transition(0.2s);
+      @include box-shadow($box-shadow-1);
+      @include generate-color(background, $white);
+    }
+  }
+
+}
+

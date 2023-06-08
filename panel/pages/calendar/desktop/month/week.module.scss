@@ -1,0 +1,108 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.container {
+  position: relative;
+
+  &.focus {
+    cursor: move;
+  }
+  > .reminders {
+    position: fixed;
+    width: 100px;
+
+    display: flex;
+    > .reminder {
+      padding: 5px;
+      width: 100%;
+      display: grid;
+      word-break: break-word;
+      place-items: center;
+      min-height: 30px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+      > .actions {
+        cursor: pointer;
+      }
+
+      @include rounded(5px);
+      @include generate-color(background, #7209B7);
+      @include generate-color(color, $white);
+    }
+    > span {
+      width: 50px;
+    }
+  }
+
+  > .remindCursor {
+    @include flex-position(x, space-between);
+    position: fixed;
+    width: 100%;
+
+    > .reminder {
+
+      width: 100%;
+      min-height: 30px;
+      padding: 0 1rem;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      @include flex-position(x, space-between);
+      @include rounded(6px);
+      @include generate-color(color, $white);
+      @include generate-color(background, $primary);
+    }
+
+    > span {
+      width: 50px;
+    }
+  }
+
+  > .workbox {
+    display: flex;
+
+    > .hour {
+      width: 100%;
+
+      @include generate-color(background, $white);
+      @include transition(0.4s ease-out);
+      display: flex;
+      flex-direction: column;
+
+      > div {
+        border: 2px solid #eff0f1;
+        border-bottom: none;
+        border-right: none;
+        padding-right: 10px;
+        width: 100px;
+        height: 1440px;
+      }
+
+      > span {
+        display: grid;
+        text-align: center;
+        align-items: center;
+        border-left: 2px solid #eff0f1;
+        height: 60px;
+        width: 100px;
+
+        > h6 {
+          @include generate-color(color, gray);
+        }
+
+        > span {
+          width: 35px;
+          height: 35px;
+          text-align: center;
+          margin: auto;
+          display: grid;
+          place-content: center;
+          @include rounded(100%);
+        }
+
+        > .active {
+          @include generate-color(color, $white);
+          @include generate-color(background, lighten($primary, 5));
+        }
+      }
+    }
+  }
+}

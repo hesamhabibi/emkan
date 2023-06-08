@@ -1,0 +1,47 @@
+module.exports = `
+
+    type Query {
+        getFormValue(id:ID!): FormValue
+        getFormValues(page:Int, limit:Int, filter:FormValueFilter,sort:[Sort]): FormValuePaginate
+        getSelfFormValues(page:Int, limit:Int, filter:FormValueFilter,sort:[Sort]): FormValuePaginate
+        getAllFormValues(filter:FormValueFilter,sort:[Sort]): [FormValue]
+    }
+
+    type Mutation {
+        createFormValue(form_id:ID,category_id:ID,input:JSON!): FormValue
+        updateFormValue(id:ID!, input:JSON!): FormValue
+        deleteFormValue(id:ID!): Response
+    }
+
+    type FormValue {
+        id: ID
+        form_id: ID
+        user_id: ID
+        fields: JSON
+        field_labels: JSON
+        category_id: ID
+        createdAt: String
+        updatedAt: String
+
+        form: Form
+        user: User
+    }
+
+    type FormValuePaginate {
+        paginate: Paginate
+        data: [FormValue]
+    }
+
+    # input FormValueInput {
+    # 
+    # }
+
+    input FormValueFilter {
+        form_id: [filterID]
+        category_id: [filterID]
+        user_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

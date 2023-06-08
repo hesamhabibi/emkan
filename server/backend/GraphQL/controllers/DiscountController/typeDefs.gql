@@ -1,0 +1,113 @@
+module.exports = `
+
+    type Query {
+        getDiscount(id:ID!): Discount
+        getDiscounts(page:Int, limit:Int, filter:DiscountFilter,sort:[Sort]): DiscountPaginate
+        getAllDiscounts(filter:DiscountFilter,sort:[Sort]): [Discount]
+    }
+
+    type Mutation {
+        createDiscount(input:DiscountInput): Discount
+        updateDiscount(id:ID!, input:DiscountInput): Discount
+        deleteDiscount(id:ID!): Response
+        setStatusDiscount(id:ID, status: Int): Discount
+    }
+
+    type Discount {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        code: String
+        status: Int
+        type: Int
+        value: Int
+        max_price: Int
+        min_price: Int
+        startAt: String
+        expireAt: String
+        settings: DiscountSetting
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        user: User
+    }
+
+    type DiscountSetting {
+        use_limit: DiscountSettingUseLimit
+        condition: DiscountSettingCondition
+        access: DiscountSettingAccess
+    }
+
+    type DiscountSettingUseLimit {
+        type: Int
+        count: Int
+    }
+
+    type DiscountSettingCondition {
+        type: Int
+        values: [ID]
+    }
+
+    type DiscountSettingAccess {
+        type: Int
+        values: [ID]
+    }
+
+    type DiscountPaginate {
+        paginate: Paginate
+        data: [Discount]
+    }
+
+    input DiscountInput {
+        title: JSON # multi language
+        code: String
+        status: Int
+        type: Int
+        value: Int
+        max_price: Int
+        min_price: Int
+        startAt: String
+        expireAt: String
+        settings: DiscountSettingInput
+    }
+
+    input DiscountSettingInput {
+        use_limit: DiscountSettingUseLimitInput
+        condition: DiscountSettingConditionInput
+        access: DiscountSettingAccessInput
+    }
+
+    input DiscountSettingUseLimitInput {
+        type: Int
+        count: Int
+    }
+
+    input DiscountSettingConditionInput {
+        type: Int
+        values: [ID]
+    }
+
+    input DiscountSettingAccessInput {
+        type: Int
+        values: [ID]
+    }
+
+
+    input DiscountFilter {
+        title: [filterMultiLang]
+        code: [filterString]
+        status: [filterInt]
+        type: [filterInt]
+        value: [filterInt]
+        max_price: [filterInt]
+        min_price: [filterInt]
+        startAt: [filterDate]
+        expireAt: [filterDate]
+        user_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

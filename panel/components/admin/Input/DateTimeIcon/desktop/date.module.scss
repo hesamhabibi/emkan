@@ -1,0 +1,184 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+
+.container {
+  position: relative;
+  //height: 100%;
+  border-radius: 0.25rem;
+  border: 1px solid darken($gray-light, 70);
+  text-align: center;
+  padding-right: 7px;
+
+  .formControl {
+    cursor: pointer;
+  }
+
+  &.top {
+    .dropDown {
+      top: auto;
+      bottom: calc(100% - 0.5rem);
+      right: 0;
+
+      &.active {
+        top: auto;
+        bottom: 100%;
+      }
+    }
+  }
+
+  .icon {
+    width: 40px;
+    //transition: 0.2s;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+
+    //&:hover {
+    //  background: #dddddd;
+    //}
+  }
+
+  > .dropDown {
+    width: 350px;
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1307;
+    left: 0;
+    border: 1px solid darken($gray-light, 70);
+    padding: 0.3rem 0;
+    top: calc(100% + 0.5rem);
+
+    &.active {
+      top: 100%;
+      visibility: visible;
+      pointer-events: visible;
+      opacity: 1;
+    }
+
+
+    > .nav {
+      text-align: center;
+      margin-bottom: 10px;
+
+      @include flex-position(x, space-between);
+
+      > button {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        @include hover {
+          @include generate-color(background, lighten($purple, 10));
+          @include generate-color(color, $white);
+        }
+      }
+    }
+
+    > .calendar {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      padding: 10px;
+
+      .header {
+        margin-bottom: 10px;
+        align-items: center;
+        //margin: 0 auto 10px auto;
+        @include flex-position(x, space-between);
+
+        > .action {
+          > i {
+            padding: .5rem .8rem;
+            @include rounded(50%);
+            @include transition(background 0.2s linear);
+            @include hover {
+              cursor: pointer;
+              @include generate-color(background, $gray-light);
+            }
+          }
+
+          @include generate-color(color, #5f6368);
+        }
+      }
+
+      .timeBody {
+        padding-top: 10px;
+        place-items: end;
+      }
+
+      .body {
+        display: table;
+        table-layout: fixed;
+        min-width: 300px;
+        margin: auto;
+        text-align: center;
+
+        > div {
+          height: 35px;
+          display: flex;
+          justify-content: space-between;
+
+          > .today {
+            @include generate-color(background, lighten(gray, 20));
+            @include generate-color(color, $white);
+
+            @include hover {
+              @include generate-color(background, lighten($purple, 15))
+            }
+          }
+
+          > .active {
+            @include generate-color(background, $purple);
+            @include generate-color(color, $white);
+
+            @include hover {
+              @include generate-color(background, lighten($purple, 25))
+            }
+          }
+
+          > span {
+            width: 35px;
+            height: 35px;
+            //display: table-cell;
+            display: grid;
+            place-items: center;
+            font-size: 12px;
+            font-weight: 600;
+            vertical-align: middle;
+            color: #70757a;
+
+            @include rounded(50%);
+            @include transition(background 0.2s linear);
+
+            @include hover {
+              cursor: pointer;
+              @include generate-color(background, $gray-light);
+            }
+
+            &[aria-disabled] {
+              @include hover {
+                cursor: auto;
+                background: transparent;
+              }
+            }
+          }
+        }
+
+        > .tableHeader {
+          > span {
+            font-size: 10px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+
+    border-radius: 0.25rem;
+    transition: 0.2s;
+    box-shadow: $box-shadow-1;
+    background: white;
+  }
+}

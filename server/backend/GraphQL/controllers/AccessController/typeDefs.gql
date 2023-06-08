@@ -1,0 +1,47 @@
+module.exports = `
+
+    type Query {
+        getAccess(id:ID!): Access
+        getAccesses(page:Int,limit:Int,filter:AccessFilter): AccessPaginate
+        getAllAccesses(filter:AccessFilter,sort:[Sort]): [Access]
+        getAccessIdsByAccess(filter:AccessFilter,sort:[Sort]): [Access]
+    }
+
+    type Mutation {
+        createAccess(input:AccessInput): Access
+        updateAccess(id:ID!,input:AccessInput): Access
+        deleteAccess(id:ID!): Response
+    }
+
+    type Access {
+        id: ID
+        name: String
+        # type: Int
+        description: String
+        createdAt: String
+        updatedAt: String
+
+        accessControlLists: [AccessControlList]
+        users: [User]
+    }
+
+    type AccessPaginate {
+        paginate: Paginate
+        data: [Access]
+    }
+
+    input AccessInput {
+        name: String
+        # type: Int
+        description: String
+    }
+
+    input AccessFilter {
+        name: [filterString]
+        # type: [filterInt]
+        description: [filterString]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`

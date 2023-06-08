@@ -1,0 +1,150 @@
+@import "styles/components/mixin/mixin";
+@import "styles/variables";
+
+
+.btn {
+  height: 37px;
+  position: relative;
+  padding: 0.5rem .5rem;
+  text-align: center;
+  flex: 1 1;
+  top: 0;
+  //height: 100%;
+  //margin: 0 0.2rem;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  @include transition(.2s);
+
+  @include rounded(0.5rem);
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.btn:hover {
+  filter: brightness(110%);
+}
+
+
+.success {
+  @extend .btn;
+  background-color: $success;
+  color: $white;
+  //@include box-shadow($box-shadow-success);
+}
+
+.primarySm {
+  @extend .btn;
+  padding: .3rem 1rem;
+  //max-width: 5rem;
+  background-color: $primary;
+  color: $white;
+  //@include box-shadow($box-shadow-primary);
+}
+
+.successSm {
+  @extend .btn;
+  padding: 0 1rem !important;
+  flex: 0.09;
+  height: 2.3rem;
+  //border-radius: 3rem;
+  background-color: $success;
+  color: $white;
+  //@include box-shadow($box-shadow-success);
+  i {
+    margin-bottom: 0.1rem;
+  }
+}
+
+.btnPrimary:disabled {
+  opacity: 0.5;
+  //background-color: $primary !important;
+}
+
+.error {
+  @extend .btn;
+  background-color: $danger;
+  color: $white;
+  //@include box-shadow($box-shadow-danger);
+}
+
+.btnError:disabled {
+  opacity: 0.5;
+  background-color: $danger !important;
+}
+
+.primary {
+  @extend .btn;
+  background-color: $primary;
+  color: $white;
+  //@include box-shadow($box-shadow-primary);
+}
+
+.mobile {
+  width: 100% !important;
+}
+
+.info {
+  @extend .btn;
+  color: $white;
+  background-color: $info;
+  //@include box-shadow($box-shadow-info);
+}
+
+.white {
+  @extend .btn;
+  color: $primary;
+  $shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  @include box-shadow($shadow);
+  background-color: $white;
+}
+
+.warning {
+  @extend .btn;
+  color: $white;
+  background-color: $warning;
+  //@include box-shadow($box-shadow-warning);
+}
+
+.orange {
+  @extend .btn;
+  background-color: $orange;
+  color: $white;
+  //@include box-shadow($box-shadow-orange)
+}
+
+@include keyframes(rotate) {
+  from {
+    @include transform(rotate(0deg))
+  }
+  to {
+    @include transform(rotate(360deg))
+  }
+}
+
+.loading::after {
+  content: '\f110';
+  padding: 0 0.3rem;
+  background: transparent !important;
+  display: inline-block;
+  font-family: $font-awesome-solid;
+  //@include animation(rotate, 1s,0,alternate,infinite,forwards);
+  animation-name: rotate;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-direction: inherit;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+  //animation-timing-function: $function;
+}
+.loading {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}

@@ -1,0 +1,36 @@
+module.exports = `
+
+    type Media {
+        id: ID
+        is_public: Boolean
+        url: String
+        path: String
+        extension: String
+        sort: Int
+        main: Boolean
+        type: String
+        size: Int
+        alt: String
+        filename: String
+        information: JSON
+        createdAt: String
+        updatedAt: String
+    }
+
+    type MediaStructure {
+        media_id: ID
+        alt: String
+        url: String
+
+        media: Media
+    }
+
+    type MediaGalleryStructure {
+        media_id: ID
+        main: Boolean
+        alt: String
+        url: String
+
+        media: Media
+    }
+`

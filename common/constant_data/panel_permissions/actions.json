@@ -1,0 +1,706 @@
+{
+  "/crm/email": [
+    {
+      "name": "دکمه مشاهده گزارش ایمیل",
+      "key": "crm_email_view_record_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال دوباره ایمیل",
+      "key": "crm_email_redo_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال ایمیل",
+      "key": "crm_email_create_action",
+      "action": "sendEmail"
+    }
+  ],
+  "/crm/sms": [
+    {
+      "name": "دکمه مشاهده گزارش پیامک",
+      "key": "crm_sms_view_record_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال دوباره پیامک",
+      "key": "crm_sms_redo_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال پیامک",
+      "key": "crm_sms_create_action",
+      "action": "sendSMS"
+    }
+  ],
+  "/crm/internal-message": [
+    {
+      "name": "دکمه مشاهده گزارش پیام داخلی",
+      "key": "crm_internal_message_view_record_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال دوباره پیام داخلی",
+      "key": "crm_internal_message_redo_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال پیام داخلی",
+      "key": "crm_internal_message_create_action",
+      "action": "sendInternalMessage"
+    }
+  ],
+  "/crm/external-message": [
+    {
+      "name": "دکمه مشاهده گزارش پیام خارجی",
+      "key": "crm_external_message_view_record_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال دوباره پیام خارجی",
+      "key": "crm_external_message_redo_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال پیام به واتساپ",
+      "key": "crm_external_send_whatsapp_action",
+      "action": "sendExternalMessage"
+    },
+    {
+      "name": "دکمه ارسال پیام به تلگرام",
+      "key": "crm_external_send_telegram_action",
+      "action": "sendExternalMessage"
+    },
+    {
+      "name": "دکمه ارسال پیام خارجی",
+      "key": "crm_external_message_create_action",
+      "action": "sendExternalMessage"
+    }
+  ],
+  "/crm/popup": [
+    {
+      "name": "دکمه مشاهده گزارش پیام خارجی",
+      "key": "crm_popup_message_view_record_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال دوباره پیام خارجی",
+      "key": "crm_popup_message_redo_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال پیام خارجی",
+      "key": "crm_popup_message_create_action",
+      "action": "sendPopup"
+    }
+  ],
+  "/crm/push-notification": [
+    {
+      "name": "دکمه مشاهده گزارش پیام خارجی",
+      "key": "crm_push_notification_view_record_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال دوباره پیام خارجی",
+      "key": "crm_push_notification_redo_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ارسال پیام خارجی",
+      "key": "crm_push_notification_create_action",
+      "action": "sendPushNotification"
+    }
+  ],
+  "/blogs": [
+    {
+      "name": "دکمه دیدن کامنت",
+      "key": "blogs_comments_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ویرایش بلاگ",
+      "key": "blogs_edit_action",
+      "action": "updateBlog"
+    },
+    {
+      "name": "دکمه حذف بلاگ",
+      "key": "blogs_delete_action",
+      "action": "deleteBlog"
+    },
+    {
+      "name": "دکمه اضافه کردن بلاگ",
+      "key": "blogs_create_action",
+      "action": "createBlog"
+    }
+  ],
+  "/blogs/catalogue": [
+    {
+      "name": "دکمه دیدن کامنت",
+      "key": "blogs_catalogue_comments_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ویرایش بلاگ",
+      "key": "blogs_catalogue_edit_action",
+      "action": "updateBlog"
+    },
+    {
+      "name": "دکمه حذف بلاگ",
+      "key": "blogs_catalogue_delete_action",
+      "action": "deleteBlog"
+    },
+    {
+      "name": "دکمه اضافه کردن بلاگ",
+      "key": "blogs_catalogue_create_action",
+      "action": "createBlog"
+    }
+  ],
+  "/blogs/page": [
+    {
+      "name": "دکمه دیدن کامنت",
+      "key": "blogs_page_comments_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ویرایش بلاگ",
+      "key": "blogs_page_edit_action",
+      "action": "updateBlog"
+    },
+    {
+      "name": "دکمه حذف بلاگ",
+      "key": "blogs_page_delete_action",
+      "action": "deleteBlog"
+    },
+    {
+      "name": "دکمه اضافه کردن بلاگ",
+      "key": "blogs_page_create_action",
+      "action": "createBlog"
+    }
+  ],
+  "/blogs/project": [
+    {
+      "name": "دکمه دیدن کامنت",
+      "key": "blogs_project_comments_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ویرایش بلاگ",
+      "key": "blogs_project_edit_action",
+      "action": "updateBlog"
+    },
+    {
+      "name": "دکمه حذف بلاگ",
+      "key": "blogs_project_delete_action",
+      "action": "deleteBlog"
+    },
+    {
+      "name": "دکمه اضافه کردن بلاگ",
+      "key": "blogs_project_create_action",
+      "action": "createBlog"
+    }
+  ],
+  "/blogs/event": [
+    {
+      "name": "دکمه دیدن کامنت",
+      "key": "blogs_event_comments_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ویرایش بلاگ",
+      "key": "blogs_event_edit_action",
+      "action": "updateBlog"
+    },
+    {
+      "name": "دکمه حذف بلاگ",
+      "key": "blogs_event_delete_action",
+      "action": "deleteBlog"
+    },
+    {
+      "name": "دکمه اضافه کردن بلاگ",
+      "key": "blogs_event_create_action",
+      "action": "createBlog"
+    }
+  ],
+  "/blogs/service": [
+    {
+      "name": "دکمه دیدن کامنت",
+      "key": "blogs_service_comments_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ویرایش بلاگ",
+      "key": "blogs_service_edit_action",
+      "action": "updateBlog"
+    },
+    {
+      "name": "دکمه حذف بلاگ",
+      "key": "blogs_service_delete_action",
+      "action": "deleteBlog"
+    },
+    {
+      "name": "دکمه اضافه کردن بلاگ",
+      "key": "blogs_service_create_action",
+      "action": "createBlog"
+    }
+  ],
+  "/brands": [
+    {
+      "name": "دکمه ویرایش",
+      "key": "brands_edit_action",
+      "action": "updateBrand"
+    },
+    {
+      "name": "دکمه حذف",
+      "key": "brands_delete_action",
+      "action": "deleteBrand"
+    },
+    {
+      "name": "دکمه اضافه کردن",
+      "key": "brands_create_action",
+      "action": "createBrand"
+    }
+  ],
+  "/calendar": [
+    {
+      "name": "دکمه اضافه کردن",
+      "key": "calendar_create_action",
+      "action": "createReminder"
+    },
+    {
+      "name": "دکمه ویرایش",
+      "key": "calendar_edit_action",
+      "action": "updateReminder"
+    },
+    {
+      "name": "دکمه حذف",
+      "key": "calendar_delete_action",
+      "action": "deleteReminder"
+    }
+  ],
+  "/attributes": [
+    {
+      "name": "دکمه اضافه کردن گونه",
+      "key": "attributes_create_action",
+      "action": "createAttribute&&sortAttributes"
+    },
+    {
+      "name": "دکمه ویرایش گونه",
+      "key": "attributes_edit_action",
+      "action": "updateAttribute&&updateAttributeDefaultValue&&sortAttributes"
+    },
+    {
+      "name": "دکمه حدف گونه",
+      "key": "attributes_delete_action",
+      "action": "deleteAttribute"
+    }
+  ],
+  "/categories/blog": [
+    {
+      "name": "دکمه ویرایش دسته بندی",
+      "key": "categories_blog_edit_action",
+      "action": "updateCategory"
+    },
+    {
+      "name": "دکمه حذف دسته بندی",
+      "key": "categories_blog_delete_action",
+      "action": "deleteCategory"
+    },
+    {
+      "name": "دکمه اضافه کردن دسته بندی",
+      "key": "categories_blog_create_action",
+      "action": "createCategory"
+    }
+  ],
+  "/categories/catalogue": [
+    {
+      "name": "دکمه ویرایش دسته بندی",
+      "key": "categories_catalogue_edit_action",
+      "action": "updateCategory"
+    },
+    {
+      "name": "دکمه حذف دسته بندی",
+      "key": "categories_catalogue_delete_action",
+      "action": "deleteCategory"
+    },
+    {
+      "name": "دکمه اضافه کردن دسته بندی",
+      "key": "categories_catalogue_create_action",
+      "action": "createCategory"
+    }
+  ],
+  "/categories/page": [
+    {
+      "name": "دکمه ویرایش دسته بندی",
+      "key": "categories_page_edit_action",
+      "action": "updateCategory"
+    },
+    {
+      "name": "دکمه حذف دسته بندی",
+      "key": "categories_page_delete_action",
+      "action": "deleteCategory"
+    },
+    {
+      "name": "دکمه اضافه کردن دسته بندی",
+      "key": "categories_page_create_action",
+      "action": "createCategory"
+    }
+  ],
+  "/categories/event": [
+    {
+      "name": "دکمه ویرایش دسته بندی",
+      "key": "categories_event_edit_action",
+      "action": "updateCategory"
+    },
+    {
+      "name": "دکمه حذف دسته بندی",
+      "key": "categories_event_delete_action",
+      "action": "deleteCategory"
+    },
+    {
+      "name": "دکمه اضافه کردن دسته بندی",
+      "key": "categories_event_create_action",
+      "action": "createCategory"
+    }
+  ],
+  "/categories/service": [
+    {
+      "name": "دکمه ویرایش دسته بندی",
+      "key": "categories_service_edit_action",
+      "action": "updateCategory"
+    },
+    {
+      "name": "دکمه حذف دسته بندی",
+      "key": "categories_service_delete_action",
+      "action": "deleteCategory"
+    },
+    {
+      "name": "دکمه اضافه کردن دسته بندی",
+      "key": "categories_service_create_action",
+      "action": "createCategory"
+    }
+  ],
+  "/categories/project": [
+    {
+      "name": "دکمه ویرایش دسته بندی",
+      "key": "categories_project_edit_action",
+      "action": "updateCategory"
+    },
+    {
+      "name": "دکمه حذف دسته بندی",
+      "key": "categories_project_delete_action",
+      "action": "deleteCategory"
+    },
+    {
+      "name": "دکمه اضافه کردن دسته بندی",
+      "key": "categories_project_create_action",
+      "action": "createCategory"
+    }
+  ],
+  "/categories/product": [
+    {
+      "name": "دکمه ویرایش دسته بندی",
+      "key": "categories_product_edit_action",
+      "action": "updateCategory"
+    },
+    {
+      "name": "دکمه حذف دسته بندی",
+      "key": "categories_product_delete_action",
+      "action": "deleteCategory"
+    },
+    {
+      "name": "دکمه اضافه کردن دسته بندی",
+      "key": "categories_product_create_action",
+      "action": "createCategory"
+    }
+  ],
+  "/categories/device": [
+    {
+      "name": "دکمه ویرایش دسته بندی",
+      "key": "categories_device_edit_action",
+      "action": "updateCategory"
+    },
+    {
+      "name": "دکمه حذف دسته بندی",
+      "key": "categories_device_delete_action",
+      "action": "deleteCategory"
+    },
+    {
+      "name": "دکمه اضافه کردن دسته بندی",
+      "key": "categories_device_create_action",
+      "action": "createCategory"
+    }
+  ],
+  "/tags": [
+    {
+      "name": "دکمه ساخت تگ",
+      "key": "tags_create_action",
+      "action": "createTag"
+    },
+    {
+      "name": "دکمه ویرایش تگ",
+      "key": "tags_update_action",
+      "action": "updateTag"
+    },
+    {
+      "name": "دکمه حذف تگ",
+      "key": "tags_delete_action",
+      "action": "deleteTag"
+    }
+  ],
+  "/products": [
+    {
+      "name": "دکمه اضافه کردن محصول",
+      "key": "products_create_action",
+      "action": "createProduct"
+    },
+    {
+      "name": "اضافه کردن فیزیکی",
+      "key": "products_create_physical_action",
+      "action": "createProduct"
+    },
+    {
+      "name": "اضافه کردن دیجیتال",
+      "key": "products_create_digital_action",
+      "action": "createProduct"
+    },
+    {
+      "name": "اضافه کردن سرویس",
+      "key": "products_create_service_action",
+      "action": "createProduct"
+    },
+    {
+      "name": "اضافه کردن پیش نمایش",
+      "key": "products_create_preview_action",
+      "action": "createProduct"
+    },
+    {
+      "name": "دکمه مشاهده کامنت ها",
+      "key": "products_see_comments_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه مشخص کردن قیمت",
+      "key": "products_set_price_action",
+      "action": "updateMixVariant&&updateMixVariantByCode"
+    },
+    {
+      "name": "دکمه ویرایش",
+      "key": "products_edit_action",
+      "action": "updateProduct"
+    },
+    {
+      "name": "دکمه حذف",
+      "key": "products_delete_action",
+      "action": "deleteProduct"
+    }
+  ],
+  "/campaigns": [
+    {
+      "name": "دکمه اضافه کردن کمپین",
+      "key": "campaigns_create_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ویرایش کمپین",
+      "key": "campaigns_edit_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه حذف کمپین",
+      "key": "campaigns_delete_action",
+      "action": ""
+    }
+  ],
+  "/tickets": [
+    {
+      "name": "دکمه دسترسی به مکالمه",
+      "key": "tickets_comment_action",
+      "action": "getTicket&&getTickets&&getAllTickets&&getTicketDepartments"
+    },
+    {
+      "name": "دکمه تایین وضعیت تیکت",
+      "key": "tickets_status_action",
+      "action": "setStatusTicket"
+    },
+    {
+      "name": "دکمه ارسال پاسخ",
+      "key": "ticket_answer_action",
+      "action": "replyTicket"
+    }
+  ],
+  "/shipping-methods": [
+    {
+      "name": "دکمه اضافه کردن",
+      "key": "shipping_methods_create_action",
+      "action": "createShippingMethod"
+    },
+    {
+      "name": "دکمه ویرایش",
+      "key": "shipping_methods_edit_action",
+      "action": "updateShippingMethod"
+    },
+    {
+      "name": "دکمه حذف",
+      "key": "shipping_methods_delete_action",
+      "action": "deleteShippingMethod"
+    },
+    {
+      "name": "ویرایش شهر و استان یکسان",
+      "key": "shipping_methods_same_city_action",
+      "action": "updateSettingByKey"
+    },
+    {
+      "name": "ویرایش استان یکسان",
+      "key": "shipping_methods_same_province_action",
+      "action": "updateSettingByKey"
+    },
+    {
+      "name": "ویرایش استان مجاور",
+      "key": "shipping_methods_close_province_action",
+      "action": "updateSettingByKey"
+    },
+    {
+      "name": "ویرایش استان دور",
+      "key": "shipping_methods_far_province_action",
+      "action": "updateSettingByKey"
+    }
+  ],
+  "/sliders": [
+    {
+      "name": "دکمه اضافه کردن",
+      "key": "sliders_create_action",
+      "action": "createSlider"
+    },
+    {
+      "name": "دکمه ویرایش",
+      "key": "sliders_edit_action",
+      "action": "uploadSlider"
+    },
+    {
+      "name": "دکمه حذف",
+      "key": "sliders_delete_action",
+      "action": "deleteSlider"
+    },
+    {
+      "name": "دکمه اضافه کردن تصویر به اسلایدر",
+      "key": "sliders_add_image_action",
+      "action": "addSliderImage&&updateSliderImage&&removeSliderImage&&sortSliderImages"
+    },
+    {
+      "name": "دکمه تایین وضعیت اسلایدر",
+      "key": "sliders_status_action",
+      "action": "setStatusSlider"
+    }
+  ],
+  "/orders": [
+    {
+      "name": "دکمه کد رهگیری",
+      "key": "orders_post_track_action",
+      "action": "setPostTrackCodeOrder"
+    },
+    {
+      "name": "دکمه مشاهده",
+      "key": "orders_view_factor_action",
+      "action": "setStatusOrder&&sendCommentOrder"
+    }
+  ],
+  "/inquiries": [
+    {
+      "name": "دکمه کد رهگیری",
+      "key": "inquiries_post_track_action",
+      "action": "setPostTrackCodeOrder"
+    },
+    {
+      "name": "دکمه مشاهده",
+      "key": "inquiries_view_factor_action",
+      "action": "setStatusOrder&&sendCommentOrder"
+    }
+  ],
+  "/discount-codes": [
+    {
+      "name": "دکمه تایین وضعیت",
+      "key": "discount_codes_status_action",
+      "action": "setStatusDiscount"
+    },
+    {
+      "name": "دکمه ویرایش",
+      "key": "discount_codes_edit_action",
+      "action": "updateDiscount"
+    },
+    {
+      "name": "دکمه حذف",
+      "key": "discount_codes_delete_action",
+      "action": "deleteDiscount"
+    },
+    {
+      "name": "دکمه اضافه کردن",
+      "key": "discount_codes_create_action",
+      "action": "createDiscount"
+    }
+  ],
+  "/deputations": [
+    {
+      "name": "دکمه ویرایش",
+      "key": "deputations_edit_action",
+      "action": "updateDeputation"
+    },
+    {
+      "name": "دکمه حذف",
+      "key": "deputations_delete_action",
+      "action": "deleteDeputation"
+    },
+    {
+      "name": "دکمه اضافه کردن",
+      "key": "deputations_create_action",
+      "action": "createDeputation"
+    }
+  ],
+  "/payment-gateways": [
+    {
+      "name": "دکمه ویرایش",
+      "key": "payment_gateways_edit_action",
+      "action": "updatePaymentGateway&&sortPaymentGateways"
+    },
+    {
+      "name": "دکمه حذف",
+      "key": "payment_gateways_delete_action",
+      "action": "deletePaymentGateway"
+    },
+    {
+      "name": "دکمه اضافه کردن",
+      "key": "payment_gateways_create_action",
+      "action": "createPaymentGateway&&sortPaymentGateways"
+    }
+  ],
+  "/comments/hidden": [
+    {
+      "key": "comments_create_action",
+      "name": "دکمه اضافه کردن کامنت",
+      "action": "createComment&&updateComment&&replyComment&&setConfirmComment"
+    },
+    {
+      "key": "comments_delete_action",
+      "name": "دکمه حذف کامنت",
+      "action": "deleteComment"
+    }
+  ],
+  "/reports": [
+    {
+      "name": "دکمه مشاهده",
+      "key": "reports_show_action",
+      "action": ""
+    },
+    {
+      "name": "دکمه ویرایش وضعیت",
+      "key": "reports_set_status_action",
+      "action": "setStatusReport&&deleteReport"
+    }
+  ],
+  "/employment": [
+    {
+      "name": "دکمه مشاهده جزییات فرم استخدام",
+      "key": "employment_view_details_action",
+      "action": "getCareerForms"
+    }
+  ]
+}

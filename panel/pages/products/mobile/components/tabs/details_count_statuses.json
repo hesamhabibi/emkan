@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "available"
+  },
+  {
+    "name": "contact_for_price",
+    "id": 2
+  },
+  {
+    "name": "not_available",
+    "id": 4
+  },
+  {
+    "name": "end_of_production",
+    "id": 5
+  }
+]

@@ -1,0 +1,106 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+
+
+.formGroup {
+
+  > .input {
+    display: none;
+  }
+
+  > .formControl {
+    width: 100%;
+    //height: 38px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include rounded(0.25rem);
+    @include transition(0.2s);
+
+    &.formControlSm {
+      height: 28px;
+      padding: 0.2rem 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    &.formControlLg {
+      height: 48px;
+      padding: 0.7rem 1rem;
+    }
+
+    //input::-webkit-file-upload-button {
+    //  visibility: hidden;
+    //  display: none;
+    //}
+    .imageActions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .Loading {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background: #f7f8f8db;
+    }
+
+    .imagePreview {
+      margin-right: 10px;
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+      @include rounded(10px);
+
+      video {
+        @include rounded(10px);
+        height: 150px;
+        max-width: 400px;
+      }
+
+      .deleteAction {
+        cursor: pointer;
+        z-index: 1;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        @include generate-color(color, $danger);
+      }
+    }
+
+    border: 2px dashed $black;
+    @include generate-color(color, $black);
+    @include generate-color(background, #d1d6d92e);
+    @include rounded(10px);
+
+
+    .addImage {
+      //width: 200px;
+      //height: 140px;
+
+      cursor: pointer;
+      height: 150px;
+      width: 100%;
+      padding: 2rem 0;
+      text-align: center;
+      position: relative;
+
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+
+
+
+

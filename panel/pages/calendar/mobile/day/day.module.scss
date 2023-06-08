@@ -1,0 +1,140 @@
+@import "styles/variables";
+
+.container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+
+  &.focus {
+    cursor: move;
+  }
+
+  > .reminders {
+    flex-wrap: wrap;
+    position: absolute;
+    width: 200px;
+
+    > .reminder {
+      padding: 5px;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      display: inline-block;
+      text-align: center;
+      word-break: break-word;
+      min-height: 80px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+      > .actions {
+        cursor: pointer;
+      }
+
+      border-radius: 5px;
+      background: #7209B7;
+      color: $white;
+    }
+
+    > span {
+      width: 50px;
+    }
+  }
+
+  > .remindCursor {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+
+    > .reminder {
+
+      width: 100%;
+      min-height: 30px;
+      padding: 0 1rem;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 6px;
+      color: $white;
+      background: $primary;
+    }
+
+    > span {
+      width: 50px;
+    }
+  }
+
+  > .workbox {
+    > .hour {
+      width: 100%;
+
+      background: $white;
+      transition: 0.4s ease-out;
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        border: 2px solid #eff0f1;
+        border-left: none;
+        border-bottom: none;
+        padding-right: 10px;
+        width: 100%;
+        height: 60px;
+      }
+
+      > span {
+        > span {
+          transform: rotate(-45deg) translate(-10px, 9px)
+        }
+
+        display: grid;
+        align-items: center;
+        border-top: 2px solid #eff0f1;
+        height: 60px;
+        width: 40px;
+      }
+    }
+  }
+}
+
+.events {
+  > button > i {
+    transition: 0.2s;
+  }
+
+  .collapsed {
+    background: #f8f8f8;
+    padding: 10px;
+    //box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  margin-bottom: 20px;
+
+  .card {
+    > .header {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      padding: 7px;
+      font-weight: bold;
+      //background-image: linear-gradient(to left, #e8ffba 50%, $white);
+      color: #333;
+    }
+
+    > .body {
+      > div {
+        margin: 3px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        > i {
+          margin-left: 5px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

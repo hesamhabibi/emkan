@@ -1,0 +1,29 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+
+.container {
+  width: 100%;
+  padding: 1rem 0.4rem;
+  margin: 10px 0;
+
+  align-items: center;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+
+  span {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  p {
+    margin: 0;
+  }
+  i {
+    cursor: pointer;
+  }
+
+  @include rounded(0.6rem);
+  @include generate-color(background, $white);
+}

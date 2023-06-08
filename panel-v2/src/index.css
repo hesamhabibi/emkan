@@ -1,0 +1,6 @@
+@import "styles/fonts.scss";
+@import "styles/badge-pulsing.scss";
+
+body{
+    margin: 0;
+}

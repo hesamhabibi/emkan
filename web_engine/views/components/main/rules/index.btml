@@ -1,0 +1,15 @@
+<!-- start main content -->
+    <div class="bg-gray-c100 dir-right pb-[50px] font-shabnam-normal-digit">
+        <div class="container mx-auto">
+            <!-- start websit directory -->
+                {%render '/components/commons/breadCrumb', links=[{title:'قوانین سایت',url:url}]%}
+            <!-- end websit directory -->
+
+            <div class="page_texteditor">
+                {{RulesPage.description_web}}
+                {%comment%} {%render '/components/main/rules/main'%} {%endcomment%}
+            </div>
+
+        </div>
+    </div>
+<!-- end main content -->

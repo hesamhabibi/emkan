@@ -1,0 +1,47 @@
+module.exports = `
+
+    type Query {
+        getFieldType(id:ID!): FieldType
+        getFieldTypes(page:Int, limit:Int, filter:FieldTypeFilter,sort:[Sort]): FieldTypePaginate
+        getAllFieldTypes(filter:FieldTypeFilter,sort:[Sort]): [FieldType]
+    }
+
+    type Mutation {
+        createFieldType(input:FieldTypeInput): FieldType
+        updateFieldType(id:ID!, input:FieldTypeInput): FieldType
+        deleteFieldType(id:ID!): Response
+    }
+
+    type FieldType {
+        id: ID
+        title: String
+        type: String
+        has_data: Boolean
+        field_validation_ids: [ID]
+        createdAt: String
+        updatedAt: String
+
+        field_validations: [FieldValidation]
+    }
+
+    type FieldTypePaginate {
+        paginate: Paginate
+        data: [FieldType]
+    }
+
+    input FieldTypeInput {
+        title: String
+        type: String
+        has_data: Boolean
+        field_validation_ids: [ID]
+    }
+
+    input FieldTypeFilter {
+        title: [filterString]
+        type: [filterInt]
+        has_data: [filterBoolean]
+        field_validation_ids: [filterArray]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+`;

@@ -1,0 +1,99 @@
+module.exports = `
+
+    enum filterIntEnum {
+        LessThan
+        LessThanOrEqual
+        Equal
+        MoreThanOrEqual
+        MoreThan
+        NotEqual
+    }
+
+    enum filterMultiLangEnum {
+        Regex
+    }
+
+    enum filterNumberEnum {
+        LessThan
+        LessThanOrEqual
+        Equal
+        MoreThanOrEqual
+        MoreThan
+        NotEqual
+    }
+
+    enum filterStringEnum {
+        Equal
+        NotEqual
+        Regex
+        Like
+    }
+
+    enum filterDateEnum {
+        LessThan
+        LessThanOrEqual
+        Equal
+        MoreThanOrEqual
+        MoreThan
+        NotEqual
+    }
+
+    enum filterIDEnum {
+        Equal
+        NotEqual
+    }
+
+    enum filterBooleanEnum {
+        Equal
+        NotEqual
+    }
+
+    enum filterArrayEnum {
+        Includes
+    }
+
+    input filterInt {
+        value: Int
+        operator: filterIntEnum
+    }
+
+    input filterNumber {
+        value: Int
+        operator: filterNumberEnum
+    }
+
+    input filterMultiLangValue {
+        value: String,
+        fields: [String],
+    }
+
+    input filterMultiLang {
+        value: filterMultiLangValue
+        operator: filterMultiLangEnum
+    }
+
+    input filterString {
+        value: String
+        operator: filterStringEnum
+    }
+
+    input filterDate {
+        value: String
+        operator: filterDateEnum
+    }
+
+    input filterID {
+        value: ID
+        operator: filterIDEnum
+    }
+
+    input filterBoolean {
+        value: Boolean
+        operator: filterBooleanEnum
+    }
+
+    input filterArray {
+        value: JSON
+        operator: filterArrayEnum
+    }
+`;

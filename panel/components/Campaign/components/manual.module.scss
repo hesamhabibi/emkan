@@ -1,0 +1,65 @@
+@import "styles/variables";
+
+
+.filter {
+
+  > div > button {
+    padding: 1.5rem 1rem !important;
+  }
+}
+
+.container {
+  padding: 10px;
+  //box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  //border-radius: 12px;
+}
+
+.table {
+  //background: rgba(184, 197, 210, 0.29);
+  padding: 10px 0;
+  border-radius: 12px;
+  margin-top: 15px;
+
+  .row {
+    background: white;
+    padding: 1rem 0.5rem;
+    margin: 10px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    > p {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+
+    > img {
+      border-radius: 12px;
+      width: 50px;
+      height: 50px;
+    }
+
+    &.children {
+      cursor: pointer;
+      i {
+        transition: 0.2s ease;
+      }
+    }
+
+
+    &.variant {
+      //margin-right: 50px;
+
+    }
+  }
+}
+
+
+.childRow {
+  //margin: 10px;
+  //padding: 10px;
+  //border: 1px solid lighten(gray, 30);
+  //border-radius: 7px;
+  padding-right: 20px;
+  padding-left: 1px
+}

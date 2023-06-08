@@ -1,0 +1,181 @@
+<!-- start home main content -->
+<div class="font-shabnam-bold-digit bg-gray-c100 overflow-x-hidden mt-[-1px] 1440:mt-[-3px]">
+
+    <!-- start home top section with blue background -->
+    <div class="relative md:bg-gradient-to-r from-blue-c50 to-blue-c100 bg-gray-c100 overflow-x-hidden">
+        {% render '/components/main/home/bigSlider' %}
+    </div>
+    <!-- end home top section with blue background -->
+
+    <!-- start home content with gray background -->
+    <div class="container mx-auto relative pb-[120px]">
+        {% if homeSettings.web_homePage_shop_feature_1.value_web or homeSettings.web_homePage_shop_feature_2.value_web or homeSettings.web_homePage_shop_feature_3.value_web or homeSettings.web_homePage_shop_feature_4.value_web %}
+            <!-- start asan ta'min features -->
+            <div class="lg:mx-[25px] mx-[10px] lg:mt-0 mt-[15px] md:px-[9px] py-[17px] lg:px-[35px] lg:py-[25px]
+            lg:absolute top-[-40px] left-0 right-0 lg:gap-3 grid md:grid-cols-4 grid-cols-2
+             bg-white rounded-[10px] text-blue-c200 text-[14px] md:text-[13px]
+             shadow-[0_0px_8px_1px_rgba(0,0,0,0.3)] text-center lg:text-right justify-around">
+                {% render '/components/main/home/shopFeatures' %}
+            </div>
+            <!-- end asan ta'min features -->
+        {% endif %}
+
+        <!--consult order -->
+        <div class="lg:pt-[130px] md:pt-[50px] pt-[30px]">
+            <div class="text-center bg-white rounded-[10px] p-[20px] w-fit m-auto shadow">
+                <h4 class="pt-[10px] pb-[20px] text-[16px] md:text-[18px]">مشاوره و سفارش تلفنی</h4>
+
+                <div class="md:flex justify-center items-center gap-6 pb-[10px]">
+                    <div class="mb-[15px] md:mb-0">
+                        <img class="w-full" src="{{ homeSettings.web_homePage_inquiry_image.value.url }}"
+                            alt="{{ homeSettings.web_homePage_inquiry_image.value.alt }}">
+                    </div>
+                    <ul class="text-right flex flex-col gap-[1rem] relative text-[13px] mr-[10px] before:absolute before:content-[''] before:top-0 before:right-0
+                        before:w-[2px] before:h-full before:bg-blue-c200 ">
+                        
+                        {%if homeSettings.web_homePage_inquiry_step_text_1.value_web%}
+                            <li class="relative pr-[20px] md:pr-[30px] before:absolute before:content-['1'] before:top-0 before:right-0
+                            before:w-[25px] before:h-[25px] before:mr-[-11px] before:bg-white before:rounded-full before:flex before:justify-center
+                            before:items-center before:border before:border-blue-c200 before:text-blue-c200">
+                                {{ homeSettings.web_homePage_inquiry_step_text_1.value_web }}
+                            </li>
+                        {%endif%}
+                        {%if homeSettings.web_homePage_inquiry_step_text_2.value_web%}
+                            <li class="relative pr-[20px] md:pr-[30px] before:absolute before:content-['2'] before:top-0 before:right-0
+                            before:w-[25px] before:h-[25px] before:mr-[-11px] before:bg-white before:rounded-full before:flex before:justify-center
+                            before:items-center before:border before:border-blue-c200 before:text-blue-c200">
+                                {{ homeSettings.web_homePage_inquiry_step_text_2.value_web }}
+                            </li>
+                        {%endif%}
+                        {%if homeSettings.web_homePage_inquiry_step_text_3.value_web%}
+                            <li class="relative pr-[20px] md:pr-[30px] before:absolute before:content-['3'] before:top-0 before:right-0
+                            before:w-[25px] before:h-[25px] before:mr-[-11px] before:bg-white before:rounded-full before:flex before:justify-center
+                            before:items-center before:border before:border-blue-c200 before:text-blue-c200">
+                                {{ homeSettings.web_homePage_inquiry_step_text_3.value_web }}
+                            </li>
+                        {%endif%}
+                    </ul>
+
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-[10px] text-[12px] md:text-[14px]">
+                    <a class=" shadow p-[10px] rounded-[10px] border border-blue-c200 text-blue-c200 hover:bg-blue-c200 hover:text-white transition-all duration-300"
+                       href="{{ homeSettings.web_homePage_inquiry_phone_number_link.value_web }}">تماس با کارشناسان</a>
+                    <a class=" shadow p-[10px] rounded-[10px] border border-blue-c200 text-blue-c200 hover:bg-blue-c200 hover:text-white transition-all duration-300"
+                       href="{{ homeSettings.web_homePage_inquiry_telegram_link.value_web }}">تلگرام</a>
+                    <a class=" shadow p-[10px] rounded-[10px] border border-blue-c200 text-blue-c200 hover:bg-blue-c200 hover:text-white transition-all duration-300"
+                       href="{{ homeSettings.web_homePage_inquiry_whatsapp_link.value_web }}">واتس آپ</a>
+                    <a class=" shadow p-[10px] rounded-[10px] border border-blue-c200 text-blue-c200 hover:bg-blue-c200 hover:text-white transition-all duration-300"
+                       href="{{ homeSettings.web_homePage_inquiry_eitaa_link.value_web }}">ایتا</a>
+                </div>
+
+            </div>
+        </div>
+        <!--consult order -->
+
+        {% if specialProducts.length %}
+            <!-- start special discont -->
+            <div class="lg:pt-[50px] md:pt-[50px] pt-[30px]">
+                {% letRoute products_route = {routeName: "products", isSpecial = '1'} %}
+                {% render '/components/commons/products/productsSlider', key="specials", products=specialProducts, title="تخفیف ویژه", link=products_route %}
+            </div>
+            <!-- end special discont -->
+        {% endif %}
+
+        <!-- start benners -->
+        <div class="mt-[30px] mx-[20px] md:flex gap-4 lg:gap-9">
+            {% if homeSettings.web_homePage_banner_title_1.value_web %}
+                <a href="{{ homeSettings.web_homePage_banner_link_1.value_web }}" class="md:w-full ">
+                    <div class="bg-blue-c100 hover:bg-blue-c101 transition-all relative  md:rounded-bl-0 rounded-tr-[30px] rounded-bl-[30px] text-center my-[15px] sm:my-[20px]">
+                        <img src="{{ homeSettings.web_homePage_banner_image_1.value.url }}"
+                             alt="{{ homeSettings.web_homePage_banner_image_1.value.alt }}"
+                             class="absolute content-[url('/images/banner1.png')] left-[-25px] md:left-[-40px] lg:left-[-35px] lg:top-[-15px] w-[160px] h-[160px] sm:w-[190px] sm:h-[190px] md:w-[200px] md:h-[200px] lg:w-[280px] lg:h-[280px] sm:top-[-10px]">
+                        <div class="w-[70%] text-start py-[15px] lg:py-[50px] pr-[15px] md:pr-[30px] lg:pr-[45px] lg:pl-[20px] ">
+                            <p class="md:text-[32px] text-[25px] lg:mb-[10px]">
+                                {{ homeSettings.web_homePage_banner_title_1.value_web }}
+                            </p>
+                            <p class="text-[16px] text-white">
+                                {{ homeSettings.web_homePage_banner_description_1.value_web }}
+                            </p>
+                            <div class="flex justify-center items-center mt-[17px] lg:mt-[35px] lg:justify-start">
+                                <span class="bg-white text-black rounded-[30px] text-[12px] py-[5px] pr-[8px] pl-[33px] mr-[0px]">خـــریـــد</span>
+                                <span class="bg-black w-fit rounded-full px-[6px] py-[2px] mr-[-25px]">
+                                    <svg class="!inline" width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.6866 12.5242L4.56598 8.04368H16V5.95631H4.56598L9.6866 1.47577L8 0L0 7L8 14L9.6866 12.5242Z"
+                                                  fill="white"/>
+                                        </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+            {% if homeSettings.web_homePage_banner_title_2.value_web %}
+                <a href="{{ homeSettings.web_homePage_banner_link_2.value_web }}" class="md:w-full">
+                    <div class="bg-blue-c100 hover:bg-blue-c101 transition-all relative  md:rounded-bl-0 rounded-tr-[30px] rounded-bl-[30px] text-center my-[15px]">
+                        <img src="{{ homeSettings.web_homePage_banner_image_2.value.url }}"
+                             alt="{{ homeSettings.web_homePage_banner_image_2.value.alt }}"
+                             class="absolute content-[url('/images/banner2.png')] left-[-25px] md:left-[-40px] lg:left-[-35px] lg:top-[-15px]w-[160px] h-[160px] sm:w-[190px] sm:h-[190px] md:w-[200px] md:h-[200px] lg:w-[280px] lg:h-[280px] sm:top-[-10px]">
+                        <div class="w-[70%] text-start py-[15px] lg:py-[50px] pr-[15px] md:pr-[30px] lg:pr-[45px] lg:pl-[20px] ">
+                            <p class="md:text-[32px] text-[25px] lg:mb-[10px]">
+                                {{ homeSettings.web_homePage_banner_title_2.value_web }}
+                            </p>
+                            <p class="text-[16px] text-white">
+                                {{ homeSettings.web_homePage_banner_description_2.value_web }}
+                            </p>
+                            <div class="flex justify-center items-center mt-[17px] lg:mt-[35px] lg:justify-start">
+                                <span class="bg-white text-black rounded-[30px] text-[12px] py-[5px] pr-[8px] pl-[33px] mr-[0px]">خـــریـــد</span>
+                                <span class="bg-black w-fit rounded-full px-[6px] py-[2px] mr-[-25px]">
+                                    <svg class="!inline" width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.6866 12.5242L4.56598 8.04368H16V5.95631H4.56598L9.6866 1.47577L8 0L0 7L8 14L9.6866 12.5242Z"
+                                                  fill="white"/>
+                                        </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+        </div>
+        <!-- end benners -->
+
+        {% if newestProducts.length %}
+            <!-- start newest products -->
+            <div class="pt-[50px]">
+                {% letRoute products_route = {routeName: "products"} %}
+                {% render '/components/commons/products/productsSlider', key="newest", products=newestProducts, title="جدید ترین ها", link=products_route %}
+            </div>
+            <!-- end newest products -->
+        {% endif %}
+
+        {% render '/components/main/home/categoriesBanner' %}
+
+        {% if bestProducts.length %}
+            <!-- start Bestselling products -->
+            <div class="pt-[85px]">
+                {% letRoute products_route = {routeName: "products"} %}
+                {% render '/components/commons/products/productsSlider', key="best", products=bestProducts, title="پرفروش ترین ها", link=products_route %}
+            </div>
+            <!-- end Bestselling products -->
+        {% endif %}
+
+        <div class="text-center mt-[55px] mx-[20px]">
+            {% if homeSettings.web_homePage_second_banner_link.value_web %}
+                <a href="{{ homeSettings.web_homePage_second_banner_link.value_web }}">
+                    <img src="{{ homeSettings.web_homePage_second_banner_image.value.url | abs_url }}"
+                         alt="{{ homeSettings.web_homePage_second_banner_image.value.alt }}" style="width: 100%;">
+                </a>
+            {% endif %}
+        </div>
+
+        {% letRoute blogs_route = {routeName: "blogs"} %}
+        {% render '/components/commons/blogs/slider', blogs=homeBlogs, title="آخرین مقالات", link=blogs_route %}
+
+        {% render '/components/main/home/brands' %}
+
+    </div>
+    <!-- end home content with gray background -->
+
+</div>
+<!-- end home main content -->

@@ -1,0 +1,34 @@
+@import "styles/variables";
+
+.bgRed {
+  background-color: $danger-light !important;
+
+  td:last-child {
+
+    background-color: $danger-light !important;
+  }
+}
+
+
+.wrapper {
+  overflow-x: auto;
+  margin: 10px;
+  //border: 1px solid #444444;
+  padding: 5px;
+  text-align: right;
+  direction: rtl;
+
+  > .header {
+    display: flex;
+    justify-content: space-between;
+
+    strong {
+      font-weight: 550;
+    }
+
+    > div {
+      text-align: right;
+    }
+  }
+
+}

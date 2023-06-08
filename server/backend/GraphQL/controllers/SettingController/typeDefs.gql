@@ -1,0 +1,64 @@
+module.exports = `
+
+    type Query {
+        getSettingByKey(key:String!): Setting
+        getSetting(id:ID!): Setting
+        getSettings(page:Int, limit:Int, filter:SettingFilter,sort:[Sort]): SettingPaginate
+        getAllSettings(filter:SettingFilter,sort:[Sort]): [Setting]
+        getAllSettingGroups: [String]
+    }
+
+    type Mutation {
+        createSetting(input:SettingInput): Setting
+        updateSetting(id:ID!, input:SettingInput): Setting
+        updateSettingByKey(key:String, input:SettingInput): Setting
+        deleteSetting(id:ID!): Response
+    }
+
+    type Setting {
+        id: ID
+        name: JSON # multi language
+        name_panel: String @multilang(field:"name",type:"panel")
+        name_web: String @multilang(field:"name")
+        key: String
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+        format: Int
+        is_main: Boolean
+        value: JSON
+        user_id: String
+        createdAt: String
+        updatedAt: String
+
+        parsed_value: JSON
+        extra_data: JSON
+
+        user: User
+    }
+
+    type SettingPaginate {
+        paginate: Paginate
+        data: [Setting]
+    }
+
+    input SettingInput {
+        name: JSON # multi language
+        key: String
+        description: JSON # multi language
+        format: Int
+        value: JSON
+    }
+
+    input SettingFilter {
+        name: [filterMultiLang]
+        key: [filterString]
+        description: [filterMultiLang]
+        format: [filterInt]
+        group: [filterString]
+        # value: [filterJSON]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

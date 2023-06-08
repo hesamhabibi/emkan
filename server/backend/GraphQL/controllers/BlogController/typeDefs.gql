@@ -1,0 +1,97 @@
+module.exports = `
+
+    type Query {
+        getBlog(id:ID!): Blog
+        getBlogs(page:Int, limit:Int, filter:BlogFilter, sort:[Sort]): BlogPaginate
+        getAllBlogs(filter:BlogFilter, sort:[Sort]): [Blog]
+    }
+
+    type Mutation {
+        createBlog(input:BlogInput): Blog
+        updateBlog(id:ID!, input:BlogInput): Blog
+        deleteBlog(id:ID!): Response
+    }
+
+    type Blog {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        summary: JSON # multi language
+        summary_panel: String @multilang(field:"summary",type:"panel")
+        summary_web: String @multilang(field:"summary")
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+        status: Int
+        publishAt: String
+        has_rating: Boolean
+        has_comment: Boolean
+        is_special: Boolean
+        type: Int
+        category_id: ID
+        media: MediaStructure
+        media_gallery: [MediaGalleryStructure]
+        document: MediaStructure
+        seo_id: ID
+        tag_ids: [ID]
+        tag_group_id: ID
+        user_id: ID
+        visit_count: Int
+        rate_average: Float
+        user_rate: Float
+        createdAt: String
+        updatedAt: String
+
+        category: Category
+        seo: SEO
+        tags: [Tag]
+        tag_group: Tag
+        user: User
+        comments: [Comment]
+    }
+
+    type BlogPaginate {
+        paginate: Paginate
+        data: [Blog]
+    }
+
+    input BlogInput {
+        title: JSON # multi language
+        summary: JSON # multi language
+        description: JSON # multi language
+        status: Int
+        publishAt: String
+        has_rating: Boolean
+        has_comment: Boolean
+        is_special: Boolean
+        type: Int
+        category_id:ID
+        media: MediaStructureInput
+        media_gallery: [MediaGalleryStructureInput]
+        document: MediaStructureInput
+        seo: SEOInput
+        tag_ids: [ID]
+        tag_group_id: ID
+    }
+
+    input BlogFilter {
+        title: [filterMultiLang]
+        summary: [filterMultiLang]
+        description: [filterMultiLang]
+        status: [filterInt]
+        publishAt: [filterDate]
+        type: [filterInt]
+        category_id: [filterID]
+        # media: [filterID]
+        # media_gallery: [filterArray]
+        # document: [filterID]
+        seo_id: [filterID]
+        tag_ids: [filterArray]
+        tag_group_id: [filterID]
+        user_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

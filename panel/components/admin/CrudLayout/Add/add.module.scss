@@ -1,0 +1,24 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.add {
+  z-index: 1;
+  width: 100%;
+  position: fixed !important;
+  margin: auto !important;
+  //right: 20px;
+  //left: 20px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 1rem;
+  top: auto !important;
+  height: auto !important;
+  @include generate-color(background, $white);
+  //left: 10px;
+  //right: 10px;
+  button {
+    width: 100% !important;
+  }
+}

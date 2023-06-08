@@ -1,0 +1,62 @@
+module.exports = `
+
+    type Query {
+        getReport(id:ID!): Report
+        getReports(page:Int, limit:Int, filter:ReportFilter,sort:[Sort]): ReportPaginate
+    }
+
+    type Mutation {
+        createReport(input:ReportInput): Report
+        setStatusReport(id:ID!, status:Int!): Report
+        deleteReport(id:ID!): Response
+    }
+
+    type Report {
+        id: ID
+        action: String
+        action_type: Int
+        parameters: JSON
+        error: JSON
+        response: JSON
+        status_code: Int
+        status: Int
+        user_id: ID
+        department: Int
+        device_info: JSON
+        createdAt: String
+        updatedAt: String
+
+        user: User
+    }
+
+    type ReportPaginate {
+        paginate: Paginate
+        data: [Report]
+    }
+
+    input ReportInput {
+        action: String
+        action_type: Int
+        parameters: JSON
+        error: JSON
+        response: JSON
+        status_code: Int
+        status: Int
+        device_info: JSON
+    }
+
+    input ReportFilter {
+        action: [filterString]
+        action_type: [filterInt]
+        # parameters: [filterJSON]
+        # error: [filterJSON]
+        # response: [filterJSON]
+        status_code: [filterInt]
+        status: [filterInt]
+        user_id: [filterID]
+        department: [filterInt]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

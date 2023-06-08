@@ -1,0 +1,93 @@
+module.exports = `
+
+    type Query {
+        getAddress(id:ID!): Address
+        getAddresses(page:Int, limit:Int, filter:AddressFilter,sort:[Sort]): AddressPaginate
+        getAllAddresses(filter:AddressFilter,sort:[Sort]): [Address]
+    }
+
+    type Mutation {
+        createUserAddress(input:UserAddressInput): Address
+        updateAddress(id:ID!, input:AddressInput): Address
+        deleteAddress(id:ID!): Response
+    }
+
+    type Address {
+        id: ID
+        title: String
+        postal_code: String
+        city_id: Int
+        state_id: Int
+        address: String
+        location: JSON
+        is_default: Boolean
+        model_name: String
+        model_id: ID
+        createdAt: String
+        updatedAt: String
+
+        city: City
+        state: State
+    }
+
+    type City {
+        id: ID
+        name: JSON # multi language
+        name_panel: String @multilang(field:"name",type:"panel",default:"fa")
+        name_web: String @multilang(field:"name",default:"fa")
+        slug: String
+        state_id: ID
+
+        state: State
+    }
+
+    type State {
+        id: ID
+        name: JSON # multi language
+        name_panel: String @multilang(field:"name",type:"panel",default:"fa")
+        name_web: String @multilang(field:"name",default:"fa")
+        slug: String
+    }
+
+    type AddressPaginate {
+        paginate: Paginate
+        data: [Address]
+    }
+
+    input UserAddressInput {
+        title: String
+        postal_code: String
+        city_id: Int
+        state_id: Int
+        address: String
+        location: JSON
+        is_default: Boolean
+        user_id: ID
+    }
+
+    input AddressInput {
+        title: String
+        postal_code: String
+        city_id: Int
+        state_id: Int
+        address: String
+        location: JSON
+        is_default: Boolean
+    }
+
+
+    input AddressFilter {
+        title: [filterString]
+        postal_code: [filterString]
+        city_id: [filterInt]
+        state_id: [filterInt]
+        address: [filterString]
+        # location: [filterJSON]
+        is_default: [filterBoolean]
+        model_name: [filterString]
+        model_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

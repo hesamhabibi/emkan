@@ -1,0 +1,30 @@
+@import "styles/variables";
+
+
+
+.formGroup {
+  direction: ltr;
+  position: relative;
+  border-radius: 0.25rem;
+  border: 1px solid darken($gray-light, 70);
+  padding-left: 45px;
+
+
+  > .colorControl {
+    border: none;
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 100%;
+  }
+
+  > .formControl {
+    width: 100%;
+    background-color: transparent;
+    //height: 38px;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    outline: none;
+    transition: 0.2s;
+  }
+}

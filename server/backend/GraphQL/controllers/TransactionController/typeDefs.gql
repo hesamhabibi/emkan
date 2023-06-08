@@ -1,0 +1,71 @@
+module.exports = `
+
+    type Query {
+        getTransaction(id:ID): Transaction
+        getTransactions(page:Int, limit:Int, filter:TransactionFilter,sort:[Sort]): TransactionPaginate
+        getAllTransactions(filter:TransactionFilter,sort:[Sort]): [Transaction]
+    }
+
+    type Mutation {
+        setStatusTransaction(id:ID, input:setStatusTransactionInput): Transaction
+    }
+
+    type Transaction {
+        id: ID
+        sand_box: Boolean
+        status: Int
+        request_response: JSON
+        request_parsed_response: TransactionParsedResponse
+        callback_response: JSON
+        callback_parsed_response: TransactionParsedResponse
+        verify_response: JSON
+        verify_parsed_response: TransactionParsedResponse
+        gateway: Int
+        amount: Int
+        description: String
+        unique_number: Int
+        paidAt: String
+        verifiedAt: String
+        payment_url: String
+        tracking_code: String
+        credit_card: String
+        order_id: ID
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        order: Order
+        user: User
+    }
+
+    type TransactionParsedResponse {
+        code: Int
+        message: String
+    }
+
+    type TransactionPaginate {
+        paginate: Paginate
+        data: [Transaction]
+    }
+
+    input setStatusTransactionInput {
+        status: Int
+    }
+
+    input TransactionFilter {
+        sand_box: [filterBoolean]
+        status: [filterInt]
+        gateway: [filterInt]
+        amount: [filterInt]
+        description: [filterString]
+        unique_number: [filterInt]
+        paidAt: [filterDate]
+        verifiedAt: [filterDate]
+        payment_url: [filterDate]
+        user_id: [filterID]
+        order_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

@@ -1,0 +1,59 @@
+module.exports = `
+
+    type Query {
+        getAccessControlList(id:ID!): AccessControlList
+        getAccessControlLists(page:Int,limit:Int,filter:AccessControlListFilter): AccessControlListPaginate
+    }
+
+    type Mutation {
+        createAccessControlList(input:AccessControlListInput): AccessControlList
+        updateAccessControlList(id:ID!,input:AccessControlListInput): AccessControlList
+        deleteAccessControlList(id:ID!): Response
+        bulkCreateAccessControlList(access_id:ID!,accessComponents:[AccessControlListBulkInput]): Response
+    }
+
+    type AccessControlList {
+        id: ID
+        access_id: ID
+        # access_type: Int
+        access_component_id: ID
+        access_component_type: Int
+        access_component_key: String
+        access_component_action_type: Int
+        access_component_action: String
+        # createdAt: String
+        # updatedAt: String
+        
+        access: Access
+        accessComponent: AccessComponent
+        users: [User]
+    }
+
+    type AccessControlListPaginate {
+        paginate: Paginate
+        data: [AccessControlList]
+    }
+
+    input AccessControlListBulkInput {
+        id: ID
+        has_access: Boolean
+    }
+
+    input AccessControlListInput {
+        access_id: ID
+        access_component_id:  ID
+    }
+
+    input AccessControlListFilter {
+        access_id: [filterID]
+        # access_type: [filterInt]
+        access_component_id: [filterID]
+        access_component_type: [filterInt]
+        access_component_key: [filterString]
+        access_component_action_type: [filterInt]
+        access_component_action: [filterString]
+        # createdAt: filterDate
+        # updatedAt: filterDate
+    }
+
+`

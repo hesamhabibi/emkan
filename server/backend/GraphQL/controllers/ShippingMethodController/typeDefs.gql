@@ -1,0 +1,92 @@
+module.exports = `
+
+    type Query {
+        getShippingMethod(id:ID): ShippingMethod
+        getShippingMethods(page:Int, limit:Int, filter:ShippingMethodFilter,sort:[Sort]): ShippingMethodPaginate
+        getAllShippingMethods(filter:ShippingMethodFilter,sort:[Sort]): [ShippingMethod]
+    }
+
+    type Mutation {
+        createShippingMethod(input:ShippingMethodInput): ShippingMethod
+        updateShippingMethod(id:ID, input:ShippingMethodInput): ShippingMethod
+        deleteShippingMethod(id:ID): Response
+    }
+
+    type ShippingMethod {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+        admin_description: String
+        is_main: Boolean
+        is_default: Boolean
+        status: Int
+        weight_sensitivity: Boolean
+        conditions: [ShippingMethodCondition]
+        attributes: [ShippingMethodAttribute]
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        user: User
+    }
+
+    type ShippingMethodCondition {
+        type: Int
+        operator: Int
+        value: JSON
+    }
+
+    type ShippingMethodAttribute {
+        id: ID
+        operator: Int
+        from_weight: Int
+        to_weight: Int
+    }
+
+
+    type ShippingMethodPaginate {
+        paginate: Paginate
+        data: [ShippingMethod]
+    }
+
+    input ShippingMethodInput {
+        title: JSON # multi language
+        description: JSON # multi language
+        admin_description: String
+        is_default: Boolean
+        status: Int
+        weight_sensitivity: Boolean
+        conditions: [ShippingMethodConditionInput]
+        attributes: [ShippingMethodAttributeInput]
+    }
+
+    input ShippingMethodConditionInput {
+        type: Int
+        operator: Int
+        value: JSON
+    }
+
+    input ShippingMethodAttributeInput {
+        operator: Int
+        from_weight: Int
+        to_weight: Int
+    }
+
+    input ShippingMethodFilter {
+        title: [filterMultiLang]
+        description: [filterMultiLang]
+        admin_description: [filterMultiLang]
+        status: [filterInt]
+        weight_sensitivity: [filterInt]
+        conditions: [filterArray]
+        attributes: [filterArray]
+        user_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

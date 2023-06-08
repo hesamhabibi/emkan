@@ -1,0 +1,41 @@
+module.exports = `
+    
+    type Query {
+        getUserPopups: [CRM]
+        getUserInternalMessages(filter: CRMFilter, page: Int, limit: Int, sort: CRMSort): CRMData
+    }
+
+    type Mutation {
+        seenPopup(popup_id: ID): Response
+        seenInternalMessage(internal_message_id: ID): Response
+    }
+
+    type CRMData {
+        paginate: Paginate
+        data: [CRM]
+    }
+    
+    type CRM {
+        id: ID
+        title: String
+        message: String
+        seen: Int
+        createdAt: String
+        updatedAt: String
+    }
+
+    input CRMFilter {
+        seen: Int
+    }
+
+    enum CRMSortFields {
+        seen
+        createdAt
+        updatedAt
+    }
+
+    input CRMSort {
+        field: CRMSortFields
+        operator: sortEnum 
+    }
+`;

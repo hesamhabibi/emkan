@@ -1,0 +1,47 @@
+{%getSettingByKeys contactUsSettings={
+fields: ["value","value_web"],
+keys:[
+"web_contactUsPage_page_title",
+"web_contactUsPage_page_note",
+"web_contactUsPage_from_title",
+"web_contactUsPage_from_map_iframe",
+"web_contactUsPage_cards_title_1",
+"web_contactUsPage_cards_value_1",
+"web_contactUsPage_cards_image_1",
+"web_contactUsPage_cards_title_2",
+"web_contactUsPage_cards_value_2",
+"web_contactUsPage_cards_image_2",
+"web_contactUsPage_cards_title_3",
+"web_contactUsPage_cards_value_3",
+"web_contactUsPage_cards_image_3",
+"web_contactUsPage_cards_title_4",
+"web_contactUsPage_cards_value_4",
+"web_contactUsPage_cards_image_4",
+
+"web_contactUsPage_rows_title_1",
+"web_contactUsPage_rows_value_1",
+"web_contactUsPage_rows_note_1",
+"web_contactUsPage_rows_title_2",
+"web_contactUsPage_rows_value_2",
+"web_contactUsPage_rows_note_2",
+"web_contactUsPage_rows_title_3",
+"web_contactUsPage_rows_value_3",
+"web_contactUsPage_rows_note_3",
+"web_contactUsPage_rows_image",
+
+]
+}-%}
+{%global contactUsSettings=contactUsSettings%}
+
+{% layout "/components/layout/layout",
+title: 'contact_us'%}
+
+{%block stylesheets%}
+{%endblock%}
+
+{%block main%}
+    {%render '/components/main/contactUs'%}
+{%endblock%}
+
+{%block scripts%}
+{%endblock%}

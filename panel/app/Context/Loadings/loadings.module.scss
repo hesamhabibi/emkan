@@ -1,0 +1,118 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+@keyframes loadData {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.dataLoading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  z-index: 1000;
+  @include generate-color(background, #f0f1f2);
+  opacity: 0.5;
+
+  div {
+    padding: 2rem;
+    position: relative;
+
+    img {
+      position: absolute;
+      text-align: center;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1003;
+    }
+  }
+}
+
+// Simple ----------------------------
+
+@keyframes ellipsis {
+  0% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(0.6);
+  }
+}
+
+@keyframes ellipsis2 {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.4);
+  }
+}
+
+.simple {
+  text-align: center;
+  i {
+    padding: 2px;
+    font-size: xx-small;
+  }
+  i:first-child {
+    animation: ellipsis 700ms infinite;
+  }
+  i:nth-child(2) {
+    animation: ellipsis2 700ms infinite;
+  }
+  i:last-child {
+    animation: ellipsis3 700ms infinite;
+  }
+}
+
+// Fade out -------------------------------------------------------------
+@keyframes fade1 {
+  40% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade2 {
+  60% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade3 {
+  80% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  text-align: center;
+  i {
+    padding: 2px;
+    font-size: xx-small;
+  }
+  i:first-child {
+    animation: fade1 700ms infinite;
+  }
+  i:nth-child(2) {
+    animation: fade2 700ms infinite;
+  }
+  i:last-child {
+    animation: fade3 700ms infinite;
+  }
+}

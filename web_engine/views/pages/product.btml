@@ -1,0 +1,83 @@
+{%let fields=[
+'only_description',
+'show_price',
+'id',
+'title_web',
+'summary_web',
+'description_web',
+'main_features_web',
+'createdAt',
+'has_rating',
+'average_rate',
+'user_rate',
+'has_variant',
+{details:["product_code","length","width","height"]},
+{category:["id","title_web",{seo:"url"}]},
+{media:["alt","url"]},
+{media_gallery:["alt","url"]},
+{variant:["name_web",{labels:["key","title_web","values"]}]},
+{mix_variant:["keys","has_media_gallery",{media_gallery:["alt","url"]},{details:["product_code","length","width","height"]},{price:["has_offer","price","main_price","discount_percent"]}]},
+{attribute_groups:{attributes:{attribute:["title_web","type"],attribute_value:["value","value_web"]}}},
+{related_products:["title_web","is_special","average_rate",{seo:"url"},{media:["alt","url"]},{mix_variant:["title_web","keys",{price:["has_offer","discount_percent","price","main_price"]}]}]},
+'has_comment',
+{comments:['title','text','createdAt',{user:[{media:['alt','url']},'name','last_name']},{reply_to:"title"}]},
+{seo:SingleSEOFields},
+{brand: ["title_web",{media:["alt","url"]}]}
+]%}
+{%mergeObject fields=[fields,SingleOGFields]%}
+
+{%getProductBySlug product={fields:fields,slug:params.slug}%}
+{%page404 product|not%}
+{%global product=product%}
+
+{%getSettingByKeys productSettings={
+fields: ["value","value_web"],
+keys:[
+
+"web_homePage_shop_feature_1",
+"web_homePage_shop_feature_1_description",
+"web_homePage_shop_feature_1_icon",
+"web_homePage_shop_feature_2",
+"web_homePage_shop_feature_2_description",
+"web_homePage_shop_feature_2_icon",
+"web_homePage_shop_feature_3",
+"web_homePage_shop_feature_3_description",
+"web_homePage_shop_feature_3_icon",
+"web_homePage_shop_feature_4",
+"web_homePage_shop_feature_4_description",
+"web_homePage_shop_feature_4_icon",
+
+"web_productPage_comments_title",
+"web_productPage_comments_text",
+"web_productPage_comments_rules_link",
+]
+}-%}
+{%global productSettings=productSettings%}
+    
+{%getUserComments userComments={
+fields:{data:["title","text","createdAt",{user:['name','last_name',{media:['alt','url']}]},{reply_to:"title"}]},
+filter:{confirmed:false,model_id:product.id},
+sort:{field:'createdAt',operator:'desc'},
+}%}
+{%global userComments=userComments.data%}
+
+{% layout "/components/layout/layout",
+og: product
+seo: product.seo
+%}
+
+{%block stylesheets%}
+{%endblock%}
+
+{%block main%}
+
+<div>{%render '/components/main/product'%}</div>
+
+{%endblock%}
+
+{%block scripts%}
+<script src="/assets/js/input-plus-minus.js"></script>
+<script src="/assets/js/cart.js"></script>
+<script src="/assets/js/rate.js"></script>
+<script src="/assets/js/comments.js"></script>
+{%endblock%}

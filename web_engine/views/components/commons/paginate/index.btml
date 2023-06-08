@@ -1,0 +1,79 @@
+{%comment%}
+inputs:
+> page: current page
+> pages: total pages
+{%endcomment%}
+
+{%if pages > 1%}
+    {%if page | not%}{%let page = 1%}{%endif%}
+    {%let page= page | at_most: pages%}
+    {%let page= page | at_least:1%}
+    {%let min_width=2%}
+    {%let max_width=2%}
+    {%let min_range = page|minus:min_width | at_least: 1 %}
+    {%let max_range = page|plus:max_width | at_most: pages %}
+
+    {%let has_previous = true%}
+    {%if page == min_range%}{%let has_previous = false%}{%endif%}
+    {%let has_next = true%}
+    {%if page == max_range%}{%let has_next = false%}{%endif%}
+
+    <!-- start pagination section -->
+    <nav aria-label="Page navigation example">
+        <ul class="inline-flex gap-1">
+            {%if has_previous%}
+                <li>
+                    <a href="javascript:addToQuery('page','{{page|minus:1}}',true)"
+                    class="py-[5px] px-[8px] ml-0 text-blue-c200 bg-white rounded-[5px] border border-blue-c200 hover:bg-gray-100 hover:text-gray-700 ">
+                        <span class="sr-only">Previous</span>
+                        <!-- Heroicon name: solid/chevron-right -->
+                        <svg class="h-6 w-5 !inline" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </li>
+            {%endif%}
+
+            {%for i in (min_range..max_range)%}
+
+                {%if i == page%}
+                    <li>
+                        <a aria-current="page"
+                            class="rounded-[5px] py-[5px] px-[11px] text-white bg-blue-c200 hover:bg-blue-100 hover:text-blue-c200 ">
+                            {{i}}
+                        </a>
+                    </li>
+                {%else%}
+                    <li>
+                        <a href="javascript:addToQuery('page','{{i}}',true)"
+                            class="rounded-[5px] py-[5px] px-[11px] leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            {{i}}
+                        </a>
+                    </li>
+                {%endif%}
+
+            {%endfor%}
+            
+            {%if has_next%}
+                <li>
+                    <a href="javascript:addToQuery('page','{{page|plus:1}}',true)"
+                    class="py-[5px] px-[8px] ml-0 text-blue-c200 bg-white rounded-[5px] border border-blue-c200 hover:bg-gray-100 hover:text-gray-700 ">
+                        <span class="sr-only">Next</span>
+                        <!-- Heroicon name: solid/chevron-left -->
+                        <svg class="h-6 w-5 !inline" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </li>
+            {%endif%}
+        </ul>
+    </nav>
+    <!-- end pagination section -->
+
+{%endif%}

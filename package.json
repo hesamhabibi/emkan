@@ -1,0 +1,12 @@
+{
+  "name": "iportal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --kill-others \"cd panel && npm run dev\" \"cd server && npm run dev\""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.2.1"
+  }
+}

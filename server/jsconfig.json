@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "paths": {
+      "@common*": [
+        "../common*"
+      ],
+      "@models*": [
+        "../common/models*"
+      ],
+      "@helpers*": [
+        "../common/helpers*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

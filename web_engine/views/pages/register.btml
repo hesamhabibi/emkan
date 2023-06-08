@@ -1,0 +1,26 @@
+
+{%getSettingByKeys registerSettings={
+fields: ["value","value_web"],
+keys:[
+"web_logo_image",
+"web_loginPage_rules_text",
+]
+}-%}
+{%global registerSettings=registerSettings%}
+
+{% layout "/components/layout/layout",
+title: 'register',
+hideHeader: true,
+hideFooter: true,
+%}
+
+{%block stylesheets%}
+{%endblock%}
+
+{%block main%}
+    {%render '/components/main/register'%}
+{%endblock%}
+
+{%block scripts%}
+    <script src="/assets/js/register.js"></script>
+{%endblock%}

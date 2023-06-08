@@ -1,0 +1,193 @@
+@import 'styles/variables';
+@import 'styles/components/mixin/mixin';
+
+#categories {
+  #treeList {
+    > .categoryGroup {
+      > .categoryItem {
+        &::after, &::before {
+          display: none;
+        }
+      }
+    }
+
+    .categoryGroup {
+      list-style-type: none;
+
+      &.sortableGhost {
+        opacity: 0.4;
+      }
+
+      &.sortableFallback {
+        opacity: 0.5 !important;
+        @include transform(scale(0.9));
+
+        .categoryItem {
+          .categoryItemBox {
+            @include generate-color(background, $blue, lighten, 30%);
+          }
+
+          &::after, &::before {
+            border-color: lighten($blue, 30%);
+            @include generate-color(background, $blue, lighten, 30%);
+          }
+        }
+
+        .categoryList {
+          &::before {
+            border-color: lighten($blue, 30%)
+          }
+        }
+      }
+
+      .categoryItem {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          border-top: 1px dotted $blue-dark;
+          width: 0.5rem;
+          right: -0.5rem;
+          top: 50%;
+          z-index: -1;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 13px;
+          height: 13px;
+          right: -0.5rem;
+          top: 50%;
+          z-index: -1;
+          border: 3px solid lighten($blue, 37%);
+          @include transform(translate(50%, -50%));
+          @include rounded(100%);
+          @include generate-color(background, $black, lighten, 50%);
+        }
+
+        .categoryItemBox {
+          padding: 0.7rem 1rem;
+          margin-bottom: 0.7rem;
+          overflow: auto;
+          @include box-shadow($box-shadow-1);
+          @include rounded(0.5rem);
+          @include generate-color(background, $white);
+          @include transition(0.2s);
+          @include flex-position(y, center);
+
+          > i {
+            cursor: move
+          }
+
+          > .checkBox {
+            width: 25px;
+            min-width: 25px;
+            height: 25px;
+            border: 1px solid lighten($black, 80%);
+            margin-left: 1rem;
+            cursor: pointer;
+            @include transition(0.2s);
+            @include rounded(0.3rem);
+
+            &.checked {
+              border: 1px solid $green-light;
+              @include flex-position(xy, center);
+              @include generate-color(background, $green-light);
+
+              &::after {
+                content: '\f00c';
+                font-family: $font-awesome-regular;
+                @include generate-color(color, $white)
+              }
+            }
+
+            &.notAll {
+              @include flex-position(xy, center);
+              @include generate-color(background, $white);
+
+              &::after {
+                content: '\f86c';
+                font-family: $font-awesome-solid;
+                font-size: 0.8rem;
+                @include generate-color(color, $green-light)
+              }
+            }
+          }
+
+          > .title {
+            margin-right: 1rem;
+            max-width: 200px;
+            min-width: 130px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @include transition(0.2s);
+            @include hover {
+              max-width: 600px;
+            }
+          }
+
+          > .actions {
+            margin-right: auto;
+            @include flex-position(y, center);
+
+            > .active {
+              padding: 0.2rem 1rem;
+              margin-left: 2.5rem;
+              @include rounded(1rem);
+              @include generate-color(background, $green-light);
+              @include generate-color(color, $white);
+            }
+
+            > .disable {
+              padding: 0.3rem 1rem;
+              margin-left: 2rem;
+              @include rounded(1rem);
+              @include generate-color(background, $warning)
+            }
+
+            > button {
+              position: relative;
+              top: 0;
+              cursor: pointer;
+              padding: 0.5rem;
+              //font-size: 1.2rem;
+              @include transition(0.2s);
+              @include hover {
+                top: -2px;
+                @include generate-color(color, $blue)
+              }
+
+              &:not(:last-child) {
+                margin-left: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      .categoryList {
+        position: relative;
+        padding-right: 2rem;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 47px;
+          top: -1rem;
+          bottom: 30px;
+          right: 1.5rem;
+          border-right: 1px dotted $blue-dark;
+          border-bottom: 1px dotted $blue-dark;
+          z-index: -1;
+        }
+      }
+
+      .mobile::before {
+        bottom: 32px;
+      }
+    }
+  }
+}

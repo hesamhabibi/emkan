@@ -1,0 +1,71 @@
+module.exports = `
+
+    type Query {
+        getBlogs(filter: BlogFilter ,page: Int, limit: Int, sort: BlogSort): BlogData
+        getBlog(blog_id: ID): Blog
+        getBlogBySlug(slug: String, type:Int): Blog
+    }
+
+    type BlogData {
+        data: [Blog]
+        paginate: Paginate
+    }
+
+    type Blog {
+        id: ID
+        title: JSON
+        title_web: String @multilang(field: "title")
+        summary: JSON # multi language
+        summary_web: String @multilang(field:"summary")
+        description: JSON
+        description_web: String @multilang(field:"description")
+        
+        tag_ids: [ID]
+        category_id: ID
+        user_id: ID
+        seo_id: ID
+        tag_group_id: ID
+
+        media: MediaStructure
+        media_gallery: [MediaGalleryStructure]
+        document: MediaStructure
+
+        seo: SEO
+        user: Author
+        category: Category
+        tags: [Tag]
+        comments: [Comment]
+        related_blogs: [Blog]
+        has_rating: Boolean
+        has_comment: Boolean
+        is_special: Boolean
+        average_rate: Float
+        user_rate: Float
+        view_count: Int
+
+        createdAt: String
+        updatedAt: String
+    }
+
+    input BlogFilter{
+        search_text: String
+        category_ids: [ID]
+        tag_ids: [ID]
+        type: Int
+        is_special: Boolean
+    }
+
+    enum BlogSortFields {
+        createdAt
+        updatedAt
+    }
+
+    input BlogSort {
+        field: BlogSortFields
+        operator: sortEnum
+    }
+
+`
+
+
+    

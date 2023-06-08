@@ -1,0 +1,79 @@
+module.exports = `
+
+    type Query {
+        getDeputation(id:ID!): Deputation
+        getDeputations(page:Int, limit:Int, filter:DeputationFilter,sort:[Sort]): DeputationPaginate
+        getAllDeputations(filter:DeputationFilter,sort:[Sort]): [Deputation]
+    }
+
+    type Mutation {
+        createDeputation(input:DeputationInput): Deputation
+        updateDeputation(id:ID!, input:DeputationInput): Deputation
+        deleteDeputation(id:ID!): Response
+    }
+
+    type Deputation {
+        id: ID
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+        state_id:ID
+        city_id:ID
+        address: JSON # multi language
+        address_panel: String @multilang(field:"address",type:"panel")
+        address_web: String @multilang(field:"address")
+        postal_code: String
+        location: JSON
+        label: JSON # multi language
+        label_panel: String @multilang(field:"label",type:"panel")
+        label_web: String @multilang(field:"label")
+        cellphone: String
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        state: State
+        city: City
+        media: MediaStructure
+        media_gallery: [MediaGalleryStructure]
+        user: User
+    }
+
+    type DeputationPaginate {
+        paginate: Paginate
+        data: [Deputation]
+    }
+
+    input DeputationInput {
+        title: JSON # multi language
+        description: JSON # multi language
+        state_id:ID
+        city_id:ID
+        address: JSON # multi language
+        postal_code: String
+        location: JSON
+        media_gallery: [MediaGalleryStructureInput]
+        label: JSON # multi language
+        cellphone: String
+    }
+
+    input DeputationFilter {
+        title: [filterMultiLang]
+        description: [filterMultiLang]
+        state_id: [filterID]
+        city_id: [filterID]
+        address: [filterMultiLang]
+        postal_code: [filterString]
+        # location: [filterJSON]
+        media_gallery:[filterArray]
+        label: [filterMultiLang]
+        cellphone: [filterString]
+        user_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

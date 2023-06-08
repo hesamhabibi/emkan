@@ -1,0 +1,41 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.formGroup {
+  display: inline-block;
+  justify-content: center;
+
+  > label {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+
+  .checkBox {
+    min-width: 25px;
+    height: 25px;
+    border: 1px solid lighten($black, 80%);
+    cursor: pointer;
+    @include flex-position(xy, center);
+    display: inline-flex;
+
+    @include transition(0.2s);
+    @include rounded(0.3rem);
+
+    &::after {
+      content: "";
+      font-family: "Font Awesome 6 Regular";
+      color: #ffffff;
+    }
+
+    &.checked {
+      border: 1px solid $green-light;
+      @include generate-color(background, $green-light);
+
+      &::after {
+        content: '\f00c';
+        font-family: $font-awesome-regular;
+        @include generate-color(color, $white)
+      }
+    }
+  }
+}

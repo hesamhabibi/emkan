@@ -1,0 +1,14 @@
+module.exports = `
+    type Price {
+        id: ID
+        price: Int
+        offer_price: Int
+        main_price: Int
+        has_offer: Boolean
+        offer_startAt: String
+        offer_expireAt: String
+        discount_percent: Float
+        createdAt: String
+        updatedAt: String
+    }
+`;

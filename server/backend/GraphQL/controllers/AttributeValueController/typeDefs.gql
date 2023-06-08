@@ -1,0 +1,35 @@
+module.exports = `
+
+    type Query {
+        getAttributeValue(id:ID!): AttributeValue
+        getAllAttributeValues(filter:AttributeValueFilter,sort:[Sort]): [AttributeValue]
+    }
+
+    type AttributeValue {
+        id: ID
+        attribute_id: ID
+        product_id: ID
+        value: JSON
+        value_panel: String @multilang(field:"value",type:"panel")
+        value_web: String @multilang(field:"value")
+        user_id: ID
+
+        createdAt: String
+        updatedAt: String
+
+        attribute: Attribute
+        product: Product
+        user: User
+    }
+
+    input AttributeValueFilter {
+        attribute_id: [filterID]
+        product_id: [filterID]
+        # value: [filterJSON]
+        user_id: [filterID]
+
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+    
+`;

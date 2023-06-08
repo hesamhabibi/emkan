@@ -1,0 +1,10 @@
+module.exports = `
+
+    type Paginate {
+        total: Int
+        page: Int
+        pages: Int
+        limit: Int
+    }
+
+`

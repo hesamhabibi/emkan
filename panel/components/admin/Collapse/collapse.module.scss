@@ -1,0 +1,21 @@
+@import "styles/components/mixin/mixin";
+@import "styles/variables";
+
+.collapse {
+  width: 100%;
+  margin: auto;
+  transition: height .25s ease-out;
+  overflow: hidden;
+  //@include rounded(.2rem);
+  //padding: 1.3rem 1rem;
+  border-bottom-right-radius: .4rem;
+  border-bottom-left-radius: .4rem;
+}
+
+
+//.collapse.show {
+//  max-height: 1000px;
+//  //height: auto;
+//  //margin-top: -10px;
+//}
+

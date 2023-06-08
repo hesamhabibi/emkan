@@ -1,0 +1,679 @@
+{
+  "/crm/email": [
+    {
+      "name": "فیلد تاتیل",
+      "key": "crm_email_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد زمان ارسال پیام",
+      "key": "crm_email_date_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد پیام",
+      "key": "crm_email_message_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد انتخاب کاربران",
+      "key": "crm_email_send_to_field",
+      "action": ""
+    }
+  ],
+  "/crm/sms": [
+    {
+      "name": "فیلد تاتیل",
+      "key": "crm_sms_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد زمان ارسال پیام",
+      "key": "crm_sms_date_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد پیام",
+      "key": "crm_sms_message_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد انتخاب کاربران",
+      "key": "crm_sms_send_to_field",
+      "action": ""
+    }
+  ],
+  "/crm/internal-message": [
+    {
+      "name": "فیلد تاتیل",
+      "key": "crm_internal_message_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد پیام",
+      "key": "crm_internal_message_message_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد زمان ارسال",
+      "key": "crm_internal_message_date_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد انتخاب کاربران",
+      "key": "crm_internal_message_send_to_field",
+      "action": ""
+    }
+  ],
+  "/crm/external-message": [
+    {
+      "name": "فیلد تاتیل",
+      "key": "crm_external_message_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد پیام",
+      "key": "crm_external_message_message_field",
+      "action": ""
+    }
+  ],
+  "/crm/popup": [
+    {
+      "name": "فیلد تاتیل",
+      "key": "crm_popup_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد پیام",
+      "key": "crm_popup_message_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد زمان ارسال",
+      "key": "crm_popup_date_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد انتخاب کاربران",
+      "key": "crm_popup_send_to_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک",
+      "key": "crm_popup_link_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد تعداد باز شدن پاپاپ",
+      "key": "crm_popup_view_count_field",
+      "action": ""
+    }
+  ],
+  "/crm/push-notification": [
+    {
+      "name": "فیلد تاتیل",
+      "key": "crm_push_notification_title_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد پیام",
+      "key": "crm_push_notification_message_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد زمان ارسال",
+      "key": "crm_push_notification_date_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد انتخاب کاربران",
+      "key": "crm_push_notification_send_to_field",
+      "action": ""
+    },
+    {
+      "name": "فیلد لینک",
+      "key": "crm_push_notification_link_field",
+      "action": ""
+    }
+  ],
+  "/blogs": [
+    {
+      "name": "ستون تاتیل",
+      "key": "blogs_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "blogs_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون تعداد بازدید",
+      "key": "blogs_visit_count_column",
+      "action": ""
+    }
+  ],
+  "/blogs/catalogue": [
+    {
+      "name": "فیلد عنوان",
+      "key": "blogs_catalogue_title_column",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت",
+      "key": "blogs_catalogue_status_column",
+      "action": ""
+    },
+    {
+      "name": "فیلد تعداد بازدید",
+      "key": "blogs_catalogue_view_count_column"
+    }
+  ],
+  "/blogs/page": [
+    {
+      "name": "فیلد عنوان",
+      "key": "blogs_page_title_column",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت",
+      "key": "blogs_page_status_column",
+      "action": ""
+    },
+    {
+      "name": "فیلد تعداد بازدید",
+      "key": "blogs_page_view_count_column"
+    }
+  ],
+  "/blogs/project": [
+    {
+      "name": "فیلد عنوان",
+      "key": "blogs_project_title_column",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت",
+      "key": "blogs_project_status_column",
+      "action": ""
+    },
+    {
+      "name": "فیلد تعداد بازدید",
+      "key": "blogs_project_view_count_column"
+    }
+  ],
+  "/blogs/event": [
+    {
+      "name": "فیلد عنوان",
+      "key": "blogs_event_title_column",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت",
+      "key": "blogs_event_status_column",
+      "action": ""
+    },
+    {
+      "name": "فیلد تعداد بازدید",
+      "key": "blogs_event_view_count_column"
+    }
+  ],
+  "/blogs/service": [
+    {
+      "name": "فیلد عنوان",
+      "key": "blogs_service_title_column",
+      "action": ""
+    },
+    {
+      "name": "فیلد وضعیت",
+      "key": "blogs_service_status_column",
+      "action": ""
+    },
+    {
+      "name": "فیلد تعداد بازدید",
+      "key": "blogs_service_view_count_column"
+    }
+  ],
+  "/brands": [
+    {
+      "name": "ستون عنوان",
+      "key": "brands_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "brands_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون نمایش در منو",
+      "key": "brands_show_in_menu_column",
+      "action": ""
+    }
+  ],
+  "/categories/blog": [
+    {
+      "name": "ستون عنوان",
+      "key": "categories_blog_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "categories_blog_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون نمایش در منو",
+      "key": "categories_blog_show_in_menu_column",
+      "action": ""
+    }
+  ],
+  "/categories/catalogue": [
+    {
+      "name": "ستون عنوان",
+      "key": "categories_catalogue_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "categories_catalogue_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون نمایش در منو",
+      "key": "categories_catalogue_show_in_menu_column",
+      "action": ""
+    }
+  ],
+  "/categories/page": [
+    {
+      "name": "ستون عنوان",
+      "key": "categories_page_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "categories_page_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون نمایش در منو",
+      "key": "categories_page_show_in_menu_column",
+      "action": ""
+    }
+  ],
+  "/categories/project": [
+    {
+      "name": "ستون عنوان",
+      "key": "categories_project_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "categories_project_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون نمایش در منو",
+      "key": "categories_project_show_in_menu_column",
+      "action": ""
+    }
+  ],
+  "/categories/event": [
+    {
+      "name": "ستون عنوان",
+      "key": "categories_event_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "categories_event_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون نمایش در منو",
+      "key": "categories_event_show_in_menu_column",
+      "action": ""
+    }
+  ],
+  "/categories/service": [
+    {
+      "name": "ستون عنوان",
+      "key": "categories_service_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "categories_service_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون نمایش در منو",
+      "key": "categories_service_show_in_menu_column",
+      "action": ""
+    }
+  ],
+  "/categories/product": [
+    {
+      "name": "دیدن جدول دسته بندی",
+      "key": "categories_see_table",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "categories_product_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون نمایش در منو",
+      "key": "categories_product_show_in_menu_column",
+      "action": ""
+    }
+  ],
+  "/categories/device": [
+    {
+      "name": "دیدن جدول دسته بندی",
+      "key": "categories_see_table",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "categories_device_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون نمایش در منو",
+      "key": "categories_device_show_in_menu_column",
+      "action": ""
+    }
+  ],
+  "/tags": [
+    {
+      "name": "دسترسی به تب تگ های تکی",
+      "key": "tags_single_tab",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به گروه تگ ها",
+      "key": "tags_group_tab",
+      "action": ""
+    },
+    {
+      "name": "فیلد عنوان تگ",
+      "key": "tags_title_column",
+      "action": ""
+    }
+  ],
+  "/attributes": [
+    {
+      "name": "ستون عنوان",
+      "key": "attributes_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون تصویر",
+      "key": "attributes_image_column",
+      "action": ""
+    }
+  ],
+  "/products": [
+    {
+      "name": "دسترسی به تب فیزیکی",
+      "key": "products_physical_tab",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به تب دیچیتال",
+      "key": "products_digital_tab",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به تب سرویس",
+      "key": "products_service_tab",
+      "action": ""
+    },
+    {
+      "name": "دسترسی به تب پیش نمایش",
+      "key": "products_preview_tab",
+      "action": ""
+    },
+    {
+      "name": "ستون تصویر",
+      "key": "products_image_column",
+      "action": ""
+    },
+    {
+      "name": "ستون عنوان",
+      "key": "products_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون کد محصول",
+      "key": "products_product_code_column",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت محصول",
+      "key": "products_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون امتیاز",
+      "key": "products_rate_column",
+      "action": ""
+    }
+  ],
+  "/campaigns": [
+    {
+      "name": "ستون عنوان",
+      "key": "campaigns_title_field",
+      "action": ""
+    },
+    {
+      "name": "ستون نشان داده شود",
+      "key": "campaigns_show_column",
+      "action": ""
+    },
+    {
+      "name": "ستون شروع کمپین",
+      "key": "campaigns_start_at_column",
+      "action": ""
+    },
+    {
+      "name": "ستون انقضای کمپین",
+      "key": "campaigns_expire_at_column",
+      "action": ""
+    }
+  ],
+  "/tickets": [
+    {
+      "name": "ستون عنوان",
+      "key": "campaigns_title_column",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "campaigns_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون تاریخ تیکت",
+      "key": "campaigns_created_at_column",
+      "action": ""
+    }
+  ],
+  "/sliders": [
+    {
+      "name": "ستون نام",
+      "key": "sliders_name_column",
+      "action": ""
+    },
+    {
+      "name": "ستون کلید",
+      "key": "sliders_key_column",
+      "action": ""
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "sliders_status_column",
+      "action": ""
+    },
+    {
+      "name": "ستون تصویر",
+      "key": "sliders_image_column",
+      "action": ""
+    },
+    {
+      "name": "ستون عنوان تصویر",
+      "key": "sliders_title_column",
+      "action": ""
+    }
+  ],
+  "/orders": [
+    {
+      "name": "ستون تاریخ",
+      "key": "orders_date_column"
+    },
+    {
+      "name": "ستون کد",
+      "key": "orders_number_column"
+    },
+    {
+      "name": "ستون نام کاربری",
+      "key": "orders_full_name_column"
+    },
+    {
+      "name": "ستون درگاه",
+      "key": "orders_payment_gateway_column"
+    },
+    {
+      "name": "ستون روش ارسال",
+      "key": "orders_payment_method_column"
+    },
+    {
+      "name": "ستون وضعیت ارسال",
+      "key": "orders_status_column"
+    }
+  ],
+  "/inquiries": [
+    {
+      "name": "ستون تاریخ",
+      "key": "inquiries_date_column"
+    },
+    {
+      "name": "ستون کد",
+      "key": "inquiries_number_column"
+    },
+    {
+      "name": "ستون نام کاربری",
+      "key": "inquiries_full_name_column"
+    },
+    {
+      "name": "ستون وضعیت ارسال",
+      "key": "inquiries_status_column"
+    }
+  ],
+  "/transactions": [
+    {
+      "name": "ستون تاریخ",
+      "key": "transactions_date_column"
+    },
+    {
+      "name": "ستون قیمت",
+      "key": "transactions_price_column"
+    },
+    {
+      "name": "ستون توضیحات",
+      "key": "transactions_detail_column"
+    },
+    {
+      "name": "ستون درگاه",
+      "key": "transaction_gateway_column"
+    }
+  ],
+  "/discount-codes": [
+    {
+      "name": "ستون عنوان",
+      "key": "discount_codes_title_column"
+    },
+    {
+      "name": "ستون کد رهگیری",
+      "key": "discount_codes_code_column"
+    }
+  ],
+  "/deputations": [
+    {
+      "name": "ستون عنوان",
+      "key": "deputations_title_action"
+    },
+    {
+      "name": "ستون برچسب",
+      "key": "deputations_label_action"
+    },
+    {
+      "name": "ستون موبایل",
+      "key": "deputations_cell_phone_action"
+    }
+  ],
+  "/shipping-methods": [
+    {
+      "name": "ستون عنوان",
+      "key": "shipping_methods_title_column"
+    }
+  ],
+  "/payment-gateways": [
+    {
+      "name": "ستون تصویر",
+      "key": "payment_gateways_image_column"
+    },
+    {
+      "name": "ستون عنوان",
+      "key": "payment_gateways_title_column"
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "payment_gateways_status_column"
+    }
+  ],
+  "/comments/hidden": [
+    {
+      "name": "دیدن کامنت ها",
+      "key": "comments_see_column"
+    }
+  ],
+  "/reports": [
+    {
+      "name": "ستون اکشن",
+      "key": "reports_action_column"
+    },
+    {
+      "name": "ستون نوع اکشن",
+      "key": "reports_action_type_column"
+    },
+    {
+      "name": "ستون وضعیت",
+      "key": "reports_status_column"
+    }
+  ],
+  "/employment": [
+    {
+      "name": "ستون نام",
+      "key": "employment_name_column"
+    },
+    {
+      "name": "ستون نوع نام خانوادگی",
+      "key": "employment_last_name_column"
+    },
+    {
+      "name": "ستون ایمیل",
+      "key": "employment_email_column"
+    },
+    {
+      "name": "ستون تلفن همراه",
+      "key": "employment_mobile_column"
+    },
+    {
+      "name": "ستون تاریخ ثبت",
+      "key": "employment_createdAt_column"
+    }
+  ]
+}

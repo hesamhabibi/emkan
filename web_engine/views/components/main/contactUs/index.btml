@@ -1,0 +1,190 @@
+<!-- start main content -->
+    <div class="bg-gray-c100 dir-right pb-[50px]">
+        <div class="container mx-auto">
+            <!-- start websit directory -->
+                {%render '/components/commons/breadCrumb', links=[{title:'تماس با ما',url:url}]%}
+            <!-- end websit directory -->
+            <div class="pt-[10px]">
+                <div class="py-[15px] ">
+                    <div class="flex items-center mb-[10px] px-[15px] lg:pr-0">
+                        <div class=" ml-[15px]">
+                        <div class="w-[30px] h-[30px] bg-blue-c200 rounded-[5px]"></div>
+                        </div>
+                        <p class="font-shabnam-bold-digit text-[20px] text-blue-c200">{{contactUsSettings.web_contactUsPage_page_title.value_web}}</p>
+                    </div>
+                    <p class="font-shabnam-bold-digit text-[15px] text-blue-c200 px-[15px] lg:pr-0">
+                        {{contactUsSettings.web_contactUsPage_page_note.value_web}}
+                    </p>
+
+                    <!-- form & map box -->
+                    <div class="px-[25px] py-[20px] bg-white rounded-[10px] mt-[15px] text-[14px]">
+                        <p class="font-shabnam-bold-digit text-[16px] mb-[10px]">
+                            {{contactUsSettings.web_contactUsPage_from_title.value_web}}
+                        </p>
+
+                        <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+                            <!-- inputs -->
+                            <form class="lg:col-span-7" id="contact_us_form" action="javascript:submit_form('contact_us_form','tickets/submit');">
+                                <input type="hidden" name="department" value="1">
+                                <div class="md:grid md:grid-cols-2 gap-4">
+                                    <div class="mb-[20px]">
+                                        <label for="name" class="font-shabnam-bold-digit mr-[10px]">نام<span class="text-red-c100">*</span></label>
+                                        <input type="text" id="name" name="name" placeholder="نام" class="font-shabnam-normal-digit py-[12px] px-[15px] mt-[10px] rounded-[10px] border border-gray-c300 w-full placeholder:text-gray-c300 focus:outline-none focus:ring-0 focus:border-blue-c100 hover:border-blue-c100 transition-all ">
+                                    </div>
+                                    <div class="mb-[20px]">
+                                        <label for="last_name" class="font-shabnam-bold-digit mr-[10px]">نام خانوادگی <span class="text-red-c100">*</span></label>
+                                        <input type="text" id="last_name" name="last_name" placeholder="نام خانوادگی" class="font-shabnam-normal-digit py-[12px] px-[15px] mt-[10px] rounded-[10px] border border-gray-c300 w-full placeholder:text-gray-c300 focus:outline-none focus:ring-0 focus:border-blue-c100 hover:border-blue-c100 transition-all ">
+                                    </div>
+                                    <div class="mb-[20px]">
+                                        <label for="email" class="font-shabnam-bold-digit mr-[10px]">ایمیل</label>
+                                        <input type="email" id="email" name="email" placeholder="ایمیل" class="font-shabnam-normal-digit py-[12px] px-[15px] mt-[10px] rounded-[10px] border border-gray-c300 w-full placeholder:text-gray-c300 focus:outline-none focus:ring-0 focus:border-blue-c100 hover:border-blue-c100 transition-all ">
+                                    </div>
+                                    <div class="mb-[20px]">
+                                        <label for="mobile" class="font-shabnam-bold-digit mr-[10px]">شماره تماس</label>
+                                        <input type="text" id="mobile" name="mobile" placeholder="شماره تماس" class="font-shabnam-normal-digit py-[12px] px-[15px] mt-[10px] rounded-[10px] border border-gray-c300 w-full placeholder:text-gray-c300 focus:outline-none focus:ring-0 focus:border-blue-c100 hover:border-blue-c100 transition-all text-left placeholder:text-left">
+                                    </div>
+                                </div>
+                                <div class="mb-[20px]">
+                                    <label for="title" class="font-shabnam-bold-digit mr-[10px]">عنوان</label>
+                                    <input type="text" id="title" name="title" placeholder="عنوان" class="font-shabnam-normal-digit py-[12px] px-[15px] mt-[10px] rounded-[10px] border border-gray-c300 w-full placeholder:text-gray-c300 focus:outline-none focus:ring-0 focus:border-blue-c100 hover:border-blue-c100 transition-all text-left placeholder:text-left">
+                                </div>
+                                <div class="mb-[20px] lg:mb-0">
+                                    <label for="text" class="font-shabnam-bold-digit mr-[10px]">متن پیام</label>
+                                    <textarea type="text" id="text" name="text" rows="12" class="font-shabnam-normal-digit py-[12px] lg:pb-0 px-[15px] mt-[10px] rounded-[10px] border border-gray-c300 w-full placeholder:text-gray-c300 focus:outline-none focus:ring-0 focus:border-blue-c100 hover:border-blue-c100 transition-all " ></textarea>
+                                </div>
+                                <div class="p-[10px]">
+                                    <button class="font-shabnam-bold-digit rounded-[10px] mb-[10px] py-[12px] w-full bg-gradient-to-r from-blue-c100 to-blue-c200 hover:shadow-[0_0px_8px_1px_rgba(0,0,0,0.3)] transition-all duration-300 text-white mt-[10px]">
+                                        ارسال
+                                    </button>
+                                </div>
+                            </form>
+                            <!-- map -->
+                            <div class="hidden lg:block lg:col-span-5 h-full" >
+                                {{contactUsSettings.web_contactUsPage_from_map_iframe.value_web}}
+                                <img src="{{contactUsSettings.web_contactUsPage_from_map_image.value.url | abs_url}}" alt="{{contactUsSettings.web_contactUsPage_from_map_image.value.alt}}" class="h-full">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- asan tamin info -->
+                    <div class="mt-[50px] mb-[40px] grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-8">
+                            
+                            <div class="bg-white rounded-[10px] pb-[55px] md:pb-[25px] pt-[22px] text-center px-[10px]">
+                                <div>
+                                    <img style="width: 50px;height: 50px;margin: auto;" src="{{contactUsSettings.web_contactUsPage_cards_image_1.value.url | abs_url}}" alt="{{contactUsSettings.web_contactUsPage_cards_image_1.value.alt}}" >
+                                    <!-- <svg class="!inline" width="50" height="50" viewBox="0 0 50 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M46.8028 0.433594H3.328C2.50441 0.433594 1.71456 0.758625 1.13219 1.33718C0.549825 1.91574 0.222656 2.70044 0.222656 3.51864V34.3691C0.222656 35.1873 0.549825 35.972 1.13219 36.5506C1.71456 37.1291 2.50441 37.4542 3.328 37.4542H46.8028C47.6264 37.4542 48.4163 37.1291 48.9986 36.5506C49.581 35.972 49.9082 35.1873 49.9082 34.3691V3.51864C49.9082 2.70044 49.581 1.91574 48.9986 1.33718C48.4163 0.758625 47.6264 0.433594 46.8028 0.433594ZM44.4117 34.3691H5.90544L16.7741 23.2013L14.5383 21.0571L3.328 32.5798V5.86328L22.6277 24.9443C23.2095 25.5189 23.9966 25.8414 24.817 25.8414C25.6374 25.8414 26.4244 25.5189 27.0063 24.9443L46.8028 5.3851V32.3793L35.3752 21.0263L33.1859 23.2013L44.4117 34.3691ZM5.362 3.51864H44.2875L24.817 22.7539L5.362 3.51864Z" fill="#0018A0"/>
+                                    </svg> -->
+                                </div>
+                                <p class="font-shabnam-bold-digit text-[11px] mt-[23px]">
+                                    {{contactUsSettings.web_contactUsPage_cards_title_1.value_web}}
+                                </p>
+                                <p class="font-shabnam-normal-digit text-[11px] mt-[5px]">{{contactUsSettings.web_contactUsPage_cards_value_1.value_web}}</p>
+                            </div>
+                            <div class="bg-white rounded-[10px] pb-[55px] md:pb-[25px] pt-[22px] text-center px-[10px]">
+                                <div>
+                                    <img style="width: 50px;height: 50px;margin: auto;" src="{{contactUsSettings.web_contactUsPage_cards_image_2.value.url | abs_url}}" alt="{{contactUsSettings.web_contactUsPage_cards_image_2.value.alt}}" >
+                                    <!-- <svg class="!inline" width="50" height="50" viewBox="0 0 50 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M46.8028 0.433594H3.328C2.50441 0.433594 1.71456 0.758625 1.13219 1.33718C0.549825 1.91574 0.222656 2.70044 0.222656 3.51864V34.3691C0.222656 35.1873 0.549825 35.972 1.13219 36.5506C1.71456 37.1291 2.50441 37.4542 3.328 37.4542H46.8028C47.6264 37.4542 48.4163 37.1291 48.9986 36.5506C49.581 35.972 49.9082 35.1873 49.9082 34.3691V3.51864C49.9082 2.70044 49.581 1.91574 48.9986 1.33718C48.4163 0.758625 47.6264 0.433594 46.8028 0.433594ZM44.4117 34.3691H5.90544L16.7741 23.2013L14.5383 21.0571L3.328 32.5798V5.86328L22.6277 24.9443C23.2095 25.5189 23.9966 25.8414 24.817 25.8414C25.6374 25.8414 26.4244 25.5189 27.0063 24.9443L46.8028 5.3851V32.3793L35.3752 21.0263L33.1859 23.2013L44.4117 34.3691ZM5.362 3.51864H44.2875L24.817 22.7539L5.362 3.51864Z" fill="#0018A0"/>
+                                    </svg> -->
+                                </div>
+                                <p class="font-shabnam-bold-digit text-[11px] mt-[23px]">
+                                    {{contactUsSettings.web_contactUsPage_cards_title_2.value_web}}
+                                </p>
+                                <p class="font-shabnam-normal-digit text-[11px] mt-[5px]">{{contactUsSettings.web_contactUsPage_cards_value_2.value_web}}</p>
+                            </div>
+                            <div class="bg-white rounded-[10px] pb-[55px] md:pb-[25px] pt-[22px] text-center px-[10px]">
+                                <div>
+                                    <img style="width: 50px;height: 50px;margin: auto;" src="{{contactUsSettings.web_contactUsPage_cards_image_3.value.url | abs_url}}" alt="{{contactUsSettings.web_contactUsPage_cards_image_3.value.alt}}" >
+                                    <!-- <svg class="!inline" width="50" height="50" viewBox="0 0 50 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M46.8028 0.433594H3.328C2.50441 0.433594 1.71456 0.758625 1.13219 1.33718C0.549825 1.91574 0.222656 2.70044 0.222656 3.51864V34.3691C0.222656 35.1873 0.549825 35.972 1.13219 36.5506C1.71456 37.1291 2.50441 37.4542 3.328 37.4542H46.8028C47.6264 37.4542 48.4163 37.1291 48.9986 36.5506C49.581 35.972 49.9082 35.1873 49.9082 34.3691V3.51864C49.9082 2.70044 49.581 1.91574 48.9986 1.33718C48.4163 0.758625 47.6264 0.433594 46.8028 0.433594ZM44.4117 34.3691H5.90544L16.7741 23.2013L14.5383 21.0571L3.328 32.5798V5.86328L22.6277 24.9443C23.2095 25.5189 23.9966 25.8414 24.817 25.8414C25.6374 25.8414 26.4244 25.5189 27.0063 24.9443L46.8028 5.3851V32.3793L35.3752 21.0263L33.1859 23.2013L44.4117 34.3691ZM5.362 3.51864H44.2875L24.817 22.7539L5.362 3.51864Z" fill="#0018A0"/>
+                                    </svg> -->
+                                </div>
+                                <p class="font-shabnam-bold-digit text-[11px] mt-[23px]">
+                                    {{contactUsSettings.web_contactUsPage_cards_title_3.value_web}}
+                                </p>
+                                <p class="font-shabnam-normal-digit text-[11px] mt-[5px]">{{contactUsSettings.web_contactUsPage_cards_value_3.value_web}}</p>
+                            </div>
+                            <div class="bg-white rounded-[10px] pb-[55px] md:pb-[25px] pt-[22px] text-center px-[10px]">
+                                <div>
+                                    <img style="width: 50px;height: 50px;margin: auto;" src="{{contactUsSettings.web_contactUsPage_cards_image_4.value.url | abs_url}}" alt="{{contactUsSettings.web_contactUsPage_cards_image_4.value.alt}}" >
+                                    <!-- <svg class="!inline" width="50" height="50" viewBox="0 0 50 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M46.8028 0.433594H3.328C2.50441 0.433594 1.71456 0.758625 1.13219 1.33718C0.549825 1.91574 0.222656 2.70044 0.222656 3.51864V34.3691C0.222656 35.1873 0.549825 35.972 1.13219 36.5506C1.71456 37.1291 2.50441 37.4542 3.328 37.4542H46.8028C47.6264 37.4542 48.4163 37.1291 48.9986 36.5506C49.581 35.972 49.9082 35.1873 49.9082 34.3691V3.51864C49.9082 2.70044 49.581 1.91574 48.9986 1.33718C48.4163 0.758625 47.6264 0.433594 46.8028 0.433594ZM44.4117 34.3691H5.90544L16.7741 23.2013L14.5383 21.0571L3.328 32.5798V5.86328L22.6277 24.9443C23.2095 25.5189 23.9966 25.8414 24.817 25.8414C25.6374 25.8414 26.4244 25.5189 27.0063 24.9443L46.8028 5.3851V32.3793L35.3752 21.0263L33.1859 23.2013L44.4117 34.3691ZM5.362 3.51864H44.2875L24.817 22.7539L5.362 3.51864Z" fill="#0018A0"/>
+                                    </svg> -->
+                                </div>
+                                <p class="font-shabnam-bold-digit text-[11px] mt-[23px]">
+                                    {{contactUsSettings.web_contactUsPage_cards_title_4.value_web}}
+                                </p>
+                                <p class="font-shabnam-normal-digit text-[11px] mt-[5px]">{{contactUsSettings.web_contactUsPage_cards_value_4.value_web}}</p>
+                            </div>
+                            
+                        </div>
+
+                    <!-- blue bullet -->
+                    <div class="md:grid md:grid-cols-12 gap-8 items-center mt-[15px] px-[15px] lg:px-0">
+                        <div class="md:col-span-7 [&>*:not(:last-child)]:border-b border-gray-c300">
+                            <div class=" py-[35px]">
+                                <div class="flex items-center mb-[10px]">
+                                    <div class=" ml-[10px]">
+                                        <div class="w-[30px] h-[30px] bg-blue-c200 rounded-[5px]"></div>
+                                    </div>
+                                    <p class="font-shabnam-bold-digit text-[15px] text-blue-c200">
+                                        {{contactUsSettings.web_contactUsPage_rows_title_1.value_web}}
+                                    </p>
+                                </div>
+                                <p class="font-shabnam-bold-digit text-[12px] text-gray-c500">
+                                    {{contactUsSettings.web_contactUsPage_rows_value_1.value_web}}
+                                </p>
+                                {%if contactUsSettings.web_contactUsPage_rows_note_1.value_web%}
+                                    <p class="py-[5px] px-[30px] bg-gray-c200 rounded-[10px] font-shabnam-normal-digit text-[13px] mt-[22px]">
+                                        {{contactUsSettings.web_contactUsPage_rows_note_1.value_web}}
+                                    </p>
+                                {%endif%}
+                            </div>
+                            <div class=" py-[35px]">
+                                <div class="flex items-center mb-[10px]">
+                                    <div class=" ml-[10px]">
+                                        <div class="w-[30px] h-[30px] bg-blue-c200 rounded-[5px]"></div>
+                                    </div>
+                                    <p class="font-shabnam-bold-digit text-[15px] text-blue-c200">
+                                        {{contactUsSettings.web_contactUsPage_rows_title_2.value_web}}
+                                    </p>
+                                </div>
+                                <p class="font-shabnam-bold-digit text-[12px] text-gray-c500">
+                                    {{contactUsSettings.web_contactUsPage_rows_value_2.value_web}}
+                                </p>
+                                {%if contactUsSettings.web_contactUsPage_rows_note_2.value_web%}
+                                    <p class="py-[5px] px-[30px] bg-gray-c200 rounded-[10px] font-shabnam-normal-digit text-[13px] mt-[22px]">
+                                        {{contactUsSettings.web_contactUsPage_rows_note_2.value_web}}
+                                    </p>
+                                {%endif%}
+                            </div>
+                            <div class=" py-[35px]">
+                                <div class="flex items-center mb-[10px]">
+                                    <div class=" ml-[10px]">
+                                        <div class="w-[30px] h-[30px] bg-blue-c200 rounded-[5px]"></div>
+                                    </div>
+                                    <p class="font-shabnam-bold-digit text-[15px] text-blue-c200">
+                                        {{contactUsSettings.web_contactUsPage_rows_title_3.value_web}}
+                                    </p>
+                                </div>
+                                <p class="font-shabnam-bold-digit text-[12px] text-gray-c500">
+                                    {{contactUsSettings.web_contactUsPage_rows_value_3.value_web}}
+                                </p>
+                                {%if contactUsSettings.web_contactUsPage_rows_note_3.value_web%}
+                                    <p class="py-[5px] px-[30px] bg-gray-c200 rounded-[10px] font-shabnam-normal-digit text-[13px] mt-[22px]">
+                                        {{contactUsSettings.web_contactUsPage_rows_note_3.value_web}}
+                                    </p>
+                                {%endif%}
+                            </div>
+                        </div>
+                        <div class="hidden md:block col-span-5">
+                            <img class="" src="{{contactUsSettings.web_contactUsPage_rows_image.value.url | abs_url}}" alt="{{contactUsSettings.web_contactUsPage_rows_image.value.alt}}">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end main content -->

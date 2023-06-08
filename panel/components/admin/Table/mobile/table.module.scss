@@ -1,0 +1,113 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+.table {
+  border: 0;
+
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
+  white-space: nowrap;
+
+  tr td:first-child { border-top-right-radius: 0 !important; }
+  tr td:first-child { border-bottom-right-radius: 0 !important; }
+  tr td:last-child { border-top-left-radius: 0 !important; }
+  tr td:last-child { border-bottom-left-radius: 0 !important; }
+
+  > thead {
+    color: #64748d;
+    font-size: large;
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  th {
+    font-size: .85em;
+    text-transform: uppercase;
+  }
+
+  th,
+  td {
+    padding: .625em;
+    width: auto;
+    text-align: center;
+
+    button {
+      margin: 0 1rem;
+
+      //position: relative;
+      //top: 0;
+      cursor: pointer;
+      @include transition(0.2s);
+      @include hover {
+        //top: -2px;
+        @include generate-color(color, $blue)
+      }
+    }
+  }
+
+  tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: left;
+  }
+  td::before {
+    content: attr(data-label);
+    float: right;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  td:last-child {
+    border-bottom: 0;
+  }
+
+  > tbody {
+    tr td:first-child {
+      border-top-right-radius: 10px;
+    }
+
+    tr td:first-child {
+      border-bottom-right-radius: 10px;
+    }
+
+    tr td:last-child {
+      border-top-left-radius: 10px;
+    }
+
+    tr td:last-child {
+      border-bottom-left-radius: 10px;
+    }
+
+    tr {
+      border: 0;
+
+      > td {
+        color: #4a4b70;
+        padding: 1rem;
+
+        i {
+          margin: 0 1rem;
+          cursor: pointer;
+        }
+      }
+
+      @include rounded(1rem);
+      @include box-shadow(rgba(0, 0, 0, 0.1) -4px 9px 25px -6px);
+      justify-content: center;
+      @include generate-color(background, $white);
+    }
+  }
+}

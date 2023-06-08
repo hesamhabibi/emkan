@@ -1,0 +1,14 @@
+module.exports = `
+
+    enum SortEnum {
+        ASC
+        DESC
+        Default
+    }
+
+    input Sort {
+        type: SortEnum
+        field: String
+    }
+
+`

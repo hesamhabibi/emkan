@@ -1,0 +1,227 @@
+@import "../variables";
+@import "../components/mixin/mixin";
+
+// CKEditor configs.
+
+.ck { // CKEditor parent element
+  direction: rtl;
+  font-family: $main-FD-font, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  border: none !important;
+}
+
+.ck-toolbar { // CKEditor Toolbar element (header)
+  background-color: #f1f3f5 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem !important;
+}
+
+//@media only screen and (max-width: 600px) { // Filter CKEditor min-width
+//  .ck.ck-content, .ck.ck-toolbar {
+//    width: 300px !important;
+//  }
+//}
+
+.ck-sticky-panel__content_sticky, .ck-sticky-panel__content { // CKEditor on focus sticky header
+  box-shadow: none !important;
+}
+
+.ck.ck-button { // CKEditor buttons
+  padding: 0 0.7rem !important;
+  font-weight: normal !important;
+}
+
+.ck-button__label { // CKEditor button labels
+  text-align: center !important;
+  padding: 0.5rem 0 !important;
+  font-size: larger !important;
+  border-radius: 0.5rem !important;
+}
+
+.ck-dropdown { // Dropdown
+  background-color: #fbfbfb !important;
+  border-radius: 0.5rem !important;
+  //padding: 0.4rem 0 !important;
+}
+
+.ck-list__item { // Dropdown items
+  min-width: auto !important;
+  font-size: medium !important;
+  font-weight: normal !important;
+}
+
+.ck-on { // CK button activated
+  background-color: #d0d0d0 !important;
+}
+
+.ck-editor__editable { // content
+  min-height: 10rem !important;
+}
+
+.ck-tooltip { // buttons tooltip
+  display: none !important;
+}
+
+.ck-button.ck-on { // buttons activated
+  color: $pink !important;
+  background-color: transparent !important;
+}
+
+.ck-button:active { // buttons clicked
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.ck.ck-button:not(.ck-disabled):active { // buttons clicked
+  box-shadow: none !important;
+}
+
+.ck-button:hover { // buttons hover
+  color: lighten($pink, 30%) !important;
+  background-color: transparent !important;
+  cursor: pointer !important;
+}
+
+.ck-link-form { // embed link styles
+  background-color: #f1f3f5 !important;
+  border: none !important;
+}
+
+
+.ck.ck-reset_all, .ck.ck-reset_all * { // embed link body
+  border-radius: 0.4rem !important;
+}
+
+.ck.ck-input-text:focus {
+  box-shadow: none !important;
+}
+.ck.ck-balloon-panel {
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px !important;
+}
+
+.ck-balloon-panel[class*=arrow_n]:after {
+  border-bottom-color: #f1f3f5 !important;
+  border: none !important;
+}
+
+.raw-html-embed__save-button, .raw-html-embed__cancel-button, .raw-html-embed__edit-button {
+  background-color: #fbfbfb !important;
+  width: 85%;
+  left: -10px;
+}
+
+.ck-balloon-panel[class*=arrow_n]:before {
+  border-bottom-color: #f1f3f5 !important;
+}
+
+.ck .ck-widget {
+  outline-color: $pink !important;
+  border-radius: 3rem !important;
+  @include roundedI(3rem);
+}
+
+//.ck .ck-widget.ck-widget_with-selection-handle:hover .ck-widget__selection-handle, .ck .ck-widget:not(.ck-widget_selected)>.ck-widget__type-around>.ck-widget__type-around__button {
+//  background-color: $pink !important;
+//}
+
+.ck-focused {
+  outline-color: $pink !important;
+}
+
+.ck-widget.raw-html-embed[dir=rtl]:before {
+  display: none;
+}
+
+.ck .ck-widget.ck-widget_with-selection-handle.ck-widget_selected:hover .ck-widget__selection-handle,
+.ck.ck-editor__editable:not(.ck-blurred) .ck-widget.raw-html-embed.ck-widget_selected:before,
+.ck .ck-widget.ck-widget_selected>.ck-widget__type-around>.ck-widget__type-around__button, .ck .ck-widget>.ck-widget__type-around>.ck-widget__type-around__button:hover,
+.ck-widget.raw-html-embed:before,
+.ck .ck-widget.ck-widget_with-selection-handle:hover .ck-widget__selection-handle,
+.ck .ck-widget:not(.ck-widget_selected)>.ck-widget__type-around>.ck-widget__type-around__button
+{
+  background-color: $pink !important;
+  border: none !important;
+}
+
+.ck .ck-widget.ck-widget_with-selection-handle.ck-widget_selected .ck-widget__selection-handle {
+  background-color: transparent !important;
+} // Fix move icon in html embed
+
+//.ck .ck-widget,
+.ck .ck-widget.ck-widget_with-selection-handle {
+  outline: transparent !important;
+  border-radius: 1rem !important;
+  border: 2px solid lighten($pink, 30%);
+}
+
+.ck .ck-widget.ck-widget_with-selection-handle.ck-widget_selected,
+.ck .ck-widget.ck-widget_with-selection-handle:hover
+{
+  border: 2px solid $pink !important;
+}
+
+
+.ck-widget.raw-html-embed .raw-html-embed__content-wrapper {
+  border-radius: 1rem !important;
+}
+
+.ck-blurred {
+  outline-color: #999999 !important;
+}
+
+.ck-labeled-field-view > .ck.ck-labeled-field-view__input-wrapper {
+  height: 2.4rem !important;
+}
+.ck-button-save, .ck-button-cancel {
+  background-color: white !important;
+}
+
+.ck-widget.raw-html-embed .raw-html-embed__content-wrapper {
+  background-color: #f1f3f5 !important;
+
+}
+
+//.ck .ck-widget.ck-widget_selected {
+//  outline-color: $pink !important;
+//}
+
+
+//:root {
+//  --ck-color-widget-hover-border: #222 !important;
+//--ck-color-base-focus: $pink !important;
+//--ck-color-base-active-focus: $pink !important;
+//--ck-color-base-active: lighten($pink, 10%) !important;
+//--ck-color-link-default: $pink !important;
+//}
+
+.ck.ck-editor__editable {
+  margin-top: 5px !important;
+  border-radius: 0.5rem !important;
+  border: 1px solid darken($gray-light, 70) !important;
+  transition: 0.2s;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused {
+  border-color: lighten($blue, 30%) !important;
+  box-shadow: $input-shadow-1 !important;
+}
+
+.ck .ck-widget__selection-handle {
+  border-radius: .5rem !important;
+  right: 1.7rem !important;
+}
+
+
+.ck .ck-widget__selection-handle,
+.ck .ck-widget.ck-widget_selected>.ck-widget__type-around>.ck-widget__type-around__button:after,
+.raw-html-embed__save-button, .raw-html-embed__cancel-button, .raw-html-embed__edit-button
+{
+  cursor: pointer !important;
+}
+
+.ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused {
+
+}
+
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+
+}

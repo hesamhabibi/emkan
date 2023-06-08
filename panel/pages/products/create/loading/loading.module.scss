@@ -1,0 +1,50 @@
+@import "styles/variables";
+
+
+@keyframes loading {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  40% {
+    transform: rotate(1000deg);
+  }
+
+  50% {
+    transform: rotateZ(1300deg);
+  }
+
+  90% {
+    transform: rotateZ(300deg);
+  }
+  100% {
+    transform: rotateZ(0)
+  }
+}
+
+
+.container {
+  display: grid;
+  place-items: center;
+  width: 60%;
+  padding: 40px 0;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  background: $white;
+
+
+  > h3 {
+    display: flex;
+    align-items: center;
+
+    > i {
+      animation: loading 10s infinite;
+    }
+  }
+}

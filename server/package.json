@@ -1,0 +1,72 @@
+{
+    "./": "./*",
+    "name": "iportal-express",
+    "version": "1.0.0",
+    "description": "iportal backend with express",
+    "main": "app.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon --ignore ./public/ --exec node index.js",
+        "backup": "node commands/databaseBackup/database_backup_command.js",
+        "restore": "node commands/databaseBackup/database_restore_command.js",
+        "seed": "node commands/seed/database_seed_command.js",
+        "gen:env": "node commands/genEnv/gen_env_command.js",
+        "gen:key": "node commands/genEnv/gen_app_key_command.js",
+        "faker": "node commands/faker/database_faker_command.js",
+        "clear": "node commands/clear/database_clear_command.js",
+        "db": "node commands/db/database_db_command.js",
+        "getObjectId": "node commands/temp.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "_moduleAliases": {
+        "@common": "../common",
+        "@models": "../common/models",
+        "@helpers": "../common/helpers"
+    },
+    "_moduleDirectories": [
+        "./node_modules"
+    ],
+    "dependencies": {
+        "@graphql-tools/merge": "^8.0.1",
+        "apollo-server-express": "^3.0.1",
+        "axios": "^0.21.1",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "collect.js": "^4.28.6",
+        "connect-timeout": "^1.9.0",
+        "cookies": "^0.8.0",
+        "cors": "^2.8.5",
+        "device-detector-js": "^2.2.10",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "ffprobe": "^1.1.2",
+        "graphql": "^15.5.1",
+        "graphql-middleware": "^6.0.10",
+        "graphql-shield": "^7.5.0",
+        "graphql-tools": "^7.0.5",
+        "graphql-type-json": "^0.3.2",
+        "jsonwebtoken": "^8.5.1",
+        "lodash.merge": "^4.6.2",
+        "module-alias": "^2.2.2",
+        "moment": "^2.29.1",
+        "moment-jalaali": "^0.9.2",
+        "mongoose": "^5.13.3",
+        "mongoose-aggregate-paginate-v2": "^1.0.5",
+        "mongoose-float": "^1.0.4",
+        "mongoose-lean-defaults": "^2.0.1",
+        "mongoose-lean-virtuals": "^0.8.0",
+        "mongoose-paginate-v2": "^1.4.2",
+        "multer": "^1.4.2",
+        "nodemailer": "^6.6.3",
+        "npm": "^7.20.0",
+        "soap": "^0.42.0",
+        "validatorjs": "^3.22.1"
+    },
+    "devDependencies": {
+        "eslint": "^7.32.0",
+        "eslint-plugin-react": "^7.24.0",
+        "faker": "^5.5.3",
+        "nodemon": "^2.0.12"
+    }
+}

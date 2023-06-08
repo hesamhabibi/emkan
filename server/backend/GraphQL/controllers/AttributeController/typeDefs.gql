@@ -1,0 +1,96 @@
+module.exports = `
+
+    type Query {
+        getAttribute(id:ID!): Attribute
+        getAttributes(page:Int, limit:Int, filter:AttributeFilter,sort:[Sort]): AttributePaginate
+        getAllAttributes(filter:AttributeFilter,sort:[Sort]): [Attribute]
+    }
+
+    type Mutation {
+        createAttribute(input:AttributeInput): Attribute
+        updateAttribute(id:ID!, input:AttributeInput): Attribute
+        deleteAttribute(id:ID!): Response
+        sortAttributes(input:[sortAttributeInput]): Response
+        updateAttributeDefaultValue(id:ID!, default_attribute_value_id:ID): Attribute
+    }
+
+    type Attribute {
+        id: ID
+        parent_id: ID
+        sort: Int
+        deep: Int
+        title: JSON # multi language
+        title_panel: String @multilang(field:"title",type:"panel")
+        title_web: String @multilang(field:"title")
+        active: Boolean
+        
+        # deep 1
+        attribute_group_ids: [ID]
+        # deep 2
+        attribute_ids: [ID]
+        # deep 3
+        type: Int
+        default_attribute_value_id: ID
+        description: JSON # multi language
+        description_panel: String @multilang(field:"description",type:"panel")
+        description_web: String @multilang(field:"description")
+        
+        user_id: ID
+        createdAt: String
+        updatedAt: String
+
+        attribute_groups: [Attribute]
+        attributes: [Attribute]
+        attribute_values: [AttributeValue]
+        default_attribute_value: AttributeValue
+        default_value: JSON
+        products: [Product]
+        parent: Attribute
+        children: [Attribute]
+        user: User
+    }
+
+    type AttributePaginate {
+        paginate: Paginate
+        data: [Attribute]
+    }
+
+    input AttributeInput {
+        parent_id: ID
+        sort: Int
+        deep: Int
+        title: JSON # multi language
+        active: Boolean
+        
+        # deep 3
+        type: Int
+        description: JSON # multi language
+        default_attribute_value_id: ID
+    }
+
+    input sortAttributeInput {
+        id: ID!
+        sort: Int
+    }
+
+    input AttributeFilter {
+        parent_id: [filterID]
+        sort: [filterInt]
+        deep: [filterInt]
+        title: [filterMultiLang]
+        active: [filterBoolean]
+        
+        # deep 1
+        attribute_group_ids: [filterArray]
+        # deep 2
+        attribute_ids: [filterArray]
+        # deep 3
+        type: [filterInt]
+        default_attribute_value_id: [filterID]
+        description: [filterMultiLang]
+
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

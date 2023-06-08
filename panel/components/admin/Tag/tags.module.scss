@@ -1,0 +1,27 @@
+@import "styles/variables.scss";
+@import "styles/components/mixin/mixin";
+
+.tag {
+  padding: 0.3rem 1rem;
+  @include rounded(1rem);
+  @include generate-color(background, lighten($info, 10%));
+  @include generate-color(color, $white);
+
+  &.success {
+    @include generate-color(background, $green-light);
+  }
+
+  &.warning {
+    @include generate-color(background, $warning);
+  }
+
+  &.error {
+    @include generate-color(background, $orange);
+  }
+  &.primary {
+    @include generate-color(background, $primary);
+  }
+  &.purple {
+    @include generate-color(background, $purple);
+  }
+}

@@ -1,0 +1,160 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+
+.container {
+  width: 270px;
+
+  position: fixed;
+  top: 107px;
+  left: 40px;
+
+  > .input {
+    text-align: center;
+    margin-bottom: 10px;
+
+
+    @include flex-position(x, space-between);
+
+    > button {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      @include hover {
+        @include generate-color(background, lighten($purple, 10));
+        @include generate-color(color, $white);
+      }
+    }
+  }
+
+  @include generate-color(background, $white);
+
+
+  > .calendar {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+
+    > .header {
+      align-items: center;
+      margin: 0 auto 10px auto;
+      @include flex-position(x, space-between);
+
+      > .action {
+        > i {
+          padding: .5rem .8rem;
+          @include rounded(50%);
+          @include transition(background 0.2s linear);
+          @include hover {
+            cursor: pointer;
+            @include generate-color(background, $gray-light);
+          }
+        }
+
+        @include generate-color(color, #5f6368);
+      }
+    }
+
+    > .body {
+      display: table;
+      table-layout: fixed;
+      width: 260px;
+      text-align: center;
+
+      > div {
+        display: table-row;
+        height: 35px;
+
+        > .today {
+          @include generate-color(background, lighten(gray, 20));
+          @include generate-color(color, $white);
+
+          @include hover {
+            @include generate-color(background, lighten($purple, 15))
+          }
+        }
+
+        > .active {
+          @include generate-color(background, $purple);
+          @include generate-color(color, $white);
+
+          @include hover {
+            @include generate-color(background, lighten($purple, 25))
+          }
+        }
+
+        > span {
+          width: 35px;
+          height: 35px;
+          display: table-cell;
+          font-size: 12px;
+          font-weight: 600;
+          vertical-align: middle;
+          color: #70757a;
+
+          @include rounded(50%);
+          @include transition(background 0.2s linear);
+
+          @include hover {
+            cursor: pointer;
+            @include generate-color(background, $gray-light);
+          }
+
+          &[aria-disabled] {
+            @include hover {
+              cursor: auto;
+              background: transparent;
+            }
+          }
+        }
+      }
+
+      > .tableHeader {
+        > span {
+          font-size: 10px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.bgPurple {
+  @include generate-color(background, $purple);
+  @include generate-color(color, $white);
+}
+
+.events {
+
+  > .card {
+    margin-top: 10px;
+    //box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+
+    > .header {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      padding: 7px;
+      font-weight: bold;
+      //background-image: linear-gradient(to left, #e8ffba 50%, $white);
+      color: #333;
+    }
+
+    > .body {
+      > div {
+        margin: 3px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        > i {
+          margin-left: 5px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

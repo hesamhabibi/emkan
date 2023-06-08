@@ -1,0 +1,28 @@
+@import "../../../../../styles/variables";
+
+.popup {
+  width: 539px;
+}
+
+.container {
+  padding: 10px;
+  //background-color: $gray-light;
+  border-radius: 10px;
+
+  border: 1px dashed lighten(gray, 30);
+  min-height: 100px;
+
+  > button {
+    margin-bottom: 10px;
+  }
+
+  > li {
+    font-weight: bold;
+    padding: 10px;
+    word-break: break-all;
+
+    > i {
+      cursor: pointer;
+    }
+  }
+}

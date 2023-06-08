@@ -1,0 +1,73 @@
+module.exports = `
+
+    type Query {
+        getAllUserAddresses(filter:AddressFilter): [Address]
+        getUserDefaultAddress: Address
+    }
+
+    type Mutation {
+        createUserAddress(input:UserAddressInput): Address
+        setUserDefaultAddress(address_id: ID): Response
+    }
+
+    type Address {
+        id: ID
+        postal_code: String
+        city_id: Int
+        state_id: Int
+        address: String
+        location: JSON
+        is_default: Boolean
+        mobile: String
+        createdAt: String
+        updatedAt: String
+
+        city: City
+        state: State
+    }
+
+     type City {
+        id: ID
+        name_multi: JSON # multi language
+        name_panel: String @multilang(field:"name_multi",type:"panel",default:"fa")
+        name_web: String @multilang(field:"name_multi",default:"fa")
+        slug: String
+        state_id: ID
+
+        state: State
+    }
+
+    type State {
+        id: ID
+        name_multi: JSON # multi language
+        name_panel: String @multilang(field:"name_multi",type:"panel",default:"fa")
+        name_web: String @multilang(field:"name_multi",default:"fa")
+        slug: String
+    }
+
+    type AddressPaginate {
+        paginate: Paginate
+        data: [Address]
+    }
+
+    input UserAddressInput {
+        postal_code: String
+        city_id: Int
+        state_id: Int
+        address: String
+        location: JSON
+        mobile: String
+    }
+  
+    input AddressFilter {
+        postal_code: [filterString]
+        city_id: [filterInt]
+        state_id: [filterInt]
+        address: [filterString]
+        # location: [filterJSON]
+        is_default: [filterBoolean]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

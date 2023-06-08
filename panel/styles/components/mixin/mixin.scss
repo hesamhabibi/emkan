@@ -1,0 +1,238 @@
+@mixin rounded($key...) {
+  -webkit-border-radius: $key;
+  -moz-border-radius: $key;
+  border-radius: $key;
+}
+
+@mixin roundedI($key...) {
+  -webkit-border-radius: $key !important;
+  -moz-border-radius: $key !important;
+  border-radius: $key !important;
+}
+
+@mixin box-shadow($key) {
+  -webkit-box-shadow: #{$key};
+  -moz-box-shadow: #{$key};
+  box-shadow: #{$key};
+}
+
+@mixin box-shadow-important($key) {
+  -webkit-box-shadow: #{$key} !important;
+  -moz-box-shadow: #{$key} !important;
+  box-shadow: #{$key} !important;
+}
+
+@mixin transition($key) {
+  -webkit-transition: $key;
+  -moz-transition: $key;
+  -ms-transition: $key;
+  -o-transition: $key;
+  transition: $key;
+}
+
+@mixin transform($key) {
+  -webkit-transform: $key;
+  -moz-transform: $key;
+  -ms-transform: $key;
+  -o-transform: $key;
+  transform: $key;
+}
+
+@mixin generate-color($type,$color,$mode:null,$key:null) {
+  @if $type==background {
+    @if $mode==lighten {
+      background-color: lighten($color, $key);
+    } @else if $mode==darken {
+      background-color: darken($color, $key);
+    } @else if $mode==rgba {
+      background-color: rgba($color, $key);
+    } @else {
+      background-color: $color;
+    }
+  } @else if $type==color {
+    @if $mode==lighten {
+      color: lighten($color, $key);
+    } @else if $mode==darken {
+      color: darken($color, $key);
+    } @else if $mode==rgba {
+      color: rgba($color, $key);
+    } @else {
+      color: $color;
+    }
+  }
+}
+
+@mixin grid($dis,$direction:null) {
+  @if $dis==flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    @if $direction==row {
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    } @else if $direction==column {
+      flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-flex-direction: column;
+    }
+  } @else if $dis==block {
+    display: block;
+  }
+}
+
+@mixin flex-position($xy,$position,$direction:null,$dis:null) {
+  @if ($dis) {
+    @include grid($dis, $direction);
+  } @else {
+    @include grid(flex, $direction);
+  }
+
+  @if $xy==x {
+    justify-content: $position;
+    -webkit-justify-content: $position;
+  } @else if $xy==y {
+    align-items: $position;
+    -webkit-align-items: $position;
+  } @else if $xy==xy {
+    justify-content: $position;
+    -webkit-justify-content: $position;
+    align-items: $position;
+    -webkit-align-items: $position;
+  }
+}
+
+@mixin hover {
+  &:not([disabled]):hover {
+    @content;
+  }
+}
+
+@mixin focus {
+  &:not([disabled]):focus {
+    @content;
+  }
+}
+
+@mixin active {
+  &:not([disabled]):focus {
+    @content;
+  }
+}
+
+@mixin img-cover($fit:false,$position:false) {
+  width: 100%;
+  height: 100%;
+  @if $fit and $position {
+    -o-object-fit: $fit;
+    object-fit: $fit;
+    -o-object-position: $position;
+    object-position: $position;
+  }
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animation($name,$duration,$delay:null,$direction:null,$count:null,$mode:null,$function:null) {
+  -webkit-animation-name: $name;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-delay: $delay;
+  -webkit-animation-direction: $direction;
+  -webkit-animation-iteration-count: $count;
+  -webkit-animation-fill-mode: $mode;
+  -webkit-animation-timing-function: $function;
+
+  -moz-animation-name: $name;
+  -moz-animation-duration: $duration;
+  -moz-animation-delay: $delay;
+  -moz-animation-direction: $direction;
+  -moz-animation-iteration-count: $count;
+  -moz-animation-fill-mode: $mode;
+  -moz-animation-timing-function: $function;
+
+  -o-animation-name: $name;
+  -o-animation-duration: $duration;
+  -o-animation-delay: $delay;
+  -o-animation-direction: $direction;
+  -o-animation-iteration-count: $count;
+  -o-animation-fill-mode: $mode;
+  -o-animation-timing-function: $function;
+
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-direction: $direction;
+  animation-iteration-count: $count;
+  animation-fill-mode: $mode;
+  animation-timing-function: $function;
+}
+
+$breakpoints: (
+        'xs': 0,
+        'sm': 576px,
+        'md': 768px,
+        'lg': 992px,
+        'xl': 1200px,
+        'xxl': 1400px
+);
+
+@function breakpoint-next($name, $breakpoint: $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+  $n: index($breakpoint-names, $name);
+  @return if($n != null and $n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null)
+}
+
+@mixin media-breakpoint($name1,$name2:false, $breakpoint: $breakpoints) {
+  $min: null;
+  $max: null;
+
+  @if (map-has-key($breakpoint, $name1)) {
+    $min: map-get($breakpoint, $name1);
+  } @else {
+    $min: $name1;
+  }
+
+  @if ($name2) {
+
+    @if (map-has-key($breakpoint, $name2)) {
+      $next: breakpoint-next($name2);
+      $max: map-get($breakpoint, $next) - .02;
+    } @else {
+      $max: $name2;
+    }
+
+    @if ($name2 != up and $name2 != down) {
+      @media (min-width: $min) and (max-width: $max) {
+        @content
+      }
+    } @else if ($name2 == up) {
+      @media (min-width: $min) {
+        @content
+      }
+    } @else if ($name2 == down) {
+      $max: $min - .02;
+      @media (max-width: $max) {
+        @content
+      }
+    }
+  } @else {
+    $next: breakpoint-next($name1);
+    $max: map-get($breakpoint, $next) - .02;
+    @media (min-width: $min) and (max-width: $max) {
+      @content
+    }
+  }
+}

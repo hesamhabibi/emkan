@@ -1,0 +1,101 @@
+module.exports = `
+
+    type Query {
+        getOrder(id:ID): Order
+        getOrders(page:Int, limit:Int, filter:OrderFilter,sort:[Sort]): OrderPaginate
+        getAllOrders(filter:OrderFilter,sort:[Sort]): [Order]
+    }
+
+    type Mutation {
+        setPostTrackCodeOrder(id:ID, input:setPostTrackCodeOrderInput): Order
+        setStatusOrder(id:ID, input:setStatusOrderInput): Order
+        sendCommentOrder(id:ID, input:sendCommentOrderInput): Response
+    }
+
+    type Order {
+        id: ID
+        user_id: ID
+        discount_id: ID
+        transaction_id: ID
+        address_id: ID
+        date: String
+        number: String
+        post_track_code: String
+        shipping_method_id: ID
+        payment_gateway_id: ID
+        type: Int
+        status: Int
+        note: String
+        products: [OrderProduct]
+        createdAt: String
+        updatedAt: String
+
+        total_prices: OrderTotalPrices
+        user: User
+        discount: Discount
+        transaction: Transaction
+        all_transactions: [Transaction]
+        address: Address
+        shipping_method: ShippingMethod
+        payment_gateway: PaymentGateway
+    }
+
+    type OrderProduct {
+        product_id: ID
+        mix_variant_keys: [String]
+        count: Int
+        note: String
+
+        price: Price
+        product: Product
+    }
+
+    type OrderTotalPrices {
+        sum_product_price_without_offer: Int
+        sum_product_price: Int
+        total_price_with_discount: Int
+        post_price: Int
+        payment_price: Int
+        total_weight: Int
+    }
+
+    type OrderPaginate {
+        paginate: Paginate
+        data: [Order]
+    }
+
+    input setPostTrackCodeOrderInput {
+        post_track_code: String
+        send_with: Int
+    }
+
+    input setStatusOrderInput {
+        status: Int
+        send_with: Int
+    }
+
+    input sendCommentOrderInput {
+        comment: String
+        send_with: Int
+    }
+
+    input OrderFilter {
+        date: [filterDate]
+        number: [filterString]
+        post_track_code: [filterString]
+        type: [filterInt]
+        is_inquiry: [filterInt]
+        status: [filterInt]
+        shipping_method_id: [filterID]
+        payment_gateway_id: [filterID]
+        note: [filterString]
+
+        user_id: [filterID]
+        transaction_id: [filterID]
+        discount_id: [filterID]
+        address_id: [filterID]
+        createdAt: [filterDate]
+        updatedAt: [filterDate]
+    }
+
+`;

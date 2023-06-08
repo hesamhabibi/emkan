@@ -1,0 +1,23 @@
+{
+  "short_name": "Asantamin",
+  "name": "Asantamin Co",
+  "icons": [
+    {
+      "src": "/logo-192.webp",
+      "type": "image/webp",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/logo-512.webp",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./?mode=standalone",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "./",
+  "background_color": "#4a0d0d",
+  "theme_color": "#4a0d0d",
+  "gcm_sender_id": "103953800507"
+}

@@ -1,0 +1,21 @@
+module.exports = `
+
+    type Query {
+        getSettingByKey(key: String ): Setting
+        getSettingByKeys(keys: [String] ): [Setting]
+    }
+
+    type Setting {
+        id: ID
+        key: String
+        description: JSON # multi language
+        description_web: String @multilang(field:"description")
+        format: Int
+        value: JSON
+        value_web: JSON @multilang(field:"value")
+        parsed_value: JSON
+        is_main: Boolean
+        createdAt: String
+        updatedAt: String
+    }
+`;

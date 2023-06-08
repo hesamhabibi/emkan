@@ -1,0 +1,20 @@
+{
+  "name": "نام",
+  "last_name": "نام خانوادگی",
+  "phone_number": "شماره تلفن",
+  "username": "نام کاربری",
+  "password": "کلمه عبور",
+  "password_confirmation": "تکرار کلمه عبور",
+  "email": "ایمیل",
+  "login": "ورود",
+  "register": "ثبت نام",
+  "submit": "ثبت",
+  "have account? login": "اکانت دارید؟ لاگین کنید",
+  "forgot password": "کلمه عبور خود را فراموش کردید؟",
+  "login to admin panel": "ورود به پنل مدیریت",
+  "register to panel": "ثبت نام فروشگاه",
+  "Forgot Password": "فراموشی رمز عبور",
+  "Reset Password": "تغییر رمز عبور",
+  "token": "توکن",
+  "password confirmation": "تایید رمز عبور"
+}

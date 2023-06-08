@@ -1,0 +1,31 @@
+@import "styles/variables";
+@import "styles/components/mixin/mixin";
+
+
+.container {
+  padding: 10px;
+  text-align: center;
+
+  > section {
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid $orange-light;
+    cursor: pointer;
+
+    i {
+      @include generate-color(color, gray);
+      @include transition(0.2s ease-out);
+    }
+
+    @include rounded(10px);
+    @include generate-color(background, $gray-light, lighten, 5);
+    @include transition(0.2s);
+
+    @include hover {
+      @include generate-color(background, $gray-light);
+    }
+  }
+
+  @include rounded(12px);
+  @include generate-color(background, $white);
+}
