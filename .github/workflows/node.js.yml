@@ -26,7 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         
-    - run: npm i --prefix ./server
-    - run: npm i --prefix ./panel
-    - run: sudo systemctl restart app-server.service
-    - run: sudo systemctl restart app-panel.service
+    - run: npm i ./server
+    - run: npm i ./panel
+    - run: npm run build ./panel
+    - run: systemctl restart app-server.service
+    - run: systemctl restart app-panel.service
