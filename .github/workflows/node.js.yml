@@ -26,8 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         
-    - run: npm i ./server
-    - run: npm i ./panel
-    - run: npm run build ./panel
+    - run: cd server
+    - run: yarn install
+    - run: cd ../panel
+    - run: yarn install
+    - run: yarn build
     - run: systemctl restart app-server.service
     - run: systemctl restart app-panel.service
