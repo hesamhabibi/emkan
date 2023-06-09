@@ -1,0 +1,16 @@
+[Unit]
+Description=AppPanel
+After=multi-user.target
+
+[Service]
+User=ehsan
+ExecStart=/home/ehsan/.nvm/versions/node/v16.20.0/bin/npm run start --prefix /home/ehsan/emkan/_work/emkan/emkan/panel
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=AppPanel
+EnvironmentFile=/home/ehsan/emkan/_work/emkan/emkan/panel/.env
+
+[Install]
+WantedBy=multi-user.target

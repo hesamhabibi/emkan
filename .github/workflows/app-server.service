@@ -1,0 +1,15 @@
+[Unit]
+Description=AppServer
+
+[Service]
+User=ehsan
+ExecStart=/home/ehsan/.nvm/versions/node/v16.20.0/bin/node /home/ehsan/emkan/_work/emkan/emkan/server/index.js
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=AppServer
+EnvironmentFile=/home/ehsan/emkan/_work/emkan/emkan/server/.env
+
+[Install]
+WantedBy=multi-user.target
