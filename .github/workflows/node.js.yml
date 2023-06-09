@@ -28,6 +28,6 @@ jobs:
         
     - run: cd server && yarn install && cd ..
     - run: cd panel && yarn install
-    - run: yarn build
+    - run: cd panel && yarn build
     - run: systemctl restart app-server.service
     - run: systemctl restart app-panel.service
