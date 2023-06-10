@@ -29,6 +29,7 @@ jobs:
     - run: cd server && yarn install && cd ..
     - run: cd panel && yarn install
     - run: cd panel && yarn build
+    - run: cd shop && yarn install
     - run: cd shop && yarn build
     - run: sudo systemctl restart app-server.service
     - run: sudo systemctl restart app-panel.service
