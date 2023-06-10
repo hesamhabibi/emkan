@@ -4,12 +4,12 @@ After=multi-user.target
 
 [Service]
 User=ehsan
-ExecStart=/home/ehsan/.nvm/versions/node/v16.20.0/bin/npm run dev --prefix /home/ehsan/emkan/_work/emkan/emkan/shop
+ExecStart=/home/ehsan/.nvm/versions/node/v16.20.0/bin/npm run start --prefix /home/ehsan/emkan/_work/emkan/emkan/shop
 Restart=always
 RestartSec=10
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=AppPanel
+SyslogIdentifier=AppWeb
 EnvironmentFile=/home/ehsan/emkan/_work/emkan/emkan/shop/.env
 
 [Install]
