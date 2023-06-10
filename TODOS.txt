@@ -1,3 +1,0 @@
-react-draft
-joyride-react
-redux-form
